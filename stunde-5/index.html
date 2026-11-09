@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Station 5 · Der Holocaust · NS-Zeit</title>
+<meta name="theme-color" content="#1d1b2c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231d1b2c'/%3E%3Crect x='14' y='14' width='9' height='36' fill='%23fff'/%3E%3Crect x='28' y='28' width='9' height='22' fill='%23a58bdb'/%3E%3Crect x='42' y='20' width='9' height='30' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/ns.css">
+<script src="../assets/ns.js" defer></script>
+<style>
+  /* Stolperstein aus Messing, nach Buch S. 103 */
+  .stone { width: min(300px, 80vw); aspect-ratio: 1; margin: 0 auto; display: grid; place-content: center; text-align: center; gap: 2px; padding: 18px;
+    background: radial-gradient(circle at 30% 25%, #e9cf8a, #b89148 55%, #8a6a2f); box-shadow: inset 0 0 0 3px rgba(0,0,0,.18), 0 10px 0 #7d7d7d, 0 14px 24px rgba(0,0,0,.25);
+    font-family: "Courier New", monospace; font-weight: 700; letter-spacing: .06em; color: #2b2112; text-transform: uppercase; font-size: clamp(14px, 1.2vw + 8px, 18px); line-height: 1.35; }
+  .stone .name { font-size: 1.2em; }
+  .calm .part:nth-of-type(even) { background: #f7f5f2; }
+</style>
+</head>
+<body class="calm">
+
+<header class="bar">
+  <a class="bar__mark" href="../index.html#karte"><i aria-hidden="true"><b></b><b></b><b></b></i>NS-Zeit</a>
+  <nav class="bar__nav" aria-label="Seite"><a class="btn-2" href="../index.html#karte">← Karte</a><a class="btn btn--lila" href="#lernpass">Mein Lernpass</a></nav>
+</header>
+
+<main>
+  <section class="lesson-hero" aria-labelledby="titel">
+    <div class="lesson-hero__text">
+      <div class="block"><p class="label muted" style="margin-bottom:10px">Station 5 · 1941 bis 1945 · Buch S. 98 bis 103</p>
+        <h1 class="h-xl" id="titel">Der Holocaust</h1></div>
+      <div class="block block--plaster" style="margin-left:clamp(0px,6%,60px)"><p class="lead"><b>Leitfrage:</b> Wie wurde aus Hass ein Völkermord, und warum erinnern wir uns bis heute daran?</p></div>
+      <div class="timeline-mini" aria-label="Ablauf der Stunde"><span><b>5′</b>Einstieg</span><span><b>22′</b>Stationen A, B, C</span><span><b>5′</b>Heute-Check</span><span><b>13′</b>Ruhige Runde</span></div>
+    </div>
+    <div class="lesson-hero__photo reveal"><img src="../img/foto/s5-stolpersteine.jpg" alt="Vier Stolpersteine aus Messing im Gehweg vor einem Haus in München." style="object-position:center 70%"></div>
+  </section>
+  <p class="credit" style="padding:0 var(--gap);text-align:right">Stolpersteine in München. Foto: Christian Michelides, CC BY-SA 4.0, Wikimedia Commons</p>
+  <div class="pavement" style="margin-top:20px"></div>
+
+  <div class="note" style="margin:24px var(--gap) 0"><b>Vorweg:</b><span>In dieser Stunde geht es um den Mord an Millionen Menschen. Manches ist schwer auszuhalten. Du darfst jederzeit eine Pause machen oder mit deiner Lehrkraft sprechen. Heute gibt es keine Punkte und kein Spiel.</span></div>
+
+  <nav class="toc" aria-label="Teile der Stunde" style="margin-top:24px">
+    <a href="#einstieg" data-need="s5.e">Einstieg</a>
+    <a href="#a" data-need="s5.a.begriffe s5.a.osten">A Vernichtung</a>
+    <a href="#b" data-need="s5.b.pflicht">B Otto Schwerdt</a>
+    <a href="#c" data-need="s5.c.person">C Erinnern</a>
+    <a href="#heute" data-need="s5.h.text">Heute-Check</a>
+    <a href="#runde" data-need="s5.d.satz">Ruhige Runde</a>
+    <a href="#lernpass">Lernpass</a>
+  </nav>
+
+  <!-- EINSTIEG -->
+  <section class="part" id="einstieg" aria-labelledby="e-t">
+    <div class="wrap">
+      <div class="part__head">
+        <p class="part__tag"><span class="chip">Einstieg · 5 Min</span><span class="label muted">alle zusammen, in Ruhe</span></p>
+        <h2 class="h-l" id="e-t">Ein Stein im Gehweg</h2>
+        <p class="lead">Dieser Stein liegt in Nördlingen, in Schwaben (Buch S. 103). Lies ihn langsam.</p>
+      </div>
+      <div class="grid-2" style="align-items:center">
+        <div class="stone" role="img" aria-label="Stolperstein: Hier wohnte Bernd Michael Mahler, Jahrgang 1937, deportiert 1942, ermordet in Piaski">
+          <span>Hier wohnte</span><span class="name">Bernd Michael</span><span class="name">Mahler</span><span>Jg. 1937</span><span>deportiert 1942</span><span>ermordet in</span><span>Piaski</span>
+        </div>
+        <div class="task">
+          <p class="task__q"><b>E</b>Wie alt war Bernd Michael, als er deportiert wurde? Was erzählt dir dieser kleine Stein über ihn, und was erzählt er nicht?</p>
+          <textarea class="answer" data-key="s5.e" placeholder="Bernd Michael war … Jahre alt. Der Stein erzählt … Er erzählt nicht …"></textarea><p class="saved" aria-live="polite"></p>
+          <p class="small muted">Neben ihm liegt der Stein seiner Mutter Helene, geboren 1906. Beide wurden 1942 in das Getto Piaski in Polen verschleppt und ermordet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATION A -->
+  <section class="part" id="a" aria-labelledby="a-t">
+    <div class="wrap">
+      <div class="part__head">
+        <p class="part__tag"><span class="chip chip--lila">Station A · Pflicht</span><span class="book">Buch S. 98 bis 100</span></p>
+        <h2 class="h-l" id="a-t">Von der Verfolgung zur Ermordung</h2>
+        <p class="lead">Über sechs Millionen europäische Juden wurden ermordet. Dazu Hunderttausende Sinti und Roma, Menschen mit Behinderungen und viele andere, die nicht in das Weltbild der Nationalsozialisten passten.</p>
+      </div>
+      <div class="grid-2">
+        <div class="stack">
+          <div class="clip" data-yt="f_93tE8qCMc" data-key="s5.a.video" data-title="Ausgrenzung, Verfolgung, Vernichtung" data-quelle="Stiftung Denkmal für die ermordeten Juden Europas" data-clips='[[0, 91, "Ausgrenzung und Gettos"], [91, 213, "Massenmord im Osten"], [213, 297, "Auschwitz und Kriegsende"]]'></div>
+        </div>
+        <ol class="stack" style="gap:0">
+          <li class="block" style="border-top:4px solid var(--ink)"><p class="label muted">ab 1939</p><p class="h-s">Gettos</p><p class="small">In Polen werden Juden in abgesperrte Stadtteile gezwungen. Im Warschauer Getto leben 450 000 Menschen auf engstem Raum. 1941 verhungern dort fast 30 000.</p></li>
+          <li class="block block--plaster" style="border-top:4px solid var(--ink)"><p class="label muted">ab Sommer 1941</p><p class="h-s">Massenerschießungen</p><p class="small">Hinter der Front erschießen SS-„Einsatzgruppen“ und Polizei Hunderttausende jüdische Männer, Frauen und Kinder.</p></li>
+          <li class="block" style="border-top:4px solid var(--ink)"><p class="label muted">20. Januar 1942</p><p class="h-s">Wannsee-Konferenz</p><p class="small">Hohe Beamte und SS-Führer besprechen in einer Villa in Berlin, wie der Mord an allen Juden Europas organisiert wird. Sie nennen es „Endlösung der Judenfrage“.</p></li>
+          <li class="block block--lila" style="border-top:4px solid var(--ink)"><p class="label">1942 bis 1945</p><p class="h-s">Vernichtungslager</p><p class="small">Sechs Lager im besetzten Polen: Auschwitz, Belzec, Kulmhof, Majdanek, Sobibor, Treblinka. Allein in Auschwitz werden mindestens 1,1 Millionen Menschen ermordet.</p></li>
+        </ol>
+      </div>
+      <div class="grid-2" style="margin-top:20px">
+        <figure><div class="reveal" style="height:230px"><img src="../img/foto/s5-wannsee.jpg" alt="Eine weiße Villa am Wannsee in Berlin hinter Bäumen, heute Gedenkstätte."></div>
+          <figcaption class="credit">Haus der Wannsee-Konferenz, heute Gedenk- und Bildungsstätte. Foto 2015, CC BY-SA 4.0, Wikimedia Commons</figcaption></figure>
+        <figure><div class="reveal" style="height:230px"><img src="../img/foto/s5-birkenau.jpg" alt="Das Torgebäude von Auschwitz-Birkenau aus rotem Backstein, davor die Bahngleise."></div>
+          <figcaption class="credit">Tor von Auschwitz-Birkenau heute. Durch dieses Tor fuhren die Deportationszüge. Foto 2013, CC BY-SA 4.0, Wikimedia Commons</figcaption></figure>
+      </div>
+      <div class="grid-2" style="margin-top:20px">
+        <div class="task">
+          <p class="task__q"><b>A1</b>Erkläre die drei Fachbegriffe in eigenen Worten: Getto, Holocaust, Shoah (Buch S. 98/99, blaue Kästen).</p>
+          <textarea class="answer" data-key="s5.a.begriffe" style="min-height:130px" placeholder="Getto: … &#10;Holocaust: … &#10;Shoah: …"></textarea><p class="saved" aria-live="polite"></p>
+        </div>
+        <div class="task">
+          <p class="task__q"><b>A2</b>Warum bauten die Nationalsozialisten die Vernichtungslager im besetzten Polen und nicht in Deutschland?</p>
+          <textarea class="answer" data-key="s5.a.osten" placeholder="Die Lager lagen im Osten, weil …"></textarea><p class="saved" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATION B -->
+  <section class="part" id="b" aria-labelledby="b-t">
+    <div class="wrap">
+      <div class="part__head">
+        <p class="part__tag"><span class="chip chip--lila">Station B · Pflicht</span><span class="book">Buch S. 101</span></p>
+        <h2 class="h-l" id="b-t">Otto Schwerdt: „Die Erinnerung ist eine Pflicht gegenüber den Toten“</h2>
+        <p class="lead">Otto Schwerdt überlebte Auschwitz. Später lebte er in Regensburg und erzählte Schülerinnen und Schülern von seinem Leben, so wie du heute.</p>
+      </div>
+      <div class="grid-2">
+        <ol class="stack small" style="gap:0">
+          <li class="block" style="border-left:6px solid var(--lila)"><b>1923</b> geboren in Braunschweig, jüdischen Glaubens</li>
+          <li class="block" style="border-left:6px solid var(--lila)"><b>1936</b> Flucht der Familie nach Polen</li>
+          <li class="block" style="border-left:6px solid var(--lila)"><b>ab 1939</b> Leben in verschiedenen Gettos</li>
+          <li class="block block--plaster" style="border-left:6px solid var(--brick)"><b>1943</b> verhaftet, nach Auschwitz verschleppt, später Theresienstadt</li>
+          <li class="block block--plaster" style="border-left:6px solid var(--brick)"><b>1945</b> befreit zusammen mit seinem Vater. Mutter, Schwester und Bruder wurden in Auschwitz ermordet.</li>
+          <li class="block" style="border-left:6px solid var(--lila)"><b>1954</b> Rückkehr nach Deutschland, später Regensburg</li>
+          <li class="block" style="border-left:6px solid var(--lila)"><b>1990</b> erster Besuch der Gedenkstätte Auschwitz</li>
+          <li class="block" style="border-left:6px solid var(--lila)"><b>1998</b> Buch „Als Gott und die Welt schliefen“, <b>2007</b> gestorben in Regensburg</li>
+        </ol>
+        <div class="stack">
+          <blockquote class="quote">„Nach meiner Befreiung wollte ich nie mehr hierher kommen […]. Ich hatte Angst vor meinen Gefühlen und Erinnerungen. Die Erinnerungen, die ich nicht mehr abschütteln kann, die mich nachts verfolgen.“
+            <cite>Otto Schwerdt über seinen ersten Besuch in Auschwitz 1990. Buch S. 101, Quelle 101.3 (gekürzt)</cite></blockquote>
+          <div class="note"><b>Im Buch:</b><span>Quelle 101.1 beschreibt Ottos Ankunft in Auschwitz. Lies sie, wenn du dich bereit fühlst.</span></div>
+          <div class="task">
+            <p class="task__q"><b>B1</b>Otto Schwerdt sagte: „Die Erinnerung ist eine Pflicht gegenüber den Toten.“ Erkläre diesen Satz. Warum ist er 45 Jahre nach seiner Befreiung trotzdem nach Auschwitz gefahren?</p>
+            <textarea class="answer" data-key="s5.b.pflicht" placeholder="Mit dem Satz meint er … Er ist trotzdem gefahren, weil …"></textarea><p class="saved" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATION C -->
+  <section class="part" id="c" aria-labelledby="c-t">
+    <div class="wrap">
+      <div class="part__head">
+        <p class="part__tag"><span class="chip chip--lila">Station C · Pflicht</span><span class="book">Buch S. 102/103</span></p>
+        <h2 class="h-l" id="c-t">Namen statt Zahlen</h2>
+        <p class="lead">Sechs Millionen ist eine Zahl, die niemand begreifen kann. Deshalb erinnern viele Projekte an einzelne Menschen mit Namen. Der Künstler Gunter Demnig verlegt seit 1992 Stolpersteine, inzwischen über 100 000 in ganz Europa. In München gibt es zusätzlich die „Erinnerungszeichen“: Tafeln und Stelen an den Häusern, in denen Verfolgte lebten.</p>
+      </div>
+      <div class="grid-2">
+        <div class="block block--sand">
+          <p class="h-s" style="margin-bottom:10px">Dein Auftrag</p>
+          <ol class="stack small" style="gap:6px">
+            <li>1. Öffne die Karte der Münchner Erinnerungszeichen.</li>
+            <li>2. Such dir einen Menschen aus, gern in einem Stadtteil, den du kennst.</li>
+            <li>3. Lies seine Lebensgeschichte und schreib drei Dinge über ihn oder sie auf.</li>
+          </ol>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px">
+            <a class="btn" href="https://map.erinnerungszeichen.de" target="_blank" rel="noopener">Karte Erinnerungszeichen</a>
+            <a class="btn-2" href="https://de.wikipedia.org/wiki/Liste_der_Stolpersteine_in_M%C3%BCnchen" target="_blank" rel="noopener">Stolpersteine München</a>
+          </div>
+        </div>
+        <div class="task">
+          <p class="task__q"><b>C1</b>Name, Lebensdaten und drei Dinge, die du über diesen Menschen erfahren hast:</p>
+          <textarea class="answer" data-key="s5.c.person" style="min-height:150px" placeholder="Name: …&#10;Lebte von … bis …, in …&#10;1. …&#10;2. …&#10;3. …"></textarea><p class="saved" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="block block--plaster" style="margin-top:20px">
+        <p class="part__tag" style="margin-bottom:12px"><span class="chip chip--sand">Zusatz · für Schnelle</span></p>
+        <div class="grid-2">
+          <p class="small">Bei <b>#everynamecounts</b> der Arolsen Archives kann jeder mithelfen, Dokumente von Verfolgten abzutippen. So werden Namen und Schicksale für immer auffindbar. Schau dir die Seite an. Mitmachen geht auch zu Hause.</p>
+          <div style="display:grid;gap:10px;align-content:start">
+            <a class="btn-2" href="https://everynamecounts.arolsen-archives.org" target="_blank" rel="noopener">#everynamecounts ansehen</a>
+            <div class="task"><p class="task__q"><b>C2</b>Warum ist es wichtig, jeden einzelnen Namen zu kennen?</p>
+              <textarea class="answer" data-key="s5.c.namen" placeholder="Jeder Name ist wichtig, weil …"></textarea><p class="saved" aria-live="polite"></p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEUTE -->
+  <section class="part" id="heute" aria-labelledby="h-t">
+    <div class="wrap">
+      <div class="part__head">
+        <p class="part__tag"><span class="chip chip--brick">Heute-Check · 5 Min</span></p>
+        <h2 class="h-l" id="h-t">„Es reicht jetzt mit dem Erinnern.“</h2>
+        <p class="lead">Manche wollen, dass wir aufhören, an den Holocaust zu erinnern. Oder sie machen ihn kleiner, als er war. Lies die Aussagen. Sie sind ohne Absender. Was steckt dahinter?</p>
+      </div>
+      <div class="grid-2">
+        <div class="today">
+          <div class="today__card"><p class="label muted">Rede</p><blockquote>„Wir müssen endlich einen Schlussstrich ziehen. Dieser ewige Schuldkult muss aufhören.“</blockquote>
+            <details><summary class="small" style="cursor:pointer;font-weight:600">Einordnung zeigen</summary><p class="small" style="margin-top:8px">Niemand von euch ist schuld an dem, was damals passiert ist. Aber wir alle tragen Verantwortung, dass es nie wieder passiert. Wer das „Schuldkult“ nennt, will, dass wir vergessen.</p></details></div>
+          <div class="today__card"><p class="label muted">Kommentar</p><blockquote>„Die zwölf Jahre waren doch nur ein kleiner Fleck in über tausend Jahren großartiger deutscher Geschichte.“</blockquote>
+            <details><summary class="small" style="cursor:pointer;font-weight:600">Einordnung zeigen</summary><p class="small" style="margin-top:8px"><b>Verharmlosung</b>: Ein Völkermord an Millionen wird als Kleinigkeit dargestellt. Denk an Bernd Michael Mahler, fünf Jahre alt.</p></details></div>
+          <div class="today__card"><p class="label muted">Video in sozialen Netzwerken</p><blockquote>„Das mit den Gaskammern ist doch übertrieben. Das hat es so nie gegeben.“</blockquote>
+            <details><summary class="small" style="cursor:pointer;font-weight:600">Einordnung zeigen</summary><p class="small" style="margin-top:8px"><b>Holocaustleugnung</b>. Sie ist in Deutschland verboten und wird bestraft (§ 130 Strafgesetzbuch). Es gibt Millionen Dokumente, Fotos, Aussagen von Tätern und Überlebenden.</p></details></div>
+        </div>
+        <div class="stack">
+          <div class="gg"><p class="label">Grundgesetz Artikel 1, Absatz 1</p><p>„Die Würde des Menschen ist unantastbar. Sie zu achten und zu schützen ist Verpflichtung aller staatlichen Gewalt.“</p><p class="small muted" style="font-family:var(--font-text)">Dieser Satz steht ganz bewusst an erster Stelle. Er ist die Antwort auf den Holocaust.</p></div>
+          <div class="block block--lila"><p class="label" style="margin-bottom:8px">Was ist heute anders?</p><p class="small">Der 27. Januar, der Tag der Befreiung von Auschwitz, ist Gedenktag in Deutschland und weltweit. Gedenkstätten wie Dachau erinnern an die Opfer. <b>Aber:</b> Judenhass gibt es noch immer. 2019 versuchte ein Attentäter in Halle, an Jom Kippur in eine voll besetzte Synagoge einzudringen. Er tötete zwei Menschen.</p></div>
+          <div class="task">
+            <p class="task__q"><b>H</b>Bald gibt es keine Zeitzeugen wie Otto Schwerdt mehr. Wie kann man trotzdem gut erinnern? Was kannst du selbst tun?</p>
+            <textarea class="answer" data-key="s5.h.text" placeholder="Man kann erinnern, indem … Ich selbst kann …"></textarea><p class="saved" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RUHIGE RUNDE -->
+  <section class="part" id="runde" aria-labelledby="d-t">
+    <div class="wrap">
+      <div class="part__head">
+        <p class="part__tag"><span class="chip">Wir reden darüber · 13 Min</span><span class="label muted">Methode: Ruhige Runde mit Satzanfängen</span></p>
+        <h2 class="h-l" id="d-t">Was nimmst du mit?</h2>
+        <p class="lead">Ihr setzt euch in einen Stuhlkreis. Jeder darf einen Satz sagen, niemand muss. Es wird nichts bewertet und nicht diskutiert. Nur zugehört.</p>
+      </div>
+      <div class="grid-3">
+        <div class="corner" style="background:var(--plaster)"><p>„Mich hat heute berührt, dass …“</p></div>
+        <div class="corner" style="background:var(--lila-hell)"><p>„Ich frage mich, wie …“</p></div>
+        <div class="corner" style="background:var(--cream)"><p>„Für mich bedeutet Erinnern …“</p></div>
+      </div>
+      <div class="grid-2" style="margin-top:24px">
+        <ol class="stack small" style="gap:10px">
+          <li><b>1. Nachdenken</b> (2 Min): Wähle einen Satzanfang und vervollständige ihn für dich, hier rechts oder im Kopf.</li>
+          <li><b>2. Runde</b> (8 Min): Reihum. Wer etwas sagen möchte, sagt seinen Satz. Wer nicht möchte, sagt „weiter“.</li>
+          <li><b>3. Stille</b> (1 Min): Zum Schluss eine Minute Stille für die Opfer.</li>
+          <li><b>4. Ausblick</b> (2 Min): Es gab auch Menschen, die Widerstand leisteten. Darum geht es nächste Stunde.</li>
+        </ol>
+        <div class="task">
+          <p class="task__q"><b>D</b>Mein Satz:</p>
+          <textarea class="answer" data-key="s5.d.satz" placeholder="Mich hat heute berührt, dass …"></textarea><p class="saved" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LERNPASS -->
+  <section class="part" id="lernpass" aria-labelledby="l-t" style="background:var(--ink);color:var(--white)">
+    <div class="wrap">
+      <div class="part__head"><p class="part__tag"><span class="chip chip--sand">Zum Schluss</span></p><h2 class="h-l" id="l-t">Mein Lernpass</h2>
+        <p class="lead">Tippe auf den Knopf, „Als PDF sichern“ wählen und in OneNote ablegen.</p></div>
+      <div class="block block--white" style="color:var(--ink)"><p class="h-s" style="margin-bottom:8px">Merksatz der Stunde</p>
+        <p>Der Holocaust (hebräisch: Shoah) war der geplante Mord an über sechs Millionen europäischen Juden. Auch Sinti und Roma, Menschen mit Behinderungen und andere Gruppen wurden ermordet. Aus Ausgrenzung wurden Gettos, Massenerschießungen und schließlich Vernichtungslager wie Auschwitz. Wir erinnern an die Opfer mit ihren Namen, damit so etwas nie wieder geschieht.</p></div>
+      <div class="pass-actions"><button class="btn btn--lila" type="button" id="pass-btn">Mein Lernpass als PDF</button><a class="btn-2" style="color:var(--white);border-color:var(--white)" href="../index.html#karte">Zurück zur Lernlandkarte</a></div>
+    </div>
+  </section>
+</main>
+<div class="pass" aria-hidden="true"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  NS.guard(5);
+  document.getElementById("pass-btn").addEventListener("click", function () {
+    NS.printPass(5, [
+      { label: "Einstieg: Der Stolperstein von Bernd Michael Mahler", key: "s5.e" },
+      { label: "A1 Getto, Holocaust, Shoah", key: "s5.a.begriffe" },
+      { label: "A2 Warum Vernichtungslager im Osten?", key: "s5.a.osten" },
+      { label: "B1 „Die Erinnerung ist eine Pflicht“", key: "s5.b.pflicht" },
+      { label: "C1 Ein Mensch aus München", key: "s5.c.person" },
+      { label: "C2 Zusatz: Warum jeder Name zählt", key: "s5.c.namen" },
+      { label: "Heute-Check: Wie wir erinnern können", key: "s5.h.text" },
+      { label: "Ruhige Runde: mein Satz", key: "s5.d.satz" }
+    ]);
+  });
+});
+</script>
+</body>
+</html>

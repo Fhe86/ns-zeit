@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NS-Zeit 1933 bis 1945 · Lernlandkarte</title>
+<meta name="description" content="Selbstlerneinheit GPG: Die Zeit des Nationalsozialismus in sieben Stationen.">
+<meta name="theme-color" content="#1d1b2c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231d1b2c'/%3E%3Crect x='14' y='14' width='9' height='36' fill='%23fff'/%3E%3Crect x='28' y='28' width='9' height='22' fill='%23a58bdb'/%3E%3Crect x='42' y='20' width='9' height='30' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/ns.css">
+<script src="assets/ns.js" defer></script>
+</head>
+<body>
+
+<header class="bar">
+  <a class="bar__mark" href="#top"><i aria-hidden="true"><b></b><b></b><b></b></i>NS-Zeit</a>
+  <nav class="bar__nav" aria-label="Seite">
+    <a class="btn-2" href="#so">So arbeitest du</a>
+    <a class="btn" href="#karte">Zur Karte</a>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- Eröffnung: Fotostreifen wie Fassaden, Text auf gestuften Blöcken -->
+  <section class="opening" aria-labelledby="titel">
+    <div class="opening__slabs" aria-hidden="true">
+      <div class="opening__slab" style="--w:11;--h:70%"><div class="reveal"><img src="img/foto/s1-hj-appell.jpg" alt=""></div></div>
+      <div class="opening__slab" style="--w:9;--h:52%"><div class="reveal"><img src="img/foto/s1-gemeinschaftsempfang.jpg" alt=""></div></div>
+      <div class="opening__slab" style="--w:7;--h:38%"><div class="reveal"><img src="img/foto/s2-boykott.jpg" alt=""></div></div>
+      <div class="opening__slab opening__slab--gap" style="--w:44;--h:10%"></div>
+      <div class="opening__slab" style="--w:8;--h:46%"><div class="reveal"><img src="img/foto/s3-schlagbaum.jpg" alt=""></div></div>
+      <div class="opening__slab" style="--w:10;--h:64%"><div class="reveal"><img src="img/foto/s7-truemmer.jpg" alt=""></div></div>
+      <div class="opening__slab" style="--w:11;--h:84%"><div class="reveal"><img src="img/foto/s6-weisse-rose.jpg" alt=""></div></div>
+    </div>
+    <div class="opening__stack">
+      <div class="block"><p class="label muted" style="margin-bottom:12px">GPG · Selbstlerneinheit · 7 Stationen</p>
+        <h1 class="h-xl" id="titel">1933 bis 1945. Wie konnte das passieren?</h1></div>
+      <div class="block block--plaster"><p class="lead">Zwölf Jahre, die Deutschland und Europa verändert haben. Du gehst den Weg Station für Station. Mit Fotos, Videos, Zeitzeugen und deinem Buch. Und am Ende jeder Stunde fragst du: Gibt es so etwas heute noch?</p></div>
+      <div class="block block--sand" style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn" href="#karte">Zur Lernlandkarte</a><a class="btn-2" href="#so">So arbeitest du</a></div>
+    </div>
+    <div class="opening__floor pavement"></div>
+  </section>
+
+  <!-- Lernlandkarte: Zeitstrahl seitwärts -->
+  <section class="section" id="karte" aria-labelledby="karte-titel" style="padding-left:0;padding-right:0">
+    <div class="track-head">
+      <div style="display:grid;gap:12px;max-width:640px">
+        <p class="label muted">Lernlandkarte</p>
+        <h2 class="h-l" id="karte-titel">Sieben Stationen, ein Weg</h2>
+        <p>Wische nach links und rechts. Jede Station ist eine Stunde mit sechs Teilen. Für jeden erledigten Teil gibt es einen grünen Haken. Hat eine Station alle sechs Haken, öffnet sich die nächste von selbst.</p>
+      </div>
+      <div class="track-hint" aria-hidden="false">
+        <button type="button" data-scroll="-1" aria-label="Zurück">←</button>
+        <button type="button" data-scroll="1" aria-label="Weiter">→</button>
+      </div>
+    </div>
+
+    <div class="journey" id="journey" aria-label="Dein Weg durch die Stationen"></div>
+    <div class="track" id="track" tabindex="0" aria-label="Stationen 1 bis 7">
+      <!-- Stationen werden unten per Skript gefüllt, damit Status und Codes überall gleich sind -->
+    </div>
+    <div class="track-floor pavement"></div>
+    <div class="legend">
+      <span><i style="background:var(--lila)"></i>offen</span>
+      <span><i style="background:var(--ok)"></i>geschafft (alle 6 Haken)</span>
+      <span><i style="background:var(--muted)"></i>noch gesperrt</span>
+    </div>
+  </section>
+
+  <!-- Roter Faden: pro geschaffter Station ein Merksatz -->
+  <section class="section section--white" id="faden" aria-labelledby="faden-titel">
+    <div class="wrap">
+      <div style="display:grid;gap:12px;max-width:720px;margin-bottom:28px">
+        <p class="label muted">Sammle alle sieben</p>
+        <h2 class="h-l" id="faden-titel">Der rote Faden</h2>
+        <p>Für jede Station, die du schaffst, wird hier ein Merksatz sichtbar. Am Ende hast du die ganze NS-Zeit in sieben Sätzen. Die solltest du dir merken.</p>
+      </div>
+      <ol class="faden" id="faden-liste"></ol>
+    </div>
+  </section>
+
+  <!-- So arbeitest du -->
+  <section class="section section--white" id="so" aria-labelledby="so-titel">
+    <div class="wrap">
+      <div style="display:grid;gap:12px;max-width:720px;margin-bottom:40px">
+        <p class="label muted">Jede Stunde gleich</p>
+        <h2 class="h-l" id="so-titel">So läuft eine Station</h2>
+      </div>
+      <ol class="steps">
+        <li><p class="num">5′</p><p class="h-s">Einstieg</p><p class="small">Ein Bild, eine Frage. Alle zusammen.</p></li>
+        <li><p class="num">22′</p><p class="h-s">Selbst lernen</p><p class="small">Pflichtaufgaben am iPad, Buch daneben. Video mit Kopfhörern. Schnell fertig? Dann die Zusatzaufgabe.</p></li>
+        <li><p class="num">5′</p><p class="h-s">Heute-Check</p><p class="small">Gleicher Trick, neue Zeit: Wo begegnet dir so etwas heute? Prüfe es am Grundgesetz.</p></li>
+        <li><p class="num">13′</p><p class="h-s">Wir reden darüber</p><p class="small">Jede Stunde eine andere Methode. Deine Meinung zählt, begründe sie.</p></li>
+      </ol>
+      <div class="grid-2" style="margin-top:48px">
+        <div class="block"><p class="h-s" style="margin-bottom:8px">Mein Lernpass</p><p class="small">Am Ende jeder Stunde tippst du auf „Mein Lernpass“. Es entsteht ein PDF mit deinen Antworten. Das legst du in OneNote ab. Deine Antworten bleiben nur auf diesem iPad gespeichert, nicht im Internet.</p></div>
+        <div class="block block--plaster"><p class="h-s" style="margin-bottom:8px">Ein ernstes Thema</p><p class="small">Manche Bilder und Berichte sind schwer auszuhalten. Wenn dich etwas sehr beschäftigt, sprich mit deiner Lehrkraft. Fragen sind immer erlaubt.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="stripes" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="foot__inner">
+    <p class="small">Grundlage: Schulbuch Trio GPG (Westermann), Kapitel „Die Zeit des Nationalsozialismus“, S. 78 bis 115. Fotos: Bundesarchiv und Wikimedia Commons, Lizenzen siehe <a href="bildnachweise.html">Bildnachweise</a>. Gestaltung nach der Vorlage „Midblock“ von 8B (MIT-Lizenz).</p>
+    <p class="small"><a href="lehrer.html">Für Lehrkräfte</a> · <button type="button" id="reset" class="small" style="background:none;border:0;color:inherit;text-decoration:underline;cursor:pointer;padding:0">Fortschritt auf diesem Gerät löschen</button></p>
+  </div>
+  <p class="wordmark" aria-hidden="true">1933–1945</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var DATA = [
+    { n: 1, jahre: "1933–1939", titel: "Verführt und erfasst", frage: "Warum machten so viele mit?", buch: "S. 78–83", foto: "s1-hj-zeltlager", w: 1.2, h: 46 },
+    { n: 2, jahre: "1933–1938", titel: "Wer nicht dazugehört", frage: "Wie werden Nachbarn zu Feinden gemacht?", buch: "S. 84–89", foto: "s2-boykott", w: 1, h: 34 },
+    { n: 3, jahre: "1938–1941", titel: "Der Weg in den Krieg", frage: "Frieden versprochen, Krieg geplant?", buch: "S. 90–93", foto: "s3-schlagbaum", w: 1.1, h: 52 },
+    { n: 4, jahre: "1939–1945", titel: "Vernichtungskrieg und Zwangsarbeit", frage: "Was passiert, wenn Menschen nichts mehr wert sein sollen?", buch: "S. 94–97", foto: "s4-ost", w: .9, h: 30 },
+    { n: 5, jahre: "1941–1945", titel: "Der Holocaust", frage: "Wie wurde aus Hass Völkermord, und warum erinnern wir uns?", buch: "S. 98–103", foto: "s5-stolpersteine", w: 1, h: 56 },
+    { n: 6, jahre: "1933–1945", titel: "Widerstand", frage: "Wegschauen oder handeln?", buch: "S. 104–105", foto: "s6-weisse-rose", w: 1.1, h: 40 },
+    { n: 7, jahre: "1943–1949", titel: "Kriegsende und was bleibt", frage: "Was haben wir daraus gelernt?", buch: "S. 106–115", foto: "s7-truemmer", w: 1, h: 48 }
+  ];
+  var track = document.getElementById("track");
+  function render() {
+    track.innerHTML = "";
+    DATA.forEach(function (d) {
+      var st = NS.isDone(d.n) ? "fertig" : (NS.isOpen(d.n) ? "offen" : "zu");
+      var stand = NS.stand(d.n), teile = NS.stunden[d.n - 1].teile;
+      var ticks = teile.map(function (t) { return '<i class="' + (NS.teilDone(t) ? "on" : "") + '" title="' + t.name + '">✓</i>'; }).join("");
+      var el = document.createElement("article");
+      el.className = "station"; el.dataset.state = st;
+      el.style.setProperty("--w", d.w); el.style.setProperty("--h", d.h);
+      el.innerHTML =
+        '<p class="station__year"><span>' + d.n + '</span><span class="label muted">' + d.jahre + '</span></p>' +
+        '<div class="station__photo reveal"><img src="img/foto/' + d.foto + '.jpg" alt="" loading="lazy">' +
+          (st === "fertig" ? '<span class="station__badge" aria-label="geschafft">✓</span>' : "") +
+          (st === "zu" ? '<span class="station__lockicon" aria-hidden="true"><span><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="10"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span></span>' : "") + '</div>' +
+        '<div class="station__plate">' +
+          '<span class="station__state">' + (st === "fertig" ? "Geschafft" : st === "offen" ? "Offen" : "Gesperrt") + '</span>' +
+          '<h3 class="h-s">' + d.titel + '</h3>' +
+          '<p>' + d.frage + '</p>' +
+          '<div class="ticks" aria-hidden="true">' + ticks + '</div>' +
+          '<p class="ticks__txt"><span>' + stand.fertig + ' von ' + stand.gesamt + ' Haken</span><span>' + (NS.hasPass(d.n) ? "Lernpass ✓" : "Buch " + d.buch) + '</span></p>' +
+          (st === "zu"
+            ? '<p class="small muted">Öffnet sich, wenn Station ' + (d.n - 1) + ' geschafft ist.</p><details><summary class="small" style="cursor:pointer;font-weight:600">Gefehlt? Code eingeben</summary><form class="station__lock"><input aria-label="Code für Station ' + d.n + '" placeholder="Code" autocomplete="off" autocapitalize="characters"><button class="btn">Öffnen</button></form><p class="station__msg" aria-live="polite"></p></details>'
+            : '<a class="btn' + (st === "offen" ? " btn--lila" : "") + '" href="stunde-' + d.n + '/index.html">' + (st === "fertig" ? "Noch einmal ansehen" : stand.fertig ? "Weitermachen" : "Station starten") + '</a>') +
+        '</div>';
+      var f = el.querySelector("form");
+      if (f) f.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (NS.tryCode(d.n, f.querySelector("input").value)) { render(); location.href = "stunde-" + d.n + "/index.html"; }
+        else el.querySelector(".station__msg").textContent = "Der Code stimmt nicht.";
+      });
+      track.appendChild(el);
+    });
+    var j = document.getElementById("journey"), html = "", fertig = 0;
+    DATA.forEach(function (d, i) {
+      var st = NS.isDone(d.n) ? "fertig" : (NS.isOpen(d.n) ? "offen" : "zu"); if (st === "fertig") fertig++;
+      html += '<span class="journey__step">' + (i ? '<span class="journey__line ' + (st !== "zu" ? "fertig" : "") + '"></span>' : "") +
+        '<span class="journey__dot ' + st + '" title="Station ' + d.n + '">' + (st === "fertig" ? "✓" : d.n) + '</span></span>';
+    });
+    j.innerHTML = html + '<span class="journey__txt">' + fertig + ' von 7 Stationen geschafft</span>';
+    document.getElementById("faden-liste").innerHTML = NS.stunden.map(function (st) {
+      var on = NS.isDone(st.n);
+      return '<li class="' + (on ? "on" : "") + '"><span class="dot">' + (on ? "✓" : st.n) + '</span><span class="jahr">' + st.jahr + '</span><span class="satz"' + (on ? "" : ' aria-label="noch nicht freigeschaltet"') + '>' + (on ? st.kern : "Schaffe Station " + st.n + ", dann erscheint hier der Merksatz.") + '</span></li>';
+    }).join("");
+    var end = document.createElement("div");
+    end.className = "station station--end";
+    end.innerHTML = '<div class="block block--ink"><p class="label" style="color:var(--sand);margin-bottom:8px">Ziel</p><p class="h-s" style="margin-bottom:8px">Kennen. Verstehen. Erkennen.</p><p class="small">Du weißt, was zwischen 1933 und 1945 geschah. Du verstehst, wie es dazu kam. Und du erkennst die Tricks, wenn sie heute wieder auftauchen.</p></div>';
+    track.appendChild(end);
+    document.querySelectorAll("#track .reveal").forEach(function (r) { r.classList.add("is-in"); });
+  }
+  render();
+  document.querySelectorAll("[data-scroll]").forEach(function (b) {
+    b.addEventListener("click", function () { track.scrollBy({ left: Number(b.dataset.scroll) * track.clientWidth * .8, behavior: "smooth" }); });
+  });
+  document.getElementById("reset").addEventListener("click", function () {
+    if (confirm("Alle Antworten und freigeschalteten Stationen auf diesem Gerät löschen?")) { NS.reset(); render(); }
+  });
+});
+</script>
+</body>
+</html>

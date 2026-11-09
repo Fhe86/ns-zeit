@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Station 1 · Verführt und erfasst · NS-Zeit</title>
+<meta name="theme-color" content="#1d1b2c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231d1b2c'/%3E%3Crect x='14' y='14' width='9' height='36' fill='%23fff'/%3E%3Crect x='28' y='28' width='9' height='22' fill='%23a58bdb'/%3E%3Crect x='42' y='20' width='9' height='30' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/ns.css">
+<script src="../assets/ns.js" defer></script>
+</head>
+<body>
+
+<header class="bar">
+  <a class="bar__mark" href="../index.html#karte"><i aria-hidden="true"><b></b><b></b><b></b></i>NS-Zeit</a>
+  <nav class="bar__nav" aria-label="Seite">
+    <a class="btn-2" href="../index.html#karte">← Karte</a>
+    <a class="btn btn--lila" href="#lernpass">Mein Lernpass</a>
+  </nav>
+</header>
+
+<main>
+  <section class="lesson-hero" aria-labelledby="titel">
+    <div class="lesson-hero__text">
+      <div class="block"><p class="label muted" style="margin-bottom:10px">Station 1 · 1933 bis 1939 · Buch S. 78 bis 83</p>
+        <h1 class="h-xl" id="titel">Verführt und erfasst</h1></div>
+      <div class="block block--plaster" style="margin-left:clamp(0px,6%,60px)"><p class="lead"><b>Leitfrage:</b> Warum machten so viele Menschen mit, auch Jugendliche in deinem Alter?</p></div>
+      <div class="timeline-mini" aria-label="Ablauf der Stunde">
+        <span><b>5′</b>Einstieg</span><span><b>22′</b>Stationen A, B, C</span><span><b>5′</b>Heute-Check</span><span><b>13′</b>Vier Ecken</span>
+      </div>
+    </div>
+    <div class="lesson-hero__photo reveal"><img src="../img/foto/s1-hj-zeltlager.jpg" alt="Jungen der Hitlerjugend schauen lachend aus einem Zelt, daneben ein Gruppenführer in Uniform."></div>
+  </section>
+  <p class="credit" style="padding:0 var(--gap);text-align:right">Hitlerjugend im Zeltlager, um 1933. Bundesarchiv, Bild 133-043, CC BY-SA 3.0 de</p>
+  <div class="pavement" style="margin-top:20px"></div>
+
+  <nav class="toc" aria-label="Teile der Stunde">
+    <a href="#einstieg" data-need="s1.feed">Einstieg</a>
+    <a href="#a" data-need="s1.a.match s1.a.radio">A Radio</a>
+    <a href="#b" data-need="s1.b.1 s1.b.4">B Foto</a>
+    <a href="#c" data-need="s1.c.sort s1.c.leben">C Jugend</a>
+    <a href="#heute" data-need="s1.h.erlebt">Heute-Check</a>
+    <a href="#ecken" data-need="s1.d.ecke">Vier Ecken</a>
+    <a href="#lernpass">Lernpass</a>
+  </nav>
+
+  <!-- ===================== EINSTIEG ===================== -->
+  <section class="part" id="einstieg" aria-labelledby="e-t">
+    <div class="wrap">
+      <div class="part__head">
+        <p class="part__tag"><span class="chip">Einstieg · 5 Min</span><span class="label muted">alle zusammen</span></p>
+        <h2 class="h-l" id="e-t">Dein Feed im Jahr 1936</h2>
+        <p class="lead">Stell dir vor, es gäbe 1936 schon Handys. So könnte dein Feed aussehen. Reagiere ehrlich auf jeden Post: Was löst er in dir aus?</p>
+      </div>
+      <div class="feed" data-feed>
+        <article class="post">
+          <p class="post__head"><i></i>reichsparteitag_nuernberg</p>
+          <div class="post__img reveal"><img src="../img/foto/s1-hj-appell.jpg" alt="Tausende Hitlerjungen stehen in Reihen auf einem riesigen Platz, vorne eine Fahne."></div>
+          <p class="post__cap">Zehntausende Jungen. Ein Platz. Ein Wille. Nächstes Jahr bist du dabei!</p>
+          <div class="post__react" data-choice="s1.feed.1"><button data-v="mitreißend">mitreißend</button><button data-v="beeindruckend">beeindruckend</button><button data-v="unheimlich">unheimlich</button><button data-v="egal">egal</button></div>
+        </article>
+        <article class="post">
+          <p class="post__head"><i></i>hitlerjugend_ortsgruppe</p>
+          <div class="post__img reveal"><img src="../img/foto/s1-hj-gelaende.jpg" alt="Jungen in kurzen Hosen klettern im Freien über ein Holzgerüst."></div>
+          <p class="post__cap">Klettern, Zeltlager, Lagerfeuer. Deine Freunde sind schon da. Und du?</p>
+          <div class="post__react" data-choice="s1.feed.2"><button data-v="mitreißend">will mit</button><button data-v="beeindruckend">cool</button><button data-v="unheimlich">komisch</button><button data-v="egal">egal</button></div>
+        </article>
+        <article class="post">
+          <p class="post__head"><i></i>volksempfaenger_offiziell</p>
+          <div class="post__img reveal"><img src="../img/foto/s1-volksempfaenger.jpg" alt="Ein dunkles Radio aus Kunststoff mit rundem Lautsprecher: der Volksempfänger VE 301." style="object-position:center 30%"></div>
+          <p class="post__cap">Ein Radio, das sich jede Familie leisten kann. Ganz Deutschland hört zu.</p>
+          <div class="post__react" data-choice="s1.feed.3"><button data-v="mitreißend">will ich haben</button><button data-v="beeindruckend">praktisch</button><button data-v="unheimlich">misstrauisch</button><button data-v="egal">egal</button></div>
+        </article>
+        <article class="post">
+          <p class="post__head"><i></i>geschaeft_mueller</p>
+          <div class="post__img reveal"><img src="../img/foto/s1-gemeinschaftsempfang.jpg" alt="Schild in einem Schaufenster: Aus Anlass des Gemeinschaftsempfangs der Rede des Führers tritt von 16 bis 17 Uhr eine Verkaufspause ein."></div>
+          <p class="post__cap">Heute 16 bis 17 Uhr geschlossen. Wir hören alle gemeinsam die Rede des Führers.</p>
+          <div class="post__react" data-choice="s1.feed.4"><button data-v="mitreißend">bin dabei</button><button data-v="beeindruckend">normal</button><button data-v="unheimlich">Zwang?</button><button data-v="egal">egal</button></div>
+        </article>
+      </div>
+      <p class="credit">Fotos: Bundesarchiv Bild 146-1981-160-05 (HJ-Appell, Reichsparteitag 1934), Bild 133-033 (HJ, Geländesport), B 145 Bild-P046302 (Carl Weinrother, Gemeinschaftsempfang), alle CC BY-SA 3.0 de; Volksempfänger VE 301: ubahnverleih, CC0.</p>
+
+      <div class="grid-2" style="margin-top:28px">
+        <div class="task">
+          <p class="task__q"><b>E</b>Welcher Post hat dich am meisten angesprochen? Warum?</p>
+          <textarea class="answer" data-key="s1.feed" placeholder="Mich hat am meisten … angesprochen, weil …"></textarea><p class="saved" aria-live="polite"></p>
+        </div>
+        <details class="block block--ink" id="aufloesung">
+          <summary class="h-s" style="cursor:pointer">Auflösung antippen</summary>
+          <p style="margin-top:12px">Alle vier Posts kommen aus derselben Quelle: der NSDAP und dem Staat. Eine andere Meinung gab es in diesem Feed nicht. Zeitungen, Radio und Kino waren ab 1933 <b>gleichgeschaltet</b>. Das heißt: Alles musste im Sinne der Nationalsozialisten berichten.</p>
+          <p>Genau das ist die Frage dieser Stunde: Warum wirkte das so gut?</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATION A ===================== -->
+  <section class="part" id="a" aria-labelledby="a-t">
+    <div class="wrap">
+      <div class="part__head">
+        <p class="part__tag"><span class="chip chip--lila">Station A · Pflicht</span><span class="book">Buch S. 80/81</span></p>
+        <h2 class="h-l" id="a-t">Das Radio im Wohnzimmer</h2>
+        <p class="lead">1933 gründet Hitler ein eigenes Ministerium für Propaganda. Chef wird Joseph Goebbels. Sein Ziel: Jeder Deutsche soll nur noch eine Stimme hören.</p>
+      </div>
+      <div class="grid-2">
+        <div class="stack">
+          <div class="clip" data-yt="ulQ17cJxWpI" data-key="s1.a.video" data-title="Deutschland 1933: Propaganda, Lügen und Gleichschaltung" data-quelle="planet schule (SWR)" data-clips='[[13, 57, "Lügen als Werkzeug"], [80, 184, "Gleichschaltung: Radio als Sprachrohr"], [324, 394, "Hetze und Angst"]]'></div>
+          <div class="note"><b>Tipp:</b><span>Schau zuerst das Video. Lies danach im Buch S. 80/81 den Abschnitt „Propagandamittel Rundfunk“.</span></div>
+        </div>
+        <div class="stack">
+          <div class="grid-2" style="gap:12px">
+            <figure><div class="reveal" style="height:220px"><img src="../img/foto/s1-volksempfaenger.jpg" alt="Volksempfänger VE 301" style="object-position:center 30%"></div><figcaption class="credit">Volksempfänger VE 301. Foto: ubahnverleih, CC0</figcaption></figure>
+            <div class="block block--sand" style="display:grid;align-content:center;gap:4px">
+              <p class="label">Haushalte mit Radio</p>
+              <p class="h-l">25 % → 70 %</p>
+              <p class="small">1933 hatte jeder vierte Haushalt ein Radio, 1939 schon sieben von zehn (Buch S. 80).</p>
+            </div>
+          </div>
+          <ul class="stack small" style="gap:8px">
+            <li>▪ Es gibt nur noch <b>einen</b> staatlichen Sender. Freie Sender werden verboten.</li>
+            <li>▪ Ausländische Sender hören ist streng verboten.</li>
+            <li>▪ Wichtige Reden hören alle gemeinsam: im Betrieb, in der Schule, im Geschäft.</li>
+            <li>▪ Zwischen Musik und Unterhaltung kommt immer wieder Politik.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="task" data-match="s1.a.match" style="margin-top:32px">
+        <p class="task__q"><b>A1</b>Die fünf Tricks der Propaganda: Welcher Trick steckt in welchem Beispiel?</p>
+        <div class="match">
+          <div class="match__row" data-right="eine">
+            <p>Freie Radiosender werden verboten. Es läuft nur noch der Staatssender.</p>
+            <select aria-label="Trick zu Beispiel 1"><option value="">Trick wählen …</option><option value="gefuehl">Gefühl statt Fakten</option><option value="wieder">Immer wiederholen</option><option value="eine">Nur eine Stimme</option><option value="feind">Ein Feindbild</option><option value="wir">Wir-Gefühl</option></select>
+          </div>
+          <div class="match__row" data-right="wir">
+            <p>Zehntausende marschieren im Gleichschritt auf dem Reichsparteitag. Jeder Einzelne fühlt sich als Teil von etwas Großem.</p>
+            <select aria-label="Trick zu Beispiel 2"><option value="">Trick wählen …</option><option value="gefuehl">Gefühl statt Fakten</option><option value="wieder">Immer wiederholen</option><option value="eine">Nur eine Stimme</option><option value="feind">Ein Feindbild</option><option value="wir">Wir-Gefühl</option></select>
+          </div>
+          <div class="match__row" data-right="wieder">
+            <p>Hitler schreibt: Propaganda soll sich auf wenige Punkte beschränken und sie so lange vertreten, „bis auch bestimmt der Letzte“ sie verstanden hat (Buch S. 81, 81.1).</p>
+            <select aria-label="Trick zu Beispiel 3"><option value="">Trick wählen …</option><option value="gefuehl">Gefühl statt Fakten</option><option value="wieder">Immer wiederholen</option><option value="eine">Nur eine Stimme</option><option value="feind">Ein Feindbild</option><option value="wir">Wir-Gefühl</option></select>
+          </div>
+          <div class="match__row" data-right="feind">
+            <p>Im Radio und auf Plakaten sind „die Juden“ an allem schuld: an der Wirtschaftskrise, am verlorenen Krieg.</p>
+            <select aria-label="Trick zu Beispiel 4"><option value="">Trick wählen …</option><option value="gefuehl">Gefühl statt Fakten</option><option value="wieder">Immer wiederholen</option><option value="eine">Nur eine Stimme</option><option value="feind">Ein Feindbild</option><option value="wir">Wir-Gefühl</option></select>
+          </div>
+          <div class="match__row" data-right="gefuehl">
+            <p>Fackelzug bei Nacht, Trommeln, Fahnen, Musik. Niemand erklärt, was die Regierung eigentlich vorhat.</p>
+            <select aria-label="Trick zu Beispiel 5"><option value="">Trick wählen …</option><option value="gefuehl">Gefühl statt Fakten</option><option value="wieder">Immer wiederholen</option><option value="eine">Nur eine Stimme</option><option value="feind">Ein Feindbild</option><option value="wir">Wir-Gefühl</option></select>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><p class="feedback" aria-live="polite"></p></div>
+      </div>
+
+      <div class="task" style="margin-top:20px">
+        <p class="task__q"><b>A2</b>Warum war es den Nationalsozialisten so wichtig, dass jede Familie ein billiges Radio hat? Schreibe zwei Sätze.</p>
+        <textarea class="answer" data-key="s1.a.radio" placeholder="Die Nationalsozialisten wollten, dass …"></textarea><p class="saved" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATION B ===================== -->
+  <section class="part" id="b" aria-labelledby="b-t">
+    <div class="wrap">
+      <div class="part__head">
+        <p class="part__tag"><span class="chip chip--lila">Station B · Pflicht</span><span class="book">Buch S. 82/83</span></p>
+        <h2 class="h-l" id="b-t">Ein Foto lügt nicht. Oder doch?</h2>
+        <p class="lead">Viele Fotos aus der NS-Zeit sind kein Zufall. Sie wurden geplant, ausgewählt und manchmal sogar nachgestellt. Werte dieses Foto aus wie ein Detektiv. Tippe ins Bild, um zu zoomen.</p>
+      </div>
+      <div class="analyse">
+        <figure class="analyse__photo">
+          <div class="zoom"><img src="../img/foto/s1-hj-appell.jpg" alt="Reichsparteitag 1934: Tausende Hitlerjungen stehen in langen Reihen auf einem riesigen Feld. Vorne halten drei Jungen eine Fahne. Im Hintergrund viele Fahnenstangen."></div>
+          <figcaption class="credit">Reichsparteitag in Nürnberg, September 1934: Appell der Hitlerjugend. Bundesarchiv, Bild 146-1981-160-05, CC BY-SA 3.0 de</figcaption>
+        </figure>
+        <div class="step4">
+          <details open>
+            <summary>1 Beschreibe</summary>
+            <div class="inner"><p class="small">Was siehst du? Vorne, in der Mitte, hinten, am Rand.</p>
+              <textarea class="answer" data-key="s1.b.1" placeholder="Vorne sehe ich … In der Mitte … Im Hintergrund …"></textarea><p class="saved" aria-live="polite"></p></div>
+          </details>
+          <details>
+            <summary>2 Ordne ein</summary>
+            <div class="inner"><p class="small">Wann und wo ist das Foto entstanden? Was für ein Ereignis ist das? Die Bildunterschrift hilft.</p>
+              <div class="choices" data-choice="s1.b.2"><button class="choice" data-v="zufall">ein zufälliges Treffen</button><button class="choice" data-v="geplant">eine geplante Großveranstaltung</button><button class="choice" data-v="schule">ein normaler Schultag</button></div></div>
+          </details>
+          <details>
+            <summary>3 Analysiere</summary>
+            <div class="inner"><p class="small">Von wo hat der Fotograf fotografiert? Warum zeigt das Bild so viele Menschen und kein einziges Gesicht ganz nah?</p>
+              <textarea class="answer" data-key="s1.b.3" placeholder="Der Fotograf steht … Man sieht viele Menschen, weil …"></textarea><p class="saved" aria-live="polite"></p></div>
+          </details>
+          <details>
+            <summary>4 Interpretiere</summary>
+            <div class="inner"><p class="small">Was soll ein 14-Jähriger denken, wenn er dieses Foto 1934 in der Zeitung sieht?</p>
+              <textarea class="answer" data-key="s1.b.4" placeholder="Er soll denken: …"></textarea><p class="saved" aria-live="polite"></p></div>
+          </details>
+          <div class="block block--plaster">
+            <p class="label" style="margin-bottom:6px">Wusstest du?</p>
+            <p class="small">Vom berühmten Fackelzug am 30. Januar 1933 gab es nur verwackelte Aufnahmen. Deshalb wurde die Szene im Sommer 1933 für einen Film noch einmal nachgestellt (Buch S. 81, 81.2). Viele kennen heute nur die gestellten Bilder.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATION C ===================== -->
+  <section class="part" id="c" aria-labelledby="c-t">
+    <div class="wrap">
+      <div class="part__head">
+        <p class="part__tag"><span class="chip chip--lila">Station C · Pflicht</span><span class="book">Buch S. 78/79</span></p>
+        <h2 class="h-l" id="c-t">Mit 10 in die Hitlerjugend</h2>
+        <p class="lead">Hitler sagte 1932: „Nicht früh genug kann die deutsche Jugend dazu erzogen werden …“ Tippe auf die Lebensjahre und sieh, wie früh es losging.</p>
+      </div>
+
+      <div class="lifepath" role="group" aria-label="Lebensweg eines Jungen und eines Mädchens">
+        <button type="button" data-age="6" style="--h:40"><span class="bar-step"></span><span class="age">6</span><span class="org">Volksschule</span></button>
+        <button type="button" data-age="10" style="--h:70"><span class="bar-step"></span><span class="age">10</span><span class="org">Jungvolk · Jungmädel</span></button>
+        <button type="button" data-age="14" style="--h:100"><span class="bar-step"></span><span class="age">14</span><span class="org">Hitlerjugend · BDM</span></button>
+        <button type="button" data-age="18" style="--h:130"><span class="bar-step"></span><span class="age">18</span><span class="org">Arbeitsdienst · Partei</span></button>
+        <button type="button" data-age="21" style="--h:160"><span class="bar-step"></span><span class="age">21</span><span class="org">Soldat · Mutter</span></button>
+        <button type="button" data-age="frei" style="--h:30"><span class="bar-step" style="background:var(--white);border-top-style:dashed"></span><span class="age">?</span><span class="org">Wann warst du frei?</span></button>
+      </div>
+      <div class="lifeinfo block" id="lifeinfo" aria-live="polite"><p class="small muted">Tippe auf ein Alter.</p></div>
+      <p class="credit">Nach Buch S. 78, Schaubild 78.2.</p>
+
+      <div class="grid-2" style="margin-top:32px">
+        <div class="stack">
+          <blockquote class="quote">„Wir waren mit Leib und Seele dabei. […] War es nicht großartig, mit jungen Menschen plötzlich etwas Gemeinsames und Verbindendes zu haben […]? Wir wurden ernst genommen.“
+            <cite>Eine Zeitzeugin erinnert sich. Buch S. 79, Quelle 79.2 (gekürzt)</cite></blockquote>
+          <div class="grid-2" style="gap:12px">
+            <figure><div class="reveal" style="height:180px"><img src="../img/foto/s1-hj-zeltlager.jpg" alt="Hitlerjungen im Zeltlager"></div><figcaption class="credit">HJ-Zeltlager. Bundesarchiv, Bild 133-043, CC BY-SA 3.0 de</figcaption></figure>
+            <figure><div class="reveal" style="height:180px"><img src="../img/foto/s1-bdm-appell.jpg" alt="Mädchen des BDM stehen in einer langen Reihe zum Appell."></div><figcaption class="credit">BDM beim Appell. Bundesarchiv, Bild 133-067, CC BY-SA 3.0 de</figcaption></figure>
+          </div>
+        </div>
+        <div class="task" data-sorter="s1.c.sort">
+          <p class="task__q"><b>C1</b>Was lockte die Jugendlichen? Was war der Preis? Tippe eine Karte an, dann die passende Spalte.</p>
+          <div class="sorter">
+            <div class="sorter__pool" aria-label="Karten">
+              <button type="button" class="chipcard" data-id="1" data-right="a">Zeltlager und Lagerfeuer</button>
+              <button type="button" class="chipcard" data-id="2" data-right="b">Bedingungsloser Gehorsam</button>
+              <button type="button" class="chipcard" data-id="3" data-right="a">Sport und Geländespiele</button>
+              <button type="button" class="chipcard" data-id="4" data-right="b">Schießübungen für den Krieg</button>
+              <button type="button" class="chipcard" data-id="5" data-right="a">Gemeinschaft mit Freunden</button>
+              <button type="button" class="chipcard" data-id="6" data-right="b">Wer „nicht passte“, wurde ausgeschlossen</button>
+              <button type="button" class="chipcard" data-id="7" data-right="a">Ernst genommen werden</button>
+              <button type="button" class="chipcard" data-id="8" data-right="b">Eid auf den Führer</button>
+              <button type="button" class="chipcard" data-id="9" data-right="b">Mädchen sollen vor allem Mütter werden</button>
+              <button type="button" class="chipcard" data-id="10" data-right="b">Ab 1939 Pflicht für alle</button>
+            </div>
+            <div class="sorter__cols">
+              <div class="sorter__col sorter__col--a" data-col="a"><h4>Das lockte</h4></div>
+              <div class="sorter__col sorter__col--b" data-col="b"><h4>Der Preis</h4></div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><p class="feedback" aria-live="polite"></p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="task" style="margin-top:20px">
+        <p class="task__q"><b>C2</b>Hitler sagte über die Jugend: „Sie werden nicht mehr frei, ihr ganzes Leben.“ Erkläre mit dem Lebensweg oben, was er damit meinte.</p>
+        <textarea class="answer" data-key="s1.c.leben" placeholder="Hitler meinte, dass … Schon mit 10 Jahren … Danach …"></textarea><p class="saved" aria-live="polite"></p>
+      </div>
+
+      <div class="block block--plaster" style="margin-top:20px">
+        <p class="part__tag" style="margin-bottom:12px"><span class="chip chip--sand">Zusatz · für Schnelle</span></p>
+        <div class="grid-2">
+          <div>
+            <div class="clip" data-yt="iraKtSfVgFk" data-key="s1.c.video" data-title="Jugend im Nationalsozialismus" data-quelle="MrWissen2go Geschichte (Terra X)" data-clips='[[65, 180, "Die HJ wird Pflicht"], [258, 300, "Warum die HJ lockte"], [549, 612, "Von Begeisterung zum Zwang"]]'></div>
+          </div>
+          <div class="task">
+            <p class="task__q"><b>C3</b>Nenne eine Sache aus dem Video, die nicht im Buch steht.</p>
+            <textarea class="answer" data-key="s1.c.zusatz" placeholder="Im Video habe ich erfahren, dass …"></textarea><p class="saved" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HEUTE-CHECK ===================== -->
+  <section class="part" id="heute" aria-labelledby="h-t">
+    <div class="wrap">
+      <div class="part__head">
+        <p class="part__tag"><span class="chip chip--brick">Heute-Check · 5 Min</span></p>
+        <h2 class="h-l" id="h-t">Gleicher Trick, neuer Kanal</h2>
+        <p class="lead">Die Tricks von 1933 sind nicht verschwunden. Sie laufen heute nur über andere Kanäle. Lies die vier Beispiele. Sie sind ohne Absender, weil es um den Trick geht, nicht um eine Person. Welcher Trick steckt jeweils drin?</p>
+      </div>
+      <div class="grid-2">
+        <div class="today">
+          <div class="today__card">
+            <p class="label muted">Kommentar unter einem Nachrichtenvideo</p>
+            <blockquote>„Die Lügenpresse verschweigt euch, was wirklich passiert. Nur hier erfahrt ihr die Wahrheit.“</blockquote>
+            <div class="choices" data-choice="s1.h.1" data-multi><button class="choice" data-v="Gefühl statt Fakten">Gefühl statt Fakten</button><button class="choice" data-v="Nur eine Stimme">Nur eine Stimme</button><button class="choice" data-v="Feindbild">Feindbild</button><button class="choice" data-v="Wir-Gefühl">Wir-Gefühl</button><button class="choice" data-v="Wiederholen">Wiederholen</button></div>
+            <details><summary class="small" style="cursor:pointer;font-weight:600">Einschätzung zeigen</summary><p class="small" style="margin-top:8px">Vor allem <b>Nur eine Stimme</b>: Alle anderen Quellen sollen unglaubwürdig wirken. Das Wort „Lügenpresse“ benutzten schon die Nationalsozialisten gegen freie Zeitungen. 2014 wurde es zum „Unwort des Jahres“ gewählt.</p></details>
+          </div>
+          <div class="today__card">
+            <p class="label muted">Kurzes Video mit dramatischer Musik</p>
+            <blockquote>Ein einzelnes Verbrechen. Darüber in großer Schrift: „Das passiert jetzt jeden Tag. Überall. Auch bei dir.“</blockquote>
+            <div class="choices" data-choice="s1.h.2" data-multi><button class="choice" data-v="Gefühl statt Fakten">Gefühl statt Fakten</button><button class="choice" data-v="Nur eine Stimme">Nur eine Stimme</button><button class="choice" data-v="Feindbild">Feindbild</button><button class="choice" data-v="Wir-Gefühl">Wir-Gefühl</button><button class="choice" data-v="Wiederholen">Wiederholen</button></div>
+            <details><summary class="small" style="cursor:pointer;font-weight:600">Einschätzung zeigen</summary><p class="small" style="margin-top:8px"><b>Gefühl statt Fakten</b>: Ein Einzelfall soll Angst machen. Ob es wirklich „jeden Tag“ passiert, sagt das Video nicht. Oft steckt auch ein <b>Feindbild</b> dahinter, wenn eine ganze Gruppe gemeint ist.</p></details>
+          </div>
+        </div>
+        <div class="today">
+          <div class="today__card">
+            <p class="label muted">Rede auf einer Kundgebung</p>
+            <blockquote>„Wir, das echte Volk, gegen die da oben und gegen alle, die nicht zu uns gehören.“</blockquote>
+            <div class="choices" data-choice="s1.h.3" data-multi><button class="choice" data-v="Gefühl statt Fakten">Gefühl statt Fakten</button><button class="choice" data-v="Nur eine Stimme">Nur eine Stimme</button><button class="choice" data-v="Feindbild">Feindbild</button><button class="choice" data-v="Wir-Gefühl">Wir-Gefühl</button><button class="choice" data-v="Wiederholen">Wiederholen</button></div>
+            <details><summary class="small" style="cursor:pointer;font-weight:600">Einschätzung zeigen</summary><p class="small" style="margin-top:8px"><b>Wir-Gefühl</b> und <b>Feindbild</b> zusammen: Wer bestimmt, wer zum „echten Volk“ gehört? Das Grundgesetz sagt: Alle Menschen sind vor dem Gesetz gleich (Art. 3).</p></details>
+          </div>
+          <div class="today__card">
+            <p class="label muted">Derselbe Satz in 50 Clips, Memes und Kommentaren</p>
+            <blockquote>Ein kurzer Spruch, drei Wörter, immer wieder. Bis du ihn mitsingen kannst.</blockquote>
+            <div class="choices" data-choice="s1.h.4" data-multi><button class="choice" data-v="Gefühl statt Fakten">Gefühl statt Fakten</button><button class="choice" data-v="Nur eine Stimme">Nur eine Stimme</button><button class="choice" data-v="Feindbild">Feindbild</button><button class="choice" data-v="Wir-Gefühl">Wir-Gefühl</button><button class="choice" data-v="Wiederholen">Wiederholen</button></div>
+            <details><summary class="small" style="cursor:pointer;font-weight:600">Einschätzung zeigen</summary><p class="small" style="margin-top:8px"><b>Wiederholen</b>: genau das, was Hitler in Quelle 81.1 beschreibt. Was wir oft hören, halten wir irgendwann für wahr.</p></details>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-top:28px">
+        <div class="stack">
+          <div class="gg">
+            <p class="label">Grundgesetz Artikel 5, Absatz 1</p>
+            <p>„Jeder hat das Recht, seine Meinung in Wort, Schrift und Bild frei zu äußern und zu verbreiten und sich aus allgemein zugänglichen Quellen ungehindert zu unterrichten. Die Pressefreiheit […] wird gewährleistet. Eine Zensur findet nicht statt.“</p>
+          </div>
+          <div class="block block--lila">
+            <p class="label" style="margin-bottom:8px">Was ist heute anders?</p>
+            <p class="small">Es gibt viele Sender und Zeitungen. Niemand darf sie gleichschalten. Du darfst jede Quelle lesen, auch aus dem Ausland. <b>Aber:</b> Der Algorithmus zeigt dir oft mehr von dem, was dich aufregt. Du entscheidest selbst, was du glaubst und was du teilst.</p>
+          </div>
+        </div>
+        <div class="task">
+          <p class="task__q"><b>H</b>Wo bist du einem dieser Tricks schon einmal begegnet? Beschreibe kurz: Kanal, Trick, was er bei dir ausgelöst hat. Bitte ohne Namen von Personen.</p>
+          <textarea class="answer" data-key="s1.h.erlebt" placeholder="Auf … habe ich gesehen, dass … Das war der Trick … Bei mir hat das … ausgelöst."></textarea><p class="saved" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VIER ECKEN ===================== -->
+  <section class="part" id="ecken" aria-labelledby="d-t">
+    <div class="wrap">
+      <div class="part__head">
+        <p class="part__tag"><span class="chip">Wir reden darüber · 13 Min</span><span class="label muted">Methode: Vier Ecken</span></p>
+        <h2 class="h-l" id="d-t">Du bist 1936 vierzehn Jahre alt. Alle deine Freunde gehen zur Hitlerjugend.</h2>
+        <p class="lead">Geh in die Ecke, die am ehesten zu dir passt. Es gibt kein Richtig oder Falsch. Wichtig ist, dass du deine Wahl begründen kannst.</p>
+      </div>
+      <div class="corners" data-choice="s1.d.ecke">
+        <button type="button" class="corner choice" data-v="A: Ich bin begeistert dabei." style="border:0"><span class="big">A</span><p>Ich bin begeistert dabei.</p></button>
+        <button type="button" class="corner choice" data-v="B: Ich gehe mit, weil alle gehen." style="border:0"><span class="big">B</span><p>Ich gehe mit, weil alle gehen.</p></button>
+        <button type="button" class="corner choice" data-v="C: Ich gehe nur, wenn ich muss." style="border:0"><span class="big">C</span><p>Ich gehe nur, wenn ich muss.</p></button>
+        <button type="button" class="corner choice" data-v="D: Ich bleibe weg, egal was passiert." style="border:0"><span class="big">D</span><p>Ich bleibe weg, egal was passiert.</p></button>
+      </div>
+      <div class="grid-2" style="margin-top:24px">
+        <ol class="stack small" style="gap:10px">
+          <li><b>1. Ecke wählen</b> (1 Min): Steh auf und geh in deine Ecke.</li>
+          <li><b>2. In der Ecke</b> (3 Min): Sammelt zusammen zwei Gründe für eure Wahl.</li>
+          <li><b>3. Berichten</b> (6 Min): Jede Ecke stellt ihre Gründe vor. Die anderen dürfen nachfragen.</li>
+          <li><b>4. Schlussfrage</b> (3 Min): Ecke D war 1936 fast leer. Warum?</li>
+        </ol>
+        <div class="task">
+          <p class="task__q"><b>D</b>Meine Ecke und mein wichtigster Grund. Hat dich in der Diskussion etwas umgestimmt?</p>
+          <textarea class="answer" data-key="s1.d.grund" placeholder="Ich war in Ecke …, weil … Nach der Diskussion denke ich …"></textarea><p class="saved" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LERNPASS ===================== -->
+  <section class="part" id="lernpass" aria-labelledby="l-t" style="background:var(--ink);color:var(--white)">
+    <div class="wrap">
+      <div class="part__head">
+        <p class="part__tag"><span class="chip chip--sand">Zum Schluss</span></p>
+        <h2 class="h-l" id="l-t">Mein Lernpass</h2>
+        <p class="lead">Tippe auf den Knopf. Im Druckmenü „Als PDF sichern“ wählen und das PDF in OneNote im Abschnitt GPG ablegen.</p>
+      </div>
+      <div class="block block--white" style="color:var(--ink)">
+        <p class="h-s" style="margin-bottom:8px">Merksatz der Stunde</p>
+        <p>Die Nationalsozialisten setzten auf Verführung: Gemeinschaft, Abenteuer, große Gefühle. Gleichzeitig ließen sie nur noch eine Stimme zu und erfassten Kinder ab 10 Jahren. Wer mitmachte, fühlte sich als Teil von etwas Großem. Wer nicht passte, wurde ausgeschlossen.</p>
+      </div>
+      <div class="pass-actions">
+        <button class="btn btn--lila" type="button" id="pass-btn">Mein Lernpass als PDF</button>
+        <a class="btn-2" style="color:var(--white);border-color:var(--white)" href="../index.html#karte">Zurück zur Lernlandkarte</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="pass" aria-hidden="true"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  NS.guard(1);
+
+  /* Lebensweg: Infotexte nach Buch S. 78 */
+  var INFO = {
+    "6": "<b>6 Jahre: Volksschule.</b> Im Klassenzimmer hängt ein Bild Hitlers. Jede Stunde beginnt mit dem Hitlergruß (Buch S. 79).",
+    "10": "<b>10 Jahre: Deutsches Jungvolk bzw. Jungmädel.</b> Zweimal pro Woche „Dienst“: Geländespiele, Lieder, Vorträge über die NS-Ideologie. Beim Eintritt schwört man dem Führer Treue (79.1).",
+    "14": "<b>14 Jahre: Hitlerjugend bzw. Bund Deutscher Mädel (BDM).</b> Jungen üben Schießen und Exerzieren. Mädchen werden auf ihre Rolle als Hausfrau und Mutter vorbereitet. 1939 waren laut Buch 98 Prozent der Jugendlichen Mitglied.",
+    "18": "<b>18 Jahre: Arbeitsdienst und Partei.</b> Junge Männer und Frauen arbeiten für den Staat, zum Beispiel auf dem Feld oder beim Straßenbau. Ab 18 kann man NSDAP-Mitglied werden.",
+    "21": "<b>21 Jahre und älter.</b> Männer werden Soldaten, später Reserve und Landwehr bis 45. Frauen sollen als Mütter „Erhalterin des Volkes“ sein (Schaubild 78.2).",
+    "frei": "<b>Wann warst du frei?</b> Zähl nach: Von 10 bis mindestens 45 gab es für Jungen immer eine Organisation, die bestimmte. Freizeit, Schule, Beruf: Überall war der Staat dabei."
+  };
+  var info = document.getElementById("lifeinfo");
+  document.querySelectorAll(".lifepath button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      document.querySelectorAll(".lifepath button").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+      info.innerHTML = "<p>" + INFO[b.dataset.age] + "</p>";
+      var seen = NS.get("s1.c.weg") || []; if (seen.indexOf(b.dataset.age) < 0) { seen.push(b.dataset.age); NS.set("s1.c.weg", seen); }
+    });
+  });
+
+  /* Lernpass */
+  var TRICK = { gefuehl: "Gefühl statt Fakten", wieder: "Immer wiederholen", eine: "Nur eine Stimme", feind: "Feindbild", wir: "Wir-Gefühl" };
+  var SORT = { 1: "Zeltlager", 2: "Gehorsam", 3: "Sport", 4: "Schießübungen", 5: "Gemeinschaft", 6: "Ausschluss", 7: "Ernst genommen", 8: "Eid", 9: "Mütter", 10: "Pflicht ab 1939" };
+  document.getElementById("pass-btn").addEventListener("click", function () {
+    NS.printPass(1, [
+      { label: "Einstieg: Welcher Post hat mich angesprochen?", key: "s1.feed" },
+      { label: "A1 Tricks der Propaganda (geprüft)", key: "s1.a.match.punkte" },
+      { label: "A1 Meine Zuordnung", key: "s1.a.match", fmt: function (v) { return Object.keys(v).map(function (i) { return "Beispiel " + (Number(i) + 1) + ": " + (TRICK[v[i]] || "–"); }).join("\n"); } },
+      { label: "A2 Warum ein billiges Radio für jede Familie?", key: "s1.a.radio" },
+      { label: "B1 Foto beschreiben", key: "s1.b.1" },
+      { label: "B2 Foto einordnen", key: "s1.b.2" },
+      { label: "B3 Foto analysieren", key: "s1.b.3" },
+      { label: "B4 Foto interpretieren", key: "s1.b.4" },
+      { label: "C1 Das lockte / Der Preis", key: "s1.c.sort", fmt: function (v) { var a = [], b = []; Object.keys(v).forEach(function (id) { (v[id] === "a" ? a : b).push(SORT[id]); }); return "Das lockte: " + a.join(", ") + "\nDer Preis: " + b.join(", "); } },
+      { label: "C2 „Sie werden nicht mehr frei“", key: "s1.c.leben" },
+      { label: "C3 Zusatz: Neues aus dem Video", key: "s1.c.zusatz" },
+      { label: "Heute-Check: Wo bin ich so einem Trick begegnet?", key: "s1.h.erlebt" },
+      { label: "Vier Ecken: meine Ecke", key: "s1.d.ecke" },
+      { label: "Vier Ecken: mein Grund", key: "s1.d.grund" }
+    ]);
+  });
+});
+</script>
+</body>
+</html>
