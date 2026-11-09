@@ -7,49 +7,49 @@
   /* Teile jeder Station. Eine Station ist geschafft, wenn alle Pflichtteile erledigt sind.
      Dann öffnet sich automatisch die nächste. Der Code ist nur noch Notschlüssel (z. B. nach Krankheit). */
   var STUNDEN = [
-    { n: 1, code: "RADIO", jahr: "1933–1939", kern: "Die Nazis verführten mit Gefühl und Gemeinschaft und ließen nur noch eine Meinung zu.", merke: ["Propaganda: Radio, Plakate und riesige Aufmärsche. Es gab nur noch eine Meinung.", "Kinder kamen ab 10 Jahren in die Hitlerjugend oder den BDM, ab 1939 war das Pflicht.", "Viele machten mit, weil es sich nach Gemeinschaft und Abenteuer anfühlte."], titel: "Verführt und erfasst", teile: [
+    { n: 1, code: "RADIO", jahr: "1933–1939", kern: "Die Nazis verführten mit Gefühl und Gemeinschaft und ließen nur noch eine Meinung zu.", merke: ["Propaganda: Radio, Plakate und riesige Aufmärsche. Es gab nur noch eine Meinung.", "Kinder kamen ab 10 Jahren in die Hitlerjugend oder den BDM, ab 1939 war das Pflicht.", "Viele machten mit, weil es sich nach Gemeinschaft und Abenteuer anfühlte."], heft: {"daten": [["1933", "Propagandaministerium unter Joseph Goebbels"], ["1933", "Gleichschaltung von Presse und Rundfunk"], ["1936", "Gesetz: Die Hitlerjugend wird Staatsjugend"], ["1939", "Pflicht für alle 10- bis 18-Jährigen"]], "begriffe": [["Propaganda", "gezielte Beeinflussung der Menschen, mit Gefühlen statt Fakten"], ["Gleichschaltung", "Zeitungen, Radio und Vereine müssen alle im Sinne der NSDAP handeln"], ["Hitlerjugend (HJ) / BDM", "Jugendorganisationen der NSDAP für Jungen und Mädchen"], ["Volksempfänger", "billiges Radio, damit die Propaganda in jedes Wohnzimmer kommt"]], "heute": "Die fünf Tricks der Propaganda: Gefühl statt Fakten, Wiederholen, nur eine Stimme, Feindbild, Wir-Gefühl. Heute schützt Art. 5 GG die Meinungs- und Pressefreiheit.", "text": "Die Nationalsozialisten setzten auf Verführung: Gemeinschaft, Abenteuer, große Gefühle. Gleichzeitig ließen sie nur noch eine Stimme zu und erfassten Kinder ab 10 Jahren. Wer mitmachte, fühlte sich als Teil von etwas Großem. Wer nicht passte, wurde ausgeschlossen.", "frage": "Warum machten so viele Menschen mit, auch Jugendliche in deinem Alter?", "foto": "s1-hj-zeltlager"}, titel: "Verführt und erfasst", teile: [
       { href: "#einstieg", name: "Einstieg", need: ["s1.feed"] },
       { href: "#a", name: "A Radio", need: ["s1.a.match", "s1.a.radio"] },
       { href: "#b", name: "B Foto", need: ["s1.b.1", "s1.b.4"] },
       { href: "#c", name: "C Jugend", need: ["s1.c.sort", "s1.c.leben"] },
       { href: "#heute", name: "Heute-Check", need: ["s1.h.erlebt"] },
       { href: "#ecken", name: "Vier Ecken", need: ["s1.d.ecke"] } ] },
-    { n: 2, code: "STUFE", jahr: "1933–1941", kern: "Wer nicht dazugehören sollte, verlor Schritt für Schritt alle Rechte.", merke: ["1933 entstand in Dachau das erste KZ, zuerst für politische Gegner.", "Juden verloren Schritt für Schritt ihre Rechte: 1933 Boykott, 1935 Nürnberger Gesetze, 1938 Pogromnacht.", "Viele schauten weg, weil jede Stufe nur ein bisschen schlimmer war."], titel: "Wer nicht dazugehört", teile: [
+    { n: 2, code: "STUFE", jahr: "1933–1941", kern: "Wer nicht dazugehören sollte, verlor Schritt für Schritt alle Rechte.", merke: ["1933 entstand in Dachau das erste KZ, zuerst für politische Gegner.", "Juden verloren Schritt für Schritt ihre Rechte: 1933 Boykott, 1935 Nürnberger Gesetze, 1938 Pogromnacht.", "Viele schauten weg, weil jede Stufe nur ein bisschen schlimmer war."], heft: {"daten": [["März 1933", "Erstes KZ in Dachau"], ["1. April 1933", "Boykott jüdischer Geschäfte"], ["1935", "Nürnberger Gesetze"], ["9./10. Nov. 1938", "Novemberpogrom"], ["1941", "Judenstern ab 6 Jahren"]], "begriffe": [["Konzentrationslager (KZ)", "Lager, in dem Menschen ohne Gericht eingesperrt, gequält und ermordet wurden"], ["Nürnberger Gesetze", "Gesetze von 1935, die Juden ihre Bürgerrechte nahmen"], ["Pogrom", "gewaltsamer Angriff auf eine Minderheit"], ["Sündenbock", "eine Gruppe wird für alle Probleme verantwortlich gemacht"]], "heute": "Sündenbock und Entrechtung in kleinen Schritten erkennen. Art. 3 GG: Niemand darf wegen Abstammung oder Glauben benachteiligt werden. Art. 16 GG: Die deutsche Staatsangehörigkeit darf nicht entzogen werden.", "text": "Zuerst verfolgten die Nationalsozialisten ihre politischen Gegner und sperrten sie in Konzentrationslager wie Dachau. Die Juden wurden Schritt für Schritt entrechtet: 1933 Boykott und Berufsverbote, 1935 Nürnberger Gesetze, 1938 Novemberpogrom, 1941 Judenstern. Viele schauten weg, weil jede Stufe nur ein bisschen schlimmer war als die davor.", "frage": "Wie werden aus Nachbarn Feinde gemacht, Schritt für Schritt?", "foto": "s2-boykott"}, titel: "Wer nicht dazugehört", teile: [
       { href: "#einstieg", name: "Einstieg", need: ["s2.e"] },
       { href: "#a", name: "A Gegner", need: ["s2.a.warum"] },
       { href: "#b", name: "B Treppe", need: ["s2.b.order", "s2.b.aus"] },
       { href: "#c", name: "C München", need: ["s2.c.muc"] },
       { href: "#heute", name: "Heute-Check", need: ["s2.h.text"] },
       { href: "#linie", name: "Positionslinie", need: ["s2.d.pos"] } ] },
-    { n: 3, code: "GRENZE", jahr: "1939", kern: "Hitler versprach Frieden und begann am 1. September 1939 den Zweiten Weltkrieg.", merke: ["Hitler sprach von Frieden, rüstete aber heimlich auf.", "Am 1. September 1939 überfiel Deutschland Polen. Der Zweite Weltkrieg begann.", "Ab Dezember 1941 kämpften auch die USA mit: ein Weltkrieg."], titel: "Der Weg in den Krieg", teile: [
+    { n: 3, code: "GRENZE", jahr: "1939", kern: "Hitler versprach Frieden und begann am 1. September 1939 den Zweiten Weltkrieg.", merke: ["Hitler sprach von Frieden, rüstete aber heimlich auf.", "Am 1. September 1939 überfiel Deutschland Polen. Der Zweite Weltkrieg begann.", "Ab Dezember 1941 kämpften auch die USA mit: ein Weltkrieg."], heft: {"daten": [["1935", "Wehrpflicht wird wieder eingeführt"], ["30. Sept. 1938", "Münchner Abkommen"], ["23. Aug. 1939", "Hitler-Stalin-Pakt"], ["1. Sept. 1939", "Überfall auf Polen, Beginn des Zweiten Weltkriegs"], ["22. Juni 1941", "Überfall auf die Sowjetunion"], ["Dez. 1941", "Krieg mit den USA"]], "begriffe": [["Appeasement", "Beschwichtigung: Großbritannien und Frankreich gaben Hitler nach, um Krieg zu verhindern"], ["Blitzkrieg", "schneller Angriff mit Flugzeugen und Panzern"], ["Vorwand", "erfundener Grund, wie der gespielte Überfall auf den Sender Gleiwitz"], ["Hitler-Stalin-Pakt", "Abmachung von 1939, Polen aufzuteilen"]], "heute": "Achte auf Taten, nicht nur auf Worte, und prüfe Nachrichten, bevor du sie glaubst. Art. 26 GG: Ein Angriffskrieg ist verboten.", "text": "Hitler sprach vom Frieden, rüstete aber massiv auf. Großbritannien und Frankreich versuchten ihn 1938 mit dem Münchner Abkommen zu beschwichtigen (Appeasement). Mit einem gespielten Überfall auf den Sender Gleiwitz als Vorwand begann am 1. September 1939 mit dem deutschen Überfall auf Polen der Zweite Weltkrieg. Ab Dezember 1941 war er ein Weltkrieg.", "frage": "Hitler sprach vom Frieden. Plante er die ganze Zeit den Krieg?", "foto": "s3-schlagbaum"}, titel: "Der Weg in den Krieg", teile: [
       { href: "#einstieg", name: "Einstieg", need: ["s3.e"] },
       { href: "#a", name: "A Worte und Taten", need: ["s3.a.sort", "s3.a.appease"] },
       { href: "#b", name: "B Zeitstrahl", need: ["s3.b.order"] },
       { href: "#c", name: "C Gleiwitz", need: ["s3.c.vorwand"] },
       { href: "#heute", name: "Heute-Check", need: ["s3.h.text"] },
       { href: "#kugellager", name: "Kugellager", need: ["s3.d.text"] } ] },
-    { n: 4, code: "OSTEN", jahr: "1939–1945", kern: "Im Osten führte Deutschland einen Krieg gegen ganze Völker.", merke: ["Im Osten wollten die Nazis Menschen vertreiben, versklaven oder töten: ein Vernichtungskrieg.", "In Leningrad verhungerten über eine Million Menschen.", "Millionen Menschen mussten in Deutschland Zwangsarbeit leisten, auch bei uns in Bayern."], titel: "Vernichtungskrieg und Zwangsarbeit", teile: [
+    { n: 4, code: "OSTEN", jahr: "1939–1945", kern: "Im Osten führte Deutschland einen Krieg gegen ganze Völker.", merke: ["Im Osten wollten die Nazis Menschen vertreiben, versklaven oder töten: ein Vernichtungskrieg.", "In Leningrad verhungerten über eine Million Menschen.", "Millionen Menschen mussten in Deutschland Zwangsarbeit leisten, auch bei uns in Bayern."], heft: {"daten": [["1939", "Besetzung Polens"], ["22. Juni 1941", "Überfall auf die Sowjetunion"], ["1941–1944", "Blockade von Leningrad"], ["1939–1945", "8,5 Mio. ausländische Arbeitskräfte in Deutschland"], ["2001", "Stiftung entschädigt ehemalige Zwangsarbeiter"]], "begriffe": [["Vernichtungskrieg", "Krieg nicht nur gegen Soldaten, sondern gegen die ganze Bevölkerung"], ["Zwangsarbeit", "Arbeit, zu der Menschen mit Gewalt gezwungen werden"], ["Lebensraum im Osten", "Ziel der NSDAP: Land im Osten erobern und die Menschen vertreiben"], ["Blockade", "eine Stadt wird eingeschlossen, nichts kommt hinein"]], "heute": "Wörter, die Menschen abwerten („Flut“, „Ungeziefer“), machen Gewalt leichter. Art. 1 GG: Die Würde jedes Menschen ist unantastbar.", "text": "Im Osten führten Wehrmacht und SS einen Vernichtungskrieg: Die Menschen dort galten als „minderwertig“. In Polen wurde die Führungsschicht ermordet, Menschen wurden vertrieben und zur Zwangsarbeit gezwungen. In der Sowjetunion starben 10 bis 15 Millionen Zivilisten, in Leningrad verhungerten über eine Million Menschen. Millionen Zwangsarbeiter mussten in Deutschland arbeiten, auch bei uns in Bayern.", "frage": "Was passiert, wenn Menschen nichts mehr wert sein sollen?", "foto": "s4-ost"}, titel: "Vernichtungskrieg und Zwangsarbeit", teile: [
       { href: "#einstieg", name: "Einstieg", need: ["s4.e"] },
       { href: "#a", name: "A Osten", need: ["s4.a.mass", "s4.a.text"] },
       { href: "#b", name: "B Leningrad", need: ["s4.b.text"] },
       { href: "#c", name: "C Zwangsarbeit", need: ["s4.c.brief"] },
       { href: "#heute", name: "Heute-Check", need: ["s4.h.text"] },
       { href: "#schreib", name: "Schreibgespräch", need: ["s4.d.text"] } ] },
-    { n: 5, code: "NAMEN", jahr: "1941–1945", kern: "Über sechs Millionen Juden wurden ermordet. Wir erinnern an jeden Einzelnen.", merke: ["Über sechs Millionen Juden wurden ermordet. Das nennt man Holocaust oder Shoah.", "Der Weg dorthin: Gettos, Massenerschießungen, Vernichtungslager wie Auschwitz.", "Stolpersteine und Erinnerungszeichen erinnern an jeden Menschen mit Namen."], titel: "Der Holocaust", teile: [
+    { n: 5, code: "NAMEN", jahr: "1941–1945", kern: "Über sechs Millionen Juden wurden ermordet. Wir erinnern an jeden Einzelnen.", merke: ["Über sechs Millionen Juden wurden ermordet. Das nennt man Holocaust oder Shoah.", "Der Weg dorthin: Gettos, Massenerschießungen, Vernichtungslager wie Auschwitz.", "Stolpersteine und Erinnerungszeichen erinnern an jeden Menschen mit Namen."], heft: {"daten": [["ab 1939", "Gettos im besetzten Polen"], ["ab Sommer 1941", "Massenerschießungen im Osten"], ["20. Jan. 1942", "Wannsee-Konferenz"], ["1942–1945", "Vernichtungslager, z. B. Auschwitz"], ["27. Jan. 1945", "Befreiung von Auschwitz, heute Gedenktag"]], "begriffe": [["Holocaust / Shoah", "der Mord an über sechs Millionen europäischen Juden"], ["Getto", "abgesperrtes Stadtviertel, in das Juden gezwungen wurden"], ["Vernichtungslager", "Lager, das nur zum Ermorden von Menschen gebaut wurde"], ["Stolperstein", "Gedenkstein im Gehweg vor dem letzten Wohnort eines Opfers"]], "heute": "Erinnern statt „Schlussstrich“. Holocaustleugnung ist in Deutschland strafbar. Art. 1 GG ist die Antwort auf den Holocaust.", "text": "Der Holocaust (hebräisch: Shoah) war der geplante Mord an über sechs Millionen europäischen Juden. Auch Sinti und Roma, Menschen mit Behinderungen und andere Gruppen wurden ermordet. Aus Ausgrenzung wurden Gettos, Massenerschießungen und schließlich Vernichtungslager wie Auschwitz. Wir erinnern an die Opfer mit ihren Namen, damit so etwas nie wieder geschieht.", "frage": "Wie wurde aus Hass ein Völkermord, und warum erinnern wir uns bis heute daran?", "foto": "s5-stolpersteine"}, titel: "Der Holocaust", teile: [
       { href: "#einstieg", name: "Einstieg", need: ["s5.e"] },
       { href: "#a", name: "A Vernichtung", need: ["s5.a.begriffe", "s5.a.osten"] },
       { href: "#b", name: "B Otto Schwerdt", need: ["s5.b.pflicht"] },
       { href: "#c", name: "C Erinnern", need: ["s5.c.person"] },
       { href: "#heute", name: "Heute-Check", need: ["s5.h.text"] },
       { href: "#runde", name: "Ruhige Runde", need: ["s5.d.satz"] } ] },
-    { n: 6, code: "MUT", jahr: "1933–1945", kern: "Nur wenige hatten den Mut zum Widerstand, oft bezahlten sie mit ihrem Leben.", merke: ["Die meisten Deutschen machten mit oder schwiegen.", "Einige leisteten Widerstand: die Weiße Rose, Georg Elser, Stauffenberg, die Edelweißpiraten.", "Zivilcourage kannst du auch heute zeigen, jeden Tag."], titel: "Widerstand", teile: [
+    { n: 6, code: "MUT", jahr: "1933–1945", kern: "Nur wenige hatten den Mut zum Widerstand, oft bezahlten sie mit ihrem Leben.", merke: ["Die meisten Deutschen machten mit oder schwiegen.", "Einige leisteten Widerstand: die Weiße Rose, Georg Elser, Stauffenberg, die Edelweißpiraten.", "Zivilcourage kannst du auch heute zeigen, jeden Tag."], heft: {"daten": [["8. Nov. 1939", "Georg Elser: Bombe im Münchner Bürgerbräukeller"], ["1942/43", "Flugblätter der Weißen Rose"], ["22. Feb. 1943", "Hinrichtung von Hans und Sophie Scholl"], ["20. Juli 1944", "Attentat von Stauffenberg"], ["Nov. 1944", "Edelweißpiraten in Köln erhängt"]], "begriffe": [["Widerstand", "gegen eine Herrschaft handeln, die man ablehnt"], ["Zivilcourage", "sich für andere einsetzen, auch wenn es Nachteile bringt"], ["Weiße Rose", "Münchner Studentengruppe, die Flugblätter gegen Hitler verteilte"], ["Edelweißpiraten", "Jugendliche, die sich der Hitlerjugend verweigerten"]], "heute": "Zivilcourage geht jeden Tag: hinschauen, Hilfe holen (110), Betroffene unterstützen. Art. 20 Abs. 4 GG: Recht auf Widerstand gegen alle, die die Demokratie abschaffen wollen.", "text": "Die meisten Deutschen machten mit oder schwiegen. Trotzdem leisteten Menschen Widerstand: Einzelne wie Georg Elser, Studierende wie die Weiße Rose, Geistliche wie Rupert Mayer, Offiziere um Stauffenberg und Jugendliche wie die Edelweißpiraten. Viele bezahlten mit ihrem Leben. Zivilcourage heißt heute: sich für andere einsetzen, auch wenn es unbequem ist.", "frage": "Wegschauen oder handeln? Was trieb Menschen an, ihr Leben zu riskieren?", "foto": "s6-weisse-rose"}, titel: "Widerstand", teile: [
       { href: "#einstieg", name: "Einstieg", need: ["s6.e"] },
       { href: "#a", name: "A Gesichter", need: ["s6.a.wer", "s6.a.text"] },
       { href: "#b", name: "B Edelweißpiraten", need: ["s6.b.vergehen"] },
       { href: "#c", name: "C Formen", need: ["s6.c.sort"] },
       { href: "#heute", name: "Heute-Check", need: ["s6.h.text"] },
       { href: "#fishbowl", name: "Fishbowl", need: ["s6.d.text"] } ] },
-    { n: 7, code: "GRUNDGESETZ", jahr: "1945–1949", kern: "Nach dem Krieg bekam Deutschland mit dem Grundgesetz eine Demokratie, die sich selbst schützt.", merke: ["Am 8. Mai 1945 endete der Krieg in Europa. Über 60 Millionen Menschen waren tot.", "Millionen Deutsche flohen oder wurden vertrieben, viele kamen nach Bayern.", "1949 kam das Grundgesetz: Menschenwürde, Demokratie und Rechtsstaat für alle."], titel: "Kriegsende und was bleibt", teile: [
+    { n: 7, code: "GRUNDGESETZ", jahr: "1945–1949", kern: "Nach dem Krieg bekam Deutschland mit dem Grundgesetz eine Demokratie, die sich selbst schützt.", merke: ["Am 8. Mai 1945 endete der Krieg in Europa. Über 60 Millionen Menschen waren tot.", "Millionen Deutsche flohen oder wurden vertrieben, viele kamen nach Bayern.", "1949 kam das Grundgesetz: Menschenwürde, Demokratie und Rechtsstaat für alle."], heft: {"daten": [["Feb. 1943", "Niederlage in Stalingrad"], ["6. Juni 1944", "Landung der Alliierten in der Normandie"], ["29. April 1945", "Befreiung des KZ Dachau"], ["8. Mai 1945", "Kapitulation, Kriegsende in Europa"], ["2. Sept. 1945", "Kapitulation Japans, Ende des Zweiten Weltkriegs"], ["23. Mai 1949", "Das Grundgesetz tritt in Kraft"]], "begriffe": [["Kapitulation", "ein Staat gibt den Krieg auf"], ["Flucht und Vertreibung", "Millionen Deutsche verloren ab 1945 ihre Heimat im Osten"], ["Grundgesetz", "die Verfassung der Bundesrepublik Deutschland seit 1949"], ["Wehrhafte Demokratie", "die Demokratie kann sich gegen ihre Feinde wehren, z. B. durch Parteiverbote"]], "heute": "Das Grundgesetz ist die Antwort auf die NS-Zeit: Menschenwürde, Demokratie, Rechtsstaat. Art. 1 und 20 dürfen nie geändert werden (Art. 79).", "text": "Nach den Niederlagen in Stalingrad (1943) und der Landung der Alliierten in der Normandie (1944) wurde die Wehrmacht zurückgedrängt. Am 8. Mai 1945 kapitulierte Deutschland, am 2. September 1945 Japan. Über zwölf Millionen Deutsche flohen oder wurden vertrieben. Das Grundgesetz von 1949 ist die Antwort auf die NS-Zeit: Menschenwürde, Demokratie und Rechtsstaat, geschützt als wehrhafte Demokratie.", "frage": "Wie endete der Krieg, und was haben wir daraus gelernt?", "foto": "s7-truemmer"}, titel: "Kriegsende und was bleibt", teile: [
       { href: "#einstieg", name: "Einstieg", need: ["s7.e"] },
       { href: "#a", name: "A Kriegsende", need: ["s7.a.order", "s7.a.wende"] },
       { href: "#b", name: "B Flucht", need: ["s7.b.sicht"] },
@@ -376,20 +376,46 @@
   NS.progress = progress;
 
   /* ---------- Mein Lernpass (Druck/PDF) ---------- */
+  /* Lernpass als Hefteintrag:
+     Seite 1 = Teil 1 „Hefteintrag“ (für alle gleich, Grundlage für die Probe),
+     Seite 2 = Teil 2 „Meine Ergebnisse“ (eigene Antworten). */
   NS.printPass = function (n, items) {
-    var s = STUNDEN[n - 1], pass = document.querySelector(".pass");
-    var html = '<h1>Mein Lernpass</h1><div class="meta"><span>Stunde ' + n + ": " + esc(s.titel) + '</span><span>NS-Zeit 1933 bis 1945 · GPG</span><span>Datum: ____________</span></div>';
+    var s = STUNDEN[n - 1], h = s.heft, pass = document.querySelector(".pass");
+    var name = (NS.get("name") || "").trim(), heute = new Date().toLocaleDateString("de-DE");
+    var kopf = function (teil) {
+      return '<header class="hp-kopf"><span>GPG · NS-Zeit 1933–1945 · Station ' + n + ' · ' + teil + '</span>' +
+        '<span>Name: ' + (name ? '<b>' + esc(name) + '</b>' : '<i class="hp-linie"></i>') + '&nbsp;&nbsp; Datum: ' + heute + '</span></header>';
+    };
+    var html = '<section class="hp-seite">' + kopf("Teil 1: Hefteintrag") +
+      '<div class="hp-titel"><p class="hp-jahr">' + esc(s.jahr) + '</p><h1>' + esc(s.titel) + '</h1><p class="hp-frage">' + esc(h.frage) + '</p></div>' +
+      '<div class="hp-oben"><img class="hp-foto" src="../img/foto/' + h.foto + '.jpg" alt="">' +
+        '<div class="hp-kasten hp-wichtig"><p class="hp-label">Das Wichtigste</p><p>' + esc(h.text) + '</p></div></div>' +
+      '<div class="hp-kasten hp-merke"><p class="hp-label">Das musst du für die Probe können</p><ol>' +
+        s.merke.map(function (m) { return '<li>' + esc(m) + '</li>'; }).join("") + '</ol></div>' +
+      '<div class="hp-zwei"><div class="hp-kasten"><p class="hp-label">Wichtige Daten</p><ul class="hp-zeit">' +
+        h.daten.map(function (d) { return '<li><b>' + esc(d[0]) + '</b><span>' + esc(d[1]) + '</span></li>'; }).join("") + '</ul></div>' +
+        '<div class="hp-kasten"><p class="hp-label">Fachbegriffe</p><dl class="hp-begriffe">' +
+        h.begriffe.map(function (b) { return '<dt>' + esc(b[0]) + '</dt><dd>' + esc(b[1]) + '</dd>'; }).join("") + '</dl></div></div>' +
+      '<div class="hp-kasten hp-heute"><p class="hp-label">Damals erkennen, heute erkennen</p><p>' + esc(h.heute) + '</p></div>' +
+      '<p class="hp-merksatz">Merksatz: ' + esc(s.kern) + '</p>' +
+      '<footer class="hp-fuss">Teil 1 ist für alle gleich und die Grundlage für die Probe. Fotos: Bundesarchiv / Wikimedia Commons, Nachweise auf der Website.</footer></section>';
+    html += '<section class="hp-seite hp-neu">' + kopf("Teil 2: Meine Ergebnisse") +
+      '<div class="hp-titel hp-titel--klein"><h1>Meine Ergebnisse</h1><p class="hp-frage">Station ' + n + ': ' + esc(s.titel) + '</p></div><div class="hp-antworten">';
     items.forEach(function (it) {
       var v = NS.get(it.key);
       if (v && it.fmt && (typeof v === "object")) v = it.fmt(v);
       else if (Array.isArray(v)) v = v.join(", ");
       else if (v && typeof v === "object") v = Object.keys(v).length + " Einträge";
-      html += "<section><h2>" + esc(it.label) + '</h2><div class="a">' + (v ? esc(String(v)) : '<span class="empty">noch offen</span>') + "</div></section>";
+      html += '<div class="hp-antwort"><p class="hp-frage2">' + esc(it.label) + '</p>' +
+        (v ? '<p class="hp-a">' + esc(String(v)) + '</p>' : '<p class="hp-a hp-leer">noch offen</p>') + '</div>';
     });
+    var st = NS.stand(n);
+    html += '</div><footer class="hp-fuss">Erledigt: ' + st.fertig + ' von ' + st.gesamt + ' Teilen' + (st.fertig === st.gesamt ? ' ✓ Station geschafft' : '') + '</footer></section>';
     pass.innerHTML = html;
     state.pass[n] = true; save();
     document.body.classList.add("printing-pass");
-    setTimeout(function () { window.print(); }, 60);
+    var img = pass.querySelector("img"), go = function () { setTimeout(function () { window.print(); }, 80); };
+    if (img && !img.complete) { img.onload = go; img.onerror = go; } else go();
   };
   window.addEventListener("afterprint", function () { document.body.classList.remove("printing-pass"); });
   function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
@@ -411,6 +437,14 @@
       m.className = "merke"; m.setAttribute("aria-label", "Das nimmst du heute mit");
       m.innerHTML = '<p class="label">Das nimmst du heute mit</p><ol>' + STUNDEN[n - 1].merke.map(function (x, i) { return '<li><span>' + (i + 1) + '</span><p>' + esc(x) + '</p></li>'; }).join("") + '</ol>';
       pav.parentNode.insertBefore(m, pav.nextSibling);
+    }
+    var pb = document.getElementById("pass-btn");
+    if (pb && !document.getElementById("pass-name")) {
+      var lab = document.createElement("label"); lab.className = "pass-name";
+      lab.innerHTML = '<span>Dein Name fürs PDF (bleibt nur auf diesem iPad)</span><input id="pass-name" autocomplete="off" placeholder="Vorname Nachname">';
+      pb.parentNode.parentNode.insertBefore(lab, pb.parentNode);
+      var inp = lab.querySelector("input"); inp.value = NS.get("name") || "";
+      inp.addEventListener("input", function () { NS.set("name", inp.value); });
     }
     warFertig = NS.isDone(n); progress();
     if (NS.isOpen(n)) return;

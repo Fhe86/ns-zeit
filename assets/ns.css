@@ -306,18 +306,48 @@ textarea.answer:focus { outline: 3px solid var(--lila); outline-offset: 0; }
   .toc { top: 64px; }
 }
 
-/* Druck: Mein Lernpass */
+/* Druck: Lernpass als Hefteintrag (Teil 1 für alle gleich, Teil 2 eigene Ergebnisse) */
+.pass-name { display: grid; gap: 6px; margin-top: 20px; max-width: 420px; font-size: 14px; }
+.pass-name input { min-height: 48px; padding: 0 14px; border: 2px solid var(--white); background: transparent; color: var(--white); font-size: 17px; }
 @media print {
-  @page { size: A4; margin: 16mm 15mm; }
-  body { background: #fff; font-size: 11.5pt; }
+  @page { size: A4; margin: 12mm 13mm; }
+  body { background: #fff; }
   body.printing-pass > *:not(.pass) { display: none !important; }
   body.printing-pass .pass { display: block !important; }
-  .pass h1 { font-family: var(--font-head); font-stretch: 75%; font-size: 30pt; line-height: 1; }
-  .pass .meta { display: flex; justify-content: space-between; border-bottom: 2pt solid #000; padding-bottom: 6pt; margin: 6pt 0 12pt; font-size: 10pt; }
-  .pass section { break-inside: avoid; margin-bottom: 10pt; padding: 8pt 10pt; border-left: 4pt solid var(--lila); background: #f3f0f8; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .pass h2 { font-size: 12pt; margin-bottom: 3pt; }
-  .pass .a { white-space: pre-wrap; min-height: 14pt; }
-  .pass .empty { color: #888; font-style: italic; }
+  .pass { color: #1d1b2c; font-family: var(--font-text); font-size: 10.5pt; line-height: 1.4; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .hp-neu { break-before: page; }
+  .hp-kopf { display: flex; justify-content: space-between; gap: 10pt; font-size: 8.5pt; color: #4f5366; border-bottom: 1.5pt solid #5f4497; padding-bottom: 4pt; margin-bottom: 9pt; }
+  .hp-linie { display: inline-block; width: 45mm; border-bottom: .8pt solid #4f5366; height: 9pt; vertical-align: bottom; }
+  .hp-titel { margin-bottom: 9pt; }
+  .hp-jahr { font-size: 9pt; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #5f4497; }
+  .hp-titel h1 { font-family: var(--font-head); font-stretch: 75%; font-weight: 650; font-size: 28pt; line-height: 1; margin: 2pt 0 4pt; }
+  .hp-titel--klein h1 { font-size: 22pt; }
+  .hp-frage { font-size: 11pt; font-style: italic; color: #4f5366; }
+  .hp-oben { display: grid; grid-template-columns: 52mm 1fr; gap: 8pt; margin-bottom: 8pt; align-items: stretch; }
+  .hp-foto { width: 100%; height: 100%; max-height: 52mm; object-fit: cover; filter: grayscale(1); }
+  .hp-kasten { border: 1pt solid #cfc6e2; border-left: 4pt solid #5f4497; padding: 7pt 9pt; break-inside: avoid; }
+  .hp-label { font-size: 8pt; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #5f4497; margin-bottom: 3pt; }
+  .hp-wichtig { background: #f6f3fb; font-size: 11pt; }
+  .hp-merke { margin-bottom: 8pt; border-left-color: #e7a36a; background: #fdf6ee; }
+  .hp-merke .hp-label { color: #b9471f; }
+  .hp-merke ol { margin: 0; padding-left: 14pt; list-style: decimal; display: grid; gap: 2pt; }
+  .hp-merke li { font-weight: 600; }
+  .hp-zwei { display: grid; grid-template-columns: 1fr 1fr; gap: 8pt; margin-bottom: 8pt; }
+  .hp-zeit { margin: 0; padding: 0; list-style: none; display: grid; gap: 3pt; }
+  .hp-zeit li { display: grid; grid-template-columns: 29mm 1fr; gap: 6pt; }
+  .hp-zeit b { color: #5f4497; }
+  .hp-begriffe { margin: 0; display: grid; gap: 1pt; }
+  .hp-begriffe dt { font-weight: 700; }
+  .hp-begriffe dd { margin: 0 0 3pt; }
+  .hp-heute { border-left-color: #b9471f; margin-bottom: 8pt; }
+  .hp-heute .hp-label { color: #b9471f; }
+  .hp-merksatz { font-family: var(--font-head); font-stretch: 75%; font-weight: 600; font-size: 14pt; line-height: 1.2; padding: 7pt 0; border-top: 1.5pt solid #1d1b2c; border-bottom: 1.5pt solid #1d1b2c; margin-bottom: 6pt; }
+  .hp-fuss { font-size: 7.5pt; color: #4f5366; margin-top: 6pt; }
+  .hp-antworten { display: grid; gap: 6pt; }
+  .hp-antwort { border-left: 3pt solid #5f4497; padding: 4pt 8pt; background: #f6f3fb; break-inside: avoid; }
+  .hp-frage2 { font-weight: 700; font-size: 9.5pt; margin-bottom: 2pt; }
+  .hp-a { white-space: pre-wrap; }
+  .hp-leer { color: #8a8a99; font-style: italic; }
 }
 
 /* Sperrbildschirm für Stunden, die noch nicht frei sind */
