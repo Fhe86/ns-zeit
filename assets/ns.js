@@ -8,18 +8,21 @@
      Dann öffnet sich automatisch die nächste. Der Code ist nur noch Notschlüssel (z. B. nach Krankheit). */
   var STUNDEN = [
     { n: 1, code: "RADIO", jahr: "1933–1939", kern: "Die Nazis verführten mit Gefühl und Gemeinschaft und ließen nur noch eine Meinung zu.", merke: ["Propaganda: Radio, Plakate und riesige Aufmärsche. Es gab nur noch eine Meinung.", "Kinder kamen ab 10 Jahren in die Hitlerjugend oder den BDM, ab 1939 war das Pflicht.", "Viele machten mit, weil es sich nach Gemeinschaft und Abenteuer anfühlte."], heft: {"daten": [["1933", "Propagandaministerium unter Joseph Goebbels"], ["1933", "Gleichschaltung von Presse und Rundfunk"], ["1936", "Gesetz: Die Hitlerjugend wird Staatsjugend"], ["1939", "Pflicht für alle 10- bis 18-Jährigen"]], "begriffe": [["Propaganda", "gezielte Beeinflussung der Menschen, mit Gefühlen statt Fakten"], ["Gleichschaltung", "Zeitungen, Radio und Vereine müssen alle im Sinne der NSDAP handeln"], ["Hitlerjugend (HJ) / BDM", "Jugendorganisationen der NSDAP für Jungen und Mädchen"], ["Volksempfänger", "billiges Radio, damit die Propaganda in jedes Wohnzimmer kommt"]], "heute": "Die fünf Tricks der Propaganda: Gefühl statt Fakten, Wiederholen, nur eine Stimme, Feindbild, Wir-Gefühl. Heute schützt Art. 5 GG die Meinungs- und Pressefreiheit.", "text": "Die Nationalsozialisten setzten auf Verführung: Gemeinschaft, Abenteuer, große Gefühle. Gleichzeitig ließen sie nur noch eine Stimme zu und erfassten Kinder ab 10 Jahren. Wer mitmachte, fühlte sich als Teil von etwas Großem. Wer nicht passte, wurde ausgeschlossen.", "frage": "Warum machten so viele Menschen mit, auch Jugendliche in deinem Alter?", "foto": "s1-hj-zeltlager"}, titel: "Verführt und erfasst", teile: [
-      { href: "#einstieg", name: "Einstieg", need: ["s1.feed"] },
-      { href: "#a", name: "A Radio", need: ["s1.a.match", "s1.a.radio"] },
-      { href: "#b", name: "B Foto", need: ["s1.b.1", "s1.b.4"] },
-      { href: "#c", name: "C Jugend", need: ["s1.c.sort", "s1.c.leben"] },
-      { href: "#heute", name: "Heute-Check", need: ["s1.h.erlebt"] },
+      { href: "#einstieg", name: "Einstieg", need: ["s1.e.post"] },
+      { href: "#radio", name: "Pauls Radio", need: ["s1.a.buch"] },
+      { href: "#tricks", name: "5 Tricks", need: ["s1.a.match.ok"] },
+      { href: "#b", name: "Das Foto", need: ["s1.b.mc1", "s1.b.mc2", "s1.b.mc3"] },
+      { href: "#c", name: "Jungvolk", need: ["s1.c.buch", "s1.c.sort.ok"] },
+      { href: "#preis", name: "Der Preis", need: ["s1.c.satz"] },
+      { href: "#heute", name: "Heute-Check", need: ["s1.h.1", "s1.h.2"] },
       { href: "#ecken", name: "Vier Ecken", need: ["s1.d.ecke"] } ] },
     { n: 2, code: "STUFE", jahr: "1933–1941", kern: "Wer nicht dazugehören sollte, verlor Schritt für Schritt alle Rechte.", merke: ["1933 entstand in Dachau das erste KZ, zuerst für politische Gegner.", "Juden verloren Schritt für Schritt ihre Rechte: 1933 Boykott, 1935 Nürnberger Gesetze, 1938 Pogromnacht.", "Viele schauten weg, weil jede Stufe nur ein bisschen schlimmer war."], heft: {"daten": [["März 1933", "Erstes KZ in Dachau"], ["1. April 1933", "Boykott jüdischer Geschäfte"], ["1935", "Nürnberger Gesetze"], ["9./10. Nov. 1938", "Novemberpogrom"], ["1941", "Judenstern ab 6 Jahren"]], "begriffe": [["Konzentrationslager (KZ)", "Lager, in dem Menschen ohne Gericht eingesperrt, gequält und ermordet wurden"], ["Nürnberger Gesetze", "Gesetze von 1935, die Juden ihre Bürgerrechte nahmen"], ["Pogrom", "gewaltsamer Angriff auf eine Minderheit"], ["Sündenbock", "eine Gruppe wird für alle Probleme verantwortlich gemacht"]], "heute": "Sündenbock und Entrechtung in kleinen Schritten erkennen. Art. 3 GG: Niemand darf wegen Abstammung oder Glauben benachteiligt werden. Art. 16 GG: Die deutsche Staatsangehörigkeit darf nicht entzogen werden.", "text": "Zuerst verfolgten die Nationalsozialisten ihre politischen Gegner und sperrten sie in Konzentrationslager wie Dachau. Die Juden wurden Schritt für Schritt entrechtet: 1933 Boykott und Berufsverbote, 1935 Nürnberger Gesetze, 1938 Novemberpogrom, 1941 Judenstern. Viele schauten weg, weil jede Stufe nur ein bisschen schlimmer war als die davor.", "frage": "Wie werden aus Nachbarn Feinde gemacht, Schritt für Schritt?", "foto": "s2-boykott"}, titel: "Wer nicht dazugehört", teile: [
-      { href: "#einstieg", name: "Einstieg", need: ["s2.e"] },
-      { href: "#a", name: "A Gegner", need: ["s2.a.warum"] },
-      { href: "#b", name: "B Treppe", need: ["s2.b.order"] },
-      { href: "#c", name: "C München", need: ["s2.c.muc"] },
-      { href: "#heute", name: "Heute-Check", need: ["s2.h.text"] },
+      { href: "#einstieg", name: "Einstieg", need: ["s2.e.wahl"] },
+      { href: "#a", name: "Dachau", need: ["s2.a.buch", "s2.a.satz"] },
+      { href: "#b", name: "Stufe für Stufe", need: ["s2.b.buch", "s2.b.order.ok"] },
+      { href: "#c", name: "Pogromnacht", need: ["s2.c.mc", "s2.c.gefuehl"] },
+      { href: "#d", name: "Abschied", need: ["s2.d.mc"] },
+      { href: "#heute", name: "Heute-Check", need: ["s2.h.1", "s2.h.2"] },
       { href: "#linie", name: "Positionslinie", need: ["s2.d.pos"] } ] },
     { n: 3, code: "GRENZE", jahr: "1939", kern: "Hitler versprach Frieden und begann am 1. September 1939 den Zweiten Weltkrieg.", merke: ["Hitler sprach von Frieden, rüstete aber heimlich auf.", "Am 1. September 1939 überfiel Deutschland Polen. Der Zweite Weltkrieg begann.", "Ab Dezember 1941 kämpften auch die USA mit: ein Weltkrieg."], heft: {"daten": [["1935", "Wehrpflicht wird wieder eingeführt"], ["30. Sept. 1938", "Münchner Abkommen"], ["23. Aug. 1939", "Hitler-Stalin-Pakt"], ["1. Sept. 1939", "Überfall auf Polen, Beginn des Zweiten Weltkriegs"], ["22. Juni 1941", "Überfall auf die Sowjetunion"], ["Dez. 1941", "Krieg mit den USA"]], "begriffe": [["Appeasement", "Beschwichtigung: Großbritannien und Frankreich gaben Hitler nach, um Krieg zu verhindern"], ["Blitzkrieg", "schneller Angriff mit Flugzeugen und Panzern"], ["Vorwand", "erfundener Grund, wie der gespielte Überfall auf den Sender Gleiwitz"], ["Hitler-Stalin-Pakt", "Abmachung von 1939, Polen aufzuteilen"]], "heute": "Achte auf Taten, nicht nur auf Worte, und prüfe Nachrichten, bevor du sie glaubst. Art. 26 GG: Ein Angriffskrieg ist verboten.", "text": "Hitler sprach vom Frieden, rüstete aber massiv auf. Großbritannien und Frankreich versuchten ihn 1938 mit dem Münchner Abkommen zu beschwichtigen (Appeasement). Mit einem gespielten Überfall auf den Sender Gleiwitz als Vorwand begann am 1. September 1939 mit dem deutschen Überfall auf Polen der Zweite Weltkrieg. Ab Dezember 1941 war er ein Weltkrieg.", "frage": "Hitler sprach vom Frieden. Plante er die ganze Zeit den Krieg?", "foto": "s3-schlagbaum"}, titel: "Der Weg in den Krieg", teile: [
       { href: "#einstieg", name: "Einstieg", need: ["s3.e"] },
@@ -151,6 +154,8 @@
         fb.textContent = ok === rows.length ? "Alles richtig. Stark!" : ok + " von " + rows.length + " richtig. Rot markierte noch einmal ansehen.";
         fb.className = "feedback " + (ok === rows.length ? "ok" : "no");
         NS.set(k + ".punkte", ok + "/" + rows.length);
+        if (ok === rows.length) NS.set(k + ".ok", true);
+        progress();
       });
     });
   }
@@ -185,6 +190,7 @@
         cards.forEach(function (c) { var col = c.parentNode.dataset.col; c.classList.remove("is-right", "is-wrong");
           if (col) { placed++; var r = col === c.dataset.right; c.classList.add(r ? "is-right" : "is-wrong"); if (r) ok++; } });
         fb.textContent = placed < cards.length ? "Erst alle Karten einsortieren." : (ok === cards.length ? "Alles richtig sortiert." : ok + " von " + cards.length + " richtig. Rot umrandete Karten noch einmal überlegen.");
+        if (ok === cards.length) { NS.set(k + ".ok", true); progress(); }
         fb.className = "feedback " + (ok === cards.length ? "ok" : "no");
       });
     });
@@ -217,7 +223,7 @@
         items.forEach(function (it) { var r = seq.indexOf(it.dataset.id) + 1 === Number(it.dataset.pos); it.classList.add(r ? "is-right" : "is-wrong"); if (r) ok++; });
         fb.textContent = ok === items.length ? "Alles in der richtigen Reihenfolge." : ok + " von " + items.length + " an der richtigen Stelle. Tipp: Die Jahreszahlen stehen im Buch.";
         fb.className = "feedback " + (ok === items.length ? "ok" : "no");
-        if (ok === items.length) items.forEach(function (it) { var s = it.querySelector("small[data-date]"); if (s) s.textContent = s.dataset.date; });
+        if (ok === items.length) { items.forEach(function (it) { var s = it.querySelector("small[data-date]"); if (s) s.textContent = s.dataset.date; }); NS.set(k + ".ok", true); progress(); }
       });
       paint();
     });
@@ -311,6 +317,81 @@
         if (rq) rq.call(el); else { var f = el.querySelector("iframe"); if (f && f.webkitEnterFullscreen) f.webkitEnterFullscreen(); }
       });
       if (NS.get(key) === "angeschaut") box.classList.add("is-seen");
+    });
+  }
+
+  /* ---------- Geschlossene Aufgaben (Fabi 09.11.: offene Aufgaben überfordern) ---------- */
+  function norm(x) { return String(x || "").toLowerCase().replace(/prozent|%|\.|,|„|“|"|'|\s+/g, " ").replace(/\s+/g, " ").trim(); }
+
+  /* Buch-Detektiv: Frage + Fundort, kurze Antwort, wird geprüft. Erst wenn alles stimmt, gilt der Schritt.
+     <div data-find="key"><div class="find__q" data-answer="70|siebzig" data-hinweis="..."><p>Frage</p><input></div>... <button data-check> */
+  function initFind() {
+    document.querySelectorAll("[data-find]").forEach(function (box) {
+      var k = box.dataset.find, saved = NS.get(k + ".in") || {}, qs = box.querySelectorAll(".find__q");
+      qs.forEach(function (q, i) {
+        var inp = q.querySelector("input"); if (saved[i]) inp.value = saved[i];
+        inp.addEventListener("input", function () { saved[i] = inp.value; NS.set(k + ".in", saved); q.classList.remove("is-right", "is-wrong"); });
+        inp.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); box.querySelector("[data-check]").click(); } });
+      });
+      var fb = box.querySelector(".feedback");
+      box.querySelector("[data-check]").addEventListener("click", function () {
+        var ok = 0;
+        qs.forEach(function (q) {
+          var v = norm(q.querySelector("input").value), right = q.dataset.answer.split("|").some(function (a) { a = norm(a); return v === a || (a.length > 3 && v.indexOf(a) > -1); });
+          q.classList.toggle("is-right", right); q.classList.toggle("is-wrong", !right);
+          var h = q.querySelector(".find__hinweis"); if (h) h.hidden = right;
+          if (right) ok++;
+        });
+        if (ok === qs.length) { NS.set(k, "gefunden"); fb.textContent = "Alles richtig gefunden. Super, Detektiv!"; fb.className = "feedback ok"; }
+        else { fb.textContent = ok + " von " + qs.length + " richtig. Schau beim roten Feld noch einmal genau an die angegebene Stelle im Buch."; fb.className = "feedback no"; }
+        progress();
+      });
+      if (NS.get(k) === "gefunden") qs.forEach(function (q) { q.classList.add("is-right"); });
+    });
+  }
+
+  /* Satzbaustein: Satz steht da, Lücken werden per Auswahl gefüllt. Fertiger Satz kommt in den Hefteintrag. */
+  function initSatz() {
+    document.querySelectorAll("[data-satz]").forEach(function (box) {
+      var k = box.dataset.satz, saved = NS.get(k + ".sel") || {}, sels = box.querySelectorAll("select");
+      sels.forEach(function (sel, i) {
+        if (saved[i]) sel.value = saved[i];
+        sel.addEventListener("change", function () { saved[i] = sel.value; NS.set(k + ".sel", saved); sel.classList.remove("is-right", "is-wrong"); });
+      });
+      var fb = box.querySelector(".feedback");
+      box.querySelector("[data-check]").addEventListener("click", function () {
+        var ok = 0;
+        sels.forEach(function (sel) { var r = sel.value === sel.dataset.right; sel.classList.toggle("is-right", r); sel.classList.toggle("is-wrong", !r); if (r) ok++; });
+        if (ok === sels.length) {
+          var satz = [].slice.call(box.querySelectorAll(".satz__text")).map(function (t) {
+            var orig = t.querySelectorAll("select"), c = t.cloneNode(true);
+            c.querySelectorAll("select").forEach(function (sel, i) { sel.replaceWith(orig[i].options[orig[i].selectedIndex].text); });
+            return c.textContent.replace(/\s+/g, " ").trim();
+          }).join(" ");
+          NS.set(k, satz); fb.textContent = "Richtig! Dieser Satz kommt in deinen Hefteintrag."; fb.className = "feedback ok";
+        } else { fb.textContent = "Noch nicht ganz. Rote Felder noch einmal überlegen."; fb.className = "feedback no"; }
+        progress();
+      });
+      if (NS.get(k)) sels.forEach(function (sel) { sel.classList.add("is-right"); });
+    });
+  }
+
+  /* Antippen mit einer richtigen Antwort und Erklärung. Erst die richtige Antwort zählt. */
+  function initMC() {
+    document.querySelectorAll("[data-mc]").forEach(function (box) {
+      var k = box.dataset.mc, right = box.dataset.right, erkl = box.querySelector(".mc__erkl"), btns = box.querySelectorAll("button[data-v]");
+      function zeig(v) {
+        btns.forEach(function (b) { b.classList.remove("is-right", "is-wrong"); if (b.dataset.v === v) b.classList.add(v === right ? "is-right" : "is-wrong"); });
+        if (v === right) { if (erkl) erkl.hidden = false; btns.forEach(function (b) { if (b.dataset.v === right) b.classList.add("is-right"); }); }
+      }
+      btns.forEach(function (b) {
+        b.addEventListener("click", function () {
+          if (b.dataset.v === right) { NS.set(k, b.textContent.trim()); zeig(right); }
+          else { zeig(b.dataset.v); var t = box.querySelector(".mc__tipp"); if (t) t.hidden = false; }
+          progress();
+        });
+      });
+      if (NS.get(k)) zeig(right);
     });
   }
 
@@ -540,6 +621,6 @@
   };
 
   document.addEventListener("DOMContentLoaded", function () {
-    initReveal(); initAnswers(); initChoices(); initMatch(); initSorter(); initOrder(); initBars(); initVideos(); initClips(); initZoom(); progress();
+    initReveal(); initAnswers(); initChoices(); initMatch(); initSorter(); initOrder(); initBars(); initVideos(); initClips(); initFind(); initSatz(); initMC(); initZoom(); progress();
   });
 })();

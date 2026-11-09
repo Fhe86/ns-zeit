@@ -6,7 +6,9 @@
 <title>NS-Zeit 1933 bis 1945 · Lernlandkarte</title>
 <meta name="description" content="Selbstlerneinheit GPG: Die Zeit des Nationalsozialismus in sieben Stationen.">
 <meta name="theme-color" content="#1d1b2c">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231d1b2c'/%3E%3Crect x='14' y='14' width='9' height='36' fill='%23fff'/%3E%3Crect x='28' y='28' width='9' height='22' fill='%23a58bdb'/%3E%3Crect x='42' y='20' width='9' height='30' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="icon" href="icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-title" content="NS-Zeit">
 <link rel="stylesheet" href="assets/ns.css">
 <script src="assets/ns.js" defer></script>
 </head>
@@ -47,7 +49,7 @@
       <div style="display:grid;gap:12px;max-width:640px">
         <p class="label muted">Lernlandkarte</p>
         <h2 class="h-l" id="karte-titel">Sieben Stationen, ein Weg</h2>
-        <p>Wische nach links und rechts. Jede Station ist eine Stunde mit sechs Teilen. Für jeden erledigten Teil gibt es einen grünen Haken. Hat eine Station alle sechs Haken, öffnet sich die nächste von selbst.</p>
+        <p>Wische nach links und rechts. Jede Station ist eine Stunde. Für jeden erledigten Schritt gibt es einen grünen Haken. Hat eine Station alle Haken, öffnet sich die nächste von selbst.</p>
       </div>
       <div class="track-hint" aria-hidden="false">
         <button type="button" data-scroll="-1" aria-label="Zurück">←</button>
@@ -62,7 +64,7 @@
     <div class="track-floor pavement"></div>
     <div class="legend">
       <span><i style="background:var(--lila)"></i>offen</span>
-      <span><i style="background:var(--ok)"></i>geschafft (alle 6 Haken)</span>
+      <span><i style="background:var(--ok)"></i>geschafft (alle Haken)</span>
       <span><i style="background:var(--muted)"></i>noch gesperrt</span>
     </div>
   </section>
@@ -139,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
           '<span class="station__state">' + (st === "fertig" ? "Geschafft" : st === "offen" ? "Offen" : "Gesperrt") + '</span>' +
           '<h3 class="h-s">' + d.titel + '</h3>' +
           '<p>' + d.frage + '</p>' +
-          '<div class="ticks" aria-hidden="true">' + ticks + '</div>' +
+          '<div class="ticks" aria-hidden="true" style="grid-template-columns:repeat(' + teile.length + ',1fr)">' + ticks + '</div>' +
           '<p class="ticks__txt"><span>' + stand.fertig + ' von ' + stand.gesamt + ' Haken</span><span>' + (NS.hasPass(d.n) ? "Lernpass ✓" : "Buch " + d.buch) + '</span></p>' +
           (st === "zu"
             ? '<p class="small muted">Öffnet sich, wenn Station ' + (d.n - 1) + ' geschafft ist.</p><details><summary class="small" style="cursor:pointer;font-weight:600">Gefehlt? Code eingeben</summary><form class="station__lock"><input aria-label="Code für Station ' + d.n + '" placeholder="Code" autocomplete="off" autocapitalize="characters"><button class="btn">Öffnen</button></form><p class="station__msg" aria-live="polite"></p></details>'
