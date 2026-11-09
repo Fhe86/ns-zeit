@@ -480,3 +480,44 @@ textarea.answer:focus { outline: 3px solid var(--lila); outline-offset: 0; }
 .pdf-schritte li { display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: start; font-size: 15px; line-height: 1.4; }
 .pdf-schritte span { width: 34px; height: 34px; display: grid; place-items: center; background: var(--sand); color: var(--ink); font-weight: 700; }
 @media (max-width: 760px) { .pdf-schritte { grid-template-columns: 1fr; } }
+
+/* ---------- Schritt-für-Schritt-Modus ---------- */
+body.gefuehrt main .part { display: none; }
+body.gefuehrt main .part.is-aktiv { display: block; animation: schrittRein .35s ease both; }
+@keyframes schrittRein { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+body.gefuehrt .toc { display: none; }
+.schritte { display: none; }
+body.gefuehrt .schritte { position: sticky; top: 68px; z-index: 15; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); background: var(--white); border-bottom: 2px solid var(--ink); overflow-x: auto; }
+.schritte button { display: grid; justify-items: center; gap: 4px; padding: 10px 4px; border: 0; border-right: 1px solid var(--sky-2); background: var(--white); cursor: pointer; font-size: 12.5px; font-weight: 600; color: var(--ink); }
+.schritte button:disabled { cursor: not-allowed; color: #a6a3b8; }
+.schritte__nr { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; border: 2px solid currentColor; font-weight: 700; }
+.schritte button.is-fertig .schritte__nr { background: var(--ok); border-color: var(--ok); color: #fff; font-size: 0; }
+.schritte button.is-fertig .schritte__nr::before { content: "✓"; font-size: 15px; }
+.schritte button.is-aktiv { background: var(--lila-hell); }
+.schritte button.is-aktiv .schritte__nr { background: var(--lila); border-color: var(--lila); color: #fff; }
+.schritte button.is-aktiv.is-fertig .schritte__nr { background: var(--ok); border-color: var(--ok); }
+@media (max-width: 700px) { .schritte__name { display: none; } }
+body:not(.gefuehrt) .schritt-nav { display: none; }
+
+.auftrag { background: var(--white); border: 3px solid var(--ink); box-shadow: 8px 8px 0 var(--sand); padding: clamp(16px, 2.4vw, 26px); margin-bottom: 30px; display: grid; gap: 12px; max-width: 860px; }
+.part:nth-of-type(even) .auftrag { background: var(--cream); }
+.auftrag__kopf { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.auftrag__nr { font-family: var(--font-head); font-stretch: 75%; font-size: 26px; font-weight: 650; color: var(--lila); }
+.auftrag__zeit { font-size: 14px; font-weight: 700; padding: 4px 10px; background: var(--sand); }
+.auftrag__brauchst { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 15px; }
+.auftrag__ding { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border: 2px solid var(--ink); font-weight: 700; background: var(--white); }
+.auftrag ol.auftrag__schritte { display: grid; gap: 8px; counter-reset: a; }
+.auftrag__schritte li { counter-increment: a; display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: start; font-size: 18px; line-height: 1.4; }
+.auftrag__schritte li::before { content: counter(a); width: 34px; height: 34px; display: grid; place-items: center; background: var(--ink); color: #fff; font-weight: 700; }
+.auftrag__fertig { font-size: 15px; color: var(--ok); font-weight: 700; }
+.auftrag__fertig::before { content: "✓ "; }
+.schritt-nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 34px; padding-top: 20px; border-top: 2px solid var(--ink); }
+.schritt-nav .btn { min-height: 58px; font-size: 18px; padding: 0 26px; }
+.schritt-nav__hinweis { flex: 1; text-align: right; font-size: 14px; color: var(--brick); font-weight: 600; }
+#lernpass .schritt-nav { border-top-color: rgba(255,255,255,.4); }
+#lernpass .schritt-nav .btn-2 { color: var(--white); border-color: var(--white); }
+.alle-zeigen { display: block; margin: 0 auto; padding: 14px; background: none; border: 0; color: var(--muted); font-size: 13px; text-decoration: underline; cursor: pointer; }
+body.gefuehrt .prog { top: 136px; }
+details.zusatz { margin-top: 28px; border: 2px dashed var(--muted); padding: 14px 16px; background: var(--cream); }
+details.zusatz > summary { cursor: pointer; font-weight: 700; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+details.zusatz[open] > summary { margin-bottom: 14px; }

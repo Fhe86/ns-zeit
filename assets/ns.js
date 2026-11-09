@@ -17,7 +17,7 @@
     { n: 2, code: "STUFE", jahr: "1933–1941", kern: "Wer nicht dazugehören sollte, verlor Schritt für Schritt alle Rechte.", merke: ["1933 entstand in Dachau das erste KZ, zuerst für politische Gegner.", "Juden verloren Schritt für Schritt ihre Rechte: 1933 Boykott, 1935 Nürnberger Gesetze, 1938 Pogromnacht.", "Viele schauten weg, weil jede Stufe nur ein bisschen schlimmer war."], heft: {"daten": [["März 1933", "Erstes KZ in Dachau"], ["1. April 1933", "Boykott jüdischer Geschäfte"], ["1935", "Nürnberger Gesetze"], ["9./10. Nov. 1938", "Novemberpogrom"], ["1941", "Judenstern ab 6 Jahren"]], "begriffe": [["Konzentrationslager (KZ)", "Lager, in dem Menschen ohne Gericht eingesperrt, gequält und ermordet wurden"], ["Nürnberger Gesetze", "Gesetze von 1935, die Juden ihre Bürgerrechte nahmen"], ["Pogrom", "gewaltsamer Angriff auf eine Minderheit"], ["Sündenbock", "eine Gruppe wird für alle Probleme verantwortlich gemacht"]], "heute": "Sündenbock und Entrechtung in kleinen Schritten erkennen. Art. 3 GG: Niemand darf wegen Abstammung oder Glauben benachteiligt werden. Art. 16 GG: Die deutsche Staatsangehörigkeit darf nicht entzogen werden.", "text": "Zuerst verfolgten die Nationalsozialisten ihre politischen Gegner und sperrten sie in Konzentrationslager wie Dachau. Die Juden wurden Schritt für Schritt entrechtet: 1933 Boykott und Berufsverbote, 1935 Nürnberger Gesetze, 1938 Novemberpogrom, 1941 Judenstern. Viele schauten weg, weil jede Stufe nur ein bisschen schlimmer war als die davor.", "frage": "Wie werden aus Nachbarn Feinde gemacht, Schritt für Schritt?", "foto": "s2-boykott"}, titel: "Wer nicht dazugehört", teile: [
       { href: "#einstieg", name: "Einstieg", need: ["s2.e"] },
       { href: "#a", name: "A Gegner", need: ["s2.a.warum"] },
-      { href: "#b", name: "B Treppe", need: ["s2.b.order", "s2.b.aus"] },
+      { href: "#b", name: "B Treppe", need: ["s2.b.order"] },
       { href: "#c", name: "C München", need: ["s2.c.muc"] },
       { href: "#heute", name: "Heute-Check", need: ["s2.h.text"] },
       { href: "#linie", name: "Positionslinie", need: ["s2.d.pos"] } ] },
@@ -358,6 +358,7 @@
     }
     var fertig = st.fertig === st.gesamt;
     if (fertig && !state.done[n]) { state.done[n] = true; save(); }
+    if (NS.onProgress) NS.onProgress();
     if (warFertig === false && fertig) jubel(n);
     warFertig = fertig;
   }
@@ -422,6 +423,78 @@
   NS.esc = esc;
 
   /* ---------- Stundenseite: gesperrt? ---------- */
+  /* ---------- Schritt-für-Schritt-Modus ----------
+     Aktiv, sobald eine Stunde Auftragskarten (.auftrag) hat. Die Schüler sehen immer nur einen Schritt.
+     „Weiter“ geht erst, wenn der Pflichtteil des Schritts erledigt ist. Lehrkraft: „Alle Schritte zeigen“. */
+  var ICON = {
+    buch: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h7a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H3z"/><path d="M21 5h-7a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h7z"/></svg>',
+    kopfhoerer: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="5" height="6" rx="1"/><rect x="16" y="14" width="5" height="6" rx="1"/></svg>',
+    ipad: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg>',
+    klasse: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5"/><path d="M14 15c3 0 8 1 8 5"/></svg>'
+  };
+  function initGefuehrt(n) {
+    var karten = document.querySelectorAll(".part .auftrag");
+    if (!karten.length) return;
+    var parts = [].slice.call(document.querySelectorAll("main .part"));
+    var teile = STUNDEN[n - 1].teile, key = "s" + n + ".schritt";
+    function teilFuer(part) { return teile.filter(function (t) { return t.href === "#" + part.id; })[0]; }
+    function istFertig(part) { var t = teilFuer(part); return !t || teilDone(t); }
+    document.body.classList.add("gefuehrt");
+    /* Auftragskarten aufbauen */
+    parts.forEach(function (part, i) {
+      var k = part.querySelector(".auftrag");
+      if (k) {
+        var dinge = (k.dataset.brauchst || "").split("|").filter(Boolean).map(function (d) {
+          var x = d.split(":"), typ = x[0].trim(), txt = x.slice(1).join(":").trim() || ({ buch: "Buch", kopfhoerer: "Kopfhörer", ipad: "iPad", klasse: "Gemeinsam mit der Klasse" })[typ];
+          return '<span class="auftrag__ding">' + (ICON[typ] || "") + esc(txt) + "</span>";
+        }).join("");
+        var kopf = document.createElement("div");
+        kopf.className = "auftrag__kopf";
+        kopf.innerHTML = '<span class="auftrag__nr">Schritt ' + (i + 1) + ' von ' + parts.length + '</span>' + (k.dataset.min ? '<span class="auftrag__zeit">ca. ' + k.dataset.min + ' Min</span>' : "");
+        k.insertBefore(kopf, k.firstChild);
+        if (dinge) { var b = document.createElement("p"); b.className = "auftrag__brauchst"; b.innerHTML = "<b>Du brauchst:</b> " + dinge; kopf.after(b); }
+      }
+      /* Navigation unten */
+      var nav = document.createElement("div");
+      nav.className = "schritt-nav";
+      nav.innerHTML = (i ? '<button type="button" class="btn-2" data-go="' + (i - 1) + '">← Zurück</button>' : "<span></span>") +
+        (i < parts.length - 1 ? '<span class="schritt-nav__hinweis" aria-live="polite"></span><button type="button" class="btn btn--lila" data-go="' + (i + 1) + '">Weiter zu Schritt ' + (i + 2) + ' →</button>' : "");
+      (part.querySelector(".wrap") || part).appendChild(nav);
+    });
+    /* Schrittleiste oben */
+    var leiste = document.createElement("nav");
+    leiste.className = "schritte"; leiste.setAttribute("aria-label", "Schritte");
+    leiste.innerHTML = parts.map(function (part, i) {
+      var t = teilFuer(part), name = t ? t.name : (part.id === "lernpass" ? "Hefteintrag" : part.id);
+      return '<button type="button" data-go="' + i + '"><span class="schritte__nr">' + (i + 1) + '</span><span class="schritte__name">' + esc(name) + '</span></button>';
+    }).join("");
+    var toc = document.querySelector(".toc"); if (toc) toc.parentNode.insertBefore(leiste, toc);
+    var cur = 0;
+    function maxErlaubt() { var m = 0; for (var i = 0; i < parts.length - 1; i++) { if (istFertig(parts[i])) m = i + 1; else break; } return m; }
+    function zeichne() {
+      var m = maxErlaubt();
+      parts.forEach(function (p, i) { p.classList.toggle("is-aktiv", i === cur); });
+      leiste.querySelectorAll("button").forEach(function (b, i) {
+        b.classList.toggle("is-aktiv", i === cur); b.classList.toggle("is-fertig", i < parts.length - 1 && istFertig(parts[i]) && !!teilFuer(parts[i]));
+        b.disabled = i > m;
+      });
+      var w = parts[cur].querySelector('.schritt-nav [data-go="' + (cur + 1) + '"]');
+      if (w) { var ok = istFertig(parts[cur]); w.disabled = !ok; parts[cur].querySelector(".schritt-nav__hinweis").textContent = ok ? "" : "Erst die Aufgabe erledigen, dann geht es weiter."; }
+    }
+    function geh(i, scroll) {
+      if (i > maxErlaubt()) return;
+      cur = Math.max(0, Math.min(parts.length - 1, i)); NS.set(key, cur); zeichne();
+      if (scroll !== false) { var y = leiste.getBoundingClientRect().top + window.scrollY - 70; window.scrollTo({ top: Math.max(0, y), behavior: "smooth" }); }
+    }
+    document.addEventListener("click", function (e) { var b = e.target.closest("[data-go]"); if (b && document.body.classList.contains("gefuehrt")) geh(Number(b.dataset.go)); });
+    NS.onProgress = zeichne;
+    var start = Number(NS.get(key) || 0); geh(Math.min(start, maxErlaubt()), false);
+    /* Lehrkraft-Schalter */
+    var t = document.createElement("button"); t.type = "button"; t.className = "alle-zeigen"; t.textContent = "Alle Schritte zeigen (Lehrkraft)";
+    t.addEventListener("click", function () { document.body.classList.toggle("gefuehrt"); t.textContent = document.body.classList.contains("gefuehrt") ? "Alle Schritte zeigen (Lehrkraft)" : "Schritt für Schritt (Schüler)"; });
+    document.body.appendChild(t);
+  }
+
   /* Kein window.prompt: blockiert in installierten Web-Apps. Stattdessen eigenes Feld. */
   NS.guard = function (n) {
     NS.current = n;
@@ -446,7 +519,7 @@
       var inp = lab.querySelector("input"); inp.value = NS.get("name") || "";
       inp.addEventListener("input", function () { NS.set("name", inp.value); });
     }
-    warFertig = NS.isDone(n); progress();
+    warFertig = NS.isDone(n); initGefuehrt(n); progress();
     if (NS.isOpen(n)) return;
     var box = document.createElement("div");
     box.className = "lockscreen";
