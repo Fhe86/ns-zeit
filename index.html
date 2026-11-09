@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>NS-Zeit 1933 bis 1945 · Lernlandkarte</title>
-<meta name="description" content="Selbstlerneinheit GPG: Die Zeit des Nationalsozialismus in sieben Stationen.">
+<meta name="description" content="Selbstlerneinheit GPG: Die Zeit des Nationalsozialismus in neun Stationen.">
 <meta name="theme-color" content="#1d1b2c">
 <link rel="icon" href="icon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="icon-180.png">
@@ -35,7 +35,7 @@
       <div class="opening__slab" style="--w:11;--h:84%"><div class="reveal"><img src="img/foto/s6-weisse-rose.jpg" alt=""></div></div>
     </div>
     <div class="opening__stack">
-      <div class="block"><p class="label muted" style="margin-bottom:12px">GPG · Selbstlerneinheit · 7 Stationen</p>
+      <div class="block"><p class="label muted" style="margin-bottom:12px">GPG · Selbstlerneinheit · 9 Stationen</p>
         <h1 class="h-xl" id="titel">1933 bis 1945. Wie konnte das passieren?</h1></div>
       <div class="block block--plaster"><p class="lead">Zwölf Jahre, die Deutschland und Europa verändert haben. Du gehst den Weg Station für Station. Mit Fotos, Videos, Zeitzeugen und deinem Buch. Und am Ende jeder Stunde fragst du: Gibt es so etwas heute noch?</p></div>
       <div class="block block--sand" style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn" href="#karte">Zur Lernlandkarte</a><a class="btn-2" href="#so">So arbeitest du</a></div>
@@ -48,7 +48,7 @@
     <div class="track-head">
       <div style="display:grid;gap:12px;max-width:640px">
         <p class="label muted">Lernlandkarte</p>
-        <h2 class="h-l" id="karte-titel">Sieben Stationen, ein Weg</h2>
+        <h2 class="h-l" id="karte-titel">Neun Stationen, ein Weg</h2>
         <p>Wische nach links und rechts. Jede Station ist eine Stunde. Für jeden erledigten Schritt gibt es einen grünen Haken. Hat eine Station alle Haken, öffnet sich die nächste von selbst.</p>
       </div>
       <div class="track-hint" aria-hidden="false">
@@ -58,7 +58,7 @@
     </div>
 
     <div class="journey" id="journey" aria-label="Dein Weg durch die Stationen"></div>
-    <div class="track" id="track" tabindex="0" aria-label="Stationen 1 bis 7">
+    <div class="track" id="track" tabindex="0" aria-label="Stationen 1 bis 9">
       <!-- Stationen werden unten per Skript gefüllt, damit Status und Codes überall gleich sind -->
     </div>
     <div class="track-floor pavement"></div>
@@ -73,9 +73,9 @@
   <section class="section section--white" id="faden" aria-labelledby="faden-titel">
     <div class="wrap">
       <div style="display:grid;gap:12px;max-width:720px;margin-bottom:28px">
-        <p class="label muted">Sammle alle sieben</p>
+        <p class="label muted">Sammle alle neun</p>
         <h2 class="h-l" id="faden-titel">Der rote Faden</h2>
-        <p>Für jede Station, die du schaffst, wird hier ein Merksatz sichtbar. Am Ende hast du die ganze NS-Zeit in sieben Sätzen. Die solltest du dir merken.</p>
+        <p>Für jede Station, die du schaffst, wird hier ein Merksatz sichtbar. Am Ende hast du die ganze NS-Zeit in neun Sätzen. Die solltest du dir merken.</p>
       </div>
       <ol class="faden" id="faden-liste"></ol>
     </div>
@@ -106,7 +106,7 @@
   <div class="stripes" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="foot__inner">
     <p class="small">Grundlage: Schulbuch Trio GPG (Westermann), Kapitel „Die Zeit des Nationalsozialismus“, S. 78 bis 115. Fotos: Bundesarchiv und Wikimedia Commons, Lizenzen siehe <a href="bildnachweise.html">Bildnachweise</a>. Gestaltung nach der Vorlage „Midblock“ von 8B (MIT-Lizenz).</p>
-    <p class="small"><a href="lehrer.html">Für Lehrkräfte</a> · <button type="button" id="reset" class="small" style="background:none;border:0;color:inherit;text-decoration:underline;cursor:pointer;padding:0">Fortschritt auf diesem Gerät löschen</button></p>
+    <p class="small"><button type="button" id="reset" class="small" style="background:none;border:0;color:inherit;text-decoration:underline;cursor:pointer;padding:0">Fortschritt auf diesem Gerät löschen</button></p>
   </div>
   <p class="wordmark" aria-hidden="true">1933–1945</p>
 </footer>
@@ -114,13 +114,15 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   var DATA = [
-    { n: 1, jahre: "1933–1939", titel: "Verführt und erfasst", frage: "Warum machten so viele mit?", buch: "S. 78–83", foto: "s1-hj-zeltlager", w: 1.2, h: 46 },
-    { n: 2, jahre: "1933–1938", titel: "Wer nicht dazugehört", frage: "Wie werden Nachbarn zu Feinden gemacht?", buch: "S. 84–89", foto: "s2-boykott", w: 1, h: 34 },
-    { n: 3, jahre: "1938–1941", titel: "Der Weg in den Krieg", frage: "Frieden versprochen, Krieg geplant?", buch: "S. 90–93", foto: "s3-schlagbaum", w: 1.1, h: 52 },
-    { n: 4, jahre: "1939–1945", titel: "Vernichtungskrieg und Zwangsarbeit", frage: "Was passiert, wenn Menschen nichts mehr wert sein sollen?", buch: "S. 94–97", foto: "s4-ost", w: .9, h: 30 },
-    { n: 5, jahre: "1941–1945", titel: "Der Holocaust", frage: "Wie wurde aus Hass Völkermord, und warum erinnern wir uns?", buch: "S. 98–103", foto: "s5-stolpersteine", w: 1, h: 56 },
-    { n: 6, jahre: "1933–1945", titel: "Widerstand", frage: "Wegschauen oder handeln?", buch: "S. 104–105", foto: "s6-weisse-rose", w: 1.1, h: 40 },
-    { n: 7, jahre: "1943–1949", titel: "Kriegsende und was bleibt", frage: "Was haben wir daraus gelernt?", buch: "S. 106–115", foto: "s7-truemmer", w: 1, h: 48 }
+    { n: 1, jahre: "1933–1934", titel: "In 18 Monaten zur Diktatur", frage: "Wie konnte Hitler die Demokratie so schnell abschaffen?", buch: "S. 72–75", foto: "s0-reichstagsbrand", w: 1.1, h: 44 },
+    { n: 2, jahre: "1933–1945", titel: "Das Weltbild der Nazis", frage: "Was glaubten die Nazis, und warum war das gefährlich?", buch: "S. 76–77", foto: "s0-einvolk", w: 1.1, h: 36 },
+    { n: 3, jahre: "1933–1939", titel: "Verführt und erfasst", frage: "Warum machten so viele mit?", buch: "S. 78–83", foto: "s1-hj-zeltlager", w: 1.2, h: 46 },
+    { n: 4, jahre: "1933–1941", titel: "Wer nicht dazugehört", frage: "Wie werden Nachbarn zu Feinden gemacht?", buch: "S. 84–89", foto: "s2-boykott", w: 1, h: 34 },
+    { n: 5, jahre: "1938–1941", titel: "Der Weg in den Krieg", frage: "Frieden versprochen, Krieg geplant?", buch: "S. 90–93", foto: "s3-schlagbaum", w: 1.1, h: 52 },
+    { n: 6, jahre: "1939–1945", titel: "Vernichtungskrieg und Zwangsarbeit", frage: "Was passiert, wenn Menschen nichts mehr wert sein sollen?", buch: "S. 94–97", foto: "s4-ost", w: .9, h: 30 },
+    { n: 7, jahre: "1941–1945", titel: "Der Holocaust", frage: "Wie wurde aus Hass Völkermord, und warum erinnern wir uns?", buch: "S. 98–103", foto: "s5-stolpersteine", w: 1, h: 56 },
+    { n: 8, jahre: "1933–1945", titel: "Widerstand", frage: "Wegschauen oder handeln?", buch: "S. 104–105", foto: "s6-weisse-rose", w: 1.1, h: 40 },
+    { n: 9, jahre: "1943–1949", titel: "Kriegsende und was bleibt", frage: "Was haben wir daraus gelernt?", buch: "S. 106–115", foto: "s7-truemmer", w: 1, h: 48 }
   ];
   var track = document.getElementById("track");
   function render() {
@@ -161,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
       html += '<span class="journey__step">' + (i ? '<span class="journey__line ' + (st !== "zu" ? "fertig" : "") + '"></span>' : "") +
         '<span class="journey__dot ' + st + '" title="Station ' + d.n + '">' + (st === "fertig" ? "✓" : d.n) + '</span></span>';
     });
-    j.innerHTML = html + '<span class="journey__txt">' + fertig + ' von 7 Stationen geschafft</span>';
+    j.innerHTML = html + '<span class="journey__txt">' + fertig + ' von ' + DATA.length + ' Stationen geschafft</span>';
     document.getElementById("faden-liste").innerHTML = NS.stunden.map(function (st) {
       var on = NS.isDone(st.n);
       return '<li class="' + (on ? "on" : "") + '"><span class="dot">' + (on ? "✓" : st.n) + '</span><span class="jahr">' + st.jahr + '</span><span class="satz"' + (on ? "" : ' aria-label="noch nicht freigeschaltet"') + '>' + (on ? st.kern : "Schaffe Station " + st.n + ", dann erscheint hier der Merksatz.") + '</span></li>';

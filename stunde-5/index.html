@@ -3,23 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Station 5 · Der Holocaust · NS-Zeit</title>
+<title>Station 5 · Der Weg in den Krieg · NS-Zeit</title>
 <meta name="theme-color" content="#1d1b2c">
 <link rel="icon" href="../icon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="../icon-180.png">
 <meta name="apple-mobile-web-app-title" content="NS-Zeit">
 <link rel="stylesheet" href="../assets/ns.css">
 <script src="../assets/ns.js" defer></script>
-<style>
-  /* Stolperstein aus Messing, nach Buch S. 103 */
-  .stone { width: min(300px, 80vw); aspect-ratio: 1; margin: 0 auto; display: grid; place-content: center; text-align: center; gap: 2px; padding: 18px;
-    background: radial-gradient(circle at 30% 25%, #e9cf8a, #b89148 55%, #8a6a2f); box-shadow: inset 0 0 0 3px rgba(0,0,0,.18), 0 10px 0 #7d7d7d, 0 14px 24px rgba(0,0,0,.25);
-    font-family: "Courier New", monospace; font-weight: 700; letter-spacing: .06em; color: #2b2112; text-transform: uppercase; font-size: clamp(14px, 1.2vw + 8px, 18px); line-height: 1.35; }
-  .stone .name { font-size: 1.2em; }
-  .calm .part:nth-of-type(even) { background: #f7f5f2; }
-</style>
 </head>
-<body class="calm">
+<body>
 
 <header class="bar">
   <a class="bar__mark" href="../index.html#karte"><i aria-hidden="true"><b></b><b></b><b></b></i>NS-Zeit</a>
@@ -29,25 +21,23 @@
 <main>
   <section class="lesson-hero" aria-labelledby="titel">
     <div class="lesson-hero__text">
-      <div class="block"><p class="label muted" style="margin-bottom:10px">Station 5 · 1941 bis 1945 · Buch S. 98 bis 103</p>
-        <h1 class="h-xl" id="titel">Der Holocaust</h1></div>
-      <div class="block block--plaster" style="margin-left:clamp(0px,6%,60px)"><p class="lead"><b>Leitfrage:</b> Wie wurde aus Hass ein Völkermord, und warum erinnern wir uns bis heute daran?</p></div>
-      <div class="timeline-mini" aria-label="Ablauf der Stunde"><span><b>5′</b>Einstieg</span><span><b>22′</b>Stationen A, B, C</span><span><b>5′</b>Heute-Check</span><span><b>13′</b>Ruhige Runde</span></div>
+      <div class="block"><p class="label muted" style="margin-bottom:10px">Station 5 · 1938 bis 1941 · Buch S. 90 bis 93</p>
+        <h1 class="h-xl" id="titel">Der Weg in den Krieg</h1></div>
+      <div class="block block--plaster" style="margin-left:clamp(0px,6%,60px)"><p class="lead"><b>Leitfrage:</b> Hitler sprach vom Frieden. Plante er die ganze Zeit den Krieg?</p></div>
+      <div class="timeline-mini" aria-label="Ablauf der Stunde"><span><b>5′</b>Einstieg</span><span><b>22′</b>Stationen A, B, C</span><span><b>5′</b>Heute-Check</span><span><b>13′</b>Kugellager</span></div>
     </div>
-    <div class="lesson-hero__photo reveal"><img src="../img/foto/s5-stolpersteine.jpg" alt="Vier Stolpersteine aus Messing im Gehweg vor einem Haus in München." style="object-position:center 70%"></div>
+    <div class="lesson-hero__photo reveal"><img src="../img/foto/s3-schlagbaum.jpg" alt="Deutsche Soldaten reißen einen Schlagbaum an der polnischen Grenze herunter."></div>
   </section>
-  <p class="credit" style="padding:0 var(--gap);text-align:right">Stolpersteine in München. Foto: Christian Michelides, CC BY-SA 4.0, Wikimedia Commons</p>
+  <p class="credit" style="padding:0 var(--gap);text-align:right">„Polen, Schlagbaum, deutsche Soldaten“, 1. September 1939. Foto: Hans Sönnke. Bundesarchiv, Bild 183-51909-0003, CC BY-SA 3.0 de</p>
   <div class="pavement" style="margin-top:20px"></div>
 
-  <div class="note" style="margin:24px var(--gap) 0"><b>Vorweg:</b><span>In dieser Stunde geht es um den Mord an Millionen Menschen. Manches ist schwer auszuhalten. Du darfst jederzeit eine Pause machen oder mit deiner Lehrkraft sprechen. Heute gibt es keine Punkte und kein Spiel.</span></div>
-
-  <nav class="toc" aria-label="Teile der Stunde" style="margin-top:24px">
+  <nav class="toc" aria-label="Teile der Stunde">
     <a href="#einstieg" data-need="s5.e">Einstieg</a>
-    <a href="#a" data-need="s5.a.begriffe s5.a.osten">A Vernichtung</a>
-    <a href="#b" data-need="s5.b.pflicht">B Otto Schwerdt</a>
-    <a href="#c" data-need="s5.c.person">C Erinnern</a>
+    <a href="#a" data-need="s5.a.sort s3.a.appease">A Worte und Taten</a>
+    <a href="#b" data-need="s5.b.order">B Zeitstrahl</a>
+    <a href="#c" data-need="s5.c.vorwand">C Gleiwitz</a>
     <a href="#heute" data-need="s5.h.text">Heute-Check</a>
-    <a href="#runde" data-need="s5.d.satz">Ruhige Runde</a>
+    <a href="#kugellager" data-need="s5.d.text">Kugellager</a>
     <a href="#lernpass">Lernpass</a>
   </nav>
 
@@ -55,19 +45,21 @@
   <section class="part" id="einstieg" aria-labelledby="e-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip">Einstieg · 5 Min</span><span class="label muted">alle zusammen, in Ruhe</span></p>
-        <h2 class="h-l" id="e-t">Ein Stein im Gehweg</h2>
-        <p class="lead">Dieser Stein liegt in Nördlingen, in Schwaben (Buch S. 103). Lies ihn langsam.</p>
+        <p class="part__tag"><span class="chip">Einstieg · 5 Min</span><span class="label muted">alle zusammen</span></p>
+        <h2 class="h-l" id="e-t">Ein Foto vom ersten Kriegstag</h2>
+        <p class="lead">Schau dir das große Foto oben an. Erinnerst du dich an Stunde 3? Ein Foto lügt nicht. Oder doch?</p>
       </div>
-      <div class="grid-2" style="align-items:center">
-        <div class="stone" role="img" aria-label="Stolperstein: Hier wohnte Bernd Michael Mahler, Jahrgang 1937, deportiert 1942, ermordet in Piaski">
-          <span>Hier wohnte</span><span class="name">Bernd Michael</span><span class="name">Mahler</span><span>Jg. 1937</span><span>deportiert 1942</span><span>ermordet in</span><span>Piaski</span>
-        </div>
+      <div class="grid-2">
         <div class="task">
-          <p class="task__q"><b>E</b>Wie alt war Bernd Michael, als er deportiert wurde? Was erzählt dir dieser kleine Stein über ihn, und was erzählt er nicht?</p>
-          <textarea class="answer" data-key="s5.e" placeholder="Bernd Michael war … Jahre alt. Der Stein erzählt … Er erzählt nicht …"></textarea><p class="saved" aria-live="polite"></p>
-          <p class="small muted">Neben ihm liegt der Stein seiner Mutter Helene, geboren 1906. Beide wurden 1942 in das Getto Piaski in Polen verschleppt und ermordet.</p>
+          <p class="task__q"><b>E</b>Was soll dieses Foto den Deutschen 1939 sagen? Ist es echt oder gestellt? Begründe.</p>
+          <div class="choices" data-choice="s5.e.echt"><button class="choice" data-v="echt">echt, zufällig fotografiert</button><button class="choice" data-v="gestellt">gestellt</button><button class="choice" data-v="weiß nicht">weiß nicht</button></div>
+          <textarea class="answer" data-key="s5.e" placeholder="Das Foto soll sagen: … Ich glaube, es ist …, weil …"></textarea><p class="saved" aria-live="polite"></p>
         </div>
+        <details class="block block--ink">
+          <summary class="h-s" style="cursor:pointer">Auflösung</summary>
+          <p style="margin-top:12px">Die Szene wurde für die Kamera nachgestellt. Soldaten und Zollbeamte spielten das Öffnen der Grenze extra für den Fotografen nach. Das Bild lief in allen Zeitungen und sollte zeigen: Deutschland holt sich einfach zurück, was ihm „gehört“.</p>
+          <p>Gestellt war an diesem Tag noch viel mehr. Das erfährst du in Station C.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -76,36 +68,47 @@
   <section class="part" id="a" aria-labelledby="a-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--lila">Station A · Pflicht</span><span class="book">Buch S. 98 bis 100</span></p>
-        <h2 class="h-l" id="a-t">Von der Verfolgung zur Ermordung</h2>
-        <p class="lead">Über sechs Millionen europäische Juden wurden ermordet. Dazu Hunderttausende Sinti und Roma, Menschen mit Behinderungen und viele andere, die nicht in das Weltbild der Nationalsozialisten passten.</p>
+        <p class="part__tag"><span class="chip chip--lila">Station A · Pflicht</span><span class="book">Buch S. 90/91</span></p>
+        <h2 class="h-l" id="a-t">Frieden sagen, Krieg planen</h2>
+        <p class="lead">Hitler hatte drei Ziele: den Versailler Vertrag aufheben, ein „Großdeutsches Reich“ schaffen und „Lebensraum im Osten“ erobern. Öffentlich sprach er trotzdem immer wieder vom Frieden.</p>
       </div>
       <div class="grid-2">
         <div class="stack">
-          <div class="clip" data-yt="f_93tE8qCMc" data-key="s5.a.video" data-title="Ausgrenzung, Verfolgung, Vernichtung" data-quelle="Stiftung Denkmal für die ermordeten Juden Europas" data-clips='[[0, 91, "Ausgrenzung und Gettos"], [91, 213, "Massenmord im Osten"], [213, 297, "Auschwitz und Kriegsende"]]'></div>
+          <div class="block block--sand">
+            <p class="label">Ausgaben für die Wehrmacht</p>
+            <div class="bars" style="margin-top:12px">
+              <div class="bars__row"><span>1933</span><span class="bars__bar"><i class="b" style="--v:5"></i></span><b>unter 1 Mrd.</b></div>
+              <div class="bars__row"><span>1938</span><span class="bars__bar"><i class="b" style="--v:100"></i></span><b>ca. 16 Mrd.</b></div>
+            </div>
+            <p class="small" style="margin-top:8px">in Reichsmark, abgelesen aus Buch S. 90, Grafik 90.3. Für Wohnungsbau gab der Staat 1938 nur einen Bruchteil davon aus.</p>
+          </div>
+          <figure><div class="reveal" style="height:250px"><img src="../img/foto/s3-muenchen-1938.jpg" alt="Der britische Premierminister Chamberlain und der französische Ministerpräsident Daladier kommen nach der Unterzeichnung des Münchner Abkommens eine Treppe herunter."></div>
+            <figcaption class="credit">München, 29./30. September 1938: Chamberlain (Großbritannien) und Daladier (Frankreich) nach der Unterzeichnung des Münchner Abkommens. Bundesarchiv, Bild 183-2005-0502-500, CC BY-SA 3.0 de</figcaption></figure>
+          <div class="note"><b>Appeasement</b><span>heißt Beschwichtigung: Großbritannien und Frankreich gaben Hitler 1938 im Münchner Abkommen das Sudetenland, damit er Ruhe gibt. Hitler versprach, danach keine weiteren Forderungen zu stellen.</span></div>
         </div>
-        <ol class="stack" style="gap:0">
-          <li class="block" style="border-top:4px solid var(--ink)"><p class="label muted">ab 1939</p><p class="h-s">Gettos</p><p class="small">In Polen werden Juden in abgesperrte Stadtteile gezwungen. Im Warschauer Getto leben 450 000 Menschen auf engstem Raum. 1941 verhungern dort fast 30 000.</p></li>
-          <li class="block block--plaster" style="border-top:4px solid var(--ink)"><p class="label muted">ab Sommer 1941</p><p class="h-s">Massenerschießungen</p><p class="small">Hinter der Front erschießen SS-„Einsatzgruppen“ und Polizei Hunderttausende jüdische Männer, Frauen und Kinder.</p></li>
-          <li class="block" style="border-top:4px solid var(--ink)"><p class="label muted">20. Januar 1942</p><p class="h-s">Wannsee-Konferenz</p><p class="small">Hohe Beamte und SS-Führer besprechen in einer Villa in Berlin, wie der Mord an allen Juden Europas organisiert wird. Sie nennen es „Endlösung der Judenfrage“.</p></li>
-          <li class="block block--lila" style="border-top:4px solid var(--ink)"><p class="label">1942 bis 1945</p><p class="h-s">Vernichtungslager</p><p class="small">Sechs Lager im besetzten Polen: Auschwitz, Belzec, Kulmhof, Majdanek, Sobibor, Treblinka. Allein in Auschwitz werden mindestens 1,1 Millionen Menschen ermordet.</p></li>
-        </ol>
+        <div class="task" data-sorter="s5.a.sort">
+          <p class="task__q"><b>A1</b>Was hat Hitler <i>gesagt</i>, was hat er <i>getan</i>? Tippe eine Karte, dann die Spalte.</p>
+          <div class="sorter">
+            <div class="sorter__pool">
+              <button type="button" class="chipcard" data-id="1" data-right="a">„Deutschland will den Frieden.“</button>
+              <button type="button" class="chipcard" data-id="2" data-right="b">Die Ausgaben für die Wehrmacht steigen auf das 16-Fache.</button>
+              <button type="button" class="chipcard" data-id="3" data-right="a">„Nach dem Sudetenland stelle ich keine Forderungen mehr.“</button>
+              <button type="button" class="chipcard" data-id="4" data-right="b">März 1939: Deutsche Truppen besetzen Prag und die restliche Tschechoslowakei.</button>
+              <button type="button" class="chipcard" data-id="5" data-right="b">1935 wird die Wehrpflicht wieder eingeführt.</button>
+              <button type="button" class="chipcard" data-id="6" data-right="a">„Seit 5.45 Uhr wird jetzt zurückgeschossen.“</button>
+              <button type="button" class="chipcard" data-id="7" data-right="b">August 1939: geheimer Pakt mit Stalin, Polen soll aufgeteilt werden.</button>
+            </div>
+            <div class="sorter__cols">
+              <div class="sorter__col sorter__col--a" data-col="a"><h4>Gesagt</h4></div>
+              <div class="sorter__col sorter__col--b" data-col="b"><h4>Getan</h4></div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><p class="feedback" aria-live="polite"></p></div>
+          </div>
+        </div>
       </div>
-      <div class="grid-2" style="margin-top:20px">
-        <figure><div class="reveal" style="height:230px"><img src="../img/foto/s5-wannsee.jpg" alt="Eine weiße Villa am Wannsee in Berlin hinter Bäumen, heute Gedenkstätte."></div>
-          <figcaption class="credit">Haus der Wannsee-Konferenz, heute Gedenk- und Bildungsstätte. Foto 2015, CC BY-SA 4.0, Wikimedia Commons</figcaption></figure>
-        <figure><div class="reveal" style="height:230px"><img src="../img/foto/s5-birkenau.jpg" alt="Das Torgebäude von Auschwitz-Birkenau aus rotem Backstein, davor die Bahngleise."></div>
-          <figcaption class="credit">Tor von Auschwitz-Birkenau heute. Durch dieses Tor fuhren die Deportationszüge. Foto 2013, CC BY-SA 4.0, Wikimedia Commons</figcaption></figure>
-      </div>
-      <div class="grid-2" style="margin-top:20px">
-        <div class="task">
-          <p class="task__q"><b>A1</b>Erkläre die drei Fachbegriffe in eigenen Worten: Getto, Holocaust, Shoah (Buch S. 98/99, blaue Kästen).</p>
-          <textarea class="answer" data-key="s5.a.begriffe" style="min-height:130px" placeholder="Getto: … &#10;Holocaust: … &#10;Shoah: …"></textarea><p class="saved" aria-live="polite"></p>
-        </div>
-        <div class="task">
-          <p class="task__q"><b>A2</b>Warum bauten die Nationalsozialisten die Vernichtungslager im besetzten Polen und nicht in Deutschland?</p>
-          <textarea class="answer" data-key="s5.a.osten" placeholder="Die Lager lagen im Osten, weil …"></textarea><p class="saved" aria-live="polite"></p>
-        </div>
+      <div class="task" style="margin-top:20px">
+        <p class="task__q"><b>A2</b>Warum musste die Appeasement-Politik scheitern? Nutze deine Spalten „Gesagt“ und „Getan“.</p>
+        <textarea class="answer" data-key="s5.a.appease" placeholder="Appeasement musste scheitern, weil Hitler … Man hätte auf … achten müssen."></textarea><p class="saved" aria-live="polite"></p>
       </div>
     </div>
   </section>
@@ -114,28 +117,39 @@
   <section class="part" id="b" aria-labelledby="b-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--lila">Station B · Pflicht</span><span class="book">Buch S. 101</span></p>
-        <h2 class="h-l" id="b-t">Otto Schwerdt: „Die Erinnerung ist eine Pflicht gegenüber den Toten“</h2>
-        <p class="lead">Otto Schwerdt überlebte Auschwitz. Später lebte er in Regensburg und erzählte Schülerinnen und Schülern von seinem Leben, so wie du heute.</p>
+        <p class="part__tag"><span class="chip chip--lila">Station B · Pflicht</span><span class="book">Buch S. 91 bis 93</span></p>
+        <h2 class="h-l" id="b-t">Von München bis Pearl Harbor</h2>
+        <p class="lead">In nur drei Jahren wird aus einer Krise in Europa ein Weltkrieg. Die Karte im Buch (S. 91) und die Doppelseite S. 92/93 helfen dir.</p>
       </div>
       <div class="grid-2">
-        <ol class="stack small" style="gap:0">
-          <li class="block" style="border-left:6px solid var(--lila)"><b>1923</b> geboren in Braunschweig, jüdischen Glaubens</li>
-          <li class="block" style="border-left:6px solid var(--lila)"><b>1936</b> Flucht der Familie nach Polen</li>
-          <li class="block" style="border-left:6px solid var(--lila)"><b>ab 1939</b> Leben in verschiedenen Gettos</li>
-          <li class="block block--plaster" style="border-left:6px solid var(--brick)"><b>1943</b> verhaftet, nach Auschwitz verschleppt, später Theresienstadt</li>
-          <li class="block block--plaster" style="border-left:6px solid var(--brick)"><b>1945</b> befreit zusammen mit seinem Vater. Mutter, Schwester und Bruder wurden in Auschwitz ermordet.</li>
-          <li class="block" style="border-left:6px solid var(--lila)"><b>1954</b> Rückkehr nach Deutschland, später Regensburg</li>
-          <li class="block" style="border-left:6px solid var(--lila)"><b>1990</b> erster Besuch der Gedenkstätte Auschwitz</li>
-          <li class="block" style="border-left:6px solid var(--lila)"><b>1998</b> Buch „Als Gott und die Welt schliefen“, <b>2007</b> gestorben in Regensburg</li>
-        </ol>
+        <div class="task" data-order="s5.b.order">
+          <p class="task__q"><b>B1</b>Bring die Ereignisse in die richtige Reihenfolge. Tippe das früheste zuerst an.</p>
+          <div class="order">
+            <button type="button" class="order__item" data-id="frankreich" data-pos="6"><span class="nr"></span><span>Überfall auf Belgien, Niederlande und Frankreich<small data-date="Mai/Juni 1940">Datum?</small></span></button>
+            <button type="button" class="order__item" data-id="oesterreich" data-pos="1"><span class="nr"></span><span>„Anschluss“ Österreichs<small data-date="März 1938">Datum?</small></span></button>
+            <button type="button" class="order__item" data-id="usa" data-pos="8"><span class="nr"></span><span>Japan greift Pearl Harbor an, Hitler erklärt den USA den Krieg<small data-date="Dezember 1941">Datum?</small></span></button>
+            <button type="button" class="order__item" data-id="muenchen" data-pos="2"><span class="nr"></span><span>Münchner Abkommen: Das Sudetenland geht an Deutschland<small data-date="30. September 1938">Datum?</small></span></button>
+            <button type="button" class="order__item" data-id="polen" data-pos="5"><span class="nr"></span><span>Überfall auf Polen, der Zweite Weltkrieg beginnt<small data-date="1. September 1939">Datum?</small></span></button>
+            <button type="button" class="order__item" data-id="prag" data-pos="3"><span class="nr"></span><span>Deutsche Truppen besetzen Prag<small data-date="März 1939">Datum?</small></span></button>
+            <button type="button" class="order__item" data-id="su" data-pos="7"><span class="nr"></span><span>Überfall auf die Sowjetunion<small data-date="22. Juni 1941">Datum?</small></span></button>
+            <button type="button" class="order__item" data-id="pakt" data-pos="4"><span class="nr"></span><span>Hitler-Stalin-Pakt<small data-date="23. August 1939">Datum?</small></span></button>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><button class="btn-2" type="button" data-reset>Neu</button><p class="feedback" aria-live="polite"></p></div>
+        </div>
         <div class="stack">
-          <blockquote class="quote">„Nach meiner Befreiung wollte ich nie mehr hierher kommen […]. Ich hatte Angst vor meinen Gefühlen und Erinnerungen. Die Erinnerungen, die ich nicht mehr abschütteln kann, die mich nachts verfolgen.“
-            <cite>Otto Schwerdt über seinen ersten Besuch in Auschwitz 1990. Buch S. 101, Quelle 101.3 (gekürzt)</cite></blockquote>
-          <div class="note"><b>Im Buch:</b><span>Quelle 101.1 beschreibt Ottos Ankunft in Auschwitz. Lies sie, wenn du dich bereit fühlst.</span></div>
+          <div class="clip" data-yt="JHw7DbiWaCc" data-key="s5.b.video" data-title="Beginn des Zweiten Weltkriegs" data-quelle="MrWissen2go Geschichte (Terra X)" data-clips='[[43, 84, "Hitler rüstet auf"], [147, 212, "Blitzkrieg gegen Polen"], [406, 466, "Frankreich besiegt"], [488, 508, "England hält stand"]]'></div>
+          <div class="block block--ink">
+            <p class="label" style="color:var(--sand);margin-bottom:6px">Blitzkrieg</p>
+            <p class="small">So nannte man die Taktik der Wehrmacht: Zuerst zerstören Flugzeuge Flugplätze und Straßen, dann stoßen Panzer schnell tief ins Land vor. Polen war nach fünf Wochen besiegt, Frankreich nach sechs. Viele Deutsche sahen das als „Rache“ für 1918 (Buch S. 92).</p>
+          </div>
+          <div class="block block--sand">
+            <p class="label">Zweiter Weltkrieg</p>
+            <p class="h-l">65 Mio.</p>
+            <p class="small">Menschen verloren ihr Leben (Buch S. 92). Das sind mehr als zweieinhalbmal so viele, wie heute in ganz Bayern und Baden-Württemberg zusammen leben.</p>
+          </div>
           <div class="task">
-            <p class="task__q"><b>B1</b>Otto Schwerdt sagte: „Die Erinnerung ist eine Pflicht gegenüber den Toten.“ Erkläre diesen Satz. Warum ist er 45 Jahre nach seiner Befreiung trotzdem nach Auschwitz gefahren?</p>
-            <textarea class="answer" data-key="s5.b.pflicht" placeholder="Mit dem Satz meint er … Er ist trotzdem gefahren, weil …"></textarea><p class="saved" aria-live="polite"></p>
+            <p class="task__q"><b>B2</b>Ab wann ist es ein <i>Welt</i>krieg? Begründe mit einem Ereignis aus dem Zeitstrahl.</p>
+            <textarea class="answer" data-key="s5.b.welt" placeholder="Ab … ist es ein Weltkrieg, weil …"></textarea><p class="saved" aria-live="polite"></p>
           </div>
         </div>
       </div>
@@ -146,37 +160,34 @@
   <section class="part" id="c" aria-labelledby="c-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--lila">Station C · Pflicht</span><span class="book">Buch S. 102/103</span></p>
-        <h2 class="h-l" id="c-t">Namen statt Zahlen</h2>
-        <p class="lead">Sechs Millionen ist eine Zahl, die niemand begreifen kann. Deshalb erinnern viele Projekte an einzelne Menschen mit Namen. Der Künstler Gunter Demnig verlegt seit 1992 Stolpersteine, inzwischen über 100 000 in ganz Europa. In München gibt es zusätzlich die „Erinnerungszeichen“: Tafeln und Stelen an den Häusern, in denen Verfolgte lebten.</p>
+        <p class="part__tag"><span class="chip chip--lila">Station C · Pflicht</span><span class="book">Buch S. 93</span></p>
+        <h2 class="h-l" id="c-t">Der Überfall, der keiner war</h2>
+        <p class="lead">31. August 1939, abends. SS-Männer in polnischen Uniformen stürmen den deutschen Radiosender in Gleiwitz. Sie rufen ein paar Sätze auf Polnisch ins Mikrofon und verschwinden. Am nächsten Morgen marschiert die Wehrmacht in Polen ein.</p>
       </div>
       <div class="grid-2">
-        <div class="block block--sand">
-          <p class="h-s" style="margin-bottom:10px">Dein Auftrag</p>
-          <ol class="stack small" style="gap:6px">
-            <li>1. Öffne die Karte der Münchner Erinnerungszeichen.</li>
-            <li>2. Such dir einen Menschen aus, gern in einem Stadtteil, den du kennst.</li>
-            <li>3. Lies seine Lebensgeschichte und schreib drei Dinge über ihn oder sie auf.</li>
+        <div class="stack">
+          <ol class="stack" style="gap:0">
+            <li class="block" style="border-top:4px solid var(--ink)"><p class="label muted">31. August 1939, abends</p><p class="h-s">Der gespielte Überfall</p><p class="small">SS-Männer in polnischen Uniformen besetzen den Sender Gleiwitz und rufen polnische Sätze ins Mikrofon.</p></li>
+            <li class="block block--plaster" style="border-top:4px solid var(--ink)"><p class="label muted">in der Nacht</p><p class="h-s">Die Lüge geht um die Welt</p><p class="small">Die Propaganda meldet: Polen hat Deutschland angegriffen.</p></li>
+            <li class="block block--lila" style="border-top:4px solid var(--ink)"><p class="label">1. September 1939, 4.45 Uhr</p><p class="h-s">Der Überfall auf Polen</p><p class="small">Die Wehrmacht marschiert ein. Der Zweite Weltkrieg beginnt.</p></li>
           </ol>
-          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px">
-            <a class="btn" href="https://map.erinnerungszeichen.de" target="_blank" rel="noopener">Karte Erinnerungszeichen</a>
-            <a class="btn-2" href="https://de.wikipedia.org/wiki/Liste_der_Stolpersteine_in_M%C3%BCnchen" target="_blank" rel="noopener">Stolpersteine München</a>
-          </div>
         </div>
-        <div class="task">
-          <p class="task__q"><b>C1</b>Name, Lebensdaten und drei Dinge, die du über diesen Menschen erfahren hast:</p>
-          <textarea class="answer" data-key="s5.c.person" style="min-height:150px" placeholder="Name: …&#10;Lebte von … bis …, in …&#10;1. …&#10;2. …&#10;3. …"></textarea><p class="saved" aria-live="polite"></p>
+        <div class="stack">
+          <figure><div class="reveal" style="height:240px"><img src="../img/foto/s3-gleiwitz.jpg" alt="Der hölzerne Funkturm des Senders Gleiwitz, heute Gliwice in Polen, vor blauem Himmel."></div>
+            <figcaption class="credit">Der Sender Gleiwitz steht noch heute, im polnischen Gliwice. Foto 2022, CC BY-SA 4.0, Wikimedia Commons</figcaption></figure>
+          <blockquote class="quote">„Seit 5.45 Uhr wird jetzt zurückgeschossen!“<cite>Hitler im Reichstag, 1. September 1939 (Buch S. 93). In Wahrheit begann der Angriff schon um 4.45 Uhr.</cite></blockquote>
         </div>
       </div>
+      <div class="task" style="margin-top:20px">
+        <p class="task__q"><b>C1</b>Warum brauchte Hitler den gespielten Überfall auf Gleiwitz, obwohl er den Krieg sowieso wollte?</p>
+        <textarea class="answer" data-key="s5.c.vorwand" placeholder="Hitler brauchte einen Vorwand, damit die Deutschen … und damit das Ausland …"></textarea><p class="saved" aria-live="polite"></p>
+      </div>
       <div class="block block--plaster" style="margin-top:20px">
-        <p class="part__tag" style="margin-bottom:12px"><span class="chip chip--sand">Zusatz · für Schnelle</span></p>
+        <p class="part__tag" style="margin-bottom:12px"><span class="chip chip--sand">Zusatz · für Schnelle</span><span class="book">Buch S. 112/113</span></p>
         <div class="grid-2">
-          <p class="small">Bei <b>#everynamecounts</b> der Arolsen Archives kann jeder mithelfen, Dokumente von Verfolgten abzutippen. So werden Namen und Schicksale für immer auffindbar. Schau dir die Seite an. Mitmachen geht auch zu Hause.</p>
-          <div style="display:grid;gap:10px;align-content:start">
-            <a class="btn-2" href="https://everynamecounts.arolsen-archives.org" target="_blank" rel="noopener">#everynamecounts ansehen</a>
-            <div class="task"><p class="task__q"><b>C2</b>Warum ist es wichtig, jeden einzelnen Namen zu kennen?</p>
-              <textarea class="answer" data-key="s5.c.namen" placeholder="Jeder Name ist wichtig, weil …"></textarea><p class="saved" aria-live="polite"></p></div>
-          </div>
+          <div><p class="small">Am 7. Dezember 1941 greifen japanische Flugzeuge den US-Hafen Pearl Harbor auf Hawaii an. Über 2000 US-Soldaten sterben. Vier Tage später erklärt Hitler den USA den Krieg. Jetzt kämpfen Deutschland, Italien und Japan gegen Großbritannien, die Sowjetunion und die USA.</p></div>
+          <div class="task"><p class="task__q"><b>C2</b>War Hitlers Kriegserklärung an die USA klug? Was bedeutete sie für Deutschland?</p>
+            <textarea class="answer" data-key="s5.c.usa" placeholder="Die Kriegserklärung war …, denn die USA …"></textarea><p class="saved" aria-live="polite"></p></div>
         </div>
       </div>
     </div>
@@ -187,53 +198,58 @@
     <div class="wrap">
       <div class="part__head">
         <p class="part__tag"><span class="chip chip--brick">Heute-Check · 5 Min</span></p>
-        <h2 class="h-l" id="h-t">„Es reicht jetzt mit dem Erinnern.“</h2>
-        <p class="lead">Manche wollen, dass wir aufhören, an den Holocaust zu erinnern. Oder sie machen ihn kleiner, als er war. Lies die Aussagen. Sie sind ohne Absender. Was steckt dahinter?</p>
+        <h2 class="h-l" id="h-t">Achte auf Taten, nicht nur auf Worte</h2>
+        <p class="lead">Der Trick von 1939: Frieden versprechen, Krieg vorbereiten. Und einen Vorwand erfinden, damit der Angriff wie Verteidigung aussieht. Gibt es das heute noch?</p>
       </div>
       <div class="grid-2">
         <div class="today">
-          <div class="today__card"><p class="label muted">Rede</p><blockquote>„Wir müssen endlich einen Schlussstrich ziehen. Dieser ewige Schuldkult muss aufhören.“</blockquote>
-            <details><summary class="small" style="cursor:pointer;font-weight:600">Einordnung zeigen</summary><p class="small" style="margin-top:8px">Niemand von euch ist schuld an dem, was damals passiert ist. Aber wir alle tragen Verantwortung, dass es nie wieder passiert. Wer das „Schuldkult“ nennt, will, dass wir vergessen.</p></details></div>
-          <div class="today__card"><p class="label muted">Kommentar</p><blockquote>„Die zwölf Jahre waren doch nur ein kleiner Fleck in über tausend Jahren großartiger deutscher Geschichte.“</blockquote>
-            <details><summary class="small" style="cursor:pointer;font-weight:600">Einordnung zeigen</summary><p class="small" style="margin-top:8px"><b>Verharmlosung</b>: Ein Völkermord an Millionen wird als Kleinigkeit dargestellt. Denk an Bernd Michael Mahler, fünf Jahre alt.</p></details></div>
-          <div class="today__card"><p class="label muted">Video in sozialen Netzwerken</p><blockquote>„Das mit den Gaskammern ist doch übertrieben. Das hat es so nie gegeben.“</blockquote>
-            <details><summary class="small" style="cursor:pointer;font-weight:600">Einordnung zeigen</summary><p class="small" style="margin-top:8px"><b>Holocaustleugnung</b>. Sie ist in Deutschland verboten und wird bestraft (§ 130 Strafgesetzbuch). Es gibt Millionen Dokumente, Fotos, Aussagen von Tätern und Überlebenden.</p></details></div>
+          <div class="today__card">
+            <p class="label muted">Rede eines Staatschefs im Fernsehen</p>
+            <blockquote>„Wir haben keinerlei Pläne, das Nachbarland anzugreifen.“ Zwei Wochen später rollen seine Panzer über die Grenze.</blockquote>
+            <div class="choices" data-choice="s5.h.1"><button class="choice" data-v="Worte und Taten passen nicht">Worte und Taten passen nicht</button><button class="choice" data-v="Vorwand">Vorwand</button><button class="choice" data-v="kein Trick">kein Trick</button></div>
+            <details><summary class="small" style="cursor:pointer;font-weight:600">Einschätzung zeigen</summary><p class="small" style="margin-top:8px"><b>Worte und Taten passen nicht.</b> So etwas ist auch im 21. Jahrhundert in Europa passiert. Entscheidend ist, was jemand tut, nicht was er sagt.</p></details>
+          </div>
+          <div class="today__card">
+            <p class="label muted">Video in sozialen Netzwerken</p>
+            <blockquote>Ein Clip zeigt angeblich einen Angriff des Nachbarlandes. Später beweisen Fachleute: Das Video ist gefälscht.</blockquote>
+            <div class="choices" data-choice="s5.h.2"><button class="choice" data-v="Worte und Taten passen nicht">Worte und Taten passen nicht</button><button class="choice" data-v="Vorwand">Vorwand</button><button class="choice" data-v="kein Trick">kein Trick</button></div>
+            <details><summary class="small" style="cursor:pointer;font-weight:600">Einschätzung zeigen</summary><p class="small" style="margin-top:8px"><b>Vorwand</b>, wie in Gleiwitz. Heute nennt man das auch „Desinformation“. Prüfe: Wer hat es zuerst veröffentlicht? Berichten seriöse Medien darüber?</p></details>
+          </div>
         </div>
         <div class="stack">
-          <div class="gg"><p class="label">Grundgesetz Artikel 1, Absatz 1</p><p>„Die Würde des Menschen ist unantastbar. Sie zu achten und zu schützen ist Verpflichtung aller staatlichen Gewalt.“</p><p class="small muted" style="font-family:var(--font-text)">Dieser Satz steht ganz bewusst an erster Stelle. Er ist die Antwort auf den Holocaust.</p></div>
-          <div class="block block--lila"><p class="label" style="margin-bottom:8px">Was ist heute anders?</p><p class="small">Der 27. Januar, der Tag der Befreiung von Auschwitz, ist Gedenktag in Deutschland und weltweit. Gedenkstätten wie Dachau erinnern an die Opfer. <b>Aber:</b> Judenhass gibt es noch immer. 2019 versuchte ein Attentäter in Halle, an Jom Kippur in eine voll besetzte Synagoge einzudringen. Er tötete zwei Menschen.</p></div>
+          <div class="gg"><p class="label">Grundgesetz Artikel 26, Absatz 1</p><p>„Handlungen, die geeignet sind und in der Absicht vorgenommen werden, das friedliche Zusammenleben der Völker zu stören, insbesondere die Führung eines Angriffskrieges vorzubereiten, sind verfassungswidrig. Sie sind unter Strafe zu stellen.“</p></div>
+          <div class="block block--lila"><p class="label" style="margin-bottom:8px">Was ist heute anders?</p><p class="small">Deutschland darf keinen Angriffskrieg führen, das steht im Grundgesetz. Deutschland ist mit seinen Nachbarn in der EU, der NATO und den Vereinten Nationen verbunden. Ehemalige Feinde wie Frankreich und Polen sind heute Partner.</p></div>
           <div class="task">
-            <p class="task__q"><b>H</b>Bald gibt es keine Zeitzeugen wie Otto Schwerdt mehr. Wie kann man trotzdem gut erinnern? Was kannst du selbst tun?</p>
-            <textarea class="answer" data-key="s5.h.text" placeholder="Man kann erinnern, indem … Ich selbst kann …"></textarea><p class="saved" aria-live="polite"></p>
+            <p class="task__q"><b>H</b>Woran erkennst du, ob ein Video oder eine Nachricht ein Vorwand sein könnte? Nenne zwei Prüffragen.</p>
+            <textarea class="answer" data-key="s5.h.text" placeholder="1. Ich frage mich, … 2. …"></textarea><p class="saved" aria-live="polite"></p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- RUHIGE RUNDE -->
-  <section class="part" id="runde" aria-labelledby="d-t">
+  <!-- KUGELLAGER -->
+  <section class="part" id="kugellager" aria-labelledby="d-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip">Wir reden darüber · 13 Min</span><span class="label muted">Methode: Ruhige Runde mit Satzanfängen</span></p>
-        <h2 class="h-l" id="d-t">Was nimmst du mit?</h2>
-        <p class="lead">Ihr setzt euch in einen Stuhlkreis. Jeder darf einen Satz sagen, niemand muss. Es wird nichts bewertet und nicht diskutiert. Nur zugehört.</p>
+        <p class="part__tag"><span class="chip">Wir reden darüber · 13 Min</span><span class="label muted">Methode: Kugellager</span></p>
+        <h2 class="h-l" id="d-t">Drei Runden, drei Partner</h2>
+        <p class="lead">Ihr bildet einen Innenkreis und einen Außenkreis, immer zwei sitzen sich gegenüber. Pro Runde redet zuerst innen (1 Min), dann außen (1 Min). Dann rückt der Außenkreis zwei Plätze weiter.</p>
       </div>
       <div class="grid-3">
-        <div class="corner" style="background:var(--plaster)"><p>„Mich hat heute berührt, dass …“</p></div>
-        <div class="corner" style="background:var(--lila-hell)"><p>„Ich frage mich, wie …“</p></div>
-        <div class="corner" style="background:var(--cream)"><p>„Für mich bedeutet Erinnern …“</p></div>
+        <div class="corner" style="background:var(--sand)"><span class="big">1</span><p>War es richtig, Hitler 1938 das Sudetenland zu geben, um einen Krieg zu verhindern?</p></div>
+        <div class="corner" style="background:var(--lila-hell)"><span class="big">2</span><p>Hätten die Deutschen 1939 merken können, dass der Überfall auf Gleiwitz gespielt war?</p></div>
+        <div class="corner" style="background:var(--plaster)"><span class="big">3</span><p>Woran erkennst du heute, ob ein Politiker die Wahrheit sagt?</p></div>
       </div>
       <div class="grid-2" style="margin-top:24px">
         <ol class="stack small" style="gap:10px">
-          <li><b>1. Nachdenken</b> (2 Min): Wähle einen Satzanfang und vervollständige ihn für dich, hier rechts oder im Kopf.</li>
-          <li><b>2. Runde</b> (8 Min): Reihum. Wer etwas sagen möchte, sagt seinen Satz. Wer nicht möchte, sagt „weiter“.</li>
-          <li><b>3. Stille</b> (1 Min): Zum Schluss eine Minute Stille für die Opfer.</li>
-          <li><b>4. Ausblick</b> (2 Min): Es gab auch Menschen, die Widerstand leisteten. Darum geht es nächste Stunde.</li>
+          <li><b>Aufstellen</b> (2 Min): Zwei Kreise, jeder hat ein Gegenüber.</li>
+          <li><b>Drei Runden</b> (je 2 Min): Frage lesen, innen erzählt, außen hört zu und fragt nach, dann umgekehrt. Weiterrücken.</li>
+          <li><b>Auswertung</b> (5 Min): Welches Argument deines Partners war das beste? Zwei bis drei stellen es vor.</li>
         </ol>
         <div class="task">
-          <p class="task__q"><b>D</b>Mein Satz:</p>
-          <textarea class="answer" data-key="s5.d.satz" placeholder="Mich hat heute berührt, dass …"></textarea><p class="saved" aria-live="polite"></p>
+          <p class="task__q"><b>D</b>Das beste Argument, das ich heute von einem Partner gehört habe:</p>
+          <textarea class="answer" data-key="s5.d.text" placeholder="Mein Partner bei Frage … hat gesagt, dass … Das hat mich überzeugt, weil …"></textarea><p class="saved" aria-live="polite"></p>
         </div>
       </div>
     </div>
@@ -246,7 +262,7 @@
         <p class="lead">Dein PDF hat zwei Teile: <b>Teil 1</b> ist der Hefteintrag zur Stunde, für alle gleich, das ist deine Grundlage für die Probe. <b>Teil 2</b> sind deine eigenen Ergebnisse. Das PDF kommt in dein <b>OneNote-Merkheft</b>.</p>
         <ol class="pdf-schritte"><li><span>1</span>Name eintragen und unten auf den Knopf tippen.</li><li><span>2</span>Im Druckmenü auf das Teilen-Symbol tippen und das PDF sichern.</li><li><span>3</span>In OneNote im Merkheft: Einfügen → Datei → als Ausdruck einfügen.</li></ol></div>
       <div class="block block--white" style="color:var(--ink)"><p class="h-s" style="margin-bottom:8px">Merksatz der Stunde</p>
-        <p>Der Holocaust (hebräisch: Shoah) war der geplante Mord an über sechs Millionen europäischen Juden. Auch Sinti und Roma, Menschen mit Behinderungen und andere Gruppen wurden ermordet. Aus Ausgrenzung wurden Gettos, Massenerschießungen und schließlich Vernichtungslager wie Auschwitz. Wir erinnern an die Opfer mit ihren Namen, damit so etwas nie wieder geschieht.</p></div>
+        <p>Hitler sprach vom Frieden, rüstete aber massiv auf. Großbritannien und Frankreich versuchten ihn 1938 mit dem Münchner Abkommen zu beschwichtigen (Appeasement). Mit einem gespielten Überfall auf den Sender Gleiwitz als Vorwand begann am 1. September 1939 mit dem deutschen Überfall auf Polen der Zweite Weltkrieg. Ab Dezember 1941 war er ein Weltkrieg.</p></div>
       <div class="pass-actions"><button class="btn btn--lila" type="button" id="pass-btn">Hefteintrag + Ergebnisse als PDF</button><a class="btn-2" style="color:var(--white);border-color:var(--white)" href="../index.html#karte">Zurück zur Lernlandkarte</a></div>
     </div>
   </section>
@@ -256,16 +272,20 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   NS.guard(5);
+  var EV = { oesterreich: "Anschluss Österreich", muenchen: "Münchner Abkommen", prag: "Besetzung Prag", pakt: "Hitler-Stalin-Pakt", polen: "Überfall Polen", frankreich: "Westfeldzug", su: "Überfall Sowjetunion", usa: "Pearl Harbor / Krieg mit USA" };
+  var KARTE = { 1: "„Deutschland will den Frieden“", 2: "Wehrmacht-Ausgaben x16", 3: "„keine Forderungen mehr“", 4: "Besetzung Prag", 5: "Wehrpflicht 1935", 6: "„Seit 5.45 Uhr …“", 7: "Pakt mit Stalin" };
   document.getElementById("pass-btn").addEventListener("click", function () {
     NS.printPass(5, [
-      { label: "Einstieg: Der Stolperstein von Bernd Michael Mahler", key: "s5.e" },
-      { label: "A1 Getto, Holocaust, Shoah", key: "s5.a.begriffe" },
-      { label: "A2 Warum Vernichtungslager im Osten?", key: "s5.a.osten" },
-      { label: "B1 „Die Erinnerung ist eine Pflicht“", key: "s5.b.pflicht" },
-      { label: "C1 Ein Mensch aus München", key: "s5.c.person" },
-      { label: "C2 Zusatz: Warum jeder Name zählt", key: "s5.c.namen" },
-      { label: "Heute-Check: Wie wir erinnern können", key: "s5.h.text" },
-      { label: "Ruhige Runde: mein Satz", key: "s5.d.satz" }
+      { label: "Einstieg: Foto echt oder gestellt?", key: "s5.e.echt" },
+      { label: "Einstieg: Begründung", key: "s5.e" },
+      { label: "A1 Gesagt / Getan", key: "s5.a.sort", fmt: function (v) { var a = [], b = []; Object.keys(v).forEach(function (id) { (v[id] === "a" ? a : b).push(KARTE[id]); }); return "Gesagt: " + a.join(", ") + "\nGetan: " + b.join(", "); } },
+      { label: "A2 Warum Appeasement scheitern musste", key: "s5.a.appease" },
+      { label: "B1 Zeitstrahl (meine Reihenfolge)", key: "s5.b.order", fmt: function (v) { return v.map(function (x, i) { return (i + 1) + ". " + EV[x]; }).join("\n"); } },
+      { label: "B2 Ab wann ein Weltkrieg?", key: "s5.b.welt" },
+      { label: "C1 Warum der Vorwand Gleiwitz?", key: "s5.c.vorwand" },
+      { label: "C2 Zusatz: Kriegserklärung an die USA", key: "s5.c.usa" },
+      { label: "Heute-Check: Meine Prüffragen", key: "s5.h.text" },
+      { label: "Kugellager: das beste Argument", key: "s5.d.text" }
     ]);
   });
 });

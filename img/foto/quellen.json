@@ -262,5 +262,37 @@
   "desc": "Bundestagsgebäude in Berlin: Der israelische Künstler Dani Karavan hat in drei Meter hohe Glasscheiben, die einen Außenhof des Jakob-Kaiser-Hauses im Uferbereich zur Spree begrenzen, die 19 Grundrechtsartikel des Grundgesetzes mit Laser eingraviert. „Die Grundrechtsartikel schweben gleichsam in Auge",
   "date": "2013-08-10",
   "url": "https://commons.wikimedia.org/wiki/File:Art_16_GG.jpg"
+ },
+ "s0-reichstagsbrand": {
+  "title": "File:Bundesarchiv Bild 146-1977-148-19A, Berlin, Reichstagsbrand.jpg",
+  "license": "CC BY-SA 3.0 de",
+  "artist": "\nUnknown authorUnknown author",
+  "desc": "\nFor documentary purposes the German Federal Archive often retained the original image captions, which may be erroneous, biased, obsolete or politically extreme. Am Morgen nach dem Reichstagsbrand.",
+  "date": "Taken on 27 February 1933",
+  "url": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_146-1977-148-19A,_Berlin,_Reichstagsbrand.jpg"
+ },
+ "s0-wels": {
+  "title": "File:Otto Wels 1932.jpg",
+  "license": "Public domain",
+  "artist": "Deutsches Reich. Reichstag.",
+  "desc": "Member of the Reichstag Otto Wels",
+  "date": "1932",
+  "url": "https://commons.wikimedia.org/wiki/File:Otto_Wels_1932.jpg"
+ },
+ "s0-buecher": {
+  "title": "File:Bundesarchiv Bild 102-14597, Berlin, Opernplatz, Bücherverbrennung.jpg",
+  "license": "CC BY-SA 3.0 de",
+  "artist": "\nPahl, Georg",
+  "desc": "\nFor documentary purposes the German Federal Archive often retained the original image captions, which may be erroneous, biased, obsolete or politically extreme. Die öffentliche Verbrennung undeutscher Schriften und Bücher auf dem Opernplatz Unter den Linden in Berlin, durch Studenten der Berliner U",
+  "date": "11 May 1933date QS:P571,+1933-05-11T00:0",
+  "url": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_102-14597,_Berlin,_Opernplatz,_B%C3%BCcherverbrennung.jpg"
+ },
+ "s0-einvolk": {
+  "title": "File:Bundesarchiv Bild 183-H03823, Berlin, Deutschlandhalle, Generalappell.jpg",
+  "license": "CC BY-SA 3.0 de",
+  "artist": "\nUnknownUnknown ",
+  "desc": "\nFor documentary purposes the German Federal Archive often retained the original image captions, which may be erroneous, biased, obsolete or politically extreme. Berlin, Deutschlandhalle, Generalappell\nGeneralappell in der Deutschlandhalle am 23.3.38\nÜbersicht in der Deutschlandhalle während des Gen",
+  "date": "23 March 1938date QS:P571,+1938-03-23T00",
+  "url": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-H03823,_Berlin,_Deutschlandhalle,_Generalappell.jpg"
  }
 }
