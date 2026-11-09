@@ -476,3 +476,7 @@ textarea.answer:focus { outline: 3px solid var(--lila); outline-offset: 0; }
 .clip__chapters .d { font-size: 13px; opacity: .75; font-variant-numeric: tabular-nums; }
 .clip__meta { padding: 10px 12px; font-size: 13px; color: #c5c3d4; }
 .clip__screen:fullscreen { aspect-ratio: auto; }
+.pdf-schritte { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }
+.pdf-schritte li { display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: start; font-size: 15px; line-height: 1.4; }
+.pdf-schritte span { width: 34px; height: 34px; display: grid; place-items: center; background: var(--sand); color: var(--ink); font-weight: 700; }
+@media (max-width: 760px) { .pdf-schritte { grid-template-columns: 1fr; } }
