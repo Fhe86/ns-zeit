@@ -1,5 +1,6 @@
 /* NS-Zeit Lernlandkarte: gemeinsames Skript.
-   Speichert alles nur im Gerät (localStorage). Keine Namen, kein Server. */
+   Antworten bleiben nur im Gerät (localStorage). An den Server (Live-Übersicht der Lehrkraft)
+   gehen nur Vorname, eine zufällige Geräte-Nummer und der Fortschritt je Station. */
 (function () {
   "use strict";
 
@@ -81,6 +82,28 @@
     try { var s = JSON.parse(localStorage.getItem(KEY) || "{}"); return { open: s.open || {}, done: s.done || {}, pass: s.pass || {}, a: s.a || {} }; }
     catch (e) { return { open: {}, done: {}, pass: {}, a: {} }; }
   }
+  /* Umzug von GitHub Pages: Die alte Adresse schickt alle zur neuen weiter und nimmt den Fortschritt
+     im Adress-Anhang (#uebernahme=…) mit. Der Anhang geht nie an einen Server, nur von Seite zu Seite. */
+  var NEUE_ADRESSE = "https://ns-zeit.fhe86.workers.dev/lernen/";
+  function b64(str) { return btoa(unescape(encodeURIComponent(str))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); }
+  function unb64(str) { return decodeURIComponent(escape(atob(str.replace(/-/g, "+").replace(/_/g, "/")))); }
+  if (/github\.io$/.test(location.hostname)) {
+    var rest = location.pathname.replace(/^\/ns-zeit\/?/, ""), mit = "";
+    try { var alt = localStorage.getItem(KEY); if (alt && alt.length > 20 && alt.length < 200000) mit = "#uebernahme=" + b64(alt); } catch (e) {}
+    location.replace(NEUE_ADRESSE + rest + mit);
+    return;
+  }
+  (function uebernehmen() {
+    var m = /^#uebernahme=([A-Za-z0-9_-]+)$/.exec(location.hash);
+    if (!m) return;
+    try {
+      var neu = JSON.parse(unb64(m[1])), jetzt = JSON.parse(localStorage.getItem(KEY) || "{}");
+      var leer = !jetzt.a || Object.keys(jetzt.a).length === 0;
+      if (leer && neu && typeof neu === "object") localStorage.setItem(KEY, JSON.stringify(neu));
+    } catch (e) { /* kaputter Anhang: einfach ohne Übernahme weiter */ }
+    try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {}
+  })();
+
   var state = load();
   function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* privater Modus: dann eben ohne Speichern */ } }
 
@@ -583,7 +606,7 @@
     }
     function geh(i, scroll) {
       if (i > maxErlaubt()) return;
-      cur = Math.max(0, Math.min(parts.length - 1, i)); NS.set(key, cur); zeichne();
+      cur = Math.max(0, Math.min(parts.length - 1, i)); NS.set(key, cur); zeichne(); melden(false);
       if (scroll !== false) { var y = leiste.getBoundingClientRect().top + window.scrollY - 70; window.scrollTo({ top: Math.max(0, y), behavior: "smooth" }); }
     }
     document.addEventListener("click", function (e) { var b = e.target.closest("[data-go]"); if (b && document.body.classList.contains("gefuehrt")) geh(Number(b.dataset.go)); });
@@ -639,7 +662,95 @@
     });
   };
 
+
+  /* ---------- Live-Übersicht: Vorname + Fortschritt an die Lehrkraft ----------
+     Nur auf der Cloudflare-Seite (/lernen/…), nicht lokal oder auf GitHub.
+     Gesendet: Vorname, Geräte-Nummer, je Station [erledigt, gesamt], aktuelle Station und Schritt. Keine Antworten. */
+  var LIVE = /^\/lernen\//.test(location.pathname);
+  var ICH_KEY = "nszeit-ich";
+  var NAME_RE = /^[A-Za-zÀ-ÖØ-öø-ÿĀ-žḀ-ỿ][A-Za-zÀ-ÖØ-öø-ÿĀ-žḀ-ỿ '’-]{0,19}$/;
+  function ich() {
+    var x = {};
+    try { x = JSON.parse(localStorage.getItem(ICH_KEY) || "{}") || {}; } catch (e) {}
+    if (!/^[a-z0-9]{16}$/.test(x.pid || "")) {
+      var z = new Uint8Array(16), abc = "abcdefghijklmnopqrstuvwxyz0123456789";
+      (window.crypto || {}).getRandomValues ? crypto.getRandomValues(z) : z.forEach(function (_, i) { z[i] = Math.random() * 256; });
+      x.pid = [].map.call(z, function (b) { return abc[b % 36]; }).join("");
+      try { localStorage.setItem(ICH_KEY, JSON.stringify(x)); } catch (e) {}
+    }
+    return x;
+  }
+  function setzeVorname(v) { var x = ich(); x.vorname = v; try { localStorage.setItem(ICH_KEY, JSON.stringify(x)); } catch (e) {} }
+  NS.vorname = function () { return ich().vorname || ""; };
+
+  var meldeTimer = null, letzteMeldung = "";
+  function melden(sofort) {
+    if (!LIVE || !NS.vorname()) return;
+    clearTimeout(meldeTimer);
+    meldeTimer = setTimeout(function () {
+      var n = NS.current || 0;
+      var body = JSON.stringify({
+        pid: ich().pid, name: NS.vorname(),
+        st: STUNDEN.map(function (s) { var x = NS.stand(s.n); return [x.fertig, x.gesamt]; }),
+        pos: { n: n, s: n ? Math.max(0, Math.min(20, Number(NS.get("s" + n + ".schritt")) || 0)) : 0 }
+      });
+      fetch("/api/report", { method: "POST", headers: { "Content-Type": "application/json" }, body: body, keepalive: true })
+        .then(function (r) { if (r.ok) letzteMeldung = body; })
+        .catch(function () { /* offline: die nächste Meldung holt es nach */ });
+    }, sofort ? 0 : 1200);
+  }
+  NS.hooks.push(function () { melden(false); });
+
+  function namensFenster(aendern) {
+    if (document.querySelector(".namefenster")) return;
+    var box = document.createElement("div");
+    box.className = "lockscreen namefenster";
+    box.innerHTML = '<div class="block"><p class="label">' + (aendern ? "Namen ändern" : "Willkommen") + '</p>' +
+      '<p class="h-m" style="margin:8px 0 10px">Wie heißt du?</p>' +
+      '<p class="small" style="margin-bottom:16px">Nur dein <b>Vorname</b>. Deine Lehrkraft sieht damit, wie weit du bist. Deine Antworten bleiben auf diesem iPad.</p>' +
+      '<form class="station__lock"><input autocomplete="off" autocapitalize="words" maxlength="20" aria-label="Vorname" placeholder="Vorname"><button class="btn btn--lila">Los</button></form>' +
+      '<p class="station__msg" role="alert"></p>' +
+      (aendern ? '<p class="small" style="margin-top:12px"><button type="button" class="btn-2" data-zu>Abbrechen</button></p>' : "") + '</div>';
+    document.body.appendChild(box);
+    var f = box.querySelector("form"), inp = f.querySelector("input"), msg = box.querySelector(".station__msg");
+    inp.value = NS.vorname(); setTimeout(function () { inp.focus(); }, 50);
+    f.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var v = inp.value.trim().replace(/\s+/g, " ");
+      if (v.indexOf(" ") > -1) { msg.textContent = "Bitte nur den Vornamen, ohne Nachnamen."; return; }
+      if (!NAME_RE.test(v)) { msg.textContent = "Bitte nur Buchstaben, höchstens 20."; return; }
+      setzeVorname(v);
+      if (!NS.get("name")) NS.set("name", v);
+      box.remove(); zeigeIch(); melden(true);
+    });
+    var zu = box.querySelector("[data-zu]"); if (zu) zu.addEventListener("click", function () { box.remove(); });
+  }
+  function zeigeIch() {
+    var el = document.getElementById("ich");
+    if (!el || !LIVE) return;
+    el.hidden = !NS.vorname();
+    el.innerHTML = 'Angemeldet als <b></b> · <button type="button" class="bar__ich-btn">ändern</button>';
+    el.querySelector("b").textContent = NS.vorname() || "–";
+    el.querySelector("button").addEventListener("click", function () { namensFenster(true); });
+  }
+  NS.namensFenster = namensFenster;
+
+  function initLive() {
+    if (!LIVE) return;
+    if ("serviceWorker" in navigator) {
+      var sw = location.pathname.replace(/\/lernen\/.*$/, "/lernen/sw.js");
+      navigator.serviceWorker.register(sw, { scope: "/lernen/" }).catch(function () {});
+    }
+    if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(function () {});
+    if (!NS.vorname()) namensFenster(false); else melden(true);
+    zeigeIch();
+    /* Lebenszeichen, solange die Seite offen ist: so sieht die Lehrkraft, wer gerade arbeitet. */
+    setInterval(function () { if (!document.hidden) melden(true); }, 45000);
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) melden(true); });
+    window.addEventListener("online", function () { melden(true); });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
-    initReveal(); initAnswers(); initChoices(); initMatch(); initSorter(); initOrder(); initBars(); initVideos(); initClips(); initFind(); initSatz(); initMC(); initZoom(); progress();
+    initReveal(); initAnswers(); initChoices(); initMatch(); initSorter(); initOrder(); initBars(); initVideos(); initClips(); initFind(); initSatz(); initMC(); initZoom(); progress(); initLive();
   });
 })();

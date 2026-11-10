@@ -573,3 +573,11 @@ details.zusatz[open] > summary { margin-bottom: 14px; }
 .mauer__fuehrer { display: none; padding: 14px; background: var(--ink); color: #fff; text-align: center; font-family: var(--font-head); font-stretch: 75%; font-size: 30px; font-weight: 650; }
 .mauer.ende .mauer__fuehrer { display: block; animation: pop .6s cubic-bezier(.3,1.6,.5,1) both; }
 @media (max-width: 560px) { .mauer__steine { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Live-Übersicht: Name oben in der Leiste, Namensfenster */
+.bar__ich { margin: 0 6px 0 0; white-space: nowrap; }
+.bar__ich-btn { display: inline; padding: 0; border: 0; background: none; text-decoration: underline; font-size: inherit; cursor: pointer; }
+.namefenster { z-index: 60; }
+@media (max-width: 560px) { .bar__ich { display: none; } }
+.namefenster input { text-transform: none; letter-spacing: normal; }
+.namefenster input::placeholder { text-transform: none; }
