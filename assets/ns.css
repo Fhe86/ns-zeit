@@ -593,3 +593,10 @@ details.zusatz[open] > summary { margin-bottom: 14px; }
 .installhinweis { position: relative; z-index: 5; background: var(--sand); color: var(--ink); border-bottom: 2px solid var(--ink); padding: 10px 16px; font-size: 15px; line-height: 1.4; text-align: center; }
 .installhinweis__icon { display: inline-flex; vertical-align: -3px; }
 @media print { .installhinweis { display: none; } }
+
+/* Restzeit-Uhr in der Leiste */
+.uhr { margin: 0 0 0 auto; margin-right: 0; padding: 6px 12px; border: 2px solid var(--ink); background: var(--white); font-weight: 700; font-size: 15px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.uhr--knapp { background: var(--sand); }
+.uhr--um { background: var(--brick); color: var(--white); border-color: var(--brick); }
+@media (max-width: 560px) { .uhr { font-size: 13px; padding: 4px 8px; } }
+@media print { .uhr { display: none; } }

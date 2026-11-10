@@ -807,8 +807,57 @@
   }
   NS.namensFenster = namensFenster;
 
+  /* ---------- Abstimmung am Ende der Station: geht anonym an die Tafel (nur Summen) ---------- */
+  var ABSTIMMUNG = { 1: "s1.x.stufe", 2: "s2.x.grund", 3: "s3.d.ecke", 4: "s4.d.pos" };
+  function stimmeSenden() {
+    var n = NS.current, key = ABSTIMMUNG[n];
+    if (!LIVE || !key) return;
+    var w = NS.get(key);
+    if (w == null) return;
+    fetch("/api/stimme", { method: "POST", headers: { "Content-Type": "application/json" }, keepalive: true,
+      body: JSON.stringify({ pid: ich().pid, n: n, wert: w }) }).catch(function () { /* offline: beim nächsten „online“ */ });
+  }
+  function initStimme() {
+    var key = ABSTIMMUNG[NS.current];
+    if (!key) return;
+    var g = document.querySelector('[data-choice="' + key + '"]');
+    if (g) g.addEventListener("ns-change", stimmeSenden);
+    stimmeSenden();
+    window.addEventListener("online", stimmeSenden);
+  }
+
+  /* ---------- Restzeit der Selbstlernphase (Timer startet die Lehrkraft) ---------- */
+  function initUhr() {
+    var bar = document.querySelector(".bar");
+    if (!bar) return;
+    var el = document.createElement("p");
+    el.className = "uhr"; el.hidden = true; el.setAttribute("aria-live", "off");
+    bar.insertBefore(el, bar.querySelector(".bar__nav"));
+    var t = null, versatz = 0;
+    function holen() {
+      if (document.hidden) return;
+      fetch("/api/timer", { cache: "no-store" }).then(function (r) { return r.json(); })
+        .then(function (j) { t = j; versatz = j.now - Date.now(); zeigen(); }).catch(function () {});
+    }
+    function zeigen() {
+      if (!t || (!t.endAt && t.pausedLeft == null)) { el.hidden = true; return; }
+      var rest = t.endAt ? t.endAt - (Date.now() + versatz) : t.pausedLeft;
+      el.hidden = false;
+      el.classList.toggle("uhr--knapp", rest > 0 && rest < 2 * 60000);
+      el.classList.toggle("uhr--um", rest <= 0);
+      if (rest <= 0) el.textContent = "Zeit um, schau nach vorne";
+      else if (!t.endAt) el.textContent = "Pause · noch " + Math.ceil(rest / 60000) + " Min";
+      else if (rest < 60000) el.textContent = "noch " + Math.ceil(rest / 1000) + " Sek";
+      else el.textContent = "noch " + Math.ceil(rest / 60000) + " Min";
+    }
+    holen(); setInterval(holen, 20000); setInterval(zeigen, 1000);
+    document.addEventListener("visibilitychange", holen);
+  }
+
   function initLive() {
     if (!LIVE) return;
+    initUhr();
+    setTimeout(initStimme, 0); /* NS.guard(n) der Stationsseite läuft erst nach diesem Skript */
     if ("serviceWorker" in navigator) {
       var sw = location.pathname.replace(/\/lernen\/.*$/, "/lernen/sw.js");
       navigator.serviceWorker.register(sw, { scope: "/lernen/" }).catch(function () {});
