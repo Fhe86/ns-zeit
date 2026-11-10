@@ -691,7 +691,7 @@
       var n = NS.current || 0;
       var body = JSON.stringify({
         pid: ich().pid, name: NS.vorname(),
-        st: STUNDEN.map(function (s) { var x = NS.stand(s.n); return [x.fertig, x.gesamt]; }),
+        st: STUNDEN.map(function (s) { var x = NS.stand(s.n); return NS.isDone(s.n) ? [x.gesamt, x.gesamt] : [x.fertig, x.gesamt]; }),
         pos: { n: n, s: n ? Math.max(0, Math.min(20, Number(NS.get("s" + n + ".schritt")) || 0)) : 0 }
       });
       fetch("/api/report", { method: "POST", headers: { "Content-Type": "application/json" }, body: body, keepalive: true })
@@ -719,12 +719,84 @@
       var v = inp.value.trim().replace(/\s+/g, " ");
       if (v.indexOf(" ") > -1) { msg.textContent = "Bitte nur den Vornamen, ohne Nachnamen."; return; }
       if (!NAME_RE.test(v)) { msg.textContent = "Bitte nur Buchstaben, höchstens 20."; return; }
+      if (!aendern && navigator.onLine !== false) {
+        var btn = f.querySelector("button"); btn.disabled = true;
+        fetch("/api/finden", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name: v }) })
+          .then(function (r) { return r.ok ? r.json() : { treffer: [] }; })
+          .catch(function () { return { treffer: [] }; })
+          .then(function (j) {
+            btn.disabled = false;
+            if (j.treffer && j.treffer.length) wiederfinden(box, v, j.treffer); else fertig(v);
+          });
+        return;
+      }
+      fertig(v);
+    });
+    function fertig(v) {
       setzeVorname(v);
       if (!NS.get("name")) NS.set("name", v);
       box.remove(); zeigeIch(); melden(true);
-    });
+    }
     var zu = box.querySelector("[data-zu]"); if (zu) zu.addEventListener("click", function () { box.remove(); });
   }
+  /* Leeres Gerät, aber der Vorname ist schon bekannt: Schüler wählt seinen alten Eintrag.
+     Dann gilt wieder die alte Geräte-Nummer (kein doppelter Eintrag) und geschaffte Stationen werden wieder freigeschaltet.
+     Antworten liegen nie auf dem Server, die kommen nicht zurück. */
+  function wann(t) {
+    var d = new Date(t), h = new Date(), gestern = new Date(h.getTime() - 864e5);
+    var uhr = d.toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit" });
+    if (d.toDateString() === h.toDateString()) return "heute " + uhr;
+    if (d.toDateString() === gestern.toDateString()) return "gestern " + uhr;
+    return d.toLocaleDateString("de-DE", { day: "numeric", month: "numeric" }) + " " + uhr;
+  }
+  function wiederfinden(box, v, treffer) {
+    var blk = box.querySelector(".block");
+    blk.innerHTML = '<p class="label">Willkommen zurück?</p>' +
+      '<p class="h-m" style="margin:8px 0 10px"></p>' +
+      '<p class="small" style="margin-bottom:16px">Tippe auf deinen Eintrag. Dann geht es mit deinen geschafften Stationen weiter.</p>' +
+      '<div class="wieder"></div>' +
+      '<p class="small" style="margin-top:14px"><button type="button" class="btn-2" data-neu>Nein, ich bin neu</button></p>';
+    blk.querySelector(".h-m").textContent = "Bist du das, " + treffer[0].name + "?";
+    var liste = blk.querySelector(".wieder");
+    treffer.forEach(function (t) {
+      var geschafft = t.st.filter(function (x) { return x[0] === x[1]; }).length;
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "wieder__btn";
+      b.innerHTML = "<b></b><span></span>";
+      b.querySelector("b").textContent = t.name + ": " + geschafft + (geschafft === 1 ? " Station" : " Stationen") + " geschafft";
+      b.querySelector("span").textContent = (t.pos.n ? "zuletzt bei Station " + t.pos.n + ", " : "") + wann(t.updatedAt);
+      b.addEventListener("click", function () { uebernehmeEintrag(t); });
+      liste.appendChild(b);
+    });
+    blk.querySelector("[data-neu]").addEventListener("click", function () {
+      setzeVorname(v); if (!NS.get("name")) NS.set("name", v);
+      box.remove(); zeigeIch(); melden(true);
+    });
+  }
+  function uebernehmeEintrag(t) {
+    var x = ich(); x.pid = t.pid; x.vorname = t.name;
+    try { localStorage.setItem(ICH_KEY, JSON.stringify(x)); } catch (e) {}
+    t.st.forEach(function (p, i) { if (p[0] === p[1] && STUNDEN[i]) state.done[i + 1] = true; });
+    if (t.pos.n && STUNDEN[t.pos.n - 1]) state.open[t.pos.n] = true;
+    if (!state.a.name) state.a.name = t.name;
+    save();
+    location.reload();
+  }
+
+  /* Hinweis auf iPad/iPhone, wenn die Seite in Safari statt als installierte App läuft.
+     Safari (vor allem im privaten Modus) kann den Stand beim Schließen verlieren, die App vom Home-Bildschirm nicht. */
+  function installHinweis() {
+    var ios = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    var app = navigator.standalone === true || (window.matchMedia && matchMedia("(display-mode: standalone)").matches);
+    if (!ios || app) return;
+    var el = document.createElement("div");
+    el.className = "installhinweis"; el.setAttribute("role", "note");
+    el.innerHTML = '<b>Damit dein Stand nicht verloren geht:</b> Tippe oben auf <span class="installhinweis__icon" aria-label="Teilen">' +
+      '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 12v8h14v-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+      '</span> und dann auf <b>„Zum Home-Bildschirm“</b>. Arbeite danach nur noch mit der App auf dem Home-Bildschirm.';
+    document.body.insertBefore(el, document.body.firstChild);
+  }
+
   function zeigeIch() {
     var el = document.getElementById("ich");
     if (!el || !LIVE) return;
@@ -742,6 +814,7 @@
       navigator.serviceWorker.register(sw, { scope: "/lernen/" }).catch(function () {});
     }
     if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(function () {});
+    installHinweis();
     if (!NS.vorname()) namensFenster(false); else melden(true);
     zeigeIch();
     /* Lebenszeichen, solange die Seite offen ist: so sieht die Lehrkraft, wer gerade arbeitet. */

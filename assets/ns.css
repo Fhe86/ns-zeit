@@ -581,3 +581,15 @@ details.zusatz[open] > summary { margin-bottom: 14px; }
 @media (max-width: 560px) { .bar__ich { display: none; } }
 .namefenster input { text-transform: none; letter-spacing: normal; }
 .namefenster input::placeholder { text-transform: none; }
+
+/* Wiederfinden: alten Eintrag wählen */
+.wieder { display: grid; gap: 10px; }
+.wieder__btn { display: grid; gap: 4px; text-align: left; padding: 14px 16px; min-height: 56px; border: 2px solid var(--ink); background: var(--white); font: inherit; cursor: pointer; }
+.wieder__btn b { font-size: 18px; }
+.wieder__btn span { color: var(--muted); font-size: 15px; }
+.wieder__btn:hover, .wieder__btn:focus-visible { background: var(--lila-hell); outline: none; }
+
+/* Hinweis: als App installieren (nur iPad/iPhone in Safari) */
+.installhinweis { position: relative; z-index: 5; background: var(--sand); color: var(--ink); border-bottom: 2px solid var(--ink); padding: 10px 16px; font-size: 15px; line-height: 1.4; text-align: center; }
+.installhinweis__icon { display: inline-flex; vertical-align: -3px; }
+@media print { .installhinweis { display: none; } }
