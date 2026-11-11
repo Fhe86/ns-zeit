@@ -22,9 +22,11 @@
 </head>
 <body>
 
+<body>
+
 <header class="bar">
   <a class="bar__mark" href="../index.html#karte"><i aria-hidden="true"><b></b><b></b><b></b></i>NS-Zeit</a>
-  <nav class="bar__nav" aria-label="Seite"><a class="btn-2" href="../index.html#karte">← Karte</a><a class="btn btn--lila" href="#lernpass">Mein Lernpass</a></nav>
+  <nav class="bar__nav" aria-label="Seite"><a class="btn-2" href="../index.html#karte">← Karte</a><a class="btn btn--lila" href="#lernpass">Mein Hefteintrag</a></nav>
 </header>
 
 <main>
@@ -33,7 +35,7 @@
       <div class="block"><p class="label muted" style="margin-bottom:10px">Station 9 · 1943 bis 1949 · Buch S. 106 bis 115</p>
         <h1 class="h-xl" id="titel">Kriegsende und was bleibt</h1></div>
       <div class="block block--plaster" style="margin-left:clamp(0px,6%,60px)"><p class="lead"><b>Leitfrage:</b> Wie endete der Krieg, und was haben wir daraus gelernt?</p></div>
-      <div class="timeline-mini" aria-label="Ablauf der Stunde"><span><b>5′</b>Einstieg</span><span><b>22′</b>Stationen A, B, C</span><span><b>5′</b>Demokratie-Radar</span><span><b>13′</b>Abschluss</span></div>
+      <div class="timeline-mini" aria-label="Ablauf der Stunde"><span><b>5′</b>Einstieg</span><span><b>25′</b>Pauls Heimkehr</span><span><b>4′</b>Demokratie-Radar</span><span><b>11′</b>Abschluss</span></div>
     </div>
     <div class="lesson-hero__photo reveal"><img src="../img/foto/s7-truemmer.jpg" alt="Frauen und Männer räumen Trümmer vor dem schwer beschädigten Reichstagsgebäude in Berlin."></div>
   </section>
@@ -41,22 +43,19 @@
   <div class="pavement" style="margin-top:20px"></div>
 
   <nav class="toc" aria-label="Teile der Stunde">
-    <a href="#einstieg" data-need="s9.e">Einstieg</a>
-    <a href="#a" data-need="s9.a.order s7.a.wende">A Kriegsende</a>
-    <a href="#b" data-need="s9.b.sicht">B Flucht</a>
-    <a href="#c" data-need="s9.c.match">C Grundgesetz</a>
-    <a href="#heute" data-need="s9.h.text">Radar</a>
-    <a href="#abschluss" data-need="s9.d.lehre">Abschluss</a>
-    <a href="#lernpass">Lernpass</a>
+    <a href="#einstieg">Einstieg</a><a href="#a">Das Ende</a><a href="#b">Ankunft in Bayern</a><a href="#c">Das Grundgesetz</a><a href="#heute">Demokratie-Radar</a><a href="#abschluss">Abschluss</a><a href="#lernpass">Hefteintrag</a>
   </nav>
 
-  <!-- EINSTIEG -->
+  <!-- 1 EINSTIEG -->
   <section class="part" id="einstieg" aria-labelledby="e-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip">Einstieg · 5 Min</span><span class="label muted">alle zusammen</span></p>
+        <p class="part__tag"><span class="chip">Einstieg</span><span class="label muted">alle zusammen</span></p>
         <h2 class="h-l" id="e-t">Die Bilanz</h2>
-        <p class="lead">Geschätzte Tote im Zweiten Weltkrieg, Soldaten und Zivilisten zusammen, in Millionen (Auswahl, Buch S. 109, Tabelle 109.1).</p>
+      </div>
+      <div class="auftrag" data-min="5" data-brauchst="klasse|ipad">
+        <ol class="auftrag__schritte"><li><span>Schau dir die Zahlen an: geschätzte Tote im Zweiten Weltkrieg, Soldaten und Zivilisten zusammen, in Millionen (Buch S. 109, Tabelle 109.1).</span></li><li><span>Beantworte die Frage. Denk an Station 6.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn die Frage grün ist. Dann sprecht ihr kurz darüber.</p>
       </div>
       <div class="grid-2">
         <div class="bars">
@@ -69,31 +68,40 @@
           <div class="bars__row"><span>Großbritannien</span><span class="bars__bar"><i style="--v:1.9"></i></span><b>0,5</b></div>
           <div class="bars__row"><span>USA</span><span class="bars__bar"><i style="--v:1.8"></i></span><b>0,4</b></div>
         </div>
-        <div class="task">
-          <p class="task__q"><b>E</b>Was fällt dir auf? Denk an Stunde 6: Warum sind die Zahlen in Polen und in der Sowjetunion so hoch?</p>
-          <textarea class="answer" data-key="s9.e" placeholder="Mir fällt auf, dass … Das liegt an …"></textarea><p class="saved" aria-live="polite"></p>
-          <p class="small muted">Rot: Länder, in denen besonders viele Zivilisten starben. In Polen starben mehr als 20-mal so viele Zivilisten wie Soldaten.</p>
-        </div>
+        <div class="mc" data-mc="s9.e.mc" data-right="vernichtung"><p class="mc__frage">Warum starben in Polen und in der Sowjetunion so viele Menschen?</p>
+          <div class="choices"><button class="choice" data-v="soldaten">Sie hatten die meisten Soldaten.</button><button class="choice" data-v="vernichtung">Dort führte Deutschland einen Vernichtungskrieg. Sehr viele Tote waren Zivilisten.</button><button class="choice" data-v="krankheit">Dort gab es eine Seuche.</button></div>
+          <p class="mc__tipp" hidden>Erinnere dich an Leningrad und an Polen in Station 6.</p>
+          <p class="mc__erkl" hidden>Richtig. Rot markiert: Länder, in denen besonders viele Zivilisten starben. In Polen starben mehr als 20-mal so viele Zivilisten wie Soldaten.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- STATION A -->
+  <!-- 2 DAS ENDE -->
   <section class="part" id="a" aria-labelledby="a-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--lila">Station A · Pflicht</span><span class="book">Buch S. 106 bis 109, 113</span></p>
-        <h2 class="h-l" id="a-t">Das Blatt wendet sich</h2>
-        <p class="lead">Ab 1943 geht es für die Wehrmacht nur noch zurück. Zwei Ereignisse gelten als Wende: Stalingrad im Osten und die Landung in der Normandie im Westen.</p>
+        <p class="part__tag"><span class="chip chip--brick">Kapitel 1</span><span class="book">Buch S. 106 bis 109, 112/113</span></p>
+        <h2 class="h-l" id="a-t">Das Ende in Europa und im Pazifik</h2>
       </div>
-      <div class="grid-3">
-        <figure><div class="reveal" style="height:200px"><img src="../img/foto/s7-stalingrad.jpg" alt="Deutsche Soldaten kämpfen in einem zerstörten Haus in Stalingrad."></div><figcaption class="credit">Stalingrad, September 1942. Bundesarchiv, Bild 101I-617-2571-04, CC BY-SA 3.0 de</figcaption></figure>
-        <figure><div class="reveal" style="height:200px"><img src="../img/foto/s7-dday.jpg" alt="US-Soldaten waten aus einem Landungsboot an den Strand der Normandie."></div><figcaption class="credit">Normandie, 6. Juni 1944. Foto: Robert F. Sargent, US Coast Guard, gemeinfrei</figcaption></figure>
-        <figure><div class="reveal" style="height:200px"><img src="../img/foto/s7-hiroshima.jpg" alt="Riesiger Atompilz über Hiroshima."></div><figcaption class="credit">Hiroshima, 6. August 1945. US-Regierung, gemeinfrei</figcaption></figure>
+      <div class="auftrag" data-min="9" data-brauchst="buch:Buch S. 106|ipad">
+        <ol class="auftrag__schritte"><li><span>Lies Kapitel 1.</span></li><li><span>Bring die acht Ereignisse in die richtige Reihenfolge, dann „Prüfen“. Rot? Auf „Neu“ tippen.</span></li><li><span>Buch <b>S. 106</b>: Finde die Zahl zu Stalingrad und tippe auf „Prüfen“.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn Reihenfolge und Buch-Detektiv grün sind.</p>
       </div>
-      <div class="grid-2" style="margin-top:24px">
+      <div class="story">
+        <div class="story__text">
+          <p class="story__kap">Pauls Geschichte · 1943 bis Mai 1945</p>
+          <p class="story__titel">„Durchhalten!“</p>
+          <p>Nach der Niederlage in Stalingrad im Februar 1943 glaubt kaum noch ein Soldat an den Sieg. Pauls Einheit muss von Leningrad immer weiter zurück, bis an die Ostsee nach Kurland, im heutigen Lettland. Im Radio heißt es trotzdem jeden Tag: Durchhalten!</p>
+          <p>In München fallen Bomben. Pauls Mutter schreibt: „Unser Haus steht noch. Das Nachbarhaus nicht.“</p>
+          <p class="story__zitat">Am 9. Mai 1945 legt Paul seine Waffe nieder. Der Krieg in Europa ist aus. Für Paul beginnt die Gefangenschaft in der Sowjetunion.</p>
+          <p class="story__fiktion">Paul ist erfunden. Die Soldaten in Kurland ergaben sich am 9. Mai 1945 und kamen in sowjetische Gefangenschaft.</p>
+        </div>
+        <div class="story__bild reveal"><img src="../img/foto/s7-stalingrad.jpg" alt="Deutsche Soldaten kämpfen in einem zerstörten Haus in Stalingrad."></div>
+      </div>
+      <p class="credit">Stalingrad, September 1942. Bundesarchiv, Bild 101I-617-2571-04, CC BY-SA 3.0 de</p>
+      <div class="grid-2" style="margin-top:16px">
         <div class="task" data-order="s9.a.order">
-          <p class="task__q"><b>A1</b>Bring die Ereignisse in die richtige Reihenfolge.</p>
+          <p class="task__q"><b>A</b>Tippe das früheste Ereignis zuerst an.</p>
           <div class="order">
             <button type="button" class="order__item" data-id="dachau" data-pos="4"><span class="nr"></span><span>US-Soldaten befreien das KZ Dachau<small data-date="29. April 1945">Datum?</small></span></button>
             <button type="button" class="order__item" data-id="stalingrad" data-pos="1"><span class="nr"></span><span>Die 6. Armee kapituliert in Stalingrad<small data-date="Februar 1943">Datum?</small></span></button>
@@ -107,52 +115,91 @@
           <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><button class="btn-2" type="button" data-reset>Neu</button><p class="feedback" aria-live="polite"></p></div>
         </div>
         <div class="stack">
-          <div class="clip" data-yt="ypZu71D4iVg" data-key="s9.a.video" data-title="Ende des Zweiten Weltkriegs in Europa" data-quelle="MrWissen2go Geschichte (Terra X)" data-clips='[[42, 106, "Der Krieg ist verloren"], [330, 373, "Landung in der Normandie"], [528, 574, "Das letzte Aufgebot"], [594, 659, "Kriegsende 1945"]]'></div>
-          <div class="block block--sand"><p class="label">Stalingrad</p><p class="small">Rund 110 000 deutsche Soldaten gingen in Gefangenschaft. Nur etwa 5 000 kamen nach dem Krieg zurück (Buch S. 106).</p></div>
-          <div class="task">
-            <p class="task__q"><b>A2</b>Warum gelten Stalingrad und die Normandie als Wende des Krieges?</p>
-            <textarea class="answer" data-key="s9.a.wende" placeholder="Stalingrad war eine Wende, weil … Die Normandie, weil …"></textarea><p class="saved" aria-live="polite"></p>
+          <div class="detektiv" data-find="s9.a.buch">
+            <div class="detektiv__kopf"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#5f4497" stroke-width="2.4"><circle cx="10" cy="10" r="6"/><path d="M15 15l6 6"/></svg><p>Buch-Detektiv: S. 106</p></div>
+            <div class="find__q" data-answer="5000|5 000|5.000|fünftausend"><p class="find__ort">Buch S. 106 · Stalingrad</p><p class="find__frage">Rund 110 000 deutsche Soldaten gingen in Stalingrad in Gefangenschaft. Wie viele kamen nach dem Krieg zurück?</p><input inputmode="numeric" autocomplete="off" placeholder="Zahl"><p class="find__hinweis" hidden>Tipp: Such auf S. 106 nach „110 000“.</p></div>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><p class="feedback" aria-live="polite"></p></div>
           </div>
+          <div class="block block--ink">
+            <p class="label" style="color:var(--sand);margin-bottom:6px">Und im Pazifik? (Buch S. 112/113)</p>
+            <p class="small">Seit Pearl Harbor 1941 kämpften Japan und die USA um die Inseln im Pazifik. Japan gab nach dem 8. Mai 1945 nicht auf. Im August warfen die USA zwei Atombomben auf Hiroshima und Nagasaki. Zehntausende waren sofort tot. Am 2. September 1945 kapitulierte Japan. Erst da war der Zweite Weltkrieg zu Ende.</p>
+          </div>
+          <figure><div class="reveal" style="height:180px"><img src="../img/foto/s7-hiroshima.jpg" alt="Riesiger Atompilz über Hiroshima."></div><figcaption class="credit">Hiroshima, 6. August 1945. US-Regierung, gemeinfrei</figcaption></figure>
         </div>
       </div>
+      <details class="zusatz">
+        <summary><span class="chip chip--sand">Zusatz · für Schnelle</span> Video: Das Ende des Kriegs in Europa (4 kurze Kapitel)</summary>
+        <div class="clip" data-yt="ypZu71D4iVg" data-key="s9.a.video" data-title="Ende des Zweiten Weltkriegs in Europa" data-quelle="MrWissen2go Geschichte (Terra X)" data-clips='[[42, 106, "Der Krieg ist verloren"], [330, 373, "Landung in der Normandie"], [528, 574, "Das letzte Aufgebot"], [594, 659, "Kriegsende 1945"]]'></div>
+      </details>
     </div>
   </section>
 
-  <!-- STATION B -->
+  <!-- 3 ANKUNFT IN BAYERN -->
   <section class="part" id="b" aria-labelledby="b-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--lila">Station B · Pflicht</span><span class="book">Buch S. 110/111</span></p>
+        <p class="part__tag"><span class="chip chip--lila">Kapitel 2</span><span class="book">Buch S. 110/111</span></p>
         <h2 class="h-l" id="b-t">Flucht und Vertreibung: Ankunft in Bayern</h2>
-        <p class="lead">Als die Rote Armee 1944/45 vorrückte, flohen Millionen Deutsche aus dem Osten. Nach dem Krieg wurden weitere Millionen aus ihrer Heimat vertrieben. Viele kamen nach Bayern.</p>
       </div>
-      <div class="grid-2">
-        <figure><div class="reveal" style="height:300px"><img src="../img/foto/s7-treck.jpg" alt="Ein Flüchtlingstreck mit Pferdewagen zieht im Winter über eine weite, verschneite Eisfläche."></div>
-          <figcaption class="credit">Flüchtlingstreck im Winter, Januar 1945. Bundesarchiv, Bild 146-1990-001-30, CC BY-SA 3.0 de</figcaption></figure>
+      <div class="auftrag" data-min="7" data-brauchst="buch:Buch S. 111|ipad">
+        <ol class="auftrag__schritte"><li><span>Lies Kapitel 2.</span></li><li><span>Buch <b>S. 111</b>: Finde die zwei Zahlen und tippe auf „Prüfen“.</span></li><li><span>Beantworte die Frage zu Pauls Mutter.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn Buch-Detektiv und Frage grün sind.</p>
+      </div>
+      <div class="story">
+        <div class="story__text">
+          <p class="story__kap">Pauls Geschichte · München-Giesing · 1946</p>
+          <p class="story__titel">Fremde in der Küche</p>
+          <p>Paul ist noch in Gefangenschaft. Seine Mutter bekommt einen Brief vom Wohnungsamt: In Pauls Zimmer zieht eine Familie aus Schlesien ein. Eine Mutter mit zwei Kindern. Sie hat auf der Flucht im Winter 1945 alles verloren, auch ihren Mann.</p>
+          <p>Jetzt teilen sich zwei Familien eine Küche. Es gibt wenig zu essen, und manche Nachbarn sagen: „Die nehmen uns alles weg.“</p>
+          <p class="story__zitat">Pauls Mutter denkt an die Frau hinter dem Zaun in der Fabrik. Sie stellt einen zweiten Topf auf den Herd.</p>
+          <p class="story__fiktion">Die Familie ist erfunden. Einquartierungen wie diese gab es nach 1945 in ganz Bayern.</p>
+        </div>
+        <div class="story__bild reveal"><img src="../img/foto/s7-treck.jpg" alt="Ein Flüchtlingstreck mit Pferdewagen zieht im Winter über eine weite, verschneite Eisfläche."></div>
+      </div>
+      <p class="credit">Flüchtlingstreck im Winter, Januar 1945. Bundesarchiv, Bild 146-1990-001-30, CC BY-SA 3.0 de</p>
+      <div class="grid-2" style="margin-top:16px">
         <div class="stack">
-          <div class="grid-2" style="gap:12px">
-            <div class="block block--sand"><p class="label">Geflohen und vertrieben</p><p class="h-l">über 12 Mio.</p><p class="small">Etwa 2 Millionen starben dabei (Buch S. 111).</p></div>
-            <div class="block block--plaster"><p class="label">Bayern 1949</p><p class="h-l">21 %</p><p class="small">Fast jeder fünfte Einwohner war ein Flüchtling oder Vertriebener (Buch S. 111).</p></div>
+          <div class="detektiv" data-find="s9.b.buch">
+            <div class="detektiv__kopf"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#5f4497" stroke-width="2.4"><circle cx="10" cy="10" r="6"/><path d="M15 15l6 6"/></svg><p>Buch-Detektiv: S. 111</p></div>
+            <div class="find__q" data-answer="12|12 mio|12 millionen|über 12|ueber 12"><p class="find__ort">Buch S. 111</p><p class="find__frage">Wie viele Deutsche flohen oder wurden vertrieben? (über … Millionen)</p><input inputmode="numeric" autocomplete="off" placeholder="Millionen"><p class="find__hinweis" hidden>Tipp: Such nach „Millionen“.</p></div>
+            <div class="find__q" data-answer="21|21 %|21 prozent"><p class="find__ort">Buch S. 111 · Bayern 1949</p><p class="find__frage">Wie viel Prozent der Menschen in Bayern waren 1949 Flüchtlinge oder Vertriebene?</p><input inputmode="numeric" autocomplete="off" placeholder="Prozent"><p class="find__hinweis" hidden>Tipp: Such nach „Bayern“ und „Prozent“.</p></div>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><p class="feedback" aria-live="polite"></p></div>
           </div>
           <div class="note"><b>Spurensuche:</b><span>Straßennamen wie Schlesische Straße oder Egerländer Straße erinnern noch heute daran. Ganze Orte entstanden neu, zum Beispiel Waldkraiburg, Geretsried oder Neugablonz.</span></div>
         </div>
-      </div>
-      <div class="task" style="margin-top:20px">
-        <p class="task__q"><b>B1</b>1946: Ein Zug mit Vertriebenen kommt in einem Dorf bei München an. Schreibe je zwei Sätze aus Sicht einer Vertriebenen und aus Sicht eines Bauern, der sie aufnehmen muss.</p>
-        <textarea class="answer" data-key="s9.b.sicht" style="min-height:140px" placeholder="Die Vertriebene: „…“&#10;Der Bauer: „…“"></textarea><p class="saved" aria-live="polite"></p>
+        <div class="mc" data-mc="s9.b.mc" data-right="beides"><p class="mc__frage">Warum war das Zusammenleben 1946 so schwer?</p>
+          <div class="choices"><button class="choice" data-v="nur">Weil die Vertriebenen nicht arbeiten wollten.</button><button class="choice" data-v="beides">Weil Wohnungen zerstört und Essen knapp war. Alle hatten Angst, zu kurz zu kommen.</button><button class="choice" data-v="sprache">Weil die Vertriebenen kein Deutsch sprachen.</button></div>
+          <p class="mc__tipp" hidden>Lies noch einmal, wie es in München 1946 aussah.</p>
+          <p class="mc__erkl" hidden>Richtig. Wenn alle wenig haben, sucht man schnell einen Schuldigen. Pauls Mutter teilt trotzdem. Mit der Zeit wurden die Vertriebenen Teil von Bayern.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- STATION C -->
+  <!-- 4 GRUNDGESETZ -->
   <section class="part" id="c" aria-labelledby="c-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--lila">Station C · Pflicht</span><span class="book">Buch S. 114/115</span></p>
+        <p class="part__tag"><span class="chip chip--lila">Kapitel 3</span><span class="book">Buch S. 114/115</span></p>
         <h2 class="h-l" id="c-t">Das Grundgesetz: eine Antwort auf jede Station</h2>
-        <p class="lead">Am 23. Mai 1949 trat das Grundgesetz in Kraft. Die Menschen, die es schrieben, hatten die NS-Zeit selbst erlebt. Fast jeder Artikel ist eine Antwort darauf.</p>
       </div>
-      <div class="task" data-match="s9.c.match">
+      <div class="auftrag" data-min="9" data-brauchst="ipad">
+        <ol class="auftrag__schritte"><li><span>Lies Kapitel 3, das Ende von Pauls und Rudis Geschichte.</span></li><li><span>Ordne jeder Erfahrung aus der NS-Zeit den passenden Artikel des Grundgesetzes zu. Tippe auf „Prüfen“.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn alle sechs grün sind.</p>
+      </div>
+      <div class="story">
+        <div class="story__text">
+          <p class="story__kap">Pauls und Rudis Geschichte · 1949</p>
+          <p class="story__titel">Ein Brief nach England</p>
+          <p>Im Herbst 1949 kommt Paul aus der Gefangenschaft zurück. Er ist 26 Jahre alt. München liegt noch halb in Trümmern. Im Mai ist das Grundgesetz in Kraft getreten. Gleich der erste Satz bleibt Paul im Kopf: „Die Würde des Menschen ist unantastbar.“</p>
+          <p>Paul denkt an Rudi. Zehn Jahre lang hat er ihm nicht geschrieben. An einem Abend setzt er sich hin und schreibt einen Brief nach England. Der erste Satz fällt ihm am schwersten: „Es tut mir leid.“</p>
+          <p class="story__zitat">Ob Rudi antwortet? Das weiß niemand. Aber Paul hat aufgehört zu schweigen.</p>
+          <p class="story__fiktion">Paul und Rudi sind erfunden. Ihre Geschichte steht für Millionen echte Geschichten.</p>
+        </div>
+        <div class="story__bild reveal"><img src="../img/foto/s7-gg-art16.jpg" alt="Glasscheibe am Bundestag mit dem Text eines Grundgesetzartikels"></div>
+      </div>
+      <p class="credit">Die Grundrechte auf Glasscheiben am Bundestag in Berlin (Kunstwerk von Dani Karavan). Foto: CC0, Wikimedia Commons</p>
+      <div style="margin-top:16px">
+<div class="task" data-match="s9.c.match">
         <p class="task__q"><b>C1</b>Welcher Artikel ist die Antwort auf welche Erfahrung aus der NS-Zeit?</p>
         <div class="match">
           <div class="match__row" data-right="1"><p><b>Station 7:</b> Millionen Menschen wurden ermordet, weil sie als „wertlos“ galten.</p>
@@ -170,6 +217,7 @@
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><p class="feedback" aria-live="polite"></p></div>
       </div>
+      </div>
       <div class="grid-2" style="margin-top:20px">
         <div class="block block--ink">
           <p class="label" style="color:var(--sand);margin-bottom:8px">Wehrhafte Demokratie</p>
@@ -179,19 +227,21 @@
             <li>▪ Gegen jeden, der die Demokratie beseitigen will, haben alle das Recht zum Widerstand (Art. 20).</li>
           </ul>
         </div>
-        <figure><div class="reveal" style="height:220px"><img src="../img/foto/s7-gg-art16.jpg" alt="Glasscheibe am Bundestag mit dem Text eines Grundgesetzartikels"></div>
-          <figcaption class="credit">Die Grundrechte auf Glasscheiben am Bundestag in Berlin (Kunstwerk von Dani Karavan). Foto: CC0, Wikimedia Commons</figcaption></figure>
+        <div class="gg"><p class="label">Grundgesetz Artikel 1, Absatz 1</p><p>„Die Würde des Menschen ist unantastbar. Sie zu achten und zu schützen ist Verpflichtung aller staatlichen Gewalt.“</p></div>
       </div>
     </div>
   </section>
 
-  <!-- RADAR -->
+  <!-- 5 RADAR -->
   <section class="part" id="heute" aria-labelledby="h-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--brick">Demokratie-Radar · 5 Min</span></p>
+        <p class="part__tag"><span class="chip chip--brick">Demokratie-Radar</span></p>
         <h2 class="h-l" id="h-t">Alle Tricks auf einen Blick</h2>
-        <p class="lead">In jeder Stunde hast du einen Mechanismus kennengelernt. Wie oft begegnet dir so etwas heute: in deinem Feed, in Gesprächen, in den Nachrichten? Sei ehrlich, es gibt kein Richtig oder Falsch.</p>
+      </div>
+      <div class="auftrag" data-min="4" data-brauchst="ipad">
+        <ol class="auftrag__schritte"><li><span>In jeder Station hast du einen Trick der Nazis kennengelernt.</span></li><li><span>Wie oft begegnet dir so etwas heute: im Feed, in Gesprächen, in den Nachrichten? Tippe bei jeder Zeile an. Sei ehrlich, es gibt kein Richtig oder Falsch.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn du alle neun Zeilen beantwortet hast.</p>
       </div>
       <div class="radar">
         <div class="radar__row"><p><b>1</b> Gerichte, Presse oder Parlament schwächen wollen</p><div class="choices" data-choice="s9.r.8"><button class="choice" data-v="nie">nie</button><button class="choice" data-v="manchmal">manchmal</button><button class="choice" data-v="oft">oft</button></div></div>
@@ -204,20 +254,19 @@
         <div class="radar__row"><p><b>7</b> „Schlussstrich“, Verharmlosung der NS-Zeit</p><div class="choices" data-choice="s9.r.6"><button class="choice" data-v="nie">nie</button><button class="choice" data-v="manchmal">manchmal</button><button class="choice" data-v="oft">oft</button></div></div>
         <div class="radar__row" style="border-left-color:var(--ok)"><p><b>8</b> Menschen, die Zivilcourage zeigen</p><div class="choices" data-choice="s9.r.7"><button class="choice" data-v="nie">nie</button><button class="choice" data-v="manchmal">manchmal</button><button class="choice" data-v="oft">oft</button></div></div>
       </div>
-      <div class="task" style="margin-top:20px">
-        <p class="task__q"><b>H</b>Welcher Mechanismus macht dir heute am meisten Sorgen? Und was hilft dagegen, auch von dir selbst?</p>
-        <textarea class="answer" data-key="s9.h.text" placeholder="Am meisten Sorgen macht mir …, weil … Dagegen hilft …"></textarea><p class="saved" aria-live="polite"></p>
-      </div>
     </div>
   </section>
 
-  <!-- ABSCHLUSS -->
+  <!-- 6 ABSCHLUSS -->
   <section class="part" id="abschluss" aria-labelledby="d-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip">Wir reden darüber · 13 Min</span><span class="label muted">Methode: Abschluss-Abstimmung</span></p>
+        <p class="part__tag"><span class="chip">Wir reden darüber</span><span class="label muted">Methode: Abschluss-Abstimmung</span></p>
         <h2 class="h-l" id="d-t">Was ist die wichtigste Lehre aus der NS-Zeit?</h2>
-        <p class="lead">Wähle die Lehre, die dir am wichtigsten ist. Dann stimmt die Klasse per Handzeichen ab, und jede Gruppe überzeugt die anderen.</p>
+      </div>
+      <div class="auftrag" data-min="11" data-brauchst="klasse">
+        <ol class="auftrag__schritte"><li><span>Tippe die Lehre an, die dir am wichtigsten ist.</span></li><li><span>Deine Wahl erscheint <b>ohne Namen</b> vorne an der Tafel.</span></li><li><span>Überleg dir ein Beispiel aus einer der neun Stationen. Wenn die Zeit um ist, überzeugt jede Gruppe die anderen.</span></li></ol>
+        <p class="auftrag__fertig">Schlussfrage: Welche Station hat dich am meisten beschäftigt?</p>
       </div>
       <div class="corners" data-choice="s9.d.lehre">
         <button type="button" class="corner choice" data-v="A: Die Würde gilt für jeden Menschen." style="border:0"><span class="big">A</span><p>Die Würde gilt für jeden Menschen, ohne Ausnahme.</p></button>
@@ -225,30 +274,17 @@
         <button type="button" class="corner choice" data-v="C: Schon bei der ersten Stufe widersprechen." style="border:0"><span class="big">C</span><p>Schon bei der ersten Stufe widersprechen, nicht erst bei der letzten.</p></button>
         <button type="button" class="corner choice" data-v="D: Erinnern, damit es nie wieder passiert." style="border:0"><span class="big">D</span><p>Erinnern, damit es nie wieder passiert.</p></button>
       </div>
-      <div class="grid-2" style="margin-top:24px">
-        <ol class="stack small" style="gap:10px">
-          <li><b>1. Abstimmen</b> (1 Min): Handzeichen für A, B, C, D. Die Lehrkraft schreibt die Zahlen an die Tafel.</li>
-          <li><b>2. Überzeugen</b> (6 Min): Jede Gruppe hat eine Minute, um die anderen mit einem Beispiel aus den neun Stationen zu überzeugen.</li>
-          <li><b>3. Zweite Abstimmung</b> (1 Min): Hat sich etwas verändert?</li>
-          <li><b>4. Rückblick</b> (5 Min): Zurück zur Lernlandkarte. Welche Station hat dich am meisten beschäftigt?</li>
-        </ol>
-        <div class="task">
-          <p class="task__q"><b>D</b>Meine wichtigste Lehre, mit einem Beispiel aus einer der neun Stationen:</p>
-          <textarea class="answer" data-key="s9.d.grund" placeholder="Für mich ist … am wichtigsten. Das zeigt zum Beispiel Station …, weil …"></textarea><p class="saved" aria-live="polite"></p>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- LERNPASS -->
+  <!-- 7 HEFTEINTRAG -->
   <section class="part" id="lernpass" aria-labelledby="l-t" style="background:var(--ink);color:var(--white)">
     <div class="wrap">
       <div class="part__head"><p class="part__tag"><span class="chip chip--sand">Zum Schluss</span></p><h2 class="h-l" id="l-t">Mein Hefteintrag</h2>
         <p class="lead">Dein PDF hat zwei Teile: <b>Teil 1</b> ist der Hefteintrag zur Stunde, für alle gleich, das ist deine Grundlage für die Probe. <b>Teil 2</b> sind deine eigenen Ergebnisse. Das PDF kommt in dein <b>OneNote-Merkheft</b>.</p>
-        <ol class="pdf-schritte"><li><span>1</span>Name eintragen und unten auf den Knopf tippen.</li><li><span>2</span>Im Druckmenü auf das Teilen-Symbol tippen und das PDF sichern.</li><li><span>3</span>In OneNote im Merkheft: Einfügen → Datei → als Ausdruck einfügen.</li></ol></div>
-      <div class="block block--white" style="color:var(--ink)"><p class="h-s" style="margin-bottom:8px">Merksatz der Stunde</p>
-        <p>Nach den Niederlagen in Stalingrad (1943) und der Landung der Alliierten in der Normandie (1944) wurde die Wehrmacht zurückgedrängt. Am 8. Mai 1945 kapitulierte Deutschland, am 2. September 1945 Japan. Über zwölf Millionen Deutsche flohen oder wurden vertrieben. Das Grundgesetz von 1949 ist die Antwort auf die NS-Zeit: Menschenwürde, Demokratie und Rechtsstaat, geschützt als wehrhafte Demokratie.</p></div>
-      <div class="pass-actions"><button class="btn btn--lila" type="button" id="pass-btn">Hefteintrag + Ergebnisse als PDF</button><a class="btn-2" style="color:var(--white);border-color:var(--white)" href="../index.html#karte">Zurück zur Lernlandkarte</a></div>
+        <ol class="pdf-schritte"><li><span>1</span>Name eintragen und unten auf den Knopf tippen.</li><li><span>2</span>Im Druckmenü auf das Teilen-Symbol tippen und das PDF sichern.</li><li><span>3</span>In OneNote im Merkheft: Einfügen → Datei → als Ausdruck einfügen.</li></ol>
+      </div>
+      <div class="pass-actions"><button class="btn btn--lila" type="button" id="pass-btn">Hefteintrag + Ergebnisse als PDF</button></div>
     </div>
   </section>
 </main>
@@ -257,21 +293,20 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   NS.guard(9);
-  var EV = { stalingrad: "Stalingrad", dday: "Normandie", auschwitz: "Befreiung Auschwitz", dachau: "Befreiung Dachau", hitler: "Hitlers Tod", kapitulation: "Kapitulation Deutschland", hiroshima: "Hiroshima/Nagasaki", japan: "Kapitulation Japan" };
-  var R = [["Gerichte, Presse, Parlament schwächen", 8], ["Freund-Feind-Denken", 9], ["Gefühl statt Fakten", 1], ["Sündenbock", 2], ["Rechte in kleinen Schritten", 3], ["Worte vs. Taten", 4], ["abwertende Wörter", 5], ["Schlussstrich", 6], ["Zivilcourage", 7]];
+  var EV = { stalingrad: "Stalingrad", dday: "Normandie", auschwitz: "Befreiung Auschwitz", dachau: "Befreiung Dachau", hitler: "Hitlers Tod", kapitulation: "Kapitulation Deutschlands", hiroshima: "Hiroshima und Nagasaki", japan: "Kapitulation Japans" };
+  var R = [["Gerichte, Presse, Parlament schwächen", 8], ["Freund-Feind-Denken", 9], ["Gefühl statt Fakten", 1], ["Sündenbock", 2], ["Rechte in kleinen Schritten", 3], ["Worte und Taten passen nicht", 4], ["abwertende Wörter", 5], ["Schlussstrich", 6], ["Zivilcourage", 7]];
+  var antworten = function (v) { return Object.keys(v).sort().map(function (i) { return v[i]; }).join(" · "); };
   document.getElementById("pass-btn").addEventListener("click", function () {
-    var radar = R.map(function (r) { return r[0] + ": " + (NS.get("s9.r." + r[1]) || "–"); }).join("\n");
-    NS.set("s9.radar", radar);
+    NS.set("s9.radar", R.map(function (r) { return r[0] + ": " + (NS.get("s9.r." + r[1]) || "–"); }).join("\n"));
     NS.printPass(9, [
-      { label: "Einstieg: Die Bilanz", key: "s9.e" },
-      { label: "A1 Kriegsende (meine Reihenfolge)", key: "s9.a.order", fmt: function (v) { return v.map(function (x, i) { return (i + 1) + ". " + EV[x]; }).join("\n"); } },
-      { label: "A2 Warum Stalingrad und Normandie die Wende waren", key: "s9.a.wende" },
-      { label: "B1 Ankunft 1946: zwei Sichtweisen", key: "s9.b.sicht" },
-      { label: "C1 Grundgesetz als Antwort (geprüft)", key: "s9.c.match.punkte" },
-      { label: "Demokratie-Radar", key: "s9.radar" },
-      { label: "Was mir Sorgen macht und was hilft", key: "s9.h.text" },
-      { label: "Meine wichtigste Lehre", key: "s9.d.lehre" },
-      { label: "Begründung", key: "s9.d.grund" }
+      { label: "Einstieg: Warum so viele Tote in Polen und der Sowjetunion?", key: "s9.e.mc" },
+      { label: "Kriegsende 1943 bis 1945", key: "s9.a.order", fmt: function (v) { return v.map(function (x, i) { return (i + 1) + ". " + EV[x]; }).join("\n"); } },
+      { label: "Buch-Detektiv S. 106: Aus Stalingrad kamen zurück …", key: "s9.a.buch.in", fmt: antworten },
+      { label: "Buch-Detektiv S. 111 (Vertriebene in Mio. · Anteil in Bayern 1949 in %)", key: "s9.b.buch.in", fmt: antworten },
+      { label: "Warum das Zusammenleben 1946 schwer war", key: "s9.b.mc" },
+      { label: "Grundgesetz als Antwort (richtig zugeordnet)", key: "s9.c.match.punkte" },
+      { label: "Mein Demokratie-Radar", key: "s9.radar" },
+      { label: "Meine wichtigste Lehre", key: "s9.d.lehre" }
     ]);
   });
 });

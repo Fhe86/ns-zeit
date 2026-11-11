@@ -70,11 +70,11 @@
       { href: "#heute", name: "Heute-Check", need: ["s8.h.1", "s8.h.2", "s8.h.3"] },
       { href: "#fishbowl", name: "Fishbowl", need: ["s8.d.pos"] } ] },
     { n: 9, code: "GRUNDGESETZ", jahr: "1943–1949", kern: "Nach dem Krieg bekam Deutschland mit dem Grundgesetz eine Demokratie, die sich selbst schützt.", merke: ["Am 8. Mai 1945 endete der Krieg in Europa. Über 60 Millionen Menschen waren tot.", "Millionen Deutsche flohen oder wurden vertrieben, viele kamen nach Bayern.", "1949 kam das Grundgesetz: Menschenwürde, Demokratie und Rechtsstaat für alle."], heft: {"daten": [["Feb. 1943", "Niederlage in Stalingrad"], ["6. Juni 1944", "Landung der Alliierten in der Normandie"], ["29. April 1945", "Befreiung des KZ Dachau"], ["8. Mai 1945", "Kapitulation, Kriegsende in Europa"], ["2. Sept. 1945", "Kapitulation Japans, Ende des Zweiten Weltkriegs"], ["23. Mai 1949", "Das Grundgesetz tritt in Kraft"]], "begriffe": [["Kapitulation", "ein Staat gibt den Krieg auf"], ["Flucht und Vertreibung", "Millionen Deutsche verloren ab 1945 ihre Heimat im Osten"], ["Grundgesetz", "die Verfassung der Bundesrepublik Deutschland seit 1949"], ["Wehrhafte Demokratie", "die Demokratie kann sich gegen ihre Feinde wehren, z. B. durch Parteiverbote"]], "heute": "Das Grundgesetz ist die Antwort auf die NS-Zeit: Menschenwürde, Demokratie, Rechtsstaat. Art. 1 und 20 dürfen nie geändert werden (Art. 79).", "text": "Nach den Niederlagen in Stalingrad (1943) und der Landung der Alliierten in der Normandie (1944) wurde die Wehrmacht zurückgedrängt. Am 8. Mai 1945 kapitulierte Deutschland, am 2. September 1945 Japan. Über zwölf Millionen Deutsche flohen oder wurden vertrieben. Das Grundgesetz von 1949 ist die Antwort auf die NS-Zeit: Menschenwürde, Demokratie und Rechtsstaat, geschützt als wehrhafte Demokratie.", "frage": "Wie endete der Krieg, und was haben wir daraus gelernt?", "foto": "s7-truemmer"}, titel: "Kriegsende und was bleibt", teile: [
-      { href: "#einstieg", name: "Einstieg", need: ["s9.e"] },
-      { href: "#a", name: "A Kriegsende", need: ["s9.a.order", "s9.a.wende"] },
-      { href: "#b", name: "B Flucht", need: ["s9.b.sicht"] },
-      { href: "#c", name: "C Grundgesetz", need: ["s9.c.match"] },
-      { href: "#heute", name: "Demokratie-Radar", need: ["s9.h.text"] },
+      { href: "#einstieg", name: "Einstieg", need: ["s9.e.mc"] },
+      { href: "#a", name: "Das Ende", need: ["s9.a.order.ok", "s9.a.buch"] },
+      { href: "#b", name: "Ankunft in Bayern", need: ["s9.b.buch", "s9.b.mc"] },
+      { href: "#c", name: "Das Grundgesetz", need: ["s9.c.match.ok"] },
+      { href: "#heute", name: "Demokratie-Radar", need: ["s9.r.1", "s9.r.2", "s9.r.3", "s9.r.4", "s9.r.5", "s9.r.6", "s9.r.7", "s9.r.8", "s9.r.9"] },
       { href: "#abschluss", name: "Abschluss", need: ["s9.d.lehre"] } ] }
   ];
 
@@ -883,7 +883,7 @@
   NS.namensFenster = namensFenster;
 
   /* ---------- Abstimmung am Ende der Station: geht anonym an die Tafel (nur Summen) ---------- */
-  var ABSTIMMUNG = { 1: "s1.x.stufe", 2: "s2.x.grund", 3: "s3.d.ecke", 4: "s4.d.pos", 5: "s5.d.wahl", 6: "s6.d.grund", 8: "s8.d.pos" };
+  var ABSTIMMUNG = { 1: "s1.x.stufe", 2: "s2.x.grund", 3: "s3.d.ecke", 4: "s4.d.pos", 5: "s5.d.wahl", 6: "s6.d.grund", 8: "s8.d.pos", 9: "s9.d.lehre" };
   function stimmeSenden() {
     var n = NS.current, key = ABSTIMMUNG[n];
     if (!LIVE || !key) return;
