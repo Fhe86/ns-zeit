@@ -17,7 +17,7 @@
 
 <header class="bar">
   <a class="bar__mark" href="../index.html#karte"><i aria-hidden="true"><b></b><b></b><b></b></i>NS-Zeit</a>
-  <nav class="bar__nav" aria-label="Seite"><a class="btn-2" href="../index.html#karte">← Karte</a><a class="btn btn--lila" href="#lernpass">Mein Lernpass</a></nav>
+  <nav class="bar__nav" aria-label="Seite"><a class="btn-2" href="../index.html#karte">← Karte</a><a class="btn btn--lila" href="#lernpass">Mein Hefteintrag</a></nav>
 </header>
 
 <main>
@@ -26,7 +26,7 @@
       <div class="block"><p class="label muted" style="margin-bottom:10px">Station 8 · 1933 bis 1945 · Buch S. 104/105</p>
         <h1 class="h-xl" id="titel">Widerstand</h1></div>
       <div class="block block--plaster" style="margin-left:clamp(0px,6%,60px)"><p class="lead"><b>Leitfrage:</b> Wegschauen oder handeln? Was trieb Menschen an, ihr Leben zu riskieren?</p></div>
-      <div class="timeline-mini" aria-label="Ablauf der Stunde"><span><b>5′</b>Einstieg</span><span><b>22′</b>Stationen A, B, C</span><span><b>5′</b>Heute-Check</span><span><b>13′</b>Fishbowl</span></div>
+      <div class="timeline-mini" aria-label="Ablauf der Stunde"><span><b>5′</b>Einstieg</span><span><b>25′</b>Pauls Geschichte und fünf Gesichter</span><span><b>4′</b>Heute-Check</span><span><b>11′</b>Fishbowl</span></div>
     </div>
     <div class="lesson-hero__photo reveal"><img src="../img/foto/s6-weisse-rose.jpg" alt="Im Kopfsteinpflaster vor der Münchner Universität liegen Flugblätter aus Keramik, als wären sie gerade fallengelassen worden."></div>
   </section>
@@ -34,45 +34,61 @@
   <div class="pavement" style="margin-top:20px"></div>
 
   <nav class="toc" aria-label="Teile der Stunde">
-    <a href="#einstieg" data-need="s8.e">Einstieg</a>
-    <a href="#a" data-need="s8.a.wer s6.a.text">A Gesichter</a>
-    <a href="#b" data-need="s8.b.vergehen">B Edelweißpiraten</a>
-    <a href="#c" data-need="s8.c.sort">C Formen</a>
-    <a href="#heute" data-need="s8.h.text">Heute-Check</a>
-    <a href="#fishbowl" data-need="s8.d.text">Fishbowl</a>
-    <a href="#lernpass">Lernpass</a>
+    <a href="#einstieg">Einstieg</a><a href="#a">Ein Brief ohne Absender</a><a href="#b">Edelweißpiraten</a><a href="#c">Viele Formen von Mut</a><a href="#heute">Heute-Check</a><a href="#fishbowl">Fishbowl</a><a href="#lernpass">Hefteintrag</a>
   </nav>
 
-  <!-- EINSTIEG -->
+  <!-- 1 EINSTIEG -->
   <section class="part" id="einstieg" aria-labelledby="e-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip">Einstieg · 5 Min</span><span class="label muted">alle zusammen</span></p>
+        <p class="part__tag"><span class="chip">Einstieg</span><span class="label muted">alle zusammen</span></p>
         <h2 class="h-l" id="e-t">Papier im Pflaster</h2>
-        <p class="lead">Vor der Universität in München liegen diese „Blätter“ im Boden. Sie sind aus Keramik. Was könnte hier passiert sein?</p>
+      </div>
+      <div class="auftrag" data-min="5" data-brauchst="klasse|ipad">
+        <ol class="auftrag__schritte"><li><span>Schau dir das große Foto oben an. Vor der Universität in München liegen diese „Blätter“ im Boden. Sie sind aus Keramik.</span></li><li><span>Tippe an, was du vermutest. Es gibt kein Richtig oder Falsch.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn du gewählt hast. Dann löst die Lehrkraft auf.</p>
       </div>
       <div class="grid-2">
         <div class="task">
-          <p class="task__q"><b>E</b>Deine Vermutung: Was erinnert hier an wen?</p>
-          <textarea class="answer" data-key="s8.e" placeholder="Ich vermute, dass hier …"></textarea><p class="saved" aria-live="polite"></p>
+          <p class="task__q"><b>E</b>Woran erinnert dieses Denkmal?</p>
+          <div class="choices" data-choice="s8.e.wahl" style="grid-template-columns:1fr">
+            <button class="choice" data-v="an einen Sturm, der Zeitungen verweht hat">an einen Sturm, der Zeitungen verweht hat</button>
+            <button class="choice" data-v="an Menschen, die hier Flugblätter verteilt haben">an Menschen, die hier Flugblätter verteilt haben</button>
+            <button class="choice" data-v="an die erste Zeitung Münchens">an die erste Zeitung Münchens</button>
+            <button class="choice" data-v="weiß nicht">weiß nicht</button>
+          </div>
         </div>
         <details class="block block--ink">
-          <summary class="h-s" style="cursor:pointer">Auflösung</summary>
+          <summary class="h-s" style="cursor:pointer">Auflösung (gemeinsam)</summary>
           <p style="margin-top:12px">Am 18. Februar 1943 warfen die Geschwister Hans und Sophie Scholl im Lichthof dieser Universität Flugblätter gegen Hitler in die Tiefe. Ein Hausmeister sah es und hielt sie fest. Vier Tage später wurden beide mit ihrem Freund Christoph Probst in München-Stadelheim hingerichtet. Hans war 24, Sophie 21 Jahre alt.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- STATION A -->
+  <!-- 2 EIN BRIEF OHNE ABSENDER -->
   <section class="part" id="a" aria-labelledby="a-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--lila">Station A · Pflicht</span><span class="book">Buch S. 105</span></p>
-        <h2 class="h-l" id="a-t">Fünf Gesichter des Widerstands</h2>
-        <p class="lead">Die meisten Deutschen machten mit oder schwiegen. Aber nicht alle. Tippe auf „Was geschah?“ und lies die Geschichten. Drei davon spielen in München.</p>
+        <p class="part__tag"><span class="chip chip--brick">Kapitel 1</span><span class="book">Buch S. 105</span></p>
+        <h2 class="h-l" id="a-t">Ein Brief ohne Absender</h2>
       </div>
-      <div class="people">
+      <div class="auftrag" data-min="9" data-brauchst="ipad">
+        <ol class="auftrag__schritte"><li><span>Lies Kapitel 1.</span></li><li><span>Tippe bei den fünf Gesichtern auf „Was geschah?“ und lies die Geschichten. Drei spielen in München.</span></li><li><span>Ordne jeder Person ihre Tat zu und tippe auf „Prüfen“.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn alle fünf grün sind.</p>
+      </div>
+      <div class="story">
+        <div class="story__text">
+          <p class="story__kap">Pauls Geschichte · München · Sommer 1942 bis Februar 1943</p>
+          <p class="story__titel">Ein Flugblatt im Briefkasten</p>
+          <p>Paul ist auf Heimaturlaub in München. Im Briefkasten liegt ein Brief ohne Absender. Darin ein Flugblatt der „Weißen Rose“. Dort steht: In Polen wurden 300 000 Juden ermordet. Die Deutschen sollen nicht länger schweigen.</p>
+          <p>Paul liest es zweimal. Er weiß, dass es stimmt. Er hat im Osten genug gesehen. Viele, die so ein Flugblatt bekommen, bringen es zur Polizei. Paul wirft es in den Ofen und sagt niemandem etwas.</p>
+          <p class="story__zitat">Im Februar 1943 liest er in der Zeitung: Drei Studenten aus München wurden hingerichtet. Sie waren kaum älter als er.</p>
+          <p class="story__fiktion">Paul ist erfunden. Die Flugblätter der Weißen Rose kamen 1942 genau so per Post in Münchner Briefkästen.</p>
+        </div>
+        <div class="story__bild reveal"><img src="../img/foto/s6-weisse-rose.jpg" alt="Denkmal der Weißen Rose: Flugblätter aus Keramik im Pflaster vor der Universität."></div>
+      </div>
+      <div class="people" style="margin-top:20px">
         <article class="person">
           <div class="person__img reveal"><img src="../img/foto/s6-elser.jpg" alt="Porträt von Georg Elser"></div>
           <div class="person__body"><p class="label muted">Einzelgänger · München 1939</p><p class="h-s">Georg Elser</p>
@@ -88,7 +104,7 @@
         <article class="person">
           <div class="person__img" style="background:var(--ink);color:var(--white);display:grid;place-content:center;text-align:center;padding:20px"><p class="h-xl" style="color:var(--sand)">R. M.</p><p class="small">Jesuitenpater in München</p></div>
           <div class="person__body"><p class="label muted">Kirche · München</p><p class="h-s">Pater Rupert Mayer</p>
-            <details><summary>Was geschah?</summary><p>Ein Jesuitenpater in München. Er predigt öffentlich gegen die Nationalsozialisten. Er wird mehrfach verhaftet, kommt ins KZ Sachsenhausen und dann unter Hausarrest ins Kloster Ettal. Er überlebt den Krieg knapp und stirbt im November 1945. Die Katholische Kirche hat ihn seliggesprochen.</p></details>
+            <details><summary>Was geschah?</summary><p>Ein Jesuitenpater in München. Er predigt öffentlich gegen die Nationalsozialisten. Er wird mehrfach verhaftet, kommt ins KZ Sachsenhausen und dann unter Hausarrest ins Kloster Ettal. Er überlebt den Krieg knapp und stirbt im November 1945. Die katholische Kirche hat ihn seliggesprochen.</p></details>
             <p class="credit">Sein Grab liegt in der Bürgersaalkirche in der Münchner Fußgängerzone.</p></div>
         </article>
         <article class="person">
@@ -100,54 +116,74 @@
         <article class="person">
           <div class="person__img reveal"><img src="../img/foto/s6-edelweiss.jpg" alt="Gedenktafel für die Edelweißpiraten an einer Backsteinmauer in Köln."></div>
           <div class="person__body"><p class="label muted">Jugendliche · Köln</p><p class="h-s">Die Edelweißpiraten</p>
-            <details><summary>Was geschah?</summary><p>Jugendliche, die keine Lust auf die Hitlerjugend haben. Sie wandern, singen verbotene Lieder und verspotten Hitler. Später helfen manche Verfolgten. Im November 1944 werden 13 von ihnen in Köln öffentlich erhängt (Buch S. 104).</p></details>
+            <details><summary>Was geschah?</summary><p>Jugendliche, die keine Lust auf die Hitlerjugend haben. Sie wandern, singen verbotene Lieder und verspotten Hitler. Später helfen manche Verfolgten. Mehr dazu in Schritt 3.</p></details>
             <p class="credit">Gedenkort in Köln. Foto CC BY 4.0, Wikimedia Commons</p></div>
         </article>
       </div>
-      <div class="grid-2" style="margin-top:28px">
-        <div class="stack">
-          <div class="clip" data-yt="2c76U3q9joU" data-key="s8.a.video" data-title="Widerstand im Nationalsozialismus" data-quelle="MrWissen2go Geschichte (Terra X)" data-clips='[[20, 60, "Warum Widerstand so schwer war"], [314, 354, "Das Attentat vom 20. Juli 1944"], [376, 523, "Weiße Rose, Elser und stille Retter"]]'></div>
+      <div class="task" data-match="s8.a.match" style="margin-top:20px">
+        <p class="task__q"><b>A</b>Wer tat was? Ordne jeder Person oder Gruppe ihre Tat zu.</p>
+        <div class="match">
+          <div class="match__row" data-right="stauff"><p><b>Claus Graf von Stauffenberg</b></p>
+            <select aria-label="Tat von Claus Graf von Stauffenberg"><option value="">Tat wählen …</option><option value="elser">baute 1939 eine Bombe in eine Säule im Bürgerbräukeller</option><option value="rose">verteilte Flugblätter gegen Hitler und den Krieg</option><option value="mayer">predigte in der Kirche öffentlich gegen die Nazis</option><option value="stauff">stellte am 20. Juli 1944 eine Bombe in Hitlers Hauptquartier ab</option><option value="edel">verweigerten die Hitlerjugend und sangen verbotene Lieder</option></select></div>
+          <div class="match__row" data-right="rose"><p><b>Die Weiße Rose</b></p>
+            <select aria-label="Tat von Die Weiße Rose"><option value="">Tat wählen …</option><option value="elser">baute 1939 eine Bombe in eine Säule im Bürgerbräukeller</option><option value="rose">verteilte Flugblätter gegen Hitler und den Krieg</option><option value="mayer">predigte in der Kirche öffentlich gegen die Nazis</option><option value="stauff">stellte am 20. Juli 1944 eine Bombe in Hitlers Hauptquartier ab</option><option value="edel">verweigerten die Hitlerjugend und sangen verbotene Lieder</option></select></div>
+          <div class="match__row" data-right="edel"><p><b>Die Edelweißpiraten</b></p>
+            <select aria-label="Tat von Die Edelweißpiraten"><option value="">Tat wählen …</option><option value="elser">baute 1939 eine Bombe in eine Säule im Bürgerbräukeller</option><option value="rose">verteilte Flugblätter gegen Hitler und den Krieg</option><option value="mayer">predigte in der Kirche öffentlich gegen die Nazis</option><option value="stauff">stellte am 20. Juli 1944 eine Bombe in Hitlers Hauptquartier ab</option><option value="edel">verweigerten die Hitlerjugend und sangen verbotene Lieder</option></select></div>
+          <div class="match__row" data-right="elser"><p><b>Georg Elser</b></p>
+            <select aria-label="Tat von Georg Elser"><option value="">Tat wählen …</option><option value="elser">baute 1939 eine Bombe in eine Säule im Bürgerbräukeller</option><option value="rose">verteilte Flugblätter gegen Hitler und den Krieg</option><option value="mayer">predigte in der Kirche öffentlich gegen die Nazis</option><option value="stauff">stellte am 20. Juli 1944 eine Bombe in Hitlers Hauptquartier ab</option><option value="edel">verweigerten die Hitlerjugend und sangen verbotene Lieder</option></select></div>
+          <div class="match__row" data-right="mayer"><p><b>Pater Rupert Mayer</b></p>
+            <select aria-label="Tat von Pater Rupert Mayer"><option value="">Tat wählen …</option><option value="elser">baute 1939 eine Bombe in eine Säule im Bürgerbräukeller</option><option value="rose">verteilte Flugblätter gegen Hitler und den Krieg</option><option value="mayer">predigte in der Kirche öffentlich gegen die Nazis</option><option value="stauff">stellte am 20. Juli 1944 eine Bombe in Hitlers Hauptquartier ab</option><option value="edel">verweigerten die Hitlerjugend und sangen verbotene Lieder</option></select></div>
         </div>
-        <div class="task">
-          <p class="task__q"><b>A1</b>Wähle eine Person oder Gruppe. Was tat sie, was riskierte sie, was trieb sie an?</p>
-          <div class="choices" data-choice="s8.a.wer"><button class="choice" data-v="Georg Elser">Elser</button><button class="choice" data-v="Weiße Rose">Weiße Rose</button><button class="choice" data-v="Rupert Mayer">Rupert Mayer</button><button class="choice" data-v="Stauffenberg">Stauffenberg</button><button class="choice" data-v="Edelweißpiraten">Edelweißpiraten</button></div>
-          <textarea class="answer" data-key="s8.a.text" style="min-height:120px" placeholder="Getan: … &#10;Riskiert: … &#10;Angetrieben hat sie/ihn vermutlich: …"></textarea><p class="saved" aria-live="polite"></p>
-        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><p class="feedback" aria-live="polite"></p></div>
       </div>
     </div>
   </section>
 
-  <!-- STATION B -->
+  <!-- 3 EDELWEISSPIRATEN -->
   <section class="part" id="b" aria-labelledby="b-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--lila">Station B · Pflicht</span><span class="book">Buch S. 104</span></p>
+        <p class="part__tag"><span class="chip chip--lila">Kapitel 2</span><span class="book">Buch S. 104</span></p>
         <h2 class="h-l" id="b-t">„Sie folgten allem, nur nicht dem Zwang“</h2>
-        <p class="lead">Lies im Buch die drei Quellen über die Edelweißpiraten (104.1). Besonders Quelle ②: Ein Kölner Jugendrichter schreibt 1943 über sie.</p>
+      </div>
+      <div class="auftrag" data-min="7" data-brauchst="buch:Buch S. 104|ipad">
+        <ol class="auftrag__schritte"><li><span>Buch <b>S. 104</b>: Lies die Quellen über die Edelweißpiraten (104.1). Besonders Quelle ②: Ein Kölner Jugendrichter schreibt 1943 über sie.</span></li><li><span>Finde die zwei Antworten und tippe auf „Prüfen“.</span></li><li><span>Beantworte die Frage zum „Vergehen“.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn Buch-Detektiv und Frage grün sind.</p>
       </div>
       <div class="grid-2">
-        <blockquote class="quote">„Die Jugend […] traf abends zusammen […]. Ein Musikinstrument war zur Stelle und damit bald eine Gruppe gegründet. Diese Jungens waren von zu Hause aus leichtsinnig, charakterlich schwach und disziplinlos […].“<cite>Ein Kölner Jugendrichter, November 1943. Buch S. 104, Quelle 104.1 ② (gekürzt)</cite></blockquote>
         <div class="stack">
-          <div class="task">
-            <p class="task__q"><b>B1</b>Was war das „Vergehen“ der Edelweißpiraten aus Sicht des Richters? Was findest du daran heute überhaupt nicht schlimm?</p>
-            <textarea class="answer" data-key="s8.b.vergehen" placeholder="Der Richter warf ihnen vor, dass … Heute wäre das …"></textarea><p class="saved" aria-live="polite"></p>
+          <blockquote class="quote">„Die Jugend […] traf abends zusammen […]. Ein Musikinstrument war zur Stelle und damit bald eine Gruppe gegründet. Diese Jungens waren von zu Hause aus leichtsinnig, charakterlich schwach und disziplinlos […].“<cite>Ein Kölner Jugendrichter, November 1943. Buch S. 104, Quelle 104.1 ② (gekürzt)</cite></blockquote>
+          <div class="note"><b>Denk an Station 3:</b><span>In der Hitlerjugend war alles vorgeschrieben. Schon ein selbst gewählter Ausflug mit Gitarre war in der Diktatur ein Zeichen von Freiheit.</span></div>
+        </div>
+        <div class="stack">
+          <div class="detektiv" data-find="s8.b.buch">
+            <div class="detektiv__kopf"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#5f4497" stroke-width="2.4"><circle cx="10" cy="10" r="6"/><path d="M15 15l6 6"/></svg><p>Buch-Detektiv: S. 104</p></div>
+            <div class="find__q" data-answer="musikinstrument|ein musikinstrument|instrument"><p class="find__ort">Buch S. 104 · Quelle 104.1 ②, der Richter</p><p class="find__frage">Was war laut Richter schnell „zur Stelle“, als sich die Jugendlichen trafen?</p><input autocomplete="off" placeholder="ein Wort"><p class="find__hinweis" hidden>Tipp: Such nach „zur Stelle“.</p></div>
+            <div class="find__q" data-answer="13|dreizehn"><p class="find__ort">Buch S. 104</p><p class="find__frage">Wie viele Edelweißpiraten wurden im November 1944 in Köln öffentlich erhängt?</p><input inputmode="numeric" autocomplete="off" placeholder="Zahl"><p class="find__hinweis" hidden>Tipp: Such nach „1944“.</p></div>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><p class="feedback" aria-live="polite"></p></div>
           </div>
-          <div class="note"><b>Denk an Stunde 3:</b><span>In der HJ war alles vorgeschrieben. Schon ein selbst gewählter Ausflug mit Gitarre war in der Diktatur ein Zeichen von Freiheit.</span></div>
+          <div class="mc" data-mc="s8.b.mc" data-right="frei"><p class="mc__frage">Was war das „Vergehen“ der Edelweißpiraten aus Sicht des Richters?</p>
+            <div class="choices"><button class="choice" data-v="bombe">Sie hatten eine Bombe gebaut.</button><button class="choice" data-v="frei">Sie trafen sich frei, ohne Hitlerjugend, machten Musik und hielten sich nicht an Befehle.</button><button class="choice" data-v="stehlen">Sie hatten in Geschäften gestohlen.</button></div>
+            <p class="mc__tipp" hidden>Lies die Quelle noch einmal: Was taten die Jugendlichen abends?</p>
+            <p class="mc__erkl" hidden>Richtig. Heute ist das ganz normal: Freunde treffen, Musik machen. In der Diktatur war schon das Widerstand.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STATION C -->
+  <!-- 4 VIELE FORMEN VON MUT -->
   <section class="part" id="c" aria-labelledby="c-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--lila">Station C · Pflicht</span><span class="book">Buch S. 105, Fachbegriffe</span></p>
+        <p class="part__tag"><span class="chip chip--lila">Kapitel 3</span><span class="book">Buch S. 105, Fachbegriffe</span></p>
         <h2 class="h-l" id="c-t">Viele Formen von Mut</h2>
-        <p class="lead">Widerstand fing nicht erst mit einer Bombe an. Schon wer nicht mitmachte, fiel auf. Sortiere die Beispiele: Wie groß war das Risiko?</p>
+      </div>
+      <div class="auftrag" data-min="7" data-brauchst="ipad">
+        <ol class="auftrag__schritte"><li><span>Widerstand fing nicht erst mit einer Bombe an. Schon wer nicht mitmachte, fiel auf. Sortiere die acht Beispiele: Tippe eine Karte, dann die passende Stufe. Dann „Prüfen“.</span></li><li><span>Lies die zwei Fachbegriffe und beantworte die Frage zur Zivilcourage.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn Karten und Frage grün sind.</p>
       </div>
       <div class="task" data-sorter="s8.c.sort">
-        <p class="task__q"><b>C1</b>Tippe eine Karte, dann die passende Stufe.</p>
+        <p class="task__q"><b>C</b>Wie groß war das Risiko?</p>
         <div class="sorter">
           <div class="sorter__pool">
             <button type="button" class="chipcard" data-id="1" data-right="a">Den Hitlergruß nicht zeigen</button>
@@ -167,20 +203,27 @@
           <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><p class="feedback" aria-live="polite"></p></div>
         </div>
       </div>
-      <div class="grid-2" style="margin-top:20px">
+      <div class="grid-3" style="margin-top:20px">
         <div class="block block--plaster"><p class="label" style="margin-bottom:6px">Fachbegriff Widerstand</p><p class="small">Menschen lehnen eine Herrschaft ab und handeln dagegen, gewaltlos oder mit Gewalt gegen Sachen und Personen (Buch S. 105).</p></div>
         <div class="block block--sand"><p class="label" style="margin-bottom:6px">Fachbegriff Zivilcourage</p><p class="small">„Bürgermut“: Man setzt sich für andere oder für Werte ein, obwohl einem selbst Nachteile drohen. Das geht auch heute, jeden Tag (Buch S. 105).</p></div>
+        <div class="mc" data-mc="s8.c.mc" data-right="mama"><p class="mc__frage">Wer aus Pauls Familie hat Zivilcourage gezeigt?</p>
+          <div class="choices"><button class="choice" data-v="vater">Pauls Vater, der sagte: „Die werden schon was angestellt haben.“</button><button class="choice" data-v="mama">Pauls Mutter, die der Zwangsarbeiterin heimlich Brot gab.</button><button class="choice" data-v="paul">Paul, der das Flugblatt verbrannte.</button></div>
+          <p class="mc__tipp" hidden>Wer hat sich für einen anderen Menschen eingesetzt, obwohl Strafe drohte?</p>
+          <p class="mc__erkl" hidden>Richtig. Pauls Mutter half, obwohl sie dafür bestraft werden konnte (Station 6). Paul hat das Flugblatt nicht verraten, aber auch nichts getan. Das ist viel, aber noch keine Zivilcourage.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- HEUTE -->
+  <!-- 5 HEUTE -->
   <section class="part" id="heute" aria-labelledby="h-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--brick">Heute-Check · 5 Min</span></p>
+        <p class="part__tag"><span class="chip chip--brick">Heute-Check</span></p>
         <h2 class="h-l" id="h-t">Zivilcourage heute: Was würdest du tun?</h2>
-        <p class="lead">Wir leben in keiner Diktatur. Niemand wird für Mut hingerichtet. Trotzdem schauen viele weg. Was kannst du in diesen Situationen tun? Mehrere Antworten sind möglich.</p>
+      </div>
+      <div class="auftrag" data-min="4" data-brauchst="ipad">
+        <ol class="auftrag__schritte"><li><span>Wir leben in keiner Diktatur. Niemand wird für Mut hingerichtet. Trotzdem schauen viele weg.</span></li><li><span>Tippe bei jeder Situation an, was du tun würdest. Mehrere Antworten sind möglich. Die Tipps der Polizei helfen dir.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn du bei allen drei Situationen gewählt hast.</p>
       </div>
       <div class="grid-2">
         <div class="today">
@@ -205,46 +248,42 @@
             <p class="credit" style="color:#c5c3d4">Nach der Kampagne „Aktion-tu-was“ der Polizeilichen Kriminalprävention</p>
           </div>
           <div class="gg"><p class="label">Grundgesetz Artikel 20, Absatz 4</p><p>„Gegen jeden, der es unternimmt, diese Ordnung zu beseitigen, haben alle Deutschen das Recht zum Widerstand, wenn andere Abhilfe nicht möglich ist.“</p><p class="small muted" style="font-family:var(--font-text)">Eine Lehre aus der NS-Zeit: Wer die Demokratie abschaffen will, gegen den darf man sich wehren.</p></div>
-          <div class="task">
-            <p class="task__q"><b>H</b>Warum ist es so schwer, Zivilcourage zu zeigen, obwohl heute kaum jemand dafür bestraft wird?</p>
-            <textarea class="answer" data-key="s8.h.text" placeholder="Es ist schwer, weil …"></textarea><p class="saved" aria-live="polite"></p>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FISHBOWL -->
+  <!-- 6 FISHBOWL -->
   <section class="part" id="fishbowl" aria-labelledby="d-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip">Wir reden darüber · 13 Min</span><span class="label muted">Methode: Fishbowl</span></p>
+        <p class="part__tag"><span class="chip">Wir reden darüber</span><span class="label muted">Methode: Fishbowl</span></p>
         <h2 class="h-l" id="d-t">„Widerstand gegen eine Diktatur ist Pflicht, auch wenn man dafür sterben kann.“</h2>
-        <p class="lead">In der Mitte stehen fünf Stühle, vier sind besetzt, einer bleibt frei. Nur die Mitte redet. Der Rest hört zu. Wer etwas sagen will, setzt sich auf den freien Stuhl. Dann muss jemand anderes die Mitte verlassen.</p>
       </div>
-      <div class="grid-2">
-        <ol class="stack small" style="gap:10px">
-          <li><b>1. Aufbau</b> (1 Min): Innenkreis mit 4 Freiwilligen + 1 freier Stuhl, alle anderen außen.</li>
-          <li><b>2. Diskussion</b> (9 Min): Die Mitte diskutiert die Aussage. Außen wird zugehört und notiert.</li>
-          <li><b>3. Auswertung</b> (3 Min): Außenkreis: Welches Argument war am stärksten? Gibt es einen Unterschied zwischen „Pflicht“ und „Recht“?</li>
-        </ol>
-        <div class="task">
-          <p class="task__q"><b>D</b>Meine Meinung zur Aussage, mit einem Argument aus der Diskussion:</p>
-          <textarea class="answer" data-key="s8.d.text" placeholder="Ich finde, … In der Diskussion hat mich überzeugt, dass …"></textarea><p class="saved" aria-live="polite"></p>
+      <div class="auftrag" data-min="11" data-brauchst="klasse">
+        <ol class="auftrag__schritte"><li><span>Tippe an, wie sehr du dem Satz zustimmst.</span></li><li><span>Deine Wahl erscheint <b>ohne Namen</b> vorne an der Tafel.</span></li><li><span>Überleg dir einen Grund. Wenn die Zeit um ist, diskutieren wir im Fishbowl darüber.</span></li></ol>
+        <p class="auftrag__fertig">Schlussfrage: Ist Widerstand eine Pflicht oder ein Recht? Und was ist der Unterschied?</p>
+      </div>
+      <div data-choice="s8.d.pos">
+        <div class="line">
+          <button type="button" class="choice" data-v="stimme voll zu">stimme voll zu</button>
+          <button type="button" class="choice" data-v="stimme eher zu">eher zu</button>
+          <button type="button" class="choice" data-v="unentschieden">unentschieden</button>
+          <button type="button" class="choice" data-v="stimme eher nicht zu">eher nicht zu</button>
+          <button type="button" class="choice" data-v="stimme gar nicht zu">gar nicht zu</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- LERNPASS -->
+  <!-- 7 HEFTEINTRAG -->
   <section class="part" id="lernpass" aria-labelledby="l-t" style="background:var(--ink);color:var(--white)">
     <div class="wrap">
       <div class="part__head"><p class="part__tag"><span class="chip chip--sand">Zum Schluss</span></p><h2 class="h-l" id="l-t">Mein Hefteintrag</h2>
         <p class="lead">Dein PDF hat zwei Teile: <b>Teil 1</b> ist der Hefteintrag zur Stunde, für alle gleich, das ist deine Grundlage für die Probe. <b>Teil 2</b> sind deine eigenen Ergebnisse. Das PDF kommt in dein <b>OneNote-Merkheft</b>.</p>
-        <ol class="pdf-schritte"><li><span>1</span>Name eintragen und unten auf den Knopf tippen.</li><li><span>2</span>Im Druckmenü auf das Teilen-Symbol tippen und das PDF sichern.</li><li><span>3</span>In OneNote im Merkheft: Einfügen → Datei → als Ausdruck einfügen.</li></ol></div>
-      <div class="block block--white" style="color:var(--ink)"><p class="h-s" style="margin-bottom:8px">Merksatz der Stunde</p>
-        <p>Die meisten Deutschen machten mit oder schwiegen. Trotzdem leisteten Menschen Widerstand: Einzelne wie Georg Elser, Studierende wie die Weiße Rose, Geistliche wie Rupert Mayer, Offiziere um Stauffenberg und Jugendliche wie die Edelweißpiraten. Viele bezahlten mit ihrem Leben. Zivilcourage heißt heute: sich für andere einsetzen, auch wenn es unbequem ist.</p></div>
-      <div class="pass-actions"><button class="btn btn--lila" type="button" id="pass-btn">Hefteintrag + Ergebnisse als PDF</button><a class="btn-2" style="color:var(--white);border-color:var(--white)" href="../index.html#karte">Zurück zur Lernlandkarte</a></div>
+        <ol class="pdf-schritte"><li><span>1</span>Name eintragen und unten auf den Knopf tippen.</li><li><span>2</span>Im Druckmenü auf das Teilen-Symbol tippen und das PDF sichern.</li><li><span>3</span>In OneNote im Merkheft: Einfügen → Datei → als Ausdruck einfügen.</li></ol>
+      </div>
+      <div class="pass-actions"><button class="btn btn--lila" type="button" id="pass-btn">Hefteintrag + Ergebnisse als PDF</button></div>
     </div>
   </section>
 </main>
@@ -255,15 +294,19 @@ document.addEventListener("DOMContentLoaded", function () {
   NS.guard(8);
   var K = { 1: "Hitlergruß verweigern", 2: "Bombe legen", 3: "Flugblätter", 4: "nicht in die HJ", 5: "Predigt", 6: "Juden verstecken", 7: "verbotene Lieder", 8: "Umsturz planen" };
   var S = { a: "Nicht mitmachen", b: "Protest und Hilfe", c: "Aktiver Widerstand" };
+  var antworten = function (v) { return Object.keys(v).sort().map(function (i) { return v[i]; }).join(" · "); };
   document.getElementById("pass-btn").addEventListener("click", function () {
     NS.printPass(8, [
-      { label: "Einstieg: Meine Vermutung", key: "s8.e" },
-      { label: "A1 Meine Person / Gruppe", key: "s8.a.wer" },
-      { label: "A1 Getan, riskiert, angetrieben", key: "s8.a.text" },
-      { label: "B1 Das „Vergehen“ der Edelweißpiraten", key: "s8.b.vergehen" },
-      { label: "C1 Formen des Widerstands", key: "s8.c.sort", fmt: function (v) { var o = { a: [], b: [], c: [] }; Object.keys(v).forEach(function (id) { o[v[id]].push(K[id]); }); return Object.keys(o).map(function (s) { return S[s] + ": " + o[s].join(", "); }).join("\n"); } },
-      { label: "Heute-Check: Warum Zivilcourage schwer ist", key: "s8.h.text" },
-      { label: "Fishbowl: meine Meinung", key: "s8.d.text" }
+      { label: "Einstieg: Das Denkmal erinnert …", key: "s8.e.wahl" },
+      { label: "Fünf Gesichter: richtig zugeordnet", key: "s8.a.match.punkte" },
+      { label: "Buch-Detektiv S. 104 (zur Stelle war … · in Köln erhängt)", key: "s8.b.buch.in", fmt: antworten },
+      { label: "Das „Vergehen“ der Edelweißpiraten", key: "s8.b.mc" },
+      { label: "Formen des Widerstands", key: "s8.c.sort", fmt: function (v) { var o = { a: [], b: [], c: [] }; Object.keys(v).forEach(function (id) { if (o[v[id]]) o[v[id]].push(K[id]); }); return Object.keys(o).map(function (s) { return S[s] + ": " + o[s].join(", "); }).join("\n"); } },
+      { label: "Zivilcourage in Pauls Familie", key: "s8.c.mc" },
+      { label: "Heute-Check: Klassenchat", key: "s8.h.1" },
+      { label: "Heute-Check: im Bus", key: "s8.h.2" },
+      { label: "Heute-Check: Hasskommentare", key: "s8.h.3" },
+      { label: "Fishbowl: „Widerstand ist Pflicht“", key: "s8.d.pos" }
     ]);
   });
 });

@@ -17,7 +17,7 @@
 
 <header class="bar">
   <a class="bar__mark" href="../index.html#karte"><i aria-hidden="true"><b></b><b></b><b></b></i>NS-Zeit</a>
-  <nav class="bar__nav" aria-label="Seite"><a class="btn-2" href="../index.html#karte">← Karte</a><a class="btn btn--lila" href="#lernpass">Mein Lernpass</a></nav>
+  <nav class="bar__nav" aria-label="Seite"><a class="btn-2" href="../index.html#karte">← Karte</a><a class="btn btn--lila" href="#lernpass">Mein Hefteintrag</a></nav>
 </header>
 
 <main>
@@ -26,7 +26,7 @@
       <div class="block"><p class="label muted" style="margin-bottom:10px">Station 6 · 1939 bis 1945 · Buch S. 94 bis 97</p>
         <h1 class="h-xl" id="titel">Vernichtungskrieg und Zwangsarbeit</h1></div>
       <div class="block block--plaster" style="margin-left:clamp(0px,6%,60px)"><p class="lead"><b>Leitfrage:</b> Was passiert, wenn Menschen nichts mehr wert sein sollen?</p></div>
-      <div class="timeline-mini" aria-label="Ablauf der Stunde"><span><b>5′</b>Einstieg</span><span><b>22′</b>Stationen A, B, C</span><span><b>5′</b>Heute-Check</span><span><b>13′</b>Schreibgespräch</span></div>
+      <div class="timeline-mini" aria-label="Ablauf der Stunde"><span><b>5′</b>Einstieg</span><span><b>25′</b>Pauls Geschichte</span><span><b>4′</b>Heute-Check</span><span><b>11′</b>Schreibgespräch</span></div>
     </div>
     <div class="lesson-hero__photo reveal" style="background:#e9e4dc"><img src="../img/foto/s4-ost.jpg" alt="Blauer, rechteckiger Stoffaufnäher mit weißer Aufschrift OST." style="object-fit:contain;padding:30px"></div>
   </section>
@@ -34,201 +34,239 @@
   <div class="pavement" style="margin-top:20px"></div>
 
   <nav class="toc" aria-label="Teile der Stunde">
-    <a href="#einstieg" data-need="s6.e">Einstieg</a>
-    <a href="#a" data-need="s6.a.mass s4.a.text">A Osten</a>
-    <a href="#b" data-need="s6.b.text">B Leningrad</a>
-    <a href="#c" data-need="s6.c.brief">C Zwangsarbeit</a>
-    <a href="#heute" data-need="s6.h.text">Heute-Check</a>
-    <a href="#schreib" data-need="s6.d.text">Schreibgespräch</a>
-    <a href="#lernpass">Lernpass</a>
+    <a href="#einstieg">Einstieg</a><a href="#a">Über die Grenze</a><a href="#b">Vor Leningrad</a><a href="#c">Hinter dem Zaun</a><a href="#heute">Heute-Check</a><a href="#schreib">Schreibgespräch</a><a href="#lernpass">Hefteintrag</a>
   </nav>
 
-  <!-- EINSTIEG -->
+  <!-- 1 EINSTIEG -->
   <section class="part" id="einstieg" aria-labelledby="e-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip">Einstieg · 5 Min</span><span class="label muted">alle zusammen</span></p>
+        <p class="part__tag"><span class="chip">Einstieg</span><span class="label muted">alle zusammen</span></p>
         <h2 class="h-l" id="e-t">Ein Stück Stoff</h2>
-        <p class="lead">Dieser Aufnäher ist etwa so groß wie deine Handfläche. Millionen Menschen mussten so etwas auf ihrer Kleidung tragen, gut sichtbar. Was glaubst du: Wozu?</p>
+      </div>
+      <div class="auftrag" data-min="5" data-brauchst="klasse|ipad">
+        <ol class="auftrag__schritte"><li><span>Schau dir den Aufnäher oben an. Er ist etwa so groß wie deine Handfläche. Millionen Menschen mussten so etwas auf ihrer Kleidung tragen.</span></li><li><span>Tippe an, was du vermutest. Es gibt kein Richtig oder Falsch.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn du gewählt hast. Dann löst die Lehrkraft auf.</p>
       </div>
       <div class="grid-2">
         <div class="task">
-          <p class="task__q"><b>E</b>Wozu diente der Aufnäher? Was macht es mit einem Menschen, so ein Zeichen tragen zu müssen?</p>
-          <textarea class="answer" data-key="s6.e" placeholder="Ich glaube, der Aufnäher sollte … Für den Menschen bedeutet das …"></textarea><p class="saved" aria-live="polite"></p>
+          <p class="task__q"><b>E</b>Wozu diente der Aufnäher?</p>
+          <div class="choices" data-choice="s6.e.wozu" style="grid-template-columns:1fr">
+            <button class="choice" data-v="eine Auszeichnung für gute Arbeit">eine Auszeichnung für gute Arbeit</button>
+            <button class="choice" data-v="ein Zeichen, damit jeder sieht: Der gehört nicht dazu">ein Zeichen, damit jeder sieht: Der gehört nicht dazu</button>
+            <button class="choice" data-v="ein Abzeichen von Soldaten">ein Abzeichen von Soldaten</button>
+            <button class="choice" data-v="weiß nicht">weiß nicht</button>
+          </div>
         </div>
         <details class="block block--ink">
-          <summary class="h-s" style="cursor:pointer">Auflösung</summary>
-          <p style="margin-top:12px">Das „OST“-Zeichen mussten Zwangsarbeiter aus der Sowjetunion tragen, ein „P“ die Menschen aus Polen (Buch S. 96). Jeder sollte sofort sehen: Mit diesem Menschen darfst du nicht reden, nicht essen, nicht befreundet sein. Wie beim Judenstern machte ein Stück Stoff aus einem Menschen eine Kategorie.</p>
+          <summary class="h-s" style="cursor:pointer">Auflösung (gemeinsam)</summary>
+          <p style="margin-top:12px">Das „OST“-Zeichen mussten Zwangsarbeiter aus der Sowjetunion tragen, ein „P“ die Menschen aus Polen (Buch S. 96). Jeder sollte sofort sehen: Mit diesem Menschen darfst du nicht reden, nicht essen, nicht befreundet sein.</p>
+          <p>Erinnerst du dich an Station 4? Wie beim Judenstern machte ein Stück Stoff aus einem Menschen eine Gruppe, die nichts wert sein sollte.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- STATION A -->
+  <!-- 2 ÜBER DIE GRENZE -->
   <section class="part" id="a" aria-labelledby="a-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--lila">Station A · Pflicht</span><span class="book">Buch S. 94/95</span></p>
-        <h2 class="h-l" id="a-t">Krieg gegen Menschen</h2>
-        <p class="lead">Im Osten ging es den Nationalsozialisten nicht nur um Land. Die Menschen dort galten in ihrer Ideologie als „minderwertig“. Sie sollten vertrieben, ausgebeutet oder getötet werden. Das nennt man <b>Vernichtungskrieg</b>.</p>
+        <p class="part__tag"><span class="chip chip--lila">Kapitel 1</span><span class="book">Buch S. 94</span></p>
+        <h2 class="h-l" id="a-t">Über die Grenze</h2>
       </div>
-      <div class="grid-2">
-        <div class="stack">
-          <div class="clip" data-yt="V9ciS-pNYAM" data-key="s6.a.video" data-title="Deutsche Besatzung der Ukraine 1941–44" data-quelle="Bundeszentrale für politische Bildung" data-clips='[[0, 97, "Überfall und Besatzung"], [97, 189, "Hunger und Zwangsarbeit"], [189, 302, "Massenmord an den Juden"]]'></div>
-          <div class="note"><b>Achtung:</b><span>Das Video zeigt historische Aufnahmen von Gewalt. Wenn es dir zu viel wird, hör nur zu oder lies im Buch weiter.</span></div>
+      <div class="auftrag" data-min="8" data-brauchst="ipad">
+        <ol class="auftrag__schritte"><li><span>Lies Kapitel 1 und die zwei Zahlen-Kästen.</span></li><li><span>Vervollständige den Satz zum Vernichtungskrieg und tippe auf „Prüfen“.</span></li><li><span>Beantworte die Frage zu Polen.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn Satz und Frage grün sind.</p>
+      </div>
+      <div class="story">
+        <div class="story__text">
+          <p class="story__kap">Pauls Geschichte · Sowjetunion · Sommer 1941</p>
+          <p class="story__titel">„Uns geht es gut“</p>
+          <p>Paul ist jetzt Soldat der Wehrmacht. Im Juni 1941 marschiert seine Einheit in die Sowjetunion. Sie kommen durch arme Dörfer. Die Soldaten nehmen den Bauern die Kühe und das Getreide weg. Was sie nicht mitnehmen, brennt.</p>
+          <p>An einer Straße sieht Paul ein Feld voller Stacheldraht. Dahinter sitzen Tausende sowjetische Gefangene, ohne Dach, ohne Essen. Ein Unteroffizier sagt: „Das sind keine Menschen wie wir.“ Das kennt Paul aus der Schule und aus der Hitlerjugend.</p>
+          <p class="story__zitat">Abends schreibt Paul nach Hause: „Liebe Mutter, uns geht es gut. Hier ist alles schmutzig und arm.“ Was er gesehen hat, schreibt er nicht.</p>
+          <p class="story__fiktion">Paul ist erfunden. Die Plünderungen und die Lager für Kriegsgefangene gab es genau so.</p>
         </div>
-        <div class="stack">
+        <div class="stack" style="align-self:start">
           <div class="block block--sand"><p class="label">Zivile Tote in der Sowjetunion</p><p class="h-l">10 bis 15 Mio.</p><p class="small">Zum Vergleich: In ganz Bayern leben heute etwa 13 Millionen Menschen (Buch S. 94).</p></div>
           <div class="block block--plaster"><p class="label">Sowjetische Kriegsgefangene</p><p class="h-l">mehr als die Hälfte</p><p class="small">der rund 5,7 Millionen Gefangenen starb in deutschen Lagern, die meisten an Hunger und Kälte.</p></div>
         </div>
       </div>
-      <div class="grid-2" style="margin-top:28px">
-        <div class="task">
-          <p class="task__q"><b>A1</b>Die drei Maßnahmen der deutschen Besatzer in Polen: Wähle genau drei (Buch S. 94).</p>
-          <div class="choices" data-choice="s6.a.mass" data-multi>
-            <button class="choice" data-v="Führungsschicht ermordet">Anwälte, Ärzte, Lehrer, Politiker werden verhaftet und ermordet</button>
-            <button class="choice" data-v="Wahlen">Die Polen dürfen eine neue Regierung wählen</button>
-            <button class="choice" data-v="Vertreibung">Polen werden vertrieben, Deutsche bekommen ihre Höfe</button>
-            <button class="choice" data-v="Schulen">Neue Schulen für polnische Kinder</button>
-            <button class="choice" data-v="Zwangsarbeit">Millionen müssen Zwangsarbeit leisten</button>
-          </div>
-          <details><summary class="small" style="cursor:pointer;font-weight:600">Lösung</summary><p class="small" style="margin-top:6px">Ermordung der Führungsschicht, Vertreibung, Zwangsarbeit. Polen sollte als Staat verschwinden.</p></details>
+      <div class="grid-2" style="margin-top:16px">
+        <div class="satz" data-satz="s6.a.satz">
+          <p class="task__q"><b>A</b>Was ist ein Vernichtungskrieg?</p>
+          <p class="satz__text">Im Vernichtungskrieg kämpfte die Wehrmacht nicht nur gegen <select data-right="soldaten" aria-label="gegen wen"><option value="">…</option><option value="soldaten">Soldaten</option><option value="juden">Juden</option><option value="englaender">Engländer</option></select>, sondern gegen die <select data-right="bevoelkerung" aria-label="gegen wen noch"><option value="">…</option><option value="regierung">Regierung</option><option value="bevoelkerung">ganze Bevölkerung</option><option value="natur">Natur</option></select>.</p>
+          <p class="satz__text">Die Menschen im Osten galten in der Ideologie der Nazis als <select data-right="minderwertig" aria-label="galten als"><option value="">…</option><option value="freunde">Freunde</option><option value="minderwertig">„minderwertig“</option><option value="gefaehrlich">besonders stark</option></select>.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><p class="feedback" aria-live="polite"></p></div>
         </div>
-        <div class="task">
-          <p class="task__q"><b>A2</b>Warum spricht man von einem „Vernichtungskrieg“ und nicht nur von einem Krieg? Nenne ein Beispiel aus Buch oder Video.</p>
-          <textarea class="answer" data-key="s6.a.text" placeholder="Es war ein Vernichtungskrieg, weil nicht nur Soldaten … Ein Beispiel: …"></textarea><p class="saved" aria-live="polite"></p>
-        </div>
+        <div class="mc" data-mc="s6.a.mc" data-right="wahlen"><p class="mc__frage">Seit 1939 war Polen besetzt (Buch S. 94). Was taten die deutschen Besatzer dort <b>nicht</b>?</p>
+          <div class="choices"><button class="choice" data-v="mord">Sie ermordeten Lehrer, Ärzte, Anwälte und Politiker.</button><button class="choice" data-v="vertreibung">Sie vertrieben Polen von ihren Höfen.</button><button class="choice" data-v="wahlen">Sie ließen die Polen eine neue Regierung wählen.</button><button class="choice" data-v="zwang">Sie zwangen Millionen zur Zwangsarbeit.</button></div>
+          <p class="mc__tipp" hidden>Polen sollte als Staat verschwinden. Passt eine eigene Regierung dazu?</p>
+          <p class="mc__erkl" hidden>Richtig. Polen sollte als Staat verschwinden. Die Führungsschicht wurde ermordet, die Menschen vertrieben oder zur Arbeit gezwungen.</p></div>
       </div>
+      <details class="zusatz">
+        <summary><span class="chip chip--sand">Zusatz · für Schnelle</span> Video: Deutsche Besatzung der Ukraine (bpb, 5 Min)</summary>
+        <div class="note" style="margin-bottom:12px"><b>Achtung:</b><span>Das Video zeigt historische Aufnahmen von Gewalt. Wenn es dir zu viel wird, hör nur zu oder hör auf.</span></div>
+        <div class="clip" data-yt="V9ciS-pNYAM" data-key="s6.a.video" data-title="Deutsche Besatzung der Ukraine 1941–44" data-quelle="Bundeszentrale für politische Bildung" data-clips='[[0, 97, "Überfall und Besatzung"], [97, 189, "Hunger und Zwangsarbeit"]]'></div>
+      </details>
     </div>
   </section>
 
-  <!-- STATION B -->
+  <!-- 3 VOR LENINGRAD -->
   <section class="part" id="b" aria-labelledby="b-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--lila">Station B · Pflicht</span><span class="book">Buch S. 95</span></p>
-        <h2 class="h-l" id="b-t">872 Tage eingeschlossen: Leningrad</h2>
-        <p class="lead">Von September 1941 bis Januar 1944 schloss die Wehrmacht die Stadt Leningrad (heute St. Petersburg) ein. Nichts kam hinein. Der Plan: Die Stadt sollte verhungern.</p>
+        <p class="part__tag"><span class="chip chip--brick">Kapitel 2</span><span class="book">Buch S. 95</span></p>
+        <h2 class="h-l" id="b-t">872 Tage: Vor Leningrad</h2>
       </div>
-      <div class="grid-2">
-        <figure><div class="reveal" style="height:320px"><img src="../img/foto/s4-leningrad.jpg" alt="Menschen in dicken Wintermänteln stehen auf einer verschneiten Straße in Leningrad an, um Wasser zu holen."></div>
-          <figcaption class="credit">Leningrad, Dezember 1941: Menschen holen Wasser aus einem Loch in der Straße. RIA Novosti Archiv, Nr. 907, CC BY-SA 3.0</figcaption></figure>
-        <div class="stack">
-          <div class="block block--sand"><p class="label">Brot pro Tag, Winter 1941</p><p class="h-l">125 g</p><p class="small">für Kinder und Angestellte, zeitweise. Das sind etwa zweieinhalb Scheiben Brot, oft mit Sägemehl gestreckt. Über eine Million Einwohner starben (Buch S. 95).</p></div>
-          <blockquote class="quote">„Heute ist ein besonderer Tag. Die Brotration wurde um 75 Gramm erhöht. Mir stehen jetzt 200 Gramm zu […]. Alle freuten sich so, dass sie vor Glück fast weinten.“<cite>Ein Mädchen aus Leningrad. Buch S. 95, Quelle 95.3 (gekürzt)</cite></blockquote>
+      <div class="auftrag" data-min="8" data-brauchst="buch:Buch S. 95|ipad">
+        <ol class="auftrag__schritte"><li><span>Lies Kapitel 2.</span></li><li><span>Buch <b>S. 95</b>, Quelle <b>95.3</b>: Lies den Bericht des Mädchens aus Leningrad. Finde die zwei Zahlen und tippe auf „Prüfen“.</span></li><li><span>Beantworte die Frage zum Plan der Wehrmacht.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn Buch-Detektiv und Frage grün sind.</p>
+      </div>
+      <div class="story">
+        <div class="story__text">
+          <p class="story__kap">Pauls Geschichte · Winter 1941</p>
+          <p class="story__titel">Eine Stadt soll verhungern</p>
+          <p>Im September 1941 erreicht Pauls Einheit Leningrad, eine Stadt mit über zwei Millionen Menschen. Die Wehrmacht schließt sie ein. Der Befehl: nicht erobern. Niemand darf hinaus, nichts darf hinein.</p>
+          <p>Es wird bitterkalt, minus 30 Grad. In der Stadt gibt es keinen Strom und kein Wasser mehr. Die Menschen holen Wasser aus Löchern in der Straße. Brot gibt es nur noch ein paar Scheiben am Tag, gestreckt mit Sägemehl.</p>
+          <p class="story__zitat">Paul friert in seinem Graben. Er weiß: Drüben in der Stadt sterben jeden Tag Tausende, auch Kinder.</p>
+          <p class="story__fiktion">Paul ist erfunden. Die Blockade dauerte von September 1941 bis Januar 1944. Über eine Million Einwohner starben (Buch S. 95).</p>
         </div>
+        <div class="story__bild reveal"><img src="../img/foto/s4-leningrad.jpg" alt="Menschen in dicken Wintermänteln stehen auf einer verschneiten Straße in Leningrad an, um Wasser zu holen."></div>
       </div>
-      <div class="task" style="margin-top:20px">
-        <p class="task__q"><b>B1</b>Lies beide Berichte im Buch (95.3). Beschreibe in drei Sätzen, wie die Menschen in Leningrad litten. Was hat dich am meisten erschüttert?</p>
-        <textarea class="answer" data-key="s6.b.text" placeholder="Die Menschen in Leningrad … Am meisten erschüttert hat mich …"></textarea><p class="saved" aria-live="polite"></p>
+      <p class="credit">Leningrad, Dezember 1941: Menschen holen Wasser aus einem Loch in der Straße. Foto: Boris Kudoyarov, RIA Novosti Archiv, Nr. 907, CC BY-SA 3.0</p>
+      <div class="grid-2" style="margin-top:16px">
+        <div class="detektiv" data-find="s6.b.buch">
+          <div class="detektiv__kopf"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#5f4497" stroke-width="2.4"><circle cx="10" cy="10" r="6"/><path d="M15 15l6 6"/></svg><p>Buch-Detektiv: S. 95</p></div>
+          <div class="find__q" data-answer="75|75 g|75 gramm"><p class="find__ort">Buch S. 95 · Quelle 95.3, Bericht des Mädchens</p><p class="find__frage">Um wie viel Gramm wurde die Brotration an diesem „besonderen Tag“ erhöht?</p><input inputmode="numeric" autocomplete="off" placeholder="Gramm"><p class="find__hinweis" hidden>Tipp: gleich im zweiten Satz.</p></div>
+          <div class="find__q" data-answer="200|200 g|200 gramm"><p class="find__ort">gleicher Bericht</p><p class="find__frage">Wie viel Gramm Brot stehen ihr jetzt am Tag zu?</p><input inputmode="numeric" autocomplete="off" placeholder="Gramm"><p class="find__hinweis" hidden>Tipp: Such nach „stehen jetzt“.</p></div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><p class="feedback" aria-live="polite"></p></div>
+          <p class="small muted" style="margin-top:10px">200 Gramm sind etwa vier Scheiben Brot. Für einen ganzen Tag. Und darüber haben sich alle so gefreut, dass sie fast weinten.</p>
+        </div>
+        <div class="mc" data-mc="s6.b.mc" data-right="hunger"><p class="mc__frage">Warum eroberte die Wehrmacht Leningrad nicht einfach?</p>
+          <div class="choices"><button class="choice" data-v="schwach">Die Wehrmacht war zu schwach dafür.</button><button class="choice" data-v="hunger">Die Stadt sollte verhungern. Hunger wurde als Waffe eingesetzt.</button><button class="choice" data-v="schonen">Hitler wollte die Menschen in der Stadt schonen.</button></div>
+          <p class="mc__tipp" hidden>Lies noch einmal den Befehl in Kapitel 2.</p>
+          <p class="mc__erkl" hidden>Richtig. Die Menschen in der Stadt sollten sterben, ohne dass ein Schuss nötig war. Das ist Vernichtungskrieg.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- STATION C -->
+  <!-- 4 HINTER DEM ZAUN -->
   <section class="part" id="c" aria-labelledby="c-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--lila">Station C · Pflicht</span><span class="book">Buch S. 96/97</span></p>
-        <h2 class="h-l" id="c-t">Zwangsarbeit, mitten in Bayern</h2>
-        <p class="lead">Die deutschen Männer waren an der Front. Wer sollte auf den Feldern und in den Fabriken arbeiten? Die Nationalsozialisten holten Menschen aus den besetzten Ländern, oft mit Gewalt.</p>
+        <p class="part__tag"><span class="chip chip--lila">Kapitel 3</span><span class="book">Buch S. 96/97</span></p>
+        <h2 class="h-l" id="c-t">Hinter dem Zaun, mitten in München</h2>
       </div>
-      <div class="grid-2">
-        <div class="stack">
-          <div class="grid-2" style="gap:12px">
-            <div class="block block--sand"><p class="label">1939 bis 1945</p><p class="h-l">8,5 Mio.</p><p class="small">ausländische Arbeitskräfte in Deutschland, dazu Kriegsgefangene und KZ-Häftlinge (Buch S. 96)</p></div>
-            <div class="block block--plaster"><p class="label">Bei uns</p><p class="small" style="margin-top:6px">Auch in München und Umgebung mussten Tausende Zwangsarbeit leisten, zum Beispiel für BMW im KZ-Außenlager Allach, gleich neben Karlsfeld.</p></div>
-          </div>
-          <figure><div class="reveal" style="height:260px"><img src="../img/foto/s4-ostarbeiter.jpg" alt="Junge Frauen in Kleidern und Kopftüchern warten in einem Raum hintereinander, eine Frau in Weiß führt sie."></div>
-            <figcaption class="credit">Junge Frauen in der besetzten Sowjetunion werden für die Arbeit in Deutschland untersucht, Mai 1942. Die Bildunterschrift stammt aus der DDR. Bundesarchiv, Bild 183-B19880, CC BY-SA 3.0 de</figcaption></figure>
+      <div class="auftrag" data-min="9" data-brauchst="buch:Buch S. 96/97|ipad">
+        <ol class="auftrag__schritte"><li><span>Lies Kapitel 3 und was Lucyna Zebrowska erzählt. Lucyna gab es wirklich.</span></li><li><span>Buch <b>S. 96</b> und Quelle <b>97.3</b>: Finde die zwei Antworten und tippe auf „Prüfen“.</span></li><li><span>Beantworte die Frage zu Pauls Mutter.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn Buch-Detektiv und Frage grün sind.</p>
+      </div>
+      <div class="story">
+        <div class="story__text">
+          <p class="story__kap">Pauls Geschichte · München-Giesing · 1942</p>
+          <p class="story__titel">Ein Stück Brot durch den Zaun</p>
+          <p>Viele deutsche Männer sind an der Front. In der Fabrik von Pauls Vater arbeiten jetzt junge Frauen aus der Ukraine. Sie tragen das Zeichen „OST“. Sie schlafen in einer Baracke hinter Stacheldraht und bekommen kaum etwas zu essen.</p>
+          <p>Reden mit ihnen ist verboten. Eines Abends steckt Pauls Mutter einer jungen Frau heimlich ein Stück Brot durch den Zaun. Die Frau ist so alt wie Paul.</p>
+          <p class="story__zitat">Pauls Mutter erzählt es niemandem. Nicht einmal ihrem Mann.</p>
+          <p class="story__fiktion">Pauls Familie ist erfunden. Zwangsarbeiter gab es in fast jeder Münchner Fabrik. Für BMW mussten im Lager Allach sogar KZ-Häftlinge arbeiten.</p>
         </div>
+        <div class="story__bild reveal"><img src="../img/foto/s4-ostarbeiter.jpg" alt="Junge Frauen in Kleidern und Kopftüchern warten in einem Raum hintereinander, eine Frau in Weiß führt sie."></div>
+      </div>
+      <p class="credit">Junge Frauen in der besetzten Sowjetunion werden für die Arbeit in Deutschland untersucht, Mai 1942. Die Bildunterschrift stammt aus der DDR. Bundesarchiv, Bild 183-B19880, CC BY-SA 3.0 de</p>
+      <div class="grid-2" style="margin-top:16px">
         <div class="stack">
           <div class="person__body block">
-            <p class="label muted">Lucyna Zebrowska</p>
+            <p class="label muted">Lucyna Zebrowska, eine echte Zeitzeugin</p>
             <p class="small">18 Jahre alt, aus Warschau. 1942 wird sie auf der Straße verhaftet und nach Dachau gebracht. Dann muss sie in Reichertshofen (Landkreis Pfaffenhofen an der Ilm) Bahnschienen reparieren.</p>
           </div>
           <blockquote class="quote">„Man hat uns eine Nummer um den Hals gehängt und Fotos gemacht. Ich war so empört darüber, dass sie uns wie Hunde behandelten. […] Der Hunger war groß.“<cite>Lucyna Zebrowska. Buch S. 97, Quelle 97.3 (gekürzt)</cite></blockquote>
-          <div class="note"><b>Erst 2001</b><span>gründeten der Staat und Firmen die Stiftung „Erinnerung, Verantwortung und Zukunft“. Überlebende bekamen zwischen 500 und 2500 Euro (Buch S. 96). Viele waren da schon gestorben.</span></div>
+        </div>
+        <div class="stack">
+          <div class="detektiv" data-find="s6.c.buch">
+            <div class="detektiv__kopf"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#5f4497" stroke-width="2.4"><circle cx="10" cy="10" r="6"/><path d="M15 15l6 6"/></svg><p>Buch-Detektiv: S. 96/97</p></div>
+            <div class="find__q" data-answer="8,5|8.5|8,5 mio|8,5 millionen|8 5"><p class="find__ort">Buch S. 96</p><p class="find__frage">Wie viele ausländische Arbeitskräfte gab es 1939 bis 1945 in Deutschland? (in Millionen)</p><input inputmode="decimal" autocomplete="off" placeholder="Millionen"><p class="find__hinweis" hidden>Tipp: Such nach „Millionen“. Komma nicht vergessen.</p></div>
+            <div class="find__q" data-answer="nummer|eine nummer"><p class="find__ort">Buch S. 97 · Quelle 97.3, Lucyna Zebrowska</p><p class="find__frage">Was hängte man Lucyna und den anderen um den Hals?</p><input autocomplete="off" placeholder="ein Wort"><p class="find__hinweis" hidden>Tipp: gleich im ersten Satz von Lucyna.</p></div>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><p class="feedback" aria-live="polite"></p></div>
+          </div>
+          <div class="mc" data-mc="s6.c.mc" data-right="strafe"><p class="mc__frage">Pauls Mutter steckt der Zwangsarbeiterin Brot zu. Was riskiert sie?</p>
+            <div class="choices"><button class="choice" data-v="nichts">Nichts, das war erlaubt.</button><button class="choice" data-v="strafe">Sie kann bestraft werden. Kontakt zu Zwangsarbeitern war verboten.</button><button class="choice" data-v="lob">Sie bekommt vom Fabrikbesitzer ein Lob.</button></div>
+            <p class="mc__tipp" hidden>Lies noch einmal: Was war mit den Frauen verboten?</p>
+            <p class="mc__erkl" hidden>Richtig. Wer half, konnte verhaftet werden. Trotzdem halfen manche heimlich, so wie Pauls Mutter. Die meisten schauten weg.</p></div>
         </div>
       </div>
-      <div class="task" style="margin-top:20px">
-        <p class="task__q"><b>C1</b>Versetze dich in Lucyna. Schreibe einen kurzen Brief an deine Familie in Warschau: Wie geht es dir? Was wünschst du dir? (5 bis 6 Sätze)</p>
-        <textarea class="answer" data-key="s6.c.brief" style="min-height:160px" placeholder="Liebe Mama, lieber Papa, …"></textarea><p class="saved" aria-live="polite"></p>
-      </div>
+      <details class="zusatz">
+        <summary><span class="chip chip--sand">Zusatz · für Schnelle</span> Ein Brief von Lucyna</summary>
+        <div class="note" style="margin-bottom:12px"><b>Erst 2001</b><span>gründeten der Staat und Firmen die Stiftung „Erinnerung, Verantwortung und Zukunft“. Überlebende bekamen zwischen 500 und 2500 Euro (Buch S. 96). Viele waren da schon gestorben.</span></div>
+        <div class="task"><p class="task__q"><b>Z</b>Versetze dich in Lucyna. Schreibe einen kurzen Brief an deine Familie in Warschau: Wie geht es dir? Was wünschst du dir?</p>
+          <textarea class="answer" data-key="s6.c.brief" style="min-height:140px" placeholder="Liebe Mama, lieber Papa, …"></textarea><p class="saved" aria-live="polite"></p></div>
+      </details>
     </div>
   </section>
 
-  <!-- HEUTE -->
+  <!-- 5 HEUTE -->
   <section class="part" id="heute" aria-labelledby="h-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--brick">Heute-Check · 5 Min</span></p>
+        <p class="part__tag"><span class="chip chip--brick">Heute-Check</span></p>
         <h2 class="h-l" id="h-t">Wenn Wörter Menschen klein machen</h2>
-        <p class="lead">Bevor Menschen schlecht behandelt wurden, wurden sie mit Worten abgewertet. Die Nationalsozialisten sprachen von „Untermenschen“. Achte darauf, welche Wörter heute über Menschen benutzt werden. Die Beispiele sind ohne Absender.</p>
+      </div>
+      <div class="auftrag" data-min="4" data-brauchst="ipad">
+        <ol class="auftrag__schritte"><li><span>Lies die zwei Beispiele von heute. Sie sind ohne Absender.</span></li><li><span>Tippe an, was drinsteckt.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn beide grün sind.</p>
       </div>
       <div class="grid-2">
-        <div class="today">
-          <div class="today__card">
-            <p class="label muted">Kommentar unter einem Nachrichtenartikel</p>
-            <blockquote>„Das ist eine Flut, eine Invasion. Die sind wie Ungeziefer.“</blockquote>
-            <div class="choices" data-choice="s6.h.1"><button class="choice" data-v="Menschen abgewertet">Menschen werden abgewertet</button><button class="choice" data-v="harmlos">harmlos</button></div>
-            <details><summary class="small" style="cursor:pointer;font-weight:600">Einschätzung zeigen</summary><p class="small" style="margin-top:8px">Menschen werden zu Wasser, Feinden oder Tieren gemacht. Gegen eine „Flut“ baut man Dämme, „Ungeziefer“ bekämpft man. Diese Sprache macht Gewalt leichter. Das zeigt die Geschichte.</p></details>
-          </div>
-          <div class="today__card">
-            <p class="label muted">Ein billiges T-Shirt im Online-Shop</p>
-            <blockquote>Hergestellt in einer Fabrik, in der Arbeiterinnen eingesperrt werden und ihren Pass abgeben müssen.</blockquote>
-            <div class="choices" data-choice="s6.h.2"><button class="choice" data-v="Zwangsarbeit">Zwangsarbeit</button><button class="choice" data-v="normale Arbeit">normale Arbeit</button></div>
-            <details><summary class="small" style="cursor:pointer;font-weight:600">Einschätzung zeigen</summary><p class="small" style="margin-top:8px"><b>Zwangsarbeit</b>. Weltweit leisten nach Schätzungen der Internationalen Arbeitsorganisation (2022) etwa 28 Millionen Menschen Zwangsarbeit. Manche Produkte, die wir kaufen, stammen daher.</p></details>
-          </div>
+        <div class="today__card mc" data-mc="s6.h.1" data-right="abwerten">
+          <p class="label muted">Kommentar unter einem Nachrichtenartikel</p>
+          <blockquote>„Das ist eine Flut, eine Invasion. Die sind wie Ungeziefer.“</blockquote>
+          <div class="choices"><button class="choice" data-v="abwerten">Menschen werden abgewertet</button><button class="choice" data-v="harmlos">harmlose Meinung</button></div>
+          <p class="mc__tipp" hidden>Womit werden hier Menschen verglichen?</p>
+          <p class="mc__erkl" hidden>Richtig. Menschen werden zu Wasser, Feinden oder Tieren gemacht. Gegen eine „Flut“ baut man Dämme, „Ungeziefer“ bekämpft man. Die Nazis sprachen von „Untermenschen“. Solche Wörter machen Gewalt leichter.</p>
         </div>
-        <div class="stack">
-          <div class="gg"><p class="label">Grundgesetz Artikel 1, Absatz 1</p><p>„Die Würde des Menschen ist unantastbar. Sie zu achten und zu schützen ist Verpflichtung aller staatlichen Gewalt.“</p></div>
-          <div class="block block--lila"><p class="label" style="margin-bottom:8px">Was ist heute anders?</p><p class="small">Im Grundgesetz steht „des Menschen“, nicht „des Deutschen“. Die Würde gilt für jeden, egal woher er kommt. Zwangsarbeit ist in Deutschland grundsätzlich verboten (Art. 12 GG). Und jeder kann beim Einkaufen darauf achten, ob Produkte fair hergestellt wurden.</p></div>
-          <div class="task">
-            <p class="task__q"><b>H</b>Warum ist es gefährlich, wenn Menschen mit Wörtern wie „Flut“ oder „Ungeziefer“ beschrieben werden?</p>
-            <textarea class="answer" data-key="s6.h.text" placeholder="Das ist gefährlich, weil …"></textarea><p class="saved" aria-live="polite"></p>
-          </div>
+        <div class="today__card mc" data-mc="s6.h.2" data-right="zwang">
+          <p class="label muted">Ein billiges T-Shirt im Online-Shop</p>
+          <blockquote>Hergestellt in einer Fabrik, in der Arbeiterinnen eingesperrt werden und ihren Pass abgeben müssen.</blockquote>
+          <div class="choices"><button class="choice" data-v="zwang">Zwangsarbeit</button><button class="choice" data-v="normal">normale Arbeit</button></div>
+          <p class="mc__tipp" hidden>Können die Frauen einfach gehen?</p>
+          <p class="mc__erkl" hidden>Richtig. Weltweit leisten nach Schätzungen der Internationalen Arbeitsorganisation (2022) etwa 28 Millionen Menschen Zwangsarbeit. Manche Produkte, die wir kaufen, stammen daher.</p>
         </div>
+      </div>
+      <div class="grid-2" style="margin-top:20px">
+        <div class="gg"><p class="label">Grundgesetz Artikel 1, Absatz 1</p><p>„Die Würde des Menschen ist unantastbar. Sie zu achten und zu schützen ist Verpflichtung aller staatlichen Gewalt.“</p></div>
+        <div class="block block--lila"><p class="label" style="margin-bottom:8px">Was ist heute anders?</p><p class="small">Im Grundgesetz steht „des Menschen“, nicht „des Deutschen“. Die Würde gilt für jeden, egal woher er kommt. Zwangsarbeit ist in Deutschland verboten (Art. 12 GG).</p></div>
       </div>
     </div>
   </section>
 
-  <!-- SCHREIBGESPRÄCH -->
+  <!-- 6 SCHREIBGESPRÄCH -->
   <section class="part" id="schreib" aria-labelledby="d-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip">Wir reden darüber · 13 Min</span><span class="label muted">Methode: Stilles Schreibgespräch</span></p>
-        <h2 class="h-l" id="d-t">Drei Plakate. Niemand spricht.</h2>
-        <p class="lead">Im Raum hängen drei große Plakate. Du gehst herum und schreibst deine Gedanken dazu. Du darfst auch auf das antworten, was andere geschrieben haben. Aber: Es wird nicht gesprochen.</p>
+        <p class="part__tag"><span class="chip">Wir reden darüber</span><span class="label muted">Methode: Stilles Schreibgespräch</span></p>
+        <h2 class="h-l" id="d-t">Die Zwangsarbeiter lebten mitten unter den Deutschen. Warum half kaum jemand?</h2>
       </div>
-      <div class="grid-3">
-        <div class="corner" style="background:var(--sand)"><span class="big">1</span><p>Hunger als Waffe: Leningrad</p></div>
-        <div class="corner" style="background:var(--plaster)"><span class="big">2</span><p>Ein Aufnäher mit „OST“: Was macht das mit einem Menschen?</p></div>
-        <div class="corner" style="background:var(--lila-hell)"><span class="big">3</span><p>Die Zwangsarbeiter arbeiteten mitten in deutschen Dörfern. Warum half kaum jemand?</p></div>
+      <div class="auftrag" data-min="11" data-brauchst="klasse">
+        <ol class="auftrag__schritte"><li><span>Tippe die Gründe an, die du für die wichtigsten hältst. Du darfst mehrere wählen.</span></li><li><span>Deine Auswahl erscheint <b>ohne Namen</b> vorne an der Tafel.</span></li><li><span>Wenn die Zeit um ist, schreiben wir unsere Gedanken still auf Plakate. Niemand spricht.</span></li></ol>
+        <p class="auftrag__fertig">Schlussfrage: Was hätte Pauls Mutter gebraucht, damit sie nicht allein geholfen hätte?</p>
       </div>
-      <div class="grid-2" style="margin-top:24px">
-        <ol class="stack small" style="gap:10px">
-          <li><b>1. Schreiben</b> (7 Min): Geh leise von Plakat zu Plakat. Schreib mindestens einen Gedanken und eine Antwort auf jemand anderen.</li>
-          <li><b>2. Lesen</b> (2 Min): Lies alle drei Plakate in Ruhe.</li>
-          <li><b>3. Sprechen</b> (4 Min): Jetzt darf geredet werden: Welcher Satz auf den Plakaten hat dich am meisten zum Nachdenken gebracht?</li>
-        </ol>
-        <div class="task">
-          <p class="task__q"><b>D</b>Der Satz von den Plakaten, der mich am meisten beschäftigt hat (fremd oder eigener):</p>
-          <textarea class="answer" data-key="s6.d.text" placeholder="Auf Plakat … stand: „…“ Das beschäftigt mich, weil …"></textarea><p class="saved" aria-live="polite"></p>
-        </div>
+      <div class="choices" data-choice="s6.d.grund" data-multi style="grid-template-columns:1fr">
+        <button class="choice" data-v="Angst vor Strafe.">Angst vor Strafe.</button>
+        <button class="choice" data-v="Die Propaganda: Sie galten als minderwertig.">Die Propaganda: Sie galten als minderwertig.</button>
+        <button class="choice" data-v="Gleichgültigkeit: Hauptsache, uns geht es gut.">Gleichgültigkeit: Hauptsache, uns geht es gut.</button>
+        <button class="choice" data-v="Sie galten als Feinde, es war ja Krieg.">Sie galten als Feinde, es war ja Krieg.</button>
+        <button class="choice" data-v="Man wollte nicht auffallen.">Man wollte nicht auffallen.</button>
       </div>
     </div>
   </section>
 
-  <!-- LERNPASS -->
+  <!-- 7 HEFTEINTRAG -->
   <section class="part" id="lernpass" aria-labelledby="l-t" style="background:var(--ink);color:var(--white)">
     <div class="wrap">
       <div class="part__head"><p class="part__tag"><span class="chip chip--sand">Zum Schluss</span></p><h2 class="h-l" id="l-t">Mein Hefteintrag</h2>
         <p class="lead">Dein PDF hat zwei Teile: <b>Teil 1</b> ist der Hefteintrag zur Stunde, für alle gleich, das ist deine Grundlage für die Probe. <b>Teil 2</b> sind deine eigenen Ergebnisse. Das PDF kommt in dein <b>OneNote-Merkheft</b>.</p>
-        <ol class="pdf-schritte"><li><span>1</span>Name eintragen und unten auf den Knopf tippen.</li><li><span>2</span>Im Druckmenü auf das Teilen-Symbol tippen und das PDF sichern.</li><li><span>3</span>In OneNote im Merkheft: Einfügen → Datei → als Ausdruck einfügen.</li></ol></div>
-      <div class="block block--white" style="color:var(--ink)"><p class="h-s" style="margin-bottom:8px">Merksatz der Stunde</p>
-        <p>Im Osten führten Wehrmacht und SS einen Vernichtungskrieg: Die Menschen dort galten als „minderwertig“. In Polen wurde die Führungsschicht ermordet, Menschen wurden vertrieben und zur Zwangsarbeit gezwungen. In der Sowjetunion starben 10 bis 15 Millionen Zivilisten, in Leningrad verhungerten über eine Million Menschen. Millionen Zwangsarbeiter mussten in Deutschland arbeiten, auch bei uns in Bayern.</p></div>
-      <div class="pass-actions"><button class="btn btn--lila" type="button" id="pass-btn">Hefteintrag + Ergebnisse als PDF</button><a class="btn-2" style="color:var(--white);border-color:var(--white)" href="../index.html#karte">Zurück zur Lernlandkarte</a></div>
+        <ol class="pdf-schritte"><li><span>1</span>Name eintragen und unten auf den Knopf tippen.</li><li><span>2</span>Im Druckmenü auf das Teilen-Symbol tippen und das PDF sichern.</li><li><span>3</span>In OneNote im Merkheft: Einfügen → Datei → als Ausdruck einfügen.</li></ol>
+      </div>
+      <div class="pass-actions"><button class="btn btn--lila" type="button" id="pass-btn">Hefteintrag + Ergebnisse als PDF</button></div>
     </div>
   </section>
 </main>
@@ -237,15 +275,18 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   NS.guard(6);
+  var antworten = function (v) { return Object.keys(v).sort().map(function (i) { return v[i]; }).join(" · "); };
   document.getElementById("pass-btn").addEventListener("click", function () {
     NS.printPass(6, [
-      { label: "Einstieg: Wozu der Aufnäher?", key: "s6.e" },
-      { label: "A1 Drei Maßnahmen in Polen", key: "s6.a.mass" },
-      { label: "A2 Warum „Vernichtungskrieg“?", key: "s6.a.text" },
-      { label: "B1 Leningrad", key: "s6.b.text" },
-      { label: "C1 Brief von Lucyna", key: "s6.c.brief" },
-      { label: "Heute-Check: Warum sind solche Wörter gefährlich?", key: "s6.h.text" },
-      { label: "Schreibgespräch: der Satz, der mich beschäftigt", key: "s6.d.text" }
+      { label: "Einstieg: Der Aufnäher war …", key: "s6.e.wozu" },
+      { label: "Was ist ein Vernichtungskrieg?", key: "s6.a.satz" },
+      { label: "Was die Besatzer in Polen nicht taten", key: "s6.a.mc" },
+      { label: "Buch-Detektiv S. 95 (Brot in Leningrad: Erhöhung · neue Ration in Gramm)", key: "s6.b.buch.in", fmt: antworten },
+      { label: "Warum Leningrad nicht erobert wurde", key: "s6.b.mc" },
+      { label: "Buch-Detektiv S. 96/97 (ausländische Arbeitskräfte in Mio. · um den Hals)", key: "s6.c.buch.in", fmt: antworten },
+      { label: "Was Pauls Mutter riskiert", key: "s6.c.mc" },
+      { label: "Zusatz: Brief von Lucyna", key: "s6.c.brief" },
+      { label: "Schreibgespräch: Warum half kaum jemand? (meine Gründe)", key: "s6.d.grund" }
     ]);
   });
 });

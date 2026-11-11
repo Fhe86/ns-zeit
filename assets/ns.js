@@ -49,26 +49,26 @@
       { href: "#heute", name: "Heute-Check", need: ["s5.h.1", "s5.h.2"] },
       { href: "#kugellager", name: "Kugellager", need: ["s5.d.wahl"] } ] },
     { n: 6, code: "OSTEN", jahr: "1939–1945", kern: "Im Osten führte Deutschland einen Krieg gegen ganze Völker.", merke: ["Im Osten wollten die Nazis Menschen vertreiben, versklaven oder töten: ein Vernichtungskrieg.", "In Leningrad verhungerten über eine Million Menschen.", "Millionen Menschen mussten in Deutschland Zwangsarbeit leisten, auch bei uns in Bayern."], heft: {"daten": [["1939", "Besetzung Polens"], ["22. Juni 1941", "Überfall auf die Sowjetunion"], ["1941–1944", "Blockade von Leningrad"], ["1939–1945", "8,5 Mio. ausländische Arbeitskräfte in Deutschland"], ["2001", "Stiftung entschädigt ehemalige Zwangsarbeiter"]], "begriffe": [["Vernichtungskrieg", "Krieg nicht nur gegen Soldaten, sondern gegen die ganze Bevölkerung"], ["Zwangsarbeit", "Arbeit, zu der Menschen mit Gewalt gezwungen werden"], ["Lebensraum im Osten", "Ziel der NSDAP: Land im Osten erobern und die Menschen vertreiben"], ["Blockade", "eine Stadt wird eingeschlossen, nichts kommt hinein"]], "heute": "Wörter, die Menschen abwerten („Flut“, „Ungeziefer“), machen Gewalt leichter. Art. 1 GG: Die Würde jedes Menschen ist unantastbar.", "text": "Im Osten führten Wehrmacht und SS einen Vernichtungskrieg: Die Menschen dort galten als „minderwertig“. In Polen wurde die Führungsschicht ermordet, Menschen wurden vertrieben und zur Zwangsarbeit gezwungen. In der Sowjetunion starben 10 bis 15 Millionen Zivilisten, in Leningrad verhungerten über eine Million Menschen. Millionen Zwangsarbeiter mussten in Deutschland arbeiten, auch bei uns in Bayern.", "frage": "Was passiert, wenn Menschen nichts mehr wert sein sollen?", "foto": "s4-ost"}, titel: "Vernichtungskrieg und Zwangsarbeit", teile: [
-      { href: "#einstieg", name: "Einstieg", need: ["s6.e"] },
-      { href: "#a", name: "A Osten", need: ["s6.a.mass", "s6.a.text"] },
-      { href: "#b", name: "B Leningrad", need: ["s6.b.text"] },
-      { href: "#c", name: "C Zwangsarbeit", need: ["s6.c.brief"] },
-      { href: "#heute", name: "Heute-Check", need: ["s6.h.text"] },
-      { href: "#schreib", name: "Schreibgespräch", need: ["s6.d.text"] } ] },
+      { href: "#einstieg", name: "Einstieg", need: ["s6.e.wozu"] },
+      { href: "#a", name: "Über die Grenze", need: ["s6.a.satz", "s6.a.mc"] },
+      { href: "#b", name: "Vor Leningrad", need: ["s6.b.buch", "s6.b.mc"] },
+      { href: "#c", name: "Hinter dem Zaun", need: ["s6.c.buch", "s6.c.mc"] },
+      { href: "#heute", name: "Heute-Check", need: ["s6.h.1", "s6.h.2"] },
+      { href: "#schreib", name: "Schreibgespräch", need: ["s6.d.grund"] } ] },
     { n: 7, code: "NAMEN", jahr: "1941–1945", kern: "Über sechs Millionen Juden wurden ermordet. Wir erinnern an jeden Einzelnen.", merke: ["Über sechs Millionen Juden wurden ermordet. Das nennt man Holocaust oder Shoah.", "Der Weg dorthin: Gettos, Massenerschießungen, Vernichtungslager wie Auschwitz.", "Stolpersteine und Erinnerungszeichen erinnern an jeden Menschen mit Namen."], heft: {"daten": [["ab 1939", "Gettos im besetzten Polen"], ["ab Sommer 1941", "Massenerschießungen im Osten"], ["20. Jan. 1942", "Wannsee-Konferenz"], ["1942–1945", "Vernichtungslager, z. B. Auschwitz"], ["27. Jan. 1945", "Befreiung von Auschwitz, heute Gedenktag"]], "begriffe": [["Holocaust / Shoah", "der Mord an über sechs Millionen europäischen Juden"], ["Getto", "abgesperrtes Stadtviertel, in das Juden gezwungen wurden"], ["Vernichtungslager", "Lager, das nur zum Ermorden von Menschen gebaut wurde"], ["Stolperstein", "Gedenkstein im Gehweg vor dem letzten Wohnort eines Opfers"]], "heute": "Erinnern statt „Schlussstrich“. Holocaustleugnung ist in Deutschland strafbar. Art. 1 GG ist die Antwort auf den Holocaust.", "text": "Der Holocaust (hebräisch: Shoah) war der geplante Mord an über sechs Millionen europäischen Juden. Auch Sinti und Roma, Menschen mit Behinderungen und andere Gruppen wurden ermordet. Aus Ausgrenzung wurden Gettos, Massenerschießungen und schließlich Vernichtungslager wie Auschwitz. Wir erinnern an die Opfer mit ihren Namen, damit so etwas nie wieder geschieht.", "frage": "Wie wurde aus Hass ein Völkermord, und warum erinnern wir uns bis heute daran?", "foto": "s5-stolpersteine"}, titel: "Der Holocaust", teile: [
-      { href: "#einstieg", name: "Einstieg", need: ["s7.e"] },
-      { href: "#a", name: "A Vernichtung", need: ["s7.a.begriffe", "s7.a.osten"] },
-      { href: "#b", name: "B Otto Schwerdt", need: ["s7.b.pflicht"] },
-      { href: "#c", name: "C Erinnern", need: ["s7.c.person"] },
-      { href: "#heute", name: "Heute-Check", need: ["s7.h.text"] },
-      { href: "#runde", name: "Ruhige Runde", need: ["s7.d.satz"] } ] },
+      { href: "#einstieg", name: "Einstieg", need: ["s7.e.alter"] },
+      { href: "#a", name: "Rudis Eltern", need: ["s7.a.mc"] },
+      { href: "#b", name: "Vom Getto zum Lager", need: ["s7.b.order.ok", "s7.b.satz"] },
+      { href: "#c", name: "Otto Schwerdt", need: ["s7.c.buch", "s7.c.mc"] },
+      { href: "#heute", name: "Heute-Check", need: ["s7.h.1", "s7.h.2", "s7.h.3"] },
+      { href: "#runde", name: "Ruhige Runde", need: ["s7.d.anfang"] } ] },
     { n: 8, code: "MUT", jahr: "1933–1945", kern: "Nur wenige hatten den Mut zum Widerstand, oft bezahlten sie mit ihrem Leben.", merke: ["Die meisten Deutschen machten mit oder schwiegen.", "Einige leisteten Widerstand: die Weiße Rose, Georg Elser, Stauffenberg, die Edelweißpiraten.", "Zivilcourage kannst du auch heute zeigen, jeden Tag."], heft: {"daten": [["8. Nov. 1939", "Georg Elser: Bombe im Münchner Bürgerbräukeller"], ["1942/43", "Flugblätter der Weißen Rose"], ["22. Feb. 1943", "Hinrichtung von Hans und Sophie Scholl"], ["20. Juli 1944", "Attentat von Stauffenberg"], ["Nov. 1944", "Edelweißpiraten in Köln erhängt"]], "begriffe": [["Widerstand", "gegen eine Herrschaft handeln, die man ablehnt"], ["Zivilcourage", "sich für andere einsetzen, auch wenn es Nachteile bringt"], ["Weiße Rose", "Münchner Studentengruppe, die Flugblätter gegen Hitler verteilte"], ["Edelweißpiraten", "Jugendliche, die sich der Hitlerjugend verweigerten"]], "heute": "Zivilcourage geht jeden Tag: hinschauen, Hilfe holen (110), Betroffene unterstützen. Art. 20 Abs. 4 GG: Recht auf Widerstand gegen alle, die die Demokratie abschaffen wollen.", "text": "Die meisten Deutschen machten mit oder schwiegen. Trotzdem leisteten Menschen Widerstand: Einzelne wie Georg Elser, Studierende wie die Weiße Rose, Geistliche wie Rupert Mayer, Offiziere um Stauffenberg und Jugendliche wie die Edelweißpiraten. Viele bezahlten mit ihrem Leben. Zivilcourage heißt heute: sich für andere einsetzen, auch wenn es unbequem ist.", "frage": "Wegschauen oder handeln? Was trieb Menschen an, ihr Leben zu riskieren?", "foto": "s6-weisse-rose"}, titel: "Widerstand", teile: [
-      { href: "#einstieg", name: "Einstieg", need: ["s8.e"] },
-      { href: "#a", name: "A Gesichter", need: ["s8.a.wer", "s8.a.text"] },
-      { href: "#b", name: "B Edelweißpiraten", need: ["s8.b.vergehen"] },
-      { href: "#c", name: "C Formen", need: ["s8.c.sort"] },
-      { href: "#heute", name: "Heute-Check", need: ["s8.h.text"] },
-      { href: "#fishbowl", name: "Fishbowl", need: ["s8.d.text"] } ] },
+      { href: "#einstieg", name: "Einstieg", need: ["s8.e.wahl"] },
+      { href: "#a", name: "Ein Brief ohne Absender", need: ["s8.a.match.ok"] },
+      { href: "#b", name: "Edelweißpiraten", need: ["s8.b.buch", "s8.b.mc"] },
+      { href: "#c", name: "Viele Formen von Mut", need: ["s8.c.sort.ok", "s8.c.mc"] },
+      { href: "#heute", name: "Heute-Check", need: ["s8.h.1", "s8.h.2", "s8.h.3"] },
+      { href: "#fishbowl", name: "Fishbowl", need: ["s8.d.pos"] } ] },
     { n: 9, code: "GRUNDGESETZ", jahr: "1943–1949", kern: "Nach dem Krieg bekam Deutschland mit dem Grundgesetz eine Demokratie, die sich selbst schützt.", merke: ["Am 8. Mai 1945 endete der Krieg in Europa. Über 60 Millionen Menschen waren tot.", "Millionen Deutsche flohen oder wurden vertrieben, viele kamen nach Bayern.", "1949 kam das Grundgesetz: Menschenwürde, Demokratie und Rechtsstaat für alle."], heft: {"daten": [["Feb. 1943", "Niederlage in Stalingrad"], ["6. Juni 1944", "Landung der Alliierten in der Normandie"], ["29. April 1945", "Befreiung des KZ Dachau"], ["8. Mai 1945", "Kapitulation, Kriegsende in Europa"], ["2. Sept. 1945", "Kapitulation Japans, Ende des Zweiten Weltkriegs"], ["23. Mai 1949", "Das Grundgesetz tritt in Kraft"]], "begriffe": [["Kapitulation", "ein Staat gibt den Krieg auf"], ["Flucht und Vertreibung", "Millionen Deutsche verloren ab 1945 ihre Heimat im Osten"], ["Grundgesetz", "die Verfassung der Bundesrepublik Deutschland seit 1949"], ["Wehrhafte Demokratie", "die Demokratie kann sich gegen ihre Feinde wehren, z. B. durch Parteiverbote"]], "heute": "Das Grundgesetz ist die Antwort auf die NS-Zeit: Menschenwürde, Demokratie, Rechtsstaat. Art. 1 und 20 dürfen nie geändert werden (Art. 79).", "text": "Nach den Niederlagen in Stalingrad (1943) und der Landung der Alliierten in der Normandie (1944) wurde die Wehrmacht zurückgedrängt. Am 8. Mai 1945 kapitulierte Deutschland, am 2. September 1945 Japan. Über zwölf Millionen Deutsche flohen oder wurden vertrieben. Das Grundgesetz von 1949 ist die Antwort auf die NS-Zeit: Menschenwürde, Demokratie und Rechtsstaat, geschützt als wehrhafte Demokratie.", "frage": "Wie endete der Krieg, und was haben wir daraus gelernt?", "foto": "s7-truemmer"}, titel: "Kriegsende und was bleibt", teile: [
       { href: "#einstieg", name: "Einstieg", need: ["s9.e"] },
       { href: "#a", name: "A Kriegsende", need: ["s9.a.order", "s9.a.wende"] },
@@ -489,8 +489,9 @@
     var next = STUNDEN[n];
     var box = document.createElement("div");
     box.className = "toast"; box.setAttribute("role", "status");
-    box.innerHTML = '<span class="toast__check" aria-hidden="true">✓</span><div><p class="h-s">Station ' + n + ' geschafft!</p><p class="small">' +
-      (next ? "Station " + next.n + " „" + esc(next.titel) + "“ ist jetzt freigeschaltet. Vergiss deinen Hefteintrag nicht." : "Du hast alle Stationen geschafft. Stark!") +
+    var ruhig = document.body.classList.contains("calm"); /* Station 7 (Holocaust): kein Jubel */
+    box.innerHTML = '<span class="toast__check" aria-hidden="true">✓</span><div><p class="h-s">Station ' + n + (ruhig ? ' abgeschlossen' : ' geschafft!') + '</p><p class="small">' +
+      (next ? "Station " + next.n + " „" + esc(next.titel) + "“ ist jetzt " + (ruhig ? "offen." : "freigeschaltet.") + " Vergiss deinen Hefteintrag nicht." : "Du hast alle Stationen geschafft. Stark!") +
       '</p></div><button type="button" class="toast__x" aria-label="Schließen">×</button>';
     document.body.appendChild(box);
     box.querySelector(".toast__x").addEventListener("click", function () { box.remove(); });
@@ -882,7 +883,7 @@
   NS.namensFenster = namensFenster;
 
   /* ---------- Abstimmung am Ende der Station: geht anonym an die Tafel (nur Summen) ---------- */
-  var ABSTIMMUNG = { 1: "s1.x.stufe", 2: "s2.x.grund", 3: "s3.d.ecke", 4: "s4.d.pos", 5: "s5.d.wahl" };
+  var ABSTIMMUNG = { 1: "s1.x.stufe", 2: "s2.x.grund", 3: "s3.d.ecke", 4: "s4.d.pos", 5: "s5.d.wahl", 6: "s6.d.grund", 8: "s8.d.pos" };
   function stimmeSenden() {
     var n = NS.current, key = ABSTIMMUNG[n];
     if (!LIVE || !key) return;
