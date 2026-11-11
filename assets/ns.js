@@ -42,12 +42,12 @@
       { href: "#heute", name: "Heute-Check", need: ["s4.h.1", "s4.h.2"] },
       { href: "#linie", name: "Positionslinie", need: ["s4.d.pos"] } ] },
     { n: 5, code: "GRENZE", jahr: "1938–1941", kern: "Hitler versprach Frieden und begann am 1. September 1939 den Zweiten Weltkrieg.", merke: ["Hitler sprach von Frieden, rüstete aber heimlich auf.", "Am 1. September 1939 überfiel Deutschland Polen. Der Zweite Weltkrieg begann.", "Ab Dezember 1941 kämpften auch die USA mit: ein Weltkrieg."], heft: {"daten": [["1935", "Wehrpflicht wird wieder eingeführt"], ["30. Sept. 1938", "Münchner Abkommen"], ["23. Aug. 1939", "Hitler-Stalin-Pakt"], ["1. Sept. 1939", "Überfall auf Polen, Beginn des Zweiten Weltkriegs"], ["22. Juni 1941", "Überfall auf die Sowjetunion"], ["Dez. 1941", "Krieg mit den USA"]], "begriffe": [["Appeasement", "Beschwichtigung: Großbritannien und Frankreich gaben Hitler nach, um Krieg zu verhindern"], ["Blitzkrieg", "schneller Angriff mit Flugzeugen und Panzern"], ["Vorwand", "erfundener Grund, wie der gespielte Überfall auf den Sender Gleiwitz"], ["Hitler-Stalin-Pakt", "Abmachung von 1939, Polen aufzuteilen"]], "heute": "Achte auf Taten, nicht nur auf Worte, und prüfe Nachrichten, bevor du sie glaubst. Art. 26 GG: Ein Angriffskrieg ist verboten.", "text": "Hitler sprach vom Frieden, rüstete aber massiv auf. Großbritannien und Frankreich versuchten ihn 1938 mit dem Münchner Abkommen zu beschwichtigen (Appeasement). Mit einem gespielten Überfall auf den Sender Gleiwitz als Vorwand begann am 1. September 1939 mit dem deutschen Überfall auf Polen der Zweite Weltkrieg. Ab Dezember 1941 war er ein Weltkrieg.", "frage": "Hitler sprach vom Frieden. Plante er die ganze Zeit den Krieg?", "foto": "s3-schlagbaum"}, titel: "Der Weg in den Krieg", teile: [
-      { href: "#einstieg", name: "Einstieg", need: ["s5.e"] },
-      { href: "#a", name: "A Worte und Taten", need: ["s5.a.sort", "s5.a.appease"] },
-      { href: "#b", name: "B Zeitstrahl", need: ["s5.b.order"] },
-      { href: "#c", name: "C Gleiwitz", need: ["s5.c.vorwand"] },
-      { href: "#heute", name: "Heute-Check", need: ["s5.h.text"] },
-      { href: "#kugellager", name: "Kugellager", need: ["s5.d.text"] } ] },
+      { href: "#einstieg", name: "Einstieg", need: ["s5.e.echt"] },
+      { href: "#a", name: "Jubel in München", need: ["s5.a.sort.ok", "s5.a.mc"] },
+      { href: "#b", name: "Der 1. September", need: ["s5.b.buch", "s5.b.mc"] },
+      { href: "#c", name: "Glocken für den Sieg", need: ["s5.c.order.ok", "s5.c.buch"] },
+      { href: "#heute", name: "Heute-Check", need: ["s5.h.1", "s5.h.2"] },
+      { href: "#kugellager", name: "Kugellager", need: ["s5.d.wahl"] } ] },
     { n: 6, code: "OSTEN", jahr: "1939–1945", kern: "Im Osten führte Deutschland einen Krieg gegen ganze Völker.", merke: ["Im Osten wollten die Nazis Menschen vertreiben, versklaven oder töten: ein Vernichtungskrieg.", "In Leningrad verhungerten über eine Million Menschen.", "Millionen Menschen mussten in Deutschland Zwangsarbeit leisten, auch bei uns in Bayern."], heft: {"daten": [["1939", "Besetzung Polens"], ["22. Juni 1941", "Überfall auf die Sowjetunion"], ["1941–1944", "Blockade von Leningrad"], ["1939–1945", "8,5 Mio. ausländische Arbeitskräfte in Deutschland"], ["2001", "Stiftung entschädigt ehemalige Zwangsarbeiter"]], "begriffe": [["Vernichtungskrieg", "Krieg nicht nur gegen Soldaten, sondern gegen die ganze Bevölkerung"], ["Zwangsarbeit", "Arbeit, zu der Menschen mit Gewalt gezwungen werden"], ["Lebensraum im Osten", "Ziel der NSDAP: Land im Osten erobern und die Menschen vertreiben"], ["Blockade", "eine Stadt wird eingeschlossen, nichts kommt hinein"]], "heute": "Wörter, die Menschen abwerten („Flut“, „Ungeziefer“), machen Gewalt leichter. Art. 1 GG: Die Würde jedes Menschen ist unantastbar.", "text": "Im Osten führten Wehrmacht und SS einen Vernichtungskrieg: Die Menschen dort galten als „minderwertig“. In Polen wurde die Führungsschicht ermordet, Menschen wurden vertrieben und zur Zwangsarbeit gezwungen. In der Sowjetunion starben 10 bis 15 Millionen Zivilisten, in Leningrad verhungerten über eine Million Menschen. Millionen Zwangsarbeiter mussten in Deutschland arbeiten, auch bei uns in Bayern.", "frage": "Was passiert, wenn Menschen nichts mehr wert sein sollen?", "foto": "s4-ost"}, titel: "Vernichtungskrieg und Zwangsarbeit", teile: [
       { href: "#einstieg", name: "Einstieg", need: ["s6.e"] },
       { href: "#a", name: "A Osten", need: ["s6.a.mass", "s6.a.text"] },
@@ -526,11 +526,13 @@
       '<footer class="hp-fuss">Teil 1 ist für alle gleich und die Grundlage für die Probe. Fotos: Bundesarchiv / Wikimedia Commons, Nachweise auf der Website.</footer></section>';
     html += '<section class="hp-seite hp-neu">' + kopf("Teil 2: Meine Ergebnisse") +
       '<div class="hp-titel hp-titel--klein"><h1>Meine Ergebnisse</h1><p class="hp-frage">Station ' + n + ': ' + esc(s.titel) + '</p></div><div class="hp-antworten">';
-    (d.rows || []).forEach(function (r) {
+    (Array.isArray(d.rows) ? d.rows : []).forEach(function (r) {
+      if (!Array.isArray(r)) return;
       html += '<div class="hp-antwort"><p class="hp-frage2">' + esc(r[0]) + '</p>' +
         (r[1] ? '<p class="hp-a">' + esc(String(r[1])) + '</p>' : '<p class="hp-a hp-leer">noch offen</p>') + '</div>';
     });
-    html += '</div><footer class="hp-fuss">Erledigt: ' + d.fertig + ' von ' + d.gesamt + ' Teilen' + (d.fertig === d.gesamt ? ' ✓ Station geschafft' : '') + '</footer></section>';
+    var fertig = Math.max(0, parseInt(d.fertig, 10) || 0), gesamt = Math.max(0, parseInt(d.gesamt, 10) || 0);
+    html += '</div><footer class="hp-fuss">Erledigt: ' + esc(fertig) + ' von ' + esc(gesamt) + ' Teilen' + (gesamt && fertig === gesamt ? ' ✓ Station geschafft' : '') + '</footer></section>';
     return html;
   }
   function drucken(pass) {
@@ -880,7 +882,7 @@
   NS.namensFenster = namensFenster;
 
   /* ---------- Abstimmung am Ende der Station: geht anonym an die Tafel (nur Summen) ---------- */
-  var ABSTIMMUNG = { 1: "s1.x.stufe", 2: "s2.x.grund", 3: "s3.d.ecke", 4: "s4.d.pos" };
+  var ABSTIMMUNG = { 1: "s1.x.stufe", 2: "s2.x.grund", 3: "s3.d.ecke", 4: "s4.d.pos", 5: "s5.d.wahl" };
   function stimmeSenden() {
     var n = NS.current, key = ABSTIMMUNG[n];
     if (!LIVE || !key) return;

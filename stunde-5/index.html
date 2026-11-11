@@ -17,7 +17,7 @@
 
 <header class="bar">
   <a class="bar__mark" href="../index.html#karte"><i aria-hidden="true"><b></b><b></b><b></b></i>NS-Zeit</a>
-  <nav class="bar__nav" aria-label="Seite"><a class="btn-2" href="../index.html#karte">← Karte</a><a class="btn btn--lila" href="#lernpass">Mein Lernpass</a></nav>
+  <nav class="bar__nav" aria-label="Seite"><a class="btn-2" href="../index.html#karte">← Karte</a><a class="btn btn--lila" href="#lernpass">Mein Hefteintrag</a></nav>
 </header>
 
 <main>
@@ -26,7 +26,7 @@
       <div class="block"><p class="label muted" style="margin-bottom:10px">Station 5 · 1938 bis 1941 · Buch S. 90 bis 93</p>
         <h1 class="h-xl" id="titel">Der Weg in den Krieg</h1></div>
       <div class="block block--plaster" style="margin-left:clamp(0px,6%,60px)"><p class="lead"><b>Leitfrage:</b> Hitler sprach vom Frieden. Plante er die ganze Zeit den Krieg?</p></div>
-      <div class="timeline-mini" aria-label="Ablauf der Stunde"><span><b>5′</b>Einstieg</span><span><b>22′</b>Stationen A, B, C</span><span><b>5′</b>Heute-Check</span><span><b>13′</b>Kugellager</span></div>
+      <div class="timeline-mini" aria-label="Ablauf der Stunde"><span><b>5′</b>Einstieg</span><span><b>25′</b>Pauls Geschichte</span><span><b>4′</b>Heute-Check</span><span><b>11′</b>Kugellager</span></div>
     </div>
     <div class="lesson-hero__photo reveal"><img src="../img/foto/s3-schlagbaum.jpg" alt="Deutsche Soldaten reißen einen Schlagbaum an der polnischen Grenze herunter."></div>
   </section>
@@ -34,71 +34,73 @@
   <div class="pavement" style="margin-top:20px"></div>
 
   <nav class="toc" aria-label="Teile der Stunde">
-    <a href="#einstieg" data-need="s5.e">Einstieg</a>
-    <a href="#a" data-need="s5.a.sort s3.a.appease">A Worte und Taten</a>
-    <a href="#b" data-need="s5.b.order">B Zeitstrahl</a>
-    <a href="#c" data-need="s5.c.vorwand">C Gleiwitz</a>
-    <a href="#heute" data-need="s5.h.text">Heute-Check</a>
-    <a href="#kugellager" data-need="s5.d.text">Kugellager</a>
-    <a href="#lernpass">Lernpass</a>
+    <a href="#einstieg">Einstieg</a><a href="#a">Jubel in München</a><a href="#b">Der 1. September</a><a href="#c">Glocken für den Sieg</a><a href="#heute">Heute-Check</a><a href="#kugellager">Kugellager</a><a href="#lernpass">Hefteintrag</a>
   </nav>
 
-  <!-- EINSTIEG -->
+  <!-- 1 EINSTIEG -->
   <section class="part" id="einstieg" aria-labelledby="e-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip">Einstieg · 5 Min</span><span class="label muted">alle zusammen</span></p>
+        <p class="part__tag"><span class="chip">Einstieg</span><span class="label muted">alle zusammen</span></p>
         <h2 class="h-l" id="e-t">Ein Foto vom ersten Kriegstag</h2>
-        <p class="lead">Schau dir das große Foto oben an. Erinnerst du dich an Stunde 3? Ein Foto lügt nicht. Oder doch?</p>
+      </div>
+      <div class="auftrag" data-min="5" data-brauchst="klasse|ipad">
+        <ol class="auftrag__schritte"><li><span>Schau dir das große Foto oben an. Soldaten reißen die Grenze zu Polen auf.</span></li><li><span>Tippe an: Ist das Foto echt oder gestellt? Es gibt kein Richtig oder Falsch.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn du gewählt hast. Dann löst die Lehrkraft auf.</p>
       </div>
       <div class="grid-2">
         <div class="task">
-          <p class="task__q"><b>E</b>Was soll dieses Foto den Deutschen 1939 sagen? Ist es echt oder gestellt? Begründe.</p>
-          <div class="choices" data-choice="s5.e.echt"><button class="choice" data-v="echt">echt, zufällig fotografiert</button><button class="choice" data-v="gestellt">gestellt</button><button class="choice" data-v="weiß nicht">weiß nicht</button></div>
-          <textarea class="answer" data-key="s5.e" placeholder="Das Foto soll sagen: … Ich glaube, es ist …, weil …"></textarea><p class="saved" aria-live="polite"></p>
+          <p class="task__q"><b>E</b>Das Foto lief 1939 in allen Zeitungen. Ist es echt, also zufällig fotografiert, oder für die Kamera gestellt?</p>
+          <div class="choices" data-choice="s5.e.echt" style="grid-template-columns:1fr">
+            <button class="choice" data-v="echt, zufällig fotografiert">echt, zufällig fotografiert</button>
+            <button class="choice" data-v="gestellt">für die Kamera gestellt</button>
+            <button class="choice" data-v="weiß nicht">weiß nicht</button>
+          </div>
         </div>
         <details class="block block--ink">
-          <summary class="h-s" style="cursor:pointer">Auflösung</summary>
-          <p style="margin-top:12px">Die Szene wurde für die Kamera nachgestellt. Soldaten und Zollbeamte spielten das Öffnen der Grenze extra für den Fotografen nach. Das Bild lief in allen Zeitungen und sollte zeigen: Deutschland holt sich einfach zurück, was ihm „gehört“.</p>
-          <p>Gestellt war an diesem Tag noch viel mehr. Das erfährst du in Station C.</p>
+          <summary class="h-s" style="cursor:pointer">Auflösung (gemeinsam)</summary>
+          <p style="margin-top:12px">Die Szene wurde für die Kamera nachgestellt. Soldaten spielten das Öffnen der Grenze extra für den Fotografen nach. Das Bild sollte zeigen: Deutschland holt sich einfach zurück, was ihm angeblich „gehört“.</p>
+          <p>An diesem Tag war noch viel mehr gestellt. Das erfährst du in Schritt 3.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- STATION A -->
+  <!-- 2 JUBEL IN MÜNCHEN -->
   <section class="part" id="a" aria-labelledby="a-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--lila">Station A · Pflicht</span><span class="book">Buch S. 90/91</span></p>
-        <h2 class="h-l" id="a-t">Frieden sagen, Krieg planen</h2>
-        <p class="lead">Hitler hatte drei Ziele: den Versailler Vertrag aufheben, ein „Großdeutsches Reich“ schaffen und „Lebensraum im Osten“ erobern. Öffentlich sprach er trotzdem immer wieder vom Frieden.</p>
+        <p class="part__tag"><span class="chip chip--lila">Kapitel 1</span><span class="book">Buch S. 90/91</span></p>
+        <h2 class="h-l" id="a-t">Jubel in München</h2>
       </div>
-      <div class="grid-2">
-        <div class="stack">
-          <div class="block block--sand">
-            <p class="label">Ausgaben für die Wehrmacht</p>
-            <div class="bars" style="margin-top:12px">
-              <div class="bars__row"><span>1933</span><span class="bars__bar"><i class="b" style="--v:5"></i></span><b>unter 1 Mrd.</b></div>
-              <div class="bars__row"><span>1938</span><span class="bars__bar"><i class="b" style="--v:100"></i></span><b>ca. 16 Mrd.</b></div>
-            </div>
-            <p class="small" style="margin-top:8px">in Reichsmark, abgelesen aus Buch S. 90, Grafik 90.3. Für Wohnungsbau gab der Staat 1938 nur einen Bruchteil davon aus.</p>
-          </div>
-          <figure><div class="reveal" style="height:250px"><img src="../img/foto/s3-muenchen-1938.jpg" alt="Der britische Premierminister Chamberlain und der französische Ministerpräsident Daladier kommen nach der Unterzeichnung des Münchner Abkommens eine Treppe herunter."></div>
-            <figcaption class="credit">München, 29./30. September 1938: Chamberlain (Großbritannien) und Daladier (Frankreich) nach der Unterzeichnung des Münchner Abkommens. Bundesarchiv, Bild 183-2005-0502-500, CC BY-SA 3.0 de</figcaption></figure>
-          <div class="note"><b>Appeasement</b><span>heißt Beschwichtigung: Großbritannien und Frankreich gaben Hitler 1938 im Münchner Abkommen das Sudetenland, damit er Ruhe gibt. Hitler versprach, danach keine weiteren Forderungen zu stellen.</span></div>
+      <div class="auftrag" data-min="8" data-brauchst="ipad">
+        <ol class="auftrag__schritte"><li><span>Lies Kapitel 1.</span></li><li><span>Was hat Hitler <b>gesagt</b>, was hat er <b>getan</b>? Tippe eine Karte, dann die Spalte. Dann „Prüfen“.</span></li><li><span>Beantworte die Frage zum Appeasement.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn die Karten und die Frage grün sind.</p>
+      </div>
+      <div class="story">
+        <div class="story__text">
+          <p class="story__kap">Pauls Geschichte · München · 30. September 1938</p>
+          <p class="story__titel">„Frieden!“</p>
+          <p>Paul ist jetzt 15. Mit seiner Hitlerjugend-Gruppe steht er am Königsplatz. Hier, mitten in München, verhandeln die Regierungschefs von Großbritannien, Frankreich, Italien und Deutschland. Hitler will das Sudetenland, ein Gebiet der Tschechoslowakei, in dem viele Deutsche wohnen.</p>
+          <p>Am Ende bekommt Hitler alles. Er verspricht: „Danach stelle ich keine Forderungen mehr.“ Die Menschen auf der Straße jubeln dem britischen Premierminister zu. Alle rufen: „Frieden!“</p>
+          <p class="story__zitat">Pauls Vater ist zufrieden: „Hitler holt sich nur, was uns zusteht. Und das ganz ohne Krieg.“</p>
+          <p>Ein halbes Jahr später, im März 1939, marschiert die Wehrmacht in Prag ein. Prag gehört nicht zum Sudetenland. Dort wohnen kaum Deutsche.</p>
+          <p class="story__fiktion">Paul ist eine erfundene Figur. Das Münchner Abkommen und der Einmarsch in Prag sind genau so passiert.</p>
         </div>
+        <div class="story__bild reveal"><img src="../img/foto/s3-muenchen-1938.jpg" alt="Der britische Premierminister Chamberlain und der französische Ministerpräsident Daladier kommen nach der Unterzeichnung des Münchner Abkommens eine Treppe herunter."></div>
+      </div>
+      <p class="credit">München, 29./30. September 1938: Chamberlain (Großbritannien) und Daladier (Frankreich) nach der Unterzeichnung des Münchner Abkommens. Bundesarchiv, Bild 183-2005-0502-500, CC BY-SA 3.0 de</p>
+      <div class="grid-2" style="margin-top:16px">
         <div class="task" data-sorter="s5.a.sort">
-          <p class="task__q"><b>A1</b>Was hat Hitler <i>gesagt</i>, was hat er <i>getan</i>? Tippe eine Karte, dann die Spalte.</p>
+          <p class="task__q"><b>A</b>Gesagt oder getan? Tippe eine Karte, dann die Spalte.</p>
           <div class="sorter">
             <div class="sorter__pool">
               <button type="button" class="chipcard" data-id="1" data-right="a">„Deutschland will den Frieden.“</button>
-              <button type="button" class="chipcard" data-id="2" data-right="b">Die Ausgaben für die Wehrmacht steigen auf das 16-Fache.</button>
+              <button type="button" class="chipcard" data-id="2" data-right="b">1935 wird die Wehrpflicht wieder eingeführt.</button>
               <button type="button" class="chipcard" data-id="3" data-right="a">„Nach dem Sudetenland stelle ich keine Forderungen mehr.“</button>
-              <button type="button" class="chipcard" data-id="4" data-right="b">März 1939: Deutsche Truppen besetzen Prag und die restliche Tschechoslowakei.</button>
-              <button type="button" class="chipcard" data-id="5" data-right="b">1935 wird die Wehrpflicht wieder eingeführt.</button>
-              <button type="button" class="chipcard" data-id="6" data-right="a">„Seit 5.45 Uhr wird jetzt zurückgeschossen.“</button>
-              <button type="button" class="chipcard" data-id="7" data-right="b">August 1939: geheimer Pakt mit Stalin, Polen soll aufgeteilt werden.</button>
+              <button type="button" class="chipcard" data-id="4" data-right="b">März 1939: Die Wehrmacht besetzt Prag.</button>
+              <button type="button" class="chipcard" data-id="5" data-right="b">Die Ausgaben für die Wehrmacht steigen bis 1938 auf das 16-Fache.</button>
+              <button type="button" class="chipcard" data-id="6" data-right="b">August 1939: geheimer Pakt mit Stalin, Polen soll aufgeteilt werden.</button>
             </div>
             <div class="sorter__cols">
               <div class="sorter__col sorter__col--a" data-col="a"><h4>Gesagt</h4></div>
@@ -107,165 +109,185 @@
             <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><p class="feedback" aria-live="polite"></p></div>
           </div>
         </div>
-      </div>
-      <div class="task" style="margin-top:20px">
-        <p class="task__q"><b>A2</b>Warum musste die Appeasement-Politik scheitern? Nutze deine Spalten „Gesagt“ und „Getan“.</p>
-        <textarea class="answer" data-key="s5.a.appease" placeholder="Appeasement musste scheitern, weil Hitler … Man hätte auf … achten müssen."></textarea><p class="saved" aria-live="polite"></p>
+        <div class="stack">
+          <div class="note"><b>Appeasement</b><span>heißt Beschwichtigung. Großbritannien und Frankreich gaben Hitler 1938 das Sudetenland. Sie hofften, dass er dann Ruhe gibt und es keinen Krieg gibt.</span></div>
+          <div class="mc" data-mc="s5.a.mc" data-right="taten"><p class="mc__frage">Warum ging der Plan mit dem Appeasement nicht auf?</p>
+            <div class="choices"><button class="choice" data-v="angriff">Großbritannien griff Deutschland 1938 an.</button><button class="choice" data-v="taten">Hitler hielt sein Versprechen nicht. Seine Taten zeigten, dass er Krieg wollte.</button><button class="choice" data-v="wenig">Hitler bekam im Münchner Abkommen zu wenig Land.</button></div>
+            <p class="mc__tipp" hidden>Schau auf deine Spalte „Getan“: Was passierte im März 1939?</p>
+            <p class="mc__erkl" hidden>Richtig. Worte und Taten passten nicht zusammen. Nachgeben machte Hitler nur mutiger.</p></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- STATION B -->
+  <!-- 3 DER 1. SEPTEMBER -->
   <section class="part" id="b" aria-labelledby="b-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--lila">Station B · Pflicht</span><span class="book">Buch S. 91 bis 93</span></p>
-        <h2 class="h-l" id="b-t">Von München bis Pearl Harbor</h2>
-        <p class="lead">In nur drei Jahren wird aus einer Krise in Europa ein Weltkrieg. Die Karte im Buch (S. 91) und die Doppelseite S. 92/93 helfen dir.</p>
+        <p class="part__tag"><span class="chip chip--brick">Kapitel 2</span><span class="book">Buch S. 92/93</span></p>
+        <h2 class="h-l" id="b-t">Ein Freitag im September</h2>
       </div>
-      <div class="grid-2">
-        <div class="task" data-order="s5.b.order">
-          <p class="task__q"><b>B1</b>Bring die Ereignisse in die richtige Reihenfolge. Tippe das früheste zuerst an.</p>
+      <div class="auftrag" data-min="8" data-brauchst="buch:Buch S. 93|ipad">
+        <ol class="auftrag__schritte"><li><span>Lies Kapitel 2 und den Ablauf von Gleiwitz.</span></li><li><span>Buch <b>S. 93</b>: Finde Hitlers Satz aus dem Reichstag. Tippe auf „Prüfen“.</span></li><li><span>Beantworte die Frage zu Gleiwitz.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn Buch-Detektiv und Frage grün sind.</p>
+      </div>
+      <div class="story">
+        <div class="story__text">
+          <p class="story__kap">Pauls Geschichte · 1. September 1939</p>
+          <p class="story__titel">„Seit … wird zurückgeschossen“</p>
+          <p>Freitagvormittag. Die ganze Familie sitzt vor dem Volksempfänger. Hitler spricht im Reichstag: Polen habe Deutschland angegriffen. Jetzt werde zurückgeschossen.</p>
+          <p>Paul ist aufgeregt. Endlich passiert etwas Großes. Seine Mutter sagt kein Wort. Sein Vater war 1918 selbst Soldat. Er schaltet das Radio aus und geht in die Küche. Jubel wie 1914 gibt es diesmal kaum, auch nicht auf den Straßen.</p>
+          <p class="story__zitat">Und Rudi in England? Ab jetzt kommt keine Post mehr von seinen Eltern. Nur über das Rote Kreuz dürfen sie ihm ab und zu ein paar Zeilen schicken.</p>
+          <p class="story__fiktion">Paul und Rudi sind erfunden. Die Rede, die Stimmung und die Rotkreuz-Briefe gab es wirklich.</p>
+        </div>
+        <div class="story__bild reveal" style="background:#111"><img src="../img/foto/s1-volksempfaenger.jpg" alt="Ein Volksempfänger, ein einfaches Radio aus der NS-Zeit." style="object-fit:contain"></div>
+      </div>
+      <p class="credit">Volksempfänger VE 301. Foto: ubahnverleih, CC0</p>
+      <div class="grid-2" style="margin-top:16px">
+        <div class="stack">
+          <ol class="stack" style="gap:0">
+            <li class="block" style="border-top:4px solid var(--ink)"><p class="label muted">31. August 1939, abends</p><p class="h-s">Der gespielte Überfall</p><p class="small">SS-Männer, verkleidet als Polen, besetzen den deutschen Radiosender in Gleiwitz. Sie rufen ein paar Sätze auf Polnisch ins Mikrofon und verschwinden.</p></li>
+            <li class="block block--plaster" style="border-top:4px solid var(--ink)"><p class="label muted">in der Nacht</p><p class="h-s">Die Lüge geht um die Welt</p><p class="small">Die Propaganda meldet: Polen hat Deutschland angegriffen.</p></li>
+            <li class="block block--lila" style="border-top:4px solid var(--ink)"><p class="label">1. September 1939, 4.45 Uhr</p><p class="h-s">Der Überfall auf Polen</p><p class="small">Die Wehrmacht marschiert in Polen ein. Der Zweite Weltkrieg beginnt.</p></li>
+          </ol>
+          <figure><div class="reveal" style="height:200px"><img src="../img/foto/s3-gleiwitz.jpg" alt="Der hölzerne Funkturm des Senders Gleiwitz, heute Gliwice in Polen, vor blauem Himmel."></div>
+            <figcaption class="credit">Der Sender Gleiwitz steht noch heute, im polnischen Gliwice. Foto: Kamil Czaiński, 2022, CC BY-SA 4.0</figcaption></figure>
+        </div>
+        <div class="stack">
+          <div class="detektiv" data-find="s5.b.buch">
+            <div class="detektiv__kopf"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#5f4497" stroke-width="2.4"><circle cx="10" cy="10" r="6"/><path d="M15 15l6 6"/></svg><p>Buch-Detektiv: S. 93</p></div>
+            <div class="find__q" data-answer="5.45|5:45|545|5.45 uhr|5:45 uhr"><p class="find__ort">Buch S. 93 · Hitler im Reichstag, 1. September 1939</p><p class="find__frage">„Seit … Uhr wird jetzt zurückgeschossen!“ Welche Uhrzeit nennt Hitler?</p><input inputmode="decimal" autocomplete="off" placeholder="Uhrzeit"><p class="find__hinweis" hidden>Tipp: Such auf S. 93 nach dem Wort „zurückgeschossen“.</p></div>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><p class="feedback" aria-live="polite"></p></div>
+          </div>
+          <div class="mc" data-mc="s5.b.mc" data-right="vorwand"><p class="mc__frage">Hitler sagte „seit 5.45 Uhr“. Der Angriff begann aber um 4.45 Uhr. Warum ließ er Gleiwitz vorher spielen?</p>
+            <div class="choices"><button class="choice" data-v="echt">Polen hatte Deutschland wirklich angegriffen.</button><button class="choice" data-v="vorwand">Der Angriff sollte wie Verteidigung aussehen. Die Deutschen sollten glauben, Polen habe angefangen.</button><button class="choice" data-v="frieden">Hitler wollte den Krieg in letzter Minute verhindern.</button></div>
+            <p class="mc__tipp" hidden>Wer stürmte den Sender wirklich?</p>
+            <p class="mc__erkl" hidden>Richtig. So etwas nennt man einen Vorwand: ein erfundener Grund. Mit einer Lüge begann der Krieg.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 GLOCKEN FÜR DEN SIEG -->
+  <section class="part" id="c" aria-labelledby="c-t">
+    <div class="wrap">
+      <div class="part__head">
+        <p class="part__tag"><span class="chip chip--lila">Kapitel 3</span><span class="book">Buch S. 91 bis 93</span></p>
+        <h2 class="h-l" id="c-t">Glocken für den Sieg</h2>
+      </div>
+      <div class="auftrag" data-min="9" data-brauchst="buch:Buch S. 92|ipad">
+        <ol class="auftrag__schritte"><li><span>Lies Kapitel 3.</span></li><li><span>Tippe die acht Ereignisse in der richtigen Reihenfolge an, dann „Prüfen“. Rot? Auf „Neu“ tippen und nochmal. Die Karte im Buch (S. 91) hilft.</span></li><li><span>Buch <b>S. 92</b>: Wie viele Menschen starben im Zweiten Weltkrieg? Tippe auf „Prüfen“.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn Zeitstrahl und Buch-Detektiv grün sind.</p>
+      </div>
+      <div class="story">
+        <div class="story__text">
+          <p class="story__kap">Pauls Geschichte · Juni 1940 bis Dezember 1941</p>
+          <p class="story__titel">„Bald bin ich dran“</p>
+          <p>Polen ist nach fünf Wochen besiegt, Frankreich im Juni 1940 nach sechs Wochen. Eine Woche lang läuten in ganz Deutschland die Kirchenglocken. Viele sehen den Sieg als Rache für 1918. Jetzt jubeln auch die, die im September noch still waren.</p>
+          <p>Im Juni 1941 greift Deutschland die Sowjetunion an, obwohl Hitler mit Stalin einen Pakt geschlossen hat. Im Dezember 1941 erklärt Hitler auch den USA den Krieg.</p>
+          <p class="story__zitat">1941 wird Paul 18. Im Briefkasten liegt sein Einberufungsbefehl. Wohin er muss, erfährst du in Station 6.</p>
+        </div>
+        <div class="block block--ink" style="align-self:start">
+          <p class="label" style="color:var(--sand);margin-bottom:6px">Blitzkrieg</p>
+          <p class="small">So nannte man die Taktik der Wehrmacht: Zuerst zerstören Flugzeuge Flugplätze und Straßen, dann stoßen Panzer schnell tief ins Land vor (Buch S. 92).</p>
+        </div>
+      </div>
+      <div class="grid-2" style="margin-top:16px">
+        <div class="task" data-order="s5.c.order">
+          <p class="task__q"><b>C</b>Von München bis Pearl Harbor: Tippe das früheste Ereignis zuerst an.</p>
           <div class="order">
-            <button type="button" class="order__item" data-id="frankreich" data-pos="6"><span class="nr"></span><span>Überfall auf Belgien, Niederlande und Frankreich<small data-date="Mai/Juni 1940">Datum?</small></span></button>
+            <button type="button" class="order__item" data-id="frankreich" data-pos="6"><span class="nr"></span><span>Überfall auf Belgien, die Niederlande und Frankreich<small data-date="Mai/Juni 1940">Datum?</small></span></button>
             <button type="button" class="order__item" data-id="oesterreich" data-pos="1"><span class="nr"></span><span>„Anschluss“ Österreichs<small data-date="März 1938">Datum?</small></span></button>
             <button type="button" class="order__item" data-id="usa" data-pos="8"><span class="nr"></span><span>Japan greift Pearl Harbor an, Hitler erklärt den USA den Krieg<small data-date="Dezember 1941">Datum?</small></span></button>
             <button type="button" class="order__item" data-id="muenchen" data-pos="2"><span class="nr"></span><span>Münchner Abkommen: Das Sudetenland geht an Deutschland<small data-date="30. September 1938">Datum?</small></span></button>
             <button type="button" class="order__item" data-id="polen" data-pos="5"><span class="nr"></span><span>Überfall auf Polen, der Zweite Weltkrieg beginnt<small data-date="1. September 1939">Datum?</small></span></button>
-            <button type="button" class="order__item" data-id="prag" data-pos="3"><span class="nr"></span><span>Deutsche Truppen besetzen Prag<small data-date="März 1939">Datum?</small></span></button>
+            <button type="button" class="order__item" data-id="prag" data-pos="3"><span class="nr"></span><span>Die Wehrmacht besetzt Prag<small data-date="März 1939">Datum?</small></span></button>
             <button type="button" class="order__item" data-id="su" data-pos="7"><span class="nr"></span><span>Überfall auf die Sowjetunion<small data-date="22. Juni 1941">Datum?</small></span></button>
             <button type="button" class="order__item" data-id="pakt" data-pos="4"><span class="nr"></span><span>Hitler-Stalin-Pakt<small data-date="23. August 1939">Datum?</small></span></button>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><button class="btn-2" type="button" data-reset>Neu</button><p class="feedback" aria-live="polite"></p></div>
         </div>
         <div class="stack">
-          <div class="clip" data-yt="JHw7DbiWaCc" data-key="s5.b.video" data-title="Beginn des Zweiten Weltkriegs" data-quelle="MrWissen2go Geschichte (Terra X)" data-clips='[[43, 84, "Hitler rüstet auf"], [147, 212, "Blitzkrieg gegen Polen"], [406, 466, "Frankreich besiegt"], [488, 508, "England hält stand"]]'></div>
-          <div class="block block--ink">
-            <p class="label" style="color:var(--sand);margin-bottom:6px">Blitzkrieg</p>
-            <p class="small">So nannte man die Taktik der Wehrmacht: Zuerst zerstören Flugzeuge Flugplätze und Straßen, dann stoßen Panzer schnell tief ins Land vor. Polen war nach fünf Wochen besiegt, Frankreich nach sechs. Viele Deutsche sahen das als „Rache“ für 1918 (Buch S. 92).</p>
+          <div class="detektiv" data-find="s5.c.buch">
+            <div class="detektiv__kopf"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#5f4497" stroke-width="2.4"><circle cx="10" cy="10" r="6"/><path d="M15 15l6 6"/></svg><p>Buch-Detektiv: S. 92</p></div>
+            <div class="find__q" data-answer="65|65 mio|65 millionen|65000000|65 000 000"><p class="find__ort">Buch S. 92</p><p class="find__frage">Wie viele Menschen verloren im Zweiten Weltkrieg ihr Leben? (in Millionen)</p><input inputmode="numeric" autocomplete="off" placeholder="Millionen"><p class="find__hinweis" hidden>Tipp: Such auf S. 92 nach „Millionen“.</p></div>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><p class="feedback" aria-live="polite"></p></div>
           </div>
           <div class="block block--sand">
-            <p class="label">Zweiter Weltkrieg</p>
-            <p class="h-l">65 Mio.</p>
-            <p class="small">Menschen verloren ihr Leben (Buch S. 92). Das sind mehr als zweieinhalbmal so viele, wie heute in ganz Bayern und Baden-Württemberg zusammen leben.</p>
-          </div>
-          <div class="task">
-            <p class="task__q"><b>B2</b>Ab wann ist es ein <i>Welt</i>krieg? Begründe mit einem Ereignis aus dem Zeitstrahl.</p>
-            <textarea class="answer" data-key="s5.b.welt" placeholder="Ab … ist es ein Weltkrieg, weil …"></textarea><p class="saved" aria-live="polite"></p>
+            <p class="label">So viele Menschen</p>
+            <p class="small">65 Millionen sind mehr als zweieinhalbmal so viele Menschen, wie heute in ganz Bayern und Baden-Württemberg zusammen leben.</p>
           </div>
         </div>
       </div>
+      <details class="zusatz">
+        <summary><span class="chip chip--sand">Zusatz · für Schnelle</span> Video: Wie der Krieg begann (4 kurze Kapitel)</summary>
+        <div class="clip" data-yt="JHw7DbiWaCc" data-key="s5.c.video" data-title="Beginn des Zweiten Weltkriegs" data-quelle="MrWissen2go Geschichte (Terra X)" data-clips='[[43, 84, "Hitler rüstet auf"], [147, 212, "Blitzkrieg gegen Polen"], [406, 466, "Frankreich besiegt"], [488, 508, "England hält stand"]]'></div>
+      </details>
     </div>
   </section>
 
-  <!-- STATION C -->
-  <section class="part" id="c" aria-labelledby="c-t">
-    <div class="wrap">
-      <div class="part__head">
-        <p class="part__tag"><span class="chip chip--lila">Station C · Pflicht</span><span class="book">Buch S. 93</span></p>
-        <h2 class="h-l" id="c-t">Der Überfall, der keiner war</h2>
-        <p class="lead">31. August 1939, abends. SS-Männer in polnischen Uniformen stürmen den deutschen Radiosender in Gleiwitz. Sie rufen ein paar Sätze auf Polnisch ins Mikrofon und verschwinden. Am nächsten Morgen marschiert die Wehrmacht in Polen ein.</p>
-      </div>
-      <div class="grid-2">
-        <div class="stack">
-          <ol class="stack" style="gap:0">
-            <li class="block" style="border-top:4px solid var(--ink)"><p class="label muted">31. August 1939, abends</p><p class="h-s">Der gespielte Überfall</p><p class="small">SS-Männer in polnischen Uniformen besetzen den Sender Gleiwitz und rufen polnische Sätze ins Mikrofon.</p></li>
-            <li class="block block--plaster" style="border-top:4px solid var(--ink)"><p class="label muted">in der Nacht</p><p class="h-s">Die Lüge geht um die Welt</p><p class="small">Die Propaganda meldet: Polen hat Deutschland angegriffen.</p></li>
-            <li class="block block--lila" style="border-top:4px solid var(--ink)"><p class="label">1. September 1939, 4.45 Uhr</p><p class="h-s">Der Überfall auf Polen</p><p class="small">Die Wehrmacht marschiert ein. Der Zweite Weltkrieg beginnt.</p></li>
-          </ol>
-        </div>
-        <div class="stack">
-          <figure><div class="reveal" style="height:240px"><img src="../img/foto/s3-gleiwitz.jpg" alt="Der hölzerne Funkturm des Senders Gleiwitz, heute Gliwice in Polen, vor blauem Himmel."></div>
-            <figcaption class="credit">Der Sender Gleiwitz steht noch heute, im polnischen Gliwice. Foto 2022, CC BY-SA 4.0, Wikimedia Commons</figcaption></figure>
-          <blockquote class="quote">„Seit 5.45 Uhr wird jetzt zurückgeschossen!“<cite>Hitler im Reichstag, 1. September 1939 (Buch S. 93). In Wahrheit begann der Angriff schon um 4.45 Uhr.</cite></blockquote>
-        </div>
-      </div>
-      <div class="task" style="margin-top:20px">
-        <p class="task__q"><b>C1</b>Warum brauchte Hitler den gespielten Überfall auf Gleiwitz, obwohl er den Krieg sowieso wollte?</p>
-        <textarea class="answer" data-key="s5.c.vorwand" placeholder="Hitler brauchte einen Vorwand, damit die Deutschen … und damit das Ausland …"></textarea><p class="saved" aria-live="polite"></p>
-      </div>
-      <div class="block block--plaster" style="margin-top:20px">
-        <p class="part__tag" style="margin-bottom:12px"><span class="chip chip--sand">Zusatz · für Schnelle</span><span class="book">Buch S. 112/113</span></p>
-        <div class="grid-2">
-          <div><p class="small">Am 7. Dezember 1941 greifen japanische Flugzeuge den US-Hafen Pearl Harbor auf Hawaii an. Über 2000 US-Soldaten sterben. Vier Tage später erklärt Hitler den USA den Krieg. Jetzt kämpfen Deutschland, Italien und Japan gegen Großbritannien, die Sowjetunion und die USA.</p></div>
-          <div class="task"><p class="task__q"><b>C2</b>War Hitlers Kriegserklärung an die USA klug? Was bedeutete sie für Deutschland?</p>
-            <textarea class="answer" data-key="s5.c.usa" placeholder="Die Kriegserklärung war …, denn die USA …"></textarea><p class="saved" aria-live="polite"></p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HEUTE -->
+  <!-- 5 HEUTE -->
   <section class="part" id="heute" aria-labelledby="h-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip chip--brick">Heute-Check · 5 Min</span></p>
+        <p class="part__tag"><span class="chip chip--brick">Heute-Check</span></p>
         <h2 class="h-l" id="h-t">Achte auf Taten, nicht nur auf Worte</h2>
-        <p class="lead">Der Trick von 1939: Frieden versprechen, Krieg vorbereiten. Und einen Vorwand erfinden, damit der Angriff wie Verteidigung aussieht. Gibt es das heute noch?</p>
+      </div>
+      <div class="auftrag" data-min="4" data-brauchst="ipad">
+        <ol class="auftrag__schritte"><li><span>Lies die zwei Beispiele von heute. Sie sind ohne Absender.</span></li><li><span>Tippe an, welcher Trick von 1938/39 drinsteckt.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn beide grün sind.</p>
       </div>
       <div class="grid-2">
-        <div class="today">
-          <div class="today__card">
-            <p class="label muted">Rede eines Staatschefs im Fernsehen</p>
-            <blockquote>„Wir haben keinerlei Pläne, das Nachbarland anzugreifen.“ Zwei Wochen später rollen seine Panzer über die Grenze.</blockquote>
-            <div class="choices" data-choice="s5.h.1"><button class="choice" data-v="Worte und Taten passen nicht">Worte und Taten passen nicht</button><button class="choice" data-v="Vorwand">Vorwand</button><button class="choice" data-v="kein Trick">kein Trick</button></div>
-            <details><summary class="small" style="cursor:pointer;font-weight:600">Einschätzung zeigen</summary><p class="small" style="margin-top:8px"><b>Worte und Taten passen nicht.</b> So etwas ist auch im 21. Jahrhundert in Europa passiert. Entscheidend ist, was jemand tut, nicht was er sagt.</p></details>
-          </div>
-          <div class="today__card">
-            <p class="label muted">Video in sozialen Netzwerken</p>
-            <blockquote>Ein Clip zeigt angeblich einen Angriff des Nachbarlandes. Später beweisen Fachleute: Das Video ist gefälscht.</blockquote>
-            <div class="choices" data-choice="s5.h.2"><button class="choice" data-v="Worte und Taten passen nicht">Worte und Taten passen nicht</button><button class="choice" data-v="Vorwand">Vorwand</button><button class="choice" data-v="kein Trick">kein Trick</button></div>
-            <details><summary class="small" style="cursor:pointer;font-weight:600">Einschätzung zeigen</summary><p class="small" style="margin-top:8px"><b>Vorwand</b>, wie in Gleiwitz. Heute nennt man das auch „Desinformation“. Prüfe: Wer hat es zuerst veröffentlicht? Berichten seriöse Medien darüber?</p></details>
-          </div>
+        <div class="today__card mc" data-mc="s5.h.1" data-right="taten">
+          <p class="label muted">Rede eines Staatschefs im Fernsehen</p>
+          <blockquote>„Wir haben keinerlei Pläne, das Nachbarland anzugreifen.“ Zwei Wochen später rollen seine Panzer über die Grenze.</blockquote>
+          <div class="choices"><button class="choice" data-v="taten">Worte und Taten passen nicht</button><button class="choice" data-v="vorwand">Erfundener Vorwand</button></div>
+          <p class="mc__tipp" hidden>Vergleiche, was er sagt, mit dem, was er tut.</p>
+          <p class="mc__erkl" hidden>Richtig. Wie Hitler 1938: Frieden versprechen, Krieg führen. So etwas ist auch im 21. Jahrhundert in Europa passiert.</p>
         </div>
-        <div class="stack">
-          <div class="gg"><p class="label">Grundgesetz Artikel 26, Absatz 1</p><p>„Handlungen, die geeignet sind und in der Absicht vorgenommen werden, das friedliche Zusammenleben der Völker zu stören, insbesondere die Führung eines Angriffskrieges vorzubereiten, sind verfassungswidrig. Sie sind unter Strafe zu stellen.“</p></div>
-          <div class="block block--lila"><p class="label" style="margin-bottom:8px">Was ist heute anders?</p><p class="small">Deutschland darf keinen Angriffskrieg führen, das steht im Grundgesetz. Deutschland ist mit seinen Nachbarn in der EU, der NATO und den Vereinten Nationen verbunden. Ehemalige Feinde wie Frankreich und Polen sind heute Partner.</p></div>
-          <div class="task">
-            <p class="task__q"><b>H</b>Woran erkennst du, ob ein Video oder eine Nachricht ein Vorwand sein könnte? Nenne zwei Prüffragen.</p>
-            <textarea class="answer" data-key="s5.h.text" placeholder="1. Ich frage mich, … 2. …"></textarea><p class="saved" aria-live="polite"></p>
-          </div>
+        <div class="today__card mc" data-mc="s5.h.2" data-right="vorwand">
+          <p class="label muted">Video in sozialen Netzwerken</p>
+          <blockquote>Ein Clip zeigt angeblich einen Angriff des Nachbarlandes. Später beweisen Fachleute: Das Video ist gefälscht.</blockquote>
+          <div class="choices"><button class="choice" data-v="taten">Worte und Taten passen nicht</button><button class="choice" data-v="vorwand">Erfundener Vorwand</button></div>
+          <p class="mc__tipp" hidden>Erinnere dich an den Sender Gleiwitz.</p>
+          <p class="mc__erkl" hidden>Richtig, wie in Gleiwitz. Heute sagt man auch „Desinformation“. Prüfe: Wer hat es zuerst veröffentlicht? Berichten seriöse Medien darüber?</p>
         </div>
+      </div>
+      <div class="grid-2" style="margin-top:20px">
+        <div class="gg"><p class="label">Grundgesetz Artikel 26, Absatz 1</p><p>„Handlungen, die geeignet sind und in der Absicht vorgenommen werden, das friedliche Zusammenleben der Völker zu stören, insbesondere die Führung eines Angriffskrieges vorzubereiten, sind verfassungswidrig. Sie sind unter Strafe zu stellen.“</p></div>
+        <div class="block block--lila"><p class="label" style="margin-bottom:8px">Was ist heute anders?</p><p class="small">Deutschland darf keinen Angriffskrieg führen, das steht im Grundgesetz. Ehemalige Kriegsgegner wie Frankreich und Polen sind heute Partner in der EU.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- KUGELLAGER -->
+  <!-- 6 KUGELLAGER -->
   <section class="part" id="kugellager" aria-labelledby="d-t">
     <div class="wrap">
       <div class="part__head">
-        <p class="part__tag"><span class="chip">Wir reden darüber · 13 Min</span><span class="label muted">Methode: Kugellager</span></p>
-        <h2 class="h-l" id="d-t">Drei Runden, drei Partner</h2>
-        <p class="lead">Ihr bildet einen Innenkreis und einen Außenkreis, immer zwei sitzen sich gegenüber. Pro Runde redet zuerst innen (1 Min), dann außen (1 Min). Dann rückt der Außenkreis zwei Plätze weiter.</p>
+        <p class="part__tag"><span class="chip">Wir reden darüber</span><span class="label muted">Methode: Kugellager</span></p>
+        <h2 class="h-l" id="d-t">„Es war richtig, Hitler 1938 das Sudetenland zu geben.“</h2>
       </div>
-      <div class="grid-3">
-        <div class="corner" style="background:var(--sand)"><span class="big">1</span><p>War es richtig, Hitler 1938 das Sudetenland zu geben, um einen Krieg zu verhindern?</p></div>
-        <div class="corner" style="background:var(--lila-hell)"><span class="big">2</span><p>Hätten die Deutschen 1939 merken können, dass der Überfall auf Gleiwitz gespielt war?</p></div>
-        <div class="corner" style="background:var(--plaster)"><span class="big">3</span><p>Woran erkennst du heute, ob ein Politiker die Wahrheit sagt?</p></div>
+      <div class="auftrag" data-min="11" data-brauchst="klasse">
+        <ol class="auftrag__schritte"><li><span>Tippe an, was du denkst.</span></li><li><span>Deine Wahl erscheint <b>ohne Namen</b> vorne an der Tafel.</span></li><li><span>Überleg dir einen Grund für deine Wahl. Wenn die Zeit um ist, sprechen wir im Kugellager darüber.</span></li></ol>
+        <p class="auftrag__fertig">Schlussfrage: Woran erkennst du heute, ob jemand wirklich Frieden will?</p>
       </div>
-      <div class="grid-2" style="margin-top:24px">
-        <ol class="stack small" style="gap:10px">
-          <li><b>Aufstellen</b> (2 Min): Zwei Kreise, jeder hat ein Gegenüber.</li>
-          <li><b>Drei Runden</b> (je 2 Min): Frage lesen, innen erzählt, außen hört zu und fragt nach, dann umgekehrt. Weiterrücken.</li>
-          <li><b>Auswertung</b> (5 Min): Welches Argument deines Partners war das beste? Zwei bis drei stellen es vor.</li>
-        </ol>
-        <div class="task">
-          <p class="task__q"><b>D</b>Das beste Argument, das ich heute von einem Partner gehört habe:</p>
-          <textarea class="answer" data-key="s5.d.text" placeholder="Mein Partner bei Frage … hat gesagt, dass … Das hat mich überzeugt, weil …"></textarea><p class="saved" aria-live="polite"></p>
-        </div>
+      <div class="choices" data-choice="s5.d.wahl" style="grid-template-columns:1fr">
+        <button class="choice" data-v="Richtig: Krieg verhindern war das Wichtigste.">Richtig: Krieg verhindern war das Wichtigste.</button>
+        <button class="choice" data-v="Verständlich, aber am Ende falsch.">Verständlich, aber am Ende falsch.</button>
+        <button class="choice" data-v="Falsch: Man hätte Hitler sofort stoppen müssen.">Falsch: Man hätte Hitler sofort stoppen müssen.</button>
+        <button class="choice" data-v="Ich bin unsicher.">Ich bin unsicher.</button>
       </div>
     </div>
   </section>
 
-  <!-- LERNPASS -->
+  <!-- 7 HEFTEINTRAG -->
   <section class="part" id="lernpass" aria-labelledby="l-t" style="background:var(--ink);color:var(--white)">
     <div class="wrap">
       <div class="part__head"><p class="part__tag"><span class="chip chip--sand">Zum Schluss</span></p><h2 class="h-l" id="l-t">Mein Hefteintrag</h2>
         <p class="lead">Dein PDF hat zwei Teile: <b>Teil 1</b> ist der Hefteintrag zur Stunde, für alle gleich, das ist deine Grundlage für die Probe. <b>Teil 2</b> sind deine eigenen Ergebnisse. Das PDF kommt in dein <b>OneNote-Merkheft</b>.</p>
-        <ol class="pdf-schritte"><li><span>1</span>Name eintragen und unten auf den Knopf tippen.</li><li><span>2</span>Im Druckmenü auf das Teilen-Symbol tippen und das PDF sichern.</li><li><span>3</span>In OneNote im Merkheft: Einfügen → Datei → als Ausdruck einfügen.</li></ol></div>
-      <div class="block block--white" style="color:var(--ink)"><p class="h-s" style="margin-bottom:8px">Merksatz der Stunde</p>
-        <p>Hitler sprach vom Frieden, rüstete aber massiv auf. Großbritannien und Frankreich versuchten ihn 1938 mit dem Münchner Abkommen zu beschwichtigen (Appeasement). Mit einem gespielten Überfall auf den Sender Gleiwitz als Vorwand begann am 1. September 1939 mit dem deutschen Überfall auf Polen der Zweite Weltkrieg. Ab Dezember 1941 war er ein Weltkrieg.</p></div>
-      <div class="pass-actions"><button class="btn btn--lila" type="button" id="pass-btn">Hefteintrag + Ergebnisse als PDF</button><a class="btn-2" style="color:var(--white);border-color:var(--white)" href="../index.html#karte">Zurück zur Lernlandkarte</a></div>
+        <ol class="pdf-schritte"><li><span>1</span>Name eintragen und unten auf den Knopf tippen.</li><li><span>2</span>Im Druckmenü auf das Teilen-Symbol tippen und das PDF sichern.</li><li><span>3</span>In OneNote im Merkheft: Einfügen → Datei → als Ausdruck einfügen.</li></ol>
+      </div>
+      <div class="pass-actions"><button class="btn btn--lila" type="button" id="pass-btn">Hefteintrag + Ergebnisse als PDF</button></div>
     </div>
   </section>
 </main>
@@ -274,20 +296,20 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   NS.guard(5);
-  var EV = { oesterreich: "Anschluss Österreich", muenchen: "Münchner Abkommen", prag: "Besetzung Prag", pakt: "Hitler-Stalin-Pakt", polen: "Überfall Polen", frankreich: "Westfeldzug", su: "Überfall Sowjetunion", usa: "Pearl Harbor / Krieg mit USA" };
-  var KARTE = { 1: "„Deutschland will den Frieden“", 2: "Wehrmacht-Ausgaben x16", 3: "„keine Forderungen mehr“", 4: "Besetzung Prag", 5: "Wehrpflicht 1935", 6: "„Seit 5.45 Uhr …“", 7: "Pakt mit Stalin" };
+  var EV = { oesterreich: "Anschluss Österreichs", muenchen: "Münchner Abkommen", prag: "Besetzung Prags", pakt: "Hitler-Stalin-Pakt", polen: "Überfall auf Polen", frankreich: "Westfeldzug", su: "Überfall auf die Sowjetunion", usa: "Pearl Harbor, Krieg mit den USA" };
+  var KARTE = { 1: "„Deutschland will den Frieden“", 2: "Wehrpflicht 1935", 3: "„keine Forderungen mehr“", 4: "Besetzung Prags", 5: "Wehrmacht-Ausgaben x16", 6: "Pakt mit Stalin" };
+  var antworten = function (v) { return Object.keys(v).sort().map(function (i) { return v[i]; }).join(" · "); };
   document.getElementById("pass-btn").addEventListener("click", function () {
     NS.printPass(5, [
-      { label: "Einstieg: Foto echt oder gestellt?", key: "s5.e.echt" },
-      { label: "Einstieg: Begründung", key: "s5.e" },
-      { label: "A1 Gesagt / Getan", key: "s5.a.sort", fmt: function (v) { var a = [], b = []; Object.keys(v).forEach(function (id) { (v[id] === "a" ? a : b).push(KARTE[id]); }); return "Gesagt: " + a.join(", ") + "\nGetan: " + b.join(", "); } },
-      { label: "A2 Warum Appeasement scheitern musste", key: "s5.a.appease" },
-      { label: "B1 Zeitstrahl (meine Reihenfolge)", key: "s5.b.order", fmt: function (v) { return v.map(function (x, i) { return (i + 1) + ". " + EV[x]; }).join("\n"); } },
-      { label: "B2 Ab wann ein Weltkrieg?", key: "s5.b.welt" },
-      { label: "C1 Warum der Vorwand Gleiwitz?", key: "s5.c.vorwand" },
-      { label: "C2 Zusatz: Kriegserklärung an die USA", key: "s5.c.usa" },
-      { label: "Heute-Check: Meine Prüffragen", key: "s5.h.text" },
-      { label: "Kugellager: das beste Argument", key: "s5.d.text" }
+      { label: "Einstieg: Das Schlagbaum-Foto ist …", key: "s5.e.echt" },
+      { label: "Gesagt oder getan?", key: "s5.a.sort", fmt: function (v) { var a = [], b = []; Object.keys(v).forEach(function (id) { (v[id] === "a" ? a : b).push(KARTE[id]); }); return "Gesagt: " + a.join(", ") + "\nGetan: " + b.join(", "); } },
+      { label: "Warum Appeasement nicht aufging", key: "s5.a.mc" },
+      { label: "Buch-Detektiv S. 93: „Seit … Uhr wird jetzt zurückgeschossen“", key: "s5.b.buch.in", fmt: antworten },
+      { label: "Warum Gleiwitz?", key: "s5.b.mc" },
+      { label: "Zeitstrahl 1938 bis 1941", key: "s5.c.order", fmt: function (v) { return v.map(function (x, i) { return (i + 1) + ". " + EV[x]; }).join("\n"); } },
+      { label: "Buch-Detektiv S. 92: Tote im Zweiten Weltkrieg (Millionen)", key: "s5.c.buch.in", fmt: antworten },
+      { label: "Heute-Check: erfundener Vorwand", key: "s5.h.2" },
+      { label: "Kugellager: Hitler 1938 das Sudetenland zu geben war …", key: "s5.d.wahl" }
     ]);
   });
 });
