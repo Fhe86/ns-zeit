@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hefteintrag · NS-Zeit</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/lernen/icon-32.png" sizes="32x32">
+<link rel="stylesheet" href="/lernen/assets/ns.css">
+<script src="/lernen/assets/ns.js" defer></script>
+<style>
+  body.heft { background: var(--paper, #e6e2ef); }
+  .heft-box { max-width: 210mm; margin: 0 auto; padding: 24px 16px 20px; }
+  .heft-box h1 { font-family: var(--font-head); font-stretch: 75%; font-size: 30px; line-height: 1.1; margin-bottom: 8px; }
+  .heft-box p { margin-bottom: 14px; }
+  .heft-box ol { margin: 0 0 18px; padding-left: 24px; display: grid; gap: 6px; list-style: decimal; }
+  .heft-box .btn { font-size: 19px; min-height: 56px; padding: 0 26px; }
+</style>
+</head>
+<body class="heft">
+<div class="heft-box" id="heft-box">
+  <h1>Dein Hefteintrag als PDF</h1>
+  <p>Tippe auf den Knopf. Dann:</p>
+  <ol>
+    <li>Im Druckmenü oben auf das <b>Teilen-Symbol</b> tippen.</li>
+    <li><b>„In Dateien sichern“</b> oder direkt <b>OneNote</b> wählen.</li>
+    <li>Danach diese Seite schließen und in der App weiterarbeiten.</li>
+  </ol>
+  <button class="btn btn--lila" type="button">Als PDF sichern</button>
+</div>
+<div class="pass" aria-label="Vorschau Hefteintrag"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () { NS.heftSeite(); });
+</script>
+</body>
+</html>

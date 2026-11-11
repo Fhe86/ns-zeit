@@ -503,43 +503,77 @@
   /* Lernpass als Hefteintrag:
      Seite 1 = Teil 1 „Hefteintrag“ (für alle gleich, Grundlage für die Probe),
      Seite 2 = Teil 2 „Meine Ergebnisse“ (eigene Antworten). */
-  NS.printPass = function (n, items) {
-    var s = STUNDEN[n - 1], h = s.heft, pass = document.querySelector(".pass");
-    var name = (NS.get("name") || "").trim(), heute = new Date().toLocaleDateString("de-DE");
+  /* Baut den Hefteintrag aus fertigen Zeilen [Frage, Antwort]. imgBase: wo die Fotos liegen. */
+  function passHtml(n, d, imgBase) {
+    var s = STUNDEN[n - 1], h = s.heft;
+    var name = String(d.name || "").trim(), heute = new Date().toLocaleDateString("de-DE");
     var kopf = function (teil) {
       return '<header class="hp-kopf"><span>GPG · NS-Zeit 1933–1945 · Station ' + n + ' · ' + teil + '</span>' +
         '<span>Name: ' + (name ? '<b>' + esc(name) + '</b>' : '<i class="hp-linie"></i>') + '&nbsp;&nbsp; Datum: ' + heute + '</span></header>';
     };
     var html = '<section class="hp-seite">' + kopf("Teil 1: Hefteintrag") +
       '<div class="hp-titel"><p class="hp-jahr">' + esc(s.jahr) + '</p><h1>' + esc(s.titel) + '</h1><p class="hp-frage">' + esc(h.frage) + '</p></div>' +
-      '<div class="hp-oben"><img class="hp-foto" src="../img/foto/' + h.foto + '.jpg" alt="">' +
+      '<div class="hp-oben"><img class="hp-foto" src="' + imgBase + h.foto + '.jpg" alt="">' +
         '<div class="hp-kasten hp-wichtig"><p class="hp-label">Das Wichtigste</p><p>' + esc(h.text) + '</p></div></div>' +
       '<div class="hp-kasten hp-merke"><p class="hp-label">Das musst du für die Probe können</p><ol>' +
         s.merke.map(function (m) { return '<li>' + esc(m) + '</li>'; }).join("") + '</ol></div>' +
       '<div class="hp-zwei"><div class="hp-kasten"><p class="hp-label">Wichtige Daten</p><ul class="hp-zeit">' +
-        h.daten.map(function (d) { return '<li><b>' + esc(d[0]) + '</b><span>' + esc(d[1]) + '</span></li>'; }).join("") + '</ul></div>' +
+        h.daten.map(function (x) { return '<li><b>' + esc(x[0]) + '</b><span>' + esc(x[1]) + '</span></li>'; }).join("") + '</ul></div>' +
         '<div class="hp-kasten"><p class="hp-label">Fachbegriffe</p><dl class="hp-begriffe">' +
-        h.begriffe.map(function (b) { return '<dt>' + esc(b[0]) + '</dt><dd>' + esc(b[1]) + '</dd>'; }).join("") + '</dl></div></div>' +
+        h.begriffe.map(function (x) { return '<dt>' + esc(x[0]) + '</dt><dd>' + esc(x[1]) + '</dd>'; }).join("") + '</dl></div></div>' +
       '<div class="hp-kasten hp-heute"><p class="hp-label">Damals erkennen, heute erkennen</p><p>' + esc(h.heute) + '</p></div>' +
       '<p class="hp-merksatz">Merksatz: ' + esc(s.kern) + '</p>' +
       '<footer class="hp-fuss">Teil 1 ist für alle gleich und die Grundlage für die Probe. Fotos: Bundesarchiv / Wikimedia Commons, Nachweise auf der Website.</footer></section>';
     html += '<section class="hp-seite hp-neu">' + kopf("Teil 2: Meine Ergebnisse") +
       '<div class="hp-titel hp-titel--klein"><h1>Meine Ergebnisse</h1><p class="hp-frage">Station ' + n + ': ' + esc(s.titel) + '</p></div><div class="hp-antworten">';
-    items.forEach(function (it) {
+    (d.rows || []).forEach(function (r) {
+      html += '<div class="hp-antwort"><p class="hp-frage2">' + esc(r[0]) + '</p>' +
+        (r[1] ? '<p class="hp-a">' + esc(String(r[1])) + '</p>' : '<p class="hp-a hp-leer">noch offen</p>') + '</div>';
+    });
+    html += '</div><footer class="hp-fuss">Erledigt: ' + d.fertig + ' von ' + d.gesamt + ' Teilen' + (d.fertig === d.gesamt ? ' ✓ Station geschafft' : '') + '</footer></section>';
+    return html;
+  }
+  function drucken(pass) {
+    document.body.classList.add("printing-pass");
+    var img = pass.querySelector("img"), go = function () { setTimeout(function () { window.print(); }, 80); };
+    if (img && !img.complete) { img.onload = go; img.onerror = go; } else go();
+  }
+  /* App vom Home-Bildschirm: Dort kann iOS nicht drucken (window.print() tut nichts).
+     Dann öffnet sich der Hefteintrag in Safari (/heft liegt außerhalb der App), dort klappt PDF und Drucken.
+     Die Antworten reisen im Adress-Anhang (#…) mit, der geht nie an den Server. */
+  function alsApp() { return navigator.standalone === true || !!(window.matchMedia && matchMedia("(display-mode: standalone)").matches); }
+  NS.printPass = function (n, items) {
+    var st = NS.stand(n);
+    var d = { n: n, name: NS.get("name") || "", fertig: st.fertig, gesamt: st.gesamt, rows: items.map(function (it) {
       var v = NS.get(it.key);
       if (v && it.fmt && (typeof v === "object")) v = it.fmt(v);
       else if (Array.isArray(v)) v = v.join(", ");
       else if (v && typeof v === "object") v = Object.keys(v).length + " Einträge";
-      html += '<div class="hp-antwort"><p class="hp-frage2">' + esc(it.label) + '</p>' +
-        (v ? '<p class="hp-a">' + esc(String(v)) + '</p>' : '<p class="hp-a hp-leer">noch offen</p>') + '</div>';
-    });
-    var st = NS.stand(n);
-    html += '</div><footer class="hp-fuss">Erledigt: ' + st.fertig + ' von ' + st.gesamt + ' Teilen' + (st.fertig === st.gesamt ? ' ✓ Station geschafft' : '') + '</footer></section>';
-    pass.innerHTML = html;
+      return [it.label, v ? String(v) : ""];
+    }) };
     state.pass[n] = true; save();
-    document.body.classList.add("printing-pass");
-    var img = pass.querySelector("img"), go = function () { setTimeout(function () { window.print(); }, 80); };
-    if (img && !img.complete) { img.onload = go; img.onerror = go; } else go();
+    if (alsApp() && LIVE) {
+      window.open(location.origin + "/heft#d=" + b64(JSON.stringify(d)), "_blank");
+      return;
+    }
+    var pass = document.querySelector(".pass");
+    pass.innerHTML = passHtml(n, d, "../img/foto/");
+    drucken(pass);
+  };
+  /* Druckseite /heft (in Safari): liest den Anhang und zeigt den Hefteintrag mit großem Knopf. */
+  NS.heftSeite = function () {
+    var m = /^#d=([A-Za-z0-9_-]+)$/.exec(location.hash), d = null;
+    try { d = m && JSON.parse(unb64(m[1])); } catch (e) { d = null; }
+    var pass = document.querySelector(".pass"), box = document.getElementById("heft-box");
+    if (!d || !Number.isInteger(d.n) || !STUNDEN[d.n - 1]) {
+      box.querySelector("p").textContent = "Hier ist kein Hefteintrag angekommen. Geh zurück in die App und tippe noch einmal auf den PDF-Knopf.";
+      box.querySelector("button").hidden = true;
+      return;
+    }
+    pass.innerHTML = passHtml(d.n, d, "/lernen/img/foto/");
+    pass.classList.add("pass--zeigen");
+    document.title = "Hefteintrag Station " + d.n;
+    box.querySelector("button").addEventListener("click", function () { drucken(pass); });
   };
   window.addEventListener("afterprint", function () { document.body.classList.remove("printing-pass"); });
   function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
@@ -668,7 +702,7 @@
      Gesendet: Vorname, Geräte-Nummer, je Station [erledigt, gesamt], aktuelle Station und Schritt. Keine Antworten. */
   var LIVE = /^\/lernen\//.test(location.pathname);
   var ICH_KEY = "nszeit-ich";
-  var NAME_RE = /^[A-Za-zÀ-ÖØ-öø-ÿĀ-žḀ-ỿ][A-Za-zÀ-ÖØ-öø-ÿĀ-žḀ-ỿ '’-]{0,19}$/;
+  var NAME_RE = /^[A-Za-zÀ-ÖØ-öø-ÿĀ-žḀ-ỿ][A-Za-zÀ-ÖØ-öø-ÿĀ-žḀ-ỿ'’-]{0,19}(?: [A-Za-zÀ-ÖØ-öø-ÿĀ-žḀ-ỿ]\.)?$/;
   function ich() {
     var x = {};
     try { x = JSON.parse(localStorage.getItem(ICH_KEY) || "{}") || {}; } catch (e) {}
@@ -695,11 +729,27 @@
         pos: { n: n, s: n ? Math.max(0, Math.min(20, Number(NS.get("s" + n + ".schritt")) || 0)) : 0 }
       });
       fetch("/api/report", { method: "POST", headers: { "Content-Type": "application/json" }, body: body, keepalive: true })
-        .then(function (r) { if (r.ok) letzteMeldung = body; })
+        .then(function (r) { if (!r.ok) return; letzteMeldung = body; return r.json().then(abgleich); })
         .catch(function () { /* offline: die nächste Meldung holt es nach */ });
     }, sofort ? 0 : 1200);
   }
   NS.hooks.push(function () { melden(false); });
+
+  /* Abgleich mit dem Server nach jeder Meldung:
+     - Hat die Lehrkraft doppelte Einträge zusammengeführt, gilt ab jetzt die Geräte-Nummer vom Server.
+     - Stationen, die auf einem anderen Gerät geschafft wurden (Schule/zu Hause), gelten auch hier als geschafft. */
+  function abgleich(j) {
+    if (!j || !j.pid) return;
+    var x = ich(), neu = false;
+    if (j.pid !== x.pid && /^[a-z0-9]{12,24}$/.test(j.pid)) { x.pid = j.pid; if (j.name) x.vorname = j.name; neu = true; }
+    else if (j.name && j.name !== x.vorname) { x.vorname = j.name; neu = true; }
+    if (neu) { try { localStorage.setItem(ICH_KEY, JSON.stringify(x)); } catch (e) {} zeigeIch(); }
+    var dazu = false;
+    (j.st || []).forEach(function (p, i) {
+      if (STUNDEN[i] && p[0] === p[1] && p[1] > 0 && !NS.isDone(i + 1)) { state.done[i + 1] = true; dazu = true; }
+    });
+    if (dazu) { save(); if (!NS.current && document.querySelector(".map, #karte")) location.reload(); }
+  }
 
   function namensFenster(aendern) {
     if (document.querySelector(".namefenster")) return;
@@ -717,7 +767,7 @@
     f.addEventListener("submit", function (e) {
       e.preventDefault();
       var v = inp.value.trim().replace(/\s+/g, " ");
-      if (v.indexOf(" ") > -1) { msg.textContent = "Bitte nur den Vornamen, ohne Nachnamen."; return; }
+      if (/ /.test(v) && !NAME_RE.test(v)) { msg.textContent = "Bitte nur den Vornamen, ohne Nachnamen."; return; }
       if (!NAME_RE.test(v)) { msg.textContent = "Bitte nur Buchstaben, höchstens 20."; return; }
       if (!aendern && navigator.onLine !== false) {
         var btn = f.querySelector("button"); btn.disabled = true;
@@ -751,27 +801,49 @@
   }
   function wiederfinden(box, v, treffer) {
     var blk = box.querySelector(".block");
-    blk.innerHTML = '<p class="label">Willkommen zurück?</p>' +
+    blk.innerHTML = '<p class="label">Den Namen gibt es schon</p>' +
       '<p class="h-m" style="margin:8px 0 10px"></p>' +
-      '<p class="small" style="margin-bottom:16px">Tippe auf deinen Eintrag. Dann geht es mit deinen geschafften Stationen weiter.</p>' +
+      '<p class="small" style="margin-bottom:16px">Hast du schon einmal mit der NS-Zeit-Seite gearbeitet, auch in Safari oder auf einem anderen Gerät? Dann tippe auf deinen Eintrag. Deine geschafften Stationen sind dann wieder da.</p>' +
       '<div class="wieder"></div>' +
-      '<p class="small" style="margin-top:14px"><button type="button" class="btn-2" data-neu>Nein, ich bin neu</button></p>';
-    blk.querySelector(".h-m").textContent = "Bist du das, " + treffer[0].name + "?";
+      '<p class="small" style="margin-top:16px"><button type="button" class="btn-2" data-neu>Nein, das bin nicht ich</button></p>';
+    blk.querySelector(".h-m").textContent = "Bist du das, " + treffer[0].name.split(" ")[0] + "?";
     var liste = blk.querySelector(".wieder");
     treffer.forEach(function (t) {
       var geschafft = t.st.filter(function (x) { return x[0] === x[1]; }).length;
       var b = document.createElement("button");
       b.type = "button"; b.className = "wieder__btn";
-      b.innerHTML = "<b></b><span></span>";
-      b.querySelector("b").textContent = t.name + ": " + geschafft + (geschafft === 1 ? " Station" : " Stationen") + " geschafft";
+      b.innerHTML = "<b></b><span></span><em>Ja, das bin ich</em>";
+      b.querySelector("b").textContent = t.name + ": " + (geschafft ? geschafft + (geschafft === 1 ? " Station" : " Stationen") + " geschafft" : "noch keine Station geschafft");
       b.querySelector("span").textContent = (t.pos.n ? "zuletzt bei Station " + t.pos.n + ", " : "") + wann(t.updatedAt);
       b.addEventListener("click", function () { uebernehmeEintrag(t); });
       liste.appendChild(b);
     });
-    blk.querySelector("[data-neu]").addEventListener("click", function () {
-      setzeVorname(v); if (!NS.get("name")) NS.set("name", v);
+    blk.querySelector("[data-neu]").addEventListener("click", function () { andererName(box, v, treffer); });
+  }
+  /* Wirklich eine andere Person mit gleichem Vornamen: Nachnamen-Buchstabe dazu ("Sofia B."),
+     damit die Lehrkraft beide auseinanderhalten kann und kein Doppel-Eintrag entsteht. */
+  function andererName(box, v, treffer) {
+    var blk = box.querySelector(".block");
+    var vor = v.split(" ")[0]; vor = vor.charAt(0).toUpperCase() + vor.slice(1);
+    blk.innerHTML = '<p class="label">Zwei mit gleichem Namen</p>' +
+      '<p class="h-m" style="margin:8px 0 10px">Erster Buchstabe deines Nachnamens?</p>' +
+      '<p class="small" style="margin-bottom:16px"></p>' +
+      '<form class="station__lock"><input autocomplete="off" autocapitalize="characters" maxlength="1" aria-label="Erster Buchstabe des Nachnamens" placeholder="B"><button class="btn btn--lila">Los</button></form>' +
+      '<p class="station__msg" role="alert"></p>' +
+      '<p class="small" style="margin-top:12px"><button type="button" class="btn-2" data-zurueck>Zurück, doch mein Eintrag</button></p>';
+    blk.querySelector(".small").textContent = "Dann heißt du hier zum Beispiel „" + vor + " B.“. So kann deine Lehrkraft euch auseinanderhalten.";
+    var f = blk.querySelector("form"), inp = f.querySelector("input"), msg = blk.querySelector(".station__msg");
+    setTimeout(function () { inp.focus(); }, 50);
+    f.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = vor + " " + inp.value.trim().toUpperCase() + ".";
+      if (!NAME_RE.test(name)) { msg.textContent = "Bitte genau einen Buchstaben."; return; }
+      var gleich = treffer.some(function (t) { return t.name.toLowerCase() === name.toLowerCase(); });
+      if (gleich) { msg.textContent = "„" + name + "“ gibt es auch schon. Bist du das? Dann tippe auf Zurück."; return; }
+      setzeVorname(name); if (!NS.get("name")) NS.set("name", vor);
       box.remove(); zeigeIch(); melden(true);
     });
+    blk.querySelector("[data-zurueck]").addEventListener("click", function () { wiederfinden(box, v, treffer); });
   }
   function uebernehmeEintrag(t) {
     var x = ich(); x.pid = t.pid; x.vorname = t.name;
@@ -793,7 +865,7 @@
     el.className = "installhinweis"; el.setAttribute("role", "note");
     el.innerHTML = '<b>Damit dein Stand nicht verloren geht:</b> Tippe oben auf <span class="installhinweis__icon" aria-label="Teilen">' +
       '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 12v8h14v-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-      '</span> und dann auf <b>„Zum Home-Bildschirm“</b>. Arbeite danach nur noch mit der App auf dem Home-Bildschirm.';
+      '</span> und dann auf <b>„Zum Home-Bildschirm“</b>. Öffne die App, gib deinen Vornamen ein und tippe bei „Bist du das?“ auf deinen Eintrag.';
     document.body.insertBefore(el, document.body.firstChild);
   }
 

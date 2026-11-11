@@ -314,8 +314,16 @@ textarea.answer:focus { outline: 3px solid var(--lila); outline-offset: 0; }
   body { background: #fff; }
   body.printing-pass > *:not(.pass) { display: none !important; }
   body.printing-pass .pass { display: block !important; }
-  .pass { color: #1d1b2c; font-family: var(--font-text); font-size: 10.5pt; line-height: 1.4; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body.heft .heft-box { display: none !important; }
+  body.heft .pass--zeigen { box-shadow: none; margin: 0; padding: 0; max-width: none; }
+}
+/* Hefteintrag: gilt für Druck und für die Vorschau auf der Druckseite /heft */
+.pass--zeigen { display: block; background: #fff; max-width: 210mm; margin: 0 auto 40px; padding: 12mm 13mm; box-shadow: 0 2px 18px rgba(29,27,44,.18); }
+.pass--zeigen .hp-neu { margin-top: 14mm; padding-top: 10mm; border-top: 2px dashed #cfc6e2; }
+@media print { .pass--zeigen .hp-neu { margin-top: 0; padding-top: 0; border-top: 0; } }
+.pass { color: #1d1b2c; font-family: var(--font-text); font-size: 10.5pt; line-height: 1.4; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .hp-neu { break-before: page; }
+@media all {
   .hp-kopf { display: flex; justify-content: space-between; gap: 10pt; font-size: 8.5pt; color: #4f5366; border-bottom: 1.5pt solid #5f4497; padding-bottom: 4pt; margin-bottom: 9pt; }
   .hp-linie { display: inline-block; width: 45mm; border-bottom: .8pt solid #4f5366; height: 9pt; vertical-align: bottom; }
   .hp-titel { margin-bottom: 9pt; }
@@ -587,6 +595,7 @@ details.zusatz[open] > summary { margin-bottom: 14px; }
 .wieder__btn { display: grid; gap: 4px; text-align: left; padding: 14px 16px; min-height: 56px; border: 2px solid var(--ink); background: var(--white); font: inherit; cursor: pointer; }
 .wieder__btn b { font-size: 18px; }
 .wieder__btn span { color: var(--muted); font-size: 15px; }
+.wieder__btn em { justify-self: start; margin-top: 6px; padding: 6px 14px; background: var(--lila, #5f4497); color: var(--white); font-style: normal; font-weight: 700; font-size: 15px; }
 .wieder__btn:hover, .wieder__btn:focus-visible { background: var(--lila-hell); outline: none; }
 
 /* Hinweis: als App installieren (nur iPad/iPhone in Safari) */
