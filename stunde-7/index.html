@@ -77,9 +77,9 @@
         <p class="part__tag"><span class="chip chip--brick">Kapitel 1</span><span class="label muted">München · 1941</span></p>
         <h2 class="h-l" id="a-t">Rudis Eltern</h2>
       </div>
-      <div class="auftrag" data-min="6" data-brauchst="ipad">
-        <ol class="auftrag__schritte"><li><span>Lies Kapitel 1 in Ruhe.</span></li><li><span>Lies, was mit den Münchner Juden im November 1941 geschah.</span></li><li><span>Beantworte die Frage zum Wort „Umsiedlung“.</span></li></ol>
-        <p class="auftrag__fertig">Fertig, wenn die Frage beantwortet ist.</p>
+      <div class="auftrag" data-min="8" data-brauchst="ipad">
+        <ol class="auftrag__schritte"><li><span>Lies Kapitel 1 in Ruhe.</span></li><li><span>Lies, was mit den Münchner Juden im November 1941 geschah.</span></li><li><span>Hör Hugo Höllenreiner (Kopfhörer!) und tippe den passenden Satz an.</span></li><li><span>Beantworte die Frage zum Wort „Umsiedlung“.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn der Satz und die Frage grün sind.</p>
       </div>
       <div class="story">
         <div class="story__text">
@@ -95,6 +95,29 @@
           <li class="block block--plaster" style="border-top:4px solid var(--ink)"><p class="label muted">20. November 1941</p><p class="h-s">Der erste Zug</p><p class="small">Rund 1000 Münchner Jüdinnen und Juden werden aus Milbertshofen nach Kaunas in Litauen gebracht.</p></li>
           <li class="block block--lila" style="border-top:4px solid var(--ink)"><p class="label">25. November 1941</p><p class="h-s">Ermordet</p><p class="small">In Kaunas erschießen SS und Polizei alle Menschen aus dem Zug, auch die Kinder.</p></li>
         </ol>
+      </div>
+      <div class="grid-2" style="margin-top:16px;align-items:start">
+        <div class="block block--plaster"><p class="label muted">Auch sie wurden verfolgt</p><p class="h-s">Sinti und Roma</p><p class="small">Die Nazis verfolgten nicht nur Juden. Auch Sinti und Roma galten ihnen als „fremde Rasse“. Hunderttausende wurden ermordet. Hugo Höllenreiner war ein Sinto aus München. Als die SS ihn abholte, war er neun Jahre alt. 2009 erzählte er in München, was er erlebt hat.</p></div>
+        <div class="stack">
+          <p class="task__q"><b>T</b>Hör Hugo Höllenreiner zu. Tippe dann den Satz an, der zeigt, <b>warum</b> seine Familie abgeholt wurde.</p>
+          <div class="ton" data-src="../ton/s7-hoellenreiner.mp3" data-key="s7.a.ton" data-pick="s7.a.ton.satz" data-right="1">
+            <ol class="ton__text">
+              <li data-t="0.4">„Am 8. März 1943 stand die SS vor unserer Tür, um uns abzuholen.“</li>
+              <li data-t="6.5">„Wir wussten nicht warum, nur weil wir Sinti waren.“</li>
+              <li data-t="10.3">„Unsere Familie wurde auf Lastwagen verladen und hier in München ins Polizeipräsidium in die Arrestzellen in der Ettstraße gefahren.“</li>
+              <li data-t="21">„Bereits dort erlebten wir Schikanen und grundlose Übergriffe.“</li>
+              <li data-t="24.7">„Nach drei Tagen wurden wir mit Prügel und Schlägen zum Güterbahnhof gebracht. Dort zwängte man uns in einen Viehwaggon.“</li>
+              <li data-t="35.3">„Dann wurden wir nach Auschwitz-Birkenau in Polen transportiert.“</li>
+              <li data-t="42.1">„Dort tätowierte man uns mit fortlaufenden Nummern.“</li>
+              <li data-t="45.4">„Von nun an hatten wir keinen Namen mehr.“</li>
+              <li data-t="47.8">„Ich war die Nummer 3529 und durfte mich nur noch mit den letzten beiden Zahlen melden.“</li>
+              <li data-t="54.1">„Hugo Höllenreiner hieß jetzt Nummer 29.“</li>
+            </ol>
+            <p class="ton__tipp" hidden>Noch nicht. Hör auf den Satz direkt nach dem Abholen.</p>
+            <p class="ton__erkl" hidden>Richtig. Die Familie hatte nichts getan. Der einzige Grund war, wer sie waren. Hugo überlebte Auschwitz und weitere Lager. Viele seiner Verwandten wurden ermordet. Später erzählte er Schulklassen seine Geschichte, damit niemand sie vergisst.</p>
+            <p class="ton__quelle">Hugo Höllenreiner (1933–2015), Rede am 27. April 2009 in München. Aufnahme: Michael Lucan, CC BY-SA 3.0, Wikimedia Commons. Für den Unterricht gekürzt.</p>
+          </div>
+        </div>
       </div>
       <div class="grid-2" style="margin-top:16px">
         <div class="mc" data-mc="s7.a.mc" data-right="tarnen"><p class="mc__frage">Im Brief stand „Umsiedlung nach dem Osten“. Was sollte dieses Wort verbergen?</p>
@@ -287,6 +310,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("pass-btn").addEventListener("click", function () {
     NS.printPass(7, [
       { label: "Einstieg: Bernd Michael Mahler war bei der Deportation …", key: "s7.e.alter" },
+      { label: "Hugo Höllenreiner im Originalton: der Grund", key: "s7.a.ton.satz" },
       { label: "Was das Wort „Umsiedlung“ verbergen sollte", key: "s7.a.mc" },
       { label: "Vom Getto zum Vernichtungslager", key: "s7.b.order", fmt: function (v) { return v.map(function (x, i) { return (i + 1) + ". " + STUFE[x]; }).join("\n"); } },
       { label: "Getto, Holocaust, Shoah", key: "s7.b.satz" },

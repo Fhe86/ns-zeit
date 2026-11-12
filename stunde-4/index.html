@@ -12,6 +12,18 @@
 <meta name="apple-mobile-web-app-title" content="NS-Zeit">
 <link rel="stylesheet" href="../assets/ns.css">
 <script src="../assets/ns.js" defer></script>
+<style>
+  .vorher { margin-bottom: 22px; padding: 16px; background: var(--white); border-left: 6px solid var(--lila); }
+  .vorher__reihe { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .vorher__bild { margin: 0; display: grid; grid-template-rows: 170px auto; gap: 8px; }
+  .vorher__bild > div { height: 170px; overflow: hidden; }
+  .vorher__bild img { width: 100%; height: 100%; object-fit: cover; }
+  .vorher__bild figcaption { font-size: 15px; line-height: 1.35; }
+  .vorher__bild figcaption b { display: block; font-family: var(--font-head); font-size: 20px; }
+  .vorher__flamme { background: radial-gradient(ellipse at 50% 100%, #f2a33a 0, #c4452c 35%, #2a1d1d 75%); position: relative; }
+  .vorher__flamme::after { content: "Die Synagoge brannte vollständig nieder (Buch S. 89)."; position: absolute; inset: auto 10px 10px 10px; color: #fff; font-size: 13px; }
+  @media (max-width: 700px) { .vorher__reihe { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
 
@@ -45,8 +57,21 @@
         <h2 class="h-l" id="e-t">1. April 1933: Vor dem Laden von Rudis Vater</h2>
       </div>
       <div class="auftrag" data-min="5" data-brauchst="klasse|ipad">
-        <ol class="auftrag__schritte"><li><span>Lies, was passiert. Du bist Paul.</span></li><li><span>Tippe an, was du tun würdest. Es gibt kein Richtig oder Falsch.</span></li></ol>
-        <p class="auftrag__fertig">Fertig, wenn du gewählt hast. Dann löst die Lehrkraft auf.</p>
+        <ol class="auftrag__schritte"><li><span>Schau dir zuerst die drei Bilder aus Regensburg an (Buch S. 88/89) und beantworte die Frage.</span></li><li><span>Lies dann, was am 1. April 1933 passiert. Du bist Paul.</span></li><li><span>Tippe an, was du tun würdest. Es gibt kein Richtig oder Falsch.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn die Frage grün ist und du gewählt hast. Dann löst die Lehrkraft auf.</p>
+      </div>
+      <div class="vorher">
+        <p class="label muted" style="margin-bottom:10px">Vorher: Jüdisches Leben in Bayern · Beispiel Regensburg</p>
+        <div class="vorher__reihe">
+          <figure class="vorher__bild"><div class="reveal"><img src="../img/foto/s2-regensburg-neu.jpg" alt="Die Regensburger Synagoge von 1912, ein großer Kuppelbau."></div><figcaption><b>1912</b> Die jüdische Gemeinde weiht ihre neue Synagoge ein. Juden sind Nachbarn, Ladenbesitzer, Ärzte, Soldaten im Ersten Weltkrieg.</figcaption></figure>
+          <figure class="vorher__bild vorher__bild--brand"><div class="vorher__flamme" aria-hidden="true"></div><figcaption><b>9./10. November 1938</b> Nazis brennen die Synagoge nieder. Am Morgen treiben SA-Männer die jüdischen Männer durch die Stadt zum Bahnhof.</figcaption></figure>
+          <figure class="vorher__bild"><div class="reveal"><img src="../img/foto/s4-regensburg-2019.jpg" alt="Eingang des neuen jüdischen Gemeindezentrums in Regensburg. Über der Tür steht in Schreibschrift aus Metall: Vergesset nicht Freunde." style="object-position:center 40%"></div><figcaption><b>2019</b> An derselben Stelle steht wieder eine Synagoge. Über dem Eingang: „Vergesset nicht, Freunde …“</figcaption></figure>
+        </div>
+        <p class="credit">Synagoge 1912: unbekannt, gemeinfrei. Gemeindezentrum 2019: Christian Michelides, CC BY-SA 4.0. Beide Wikimedia Commons</p>
+        <div class="mc" data-mc="s4.v.seit" data-right="1500" style="margin-top:12px"><p class="mc__frage">Wie lange leben Menschen jüdischen Glaubens schon in Deutschland? (Buch S. 88, „Ankunft der Juden“)</p>
+          <div class="choices"><button class="choice" data-v="100">seit etwa 100 Jahren</button><button class="choice" data-v="500">seit etwa 500 Jahren</button><button class="choice" data-v="1500">seit mehr als 1500 Jahren</button></div>
+          <p class="mc__tipp" hidden>Such auf S. 88 die Stadt Köln und das Jahr.</p>
+          <p class="mc__erkl" hidden>Richtig. Schon im Jahr 321 lebten Juden in Köln. Sie gehörten seit Jahrhunderten dazu. Ab 1933 sollte das nicht mehr gelten.</p></div>
       </div>
       <div class="story">
         <div class="story__text">
@@ -323,6 +348,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var antworten = function (v) { return Object.keys(v).sort().map(function (i) { return v[i]; }).join(" · "); };
   document.getElementById("pass-btn").addEventListener("click", function () {
     NS.printPass(4, [
+      { label: "Vorher: Juden leben in Deutschland seit …", key: "s4.v.seit" },
       { label: "Einstieg: Ich als Paul am 1. April 1933", key: "s4.e.wahl" },
       { label: "Buch-Detektiv S. 85 (KZ Dachau seit … · KZ bis Juli 1933 · Leitung ab 1934)", key: "s4.a.buch.in", fmt: antworten },
       { label: "Warum zuerst die Gegner?", key: "s4.a.satz" },

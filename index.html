@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>NS-Zeit 1933 bis 1945 · Lernlandkarte</title>
-<meta name="description" content="Selbstlerneinheit GPG: Die Zeit des Nationalsozialismus in neun Stationen.">
+<meta name="description" content="Selbstlerneinheit GPG: Die Zeit des Nationalsozialismus in zehn Stationen.">
 <meta name="theme-color" content="#1d1b2c">
 <link rel="icon" href="icon-32.png" sizes="32x32">
 <link rel="manifest" href="manifest.webmanifest">
@@ -38,7 +38,7 @@
       <div class="opening__slab" style="--w:11;--h:84%"><div class="reveal"><img src="img/foto/s6-weisse-rose.jpg" alt=""></div></div>
     </div>
     <div class="opening__stack">
-      <div class="block"><p class="label muted" style="margin-bottom:12px">GPG · Selbstlerneinheit · 9 Stationen</p>
+      <div class="block"><p class="label muted" style="margin-bottom:12px">GPG · Selbstlerneinheit · 10 Stationen</p>
         <h1 class="h-xl" id="titel">1933 bis 1945. Wie konnte das passieren?</h1></div>
       <div class="block block--plaster"><p class="lead">Zwölf Jahre, die Deutschland und Europa verändert haben. Du gehst den Weg Station für Station. Mit Fotos, Videos, Zeitzeugen und deinem Buch. Und am Ende jeder Stunde fragst du: Gibt es so etwas heute noch?</p></div>
       <div class="block block--sand" style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn" href="#karte">Zur Lernlandkarte</a><a class="btn-2" href="#so">So arbeitest du</a></div>
@@ -51,7 +51,7 @@
     <div class="track-head">
       <div style="display:grid;gap:12px;max-width:640px">
         <p class="label muted">Lernlandkarte</p>
-        <h2 class="h-l" id="karte-titel">Neun Stationen, ein Weg</h2>
+        <h2 class="h-l" id="karte-titel">Zehn Stationen, ein Weg</h2>
         <p>Wische nach links und rechts. Jede Station ist eine Stunde. Für jeden erledigten Schritt gibt es einen grünen Haken. Hat eine Station alle Haken, öffnet sich die nächste von selbst.</p>
       </div>
       <div class="track-hint" aria-hidden="false">
@@ -61,7 +61,7 @@
     </div>
 
     <div class="journey" id="journey" aria-label="Dein Weg durch die Stationen"></div>
-    <div class="track" id="track" tabindex="0" aria-label="Stationen 1 bis 9">
+    <div class="track" id="track" tabindex="0" aria-label="Stationen 1 bis 10">
       <!-- Stationen werden unten per Skript gefüllt, damit Status und Codes überall gleich sind -->
     </div>
     <div class="track-floor pavement"></div>
@@ -76,9 +76,9 @@
   <section class="section section--white" id="faden" aria-labelledby="faden-titel">
     <div class="wrap">
       <div style="display:grid;gap:12px;max-width:720px;margin-bottom:28px">
-        <p class="label muted">Sammle alle neun</p>
+        <p class="label muted">Sammle alle zehn</p>
         <h2 class="h-l" id="faden-titel">Der rote Faden</h2>
-        <p>Für jede Station, die du schaffst, wird hier ein Merksatz sichtbar. Am Ende hast du die ganze NS-Zeit in neun Sätzen. Die solltest du dir merken.</p>
+        <p>Für jede Station, die du schaffst, wird hier ein Merksatz sichtbar. Am Ende hast du die ganze NS-Zeit in zehn Sätzen. Die solltest du dir merken.</p>
       </div>
       <ol class="faden" id="faden-liste"></ol>
     </div>
@@ -125,7 +125,8 @@ document.addEventListener("DOMContentLoaded", function () {
     { n: 6, jahre: "1939–1945", titel: "Vernichtungskrieg und Zwangsarbeit", frage: "Was passiert, wenn Menschen nichts mehr wert sein sollen?", buch: "S. 94–97", foto: "s4-ost", w: .9, h: 30 },
     { n: 7, jahre: "1941–1945", titel: "Der Holocaust", frage: "Wie wurde aus Hass Völkermord, und warum erinnern wir uns?", buch: "S. 98–103", foto: "s5-stolpersteine", w: 1, h: 56 },
     { n: 8, jahre: "1933–1945", titel: "Widerstand", frage: "Wegschauen oder handeln?", buch: "S. 104–105", foto: "s6-weisse-rose", w: 1.1, h: 40 },
-    { n: 9, jahre: "1943–1949", titel: "Kriegsende und was bleibt", frage: "Was haben wir daraus gelernt?", buch: "S. 106–115", foto: "s7-truemmer", w: 1, h: 48 }
+    { n: 9, jahre: "1942–1945", titel: "Kriegswende und Kriegsende", frage: "Wie kam der Krieg nach Deutschland zurück?", buch: "S. 106–113", foto: "s7-dday", w: 1, h: 48 },
+    { n: 10, jahre: "1945–heute", titel: "Was bleibt?", frage: "Was haben wir daraus gelernt?", buch: "S. 110–115", foto: "s7-truemmer", w: 1.1, h: 38 }
   ];
   var track = document.getElementById("track");
   function render() {

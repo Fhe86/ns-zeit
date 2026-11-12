@@ -161,8 +161,8 @@
         <h2 class="h-l" id="b-t">Das Foto in der Zeitung</h2>
       </div>
       <div class="auftrag" data-min="4" data-brauchst="ipad">
-        <ol class="auftrag__schritte"><li><span>Lies Kapitel 2.</span></li><li><span>Schau dir das Foto genau an. Tippe darauf, um zu zoomen.</span></li><li><span>Beantworte die drei Fragen. Bei jeder Frage ist eine Antwort richtig.</span></li></ol>
-        <p class="auftrag__fertig">Fertig, wenn alle drei Fragen grün sind.</p>
+        <ol class="auftrag__schritte"><li><span>Lies Kapitel 2.</span></li><li><span>Foto-Detektiv: Tippe die vier roten Punkte im Foto an und lies, was sie zeigen.</span></li><li><span>Beantworte dann die Frage. Eine Antwort ist richtig.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn alle vier Details gefunden sind und die Frage grün ist.</p>
       </div>
       <div class="story">
         <div class="story__text">
@@ -172,19 +172,24 @@
           <p class="story__zitat">Paul starrt das Bild lange an. „Da will ich auch hin“, sagt er.</p>
           <p class="story__fiktion">Erfundene Figur, echtes Foto.</p>
         </div>
-        <div class="zoom"><img src="../img/foto/s1-hj-appell.jpg" alt="Reichsparteitag 1934: Tausende Hitlerjungen stehen in langen Reihen, vorne drei Jungen mit einer Fahne."></div>
+        <div class="spot" data-spot="s3.b.spot">
+          <div class="spot__bild"><img src="../img/foto/s1-hj-appell.jpg" alt="Reichsparteitag 1934: Tausende Hitlerjungen stehen in langen Reihen, vorne drei Jungen mit einer Fahne.">
+            <button type="button" class="spot__p" style="left:60%;top:42%" data-i="0"></button>
+            <button type="button" class="spot__p" style="left:79%;top:76%" data-i="1"></button>
+            <button type="button" class="spot__p" style="left:9%;top:50%" data-i="2"></button>
+            <button type="button" class="spot__p" style="left:28%;top:63%" data-i="3"></button>
+          </div>
+        </div>
       </div>
       <p class="credit">Reichsparteitag Nürnberg, September 1934, Appell der Hitlerjugend. Bundesarchiv, Bild 146-1981-160-05, CC BY-SA 3.0 de</p>
-      <div class="grid-3" style="margin-top:18px">
-        <div class="mc" data-mc="s3.b.mc1" data-right="oben"><p class="mc__frage">1. Von wo hat der Fotograf fotografiert?</p>
-          <div class="choices"><button class="choice" data-v="mitte">aus der Mitte der Jungen</button><button class="choice" data-v="oben">von leicht oben, mit Blick über die Masse</button><button class="choice" data-v="unten">vom Boden aus</button></div>
-          <p class="mc__tipp" hidden>Schau, wie weit man über die Reihen blicken kann.</p>
-          <p class="mc__erkl" hidden>Richtig. Von oben sieht man, wie riesig die Masse ist. Das wirkt mächtig.</p></div>
-        <div class="mc" data-mc="s3.b.mc2" data-right="masse"><p class="mc__frage">2. Warum sieht man kaum einzelne Gesichter?</p>
-          <div class="choices"><button class="choice" data-v="alt">weil das Foto alt ist</button><button class="choice" data-v="masse">weil der Einzelne nicht zählen soll, nur die Masse</button><button class="choice" data-v="dunkel">weil es dunkel war</button></div>
-          <p class="mc__tipp" hidden>Denk an den Trick „Wir-Gefühl“.</p>
-          <p class="mc__erkl" hidden>Richtig. Nicht Paul oder Max zählen, sondern „die Jugend“ als Ganzes.</p></div>
-        <div class="mc" data-mc="s3.b.mc3" data-right="dabei"><p class="mc__frage">3. Was soll Paul denken, wenn er das Foto sieht?</p>
+      <div class="grid-2" style="margin-top:18px;align-items:start">
+        <ol class="spot__info" data-for="s3.b.spot">
+          <li data-i="0" hidden><b>Die drei Jungen vorn.</b> Groß im Bild, aufrecht, sie singen. So soll ein Hitlerjunge aussehen: ein Vorbild für Jungen wie Paul.</li>
+          <li data-i="1" hidden><b>Die Fahne.</b> Darauf das Zeichen der Hitlerjugend. Fahnen und Zeichen machen aus Einzelnen eine Gruppe.</li>
+          <li data-i="2" hidden><b>Die Masse dahinter.</b> Tausende in gleicher Uniform, in geraden Reihen. Einzelne Gesichter erkennt man kaum. Nicht Paul oder Max zählen, sondern „die Jugend“.</li>
+          <li data-i="3" hidden><b>Der kniende Mann.</b> Schau genau: Er trägt keine Uniform und kniet vor den Reihen, vermutlich ein Fotograf. Der Parteitag war für Kameras geplant. Die Bilder kamen in Zeitungen und Wochenschauen (Buch S. 83, „Die Macht der Bilder“).</li>
+        </ol>
+        <div class="mc" data-mc="s3.b.mc3" data-right="dabei"><p class="mc__frage">Was soll Paul denken, wenn er das Foto sieht?</p>
           <div class="choices"><button class="choice" data-v="langweilig">„Das ist langweilig.“</button><button class="choice" data-v="dabei">„Da will ich dazugehören.“</button><button class="choice" data-v="leid">„Die tun mir leid.“</button></div>
           <p class="mc__tipp" hidden>Lies noch einmal, was Paul sagt.</p>
           <p class="mc__erkl" hidden>Genau. Das Foto ist Propaganda. Es wurde gemacht, damit Jungen wie Paul mitmachen wollen.</p></div>

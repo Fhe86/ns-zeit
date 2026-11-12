@@ -11,13 +11,13 @@
     { n: 1, code: "MACHT", jahr: "1933–1934", kern: "In nur 18 Monaten schafften die Nazis die Demokratie ab: Grundrechte, Parlament, Parteien, Gewerkschaften und freie Presse.", merke: ["30. Januar 1933: Hitler wird Reichskanzler. Nach dem Reichstagsbrand setzt eine Notverordnung die Grundrechte außer Kraft.", "23. März 1933: Mit dem Ermächtigungsgesetz darf Hitler Gesetze ohne das Parlament machen. Die Gewaltenteilung ist aufgehoben.", "Gleichschaltung: Gewerkschaften, Parteien, Länder und freie Presse werden verboten oder aufgelöst. 1934 ist Hitler „Führer“."], heft: {"daten": [["30. Jan. 1933", "Hitler wird Reichskanzler"], ["27. Feb. 1933", "Reichstagsbrand, danach Notverordnung"], ["23. März 1933", "Ermächtigungsgesetz"], ["2. Mai 1933", "Verbot der Gewerkschaften"], ["Juli 1933", "Die NSDAP ist die einzige Partei"], ["Aug. 1934", "Hitler wird „Führer“"]], "begriffe": [["Notverordnung (Reichstagsbrandverordnung)", "setzte die Grundrechte außer Kraft, z. B. Meinungs- und Pressefreiheit"], ["Ermächtigungsgesetz", "erlaubte Hitler, ohne den Reichstag Gesetze zu beschließen"], ["Gewaltenteilung", "Parlament, Regierung und Gerichte kontrollieren sich gegenseitig, die Nazis schafften sie ab"], ["Gleichschaltung", "alle Einrichtungen müssen sich der NSDAP unterordnen, unabhängige werden verboten"]], "heute": "Das Grundgesetz schützt die Demokratie: Gewaltenteilung (Art. 20). Menschenwürde und Demokratie dürfen nie abgeschafft werden (Art. 79).", "text": "Am 30. Januar 1933 wurde Hitler Reichskanzler. Nach dem Reichstagsbrand setzte eine Notverordnung die Grundrechte außer Kraft, die SA verschleppte Tausende Gegner. Mit dem Ermächtigungsgesetz vom 23. März 1933 durfte Hitler Gesetze ohne das Parlament beschließen. Danach wurden Gewerkschaften, Parteien, Länder und die freie Presse verboten oder gleichgeschaltet. Im August 1934 war Hitler „Führer“ mit aller Macht.", "frage": "Wie konnte Hitler die Demokratie in nur 18 Monaten abschaffen?", "foto": "s0-reichstagsbrand"}, titel: "In 18 Monaten zur Diktatur", teile: [
       { href: "#einstieg", name: "Einstieg", need: ["s1.e.sort.ok"] },
       { href: "#a", name: "Der 30. Januar", need: ["s1.a.buch"] },
-      { href: "#b", name: "Das Parlament", need: ["s1.b.mc1", "s1.b.mc2"] },
+      { href: "#b", name: "Das Parlament", need: ["s1.b.mc1", "s1.b.ton.satz"] },
       { href: "#c", name: "Treppe zur Diktatur", need: ["s1.c.order.ok", "s1.c.buch"] },
       { href: "#d", name: "Gleichschaltung", need: ["s1.d.buch", "s1.d.satz"] },
       { href: "#heute", name: "Heute-Check", need: ["s1.h.1", "s1.h.2"] },
       { href: "#stufe", name: "Stufen-Abstimmung", need: ["s1.x.stufe"] } ] },
     { n: 2, code: "WELTBILD", jahr: "1933–1945", kern: "Das Weltbild der Nazis teilte Menschen in „wertvoll“ und „minderwertig“ ein. Daraus folgten Ausgrenzung, Krieg und Völkermord.", merke: ["Eine Ideologie ist eine Sicht auf die Welt, die vorgibt, was richtig und falsch ist, und für alles einfache Lösungen hat.", "Bausteine der NS-Ideologie: „Rassenlehre“, Antisemitismus (Judenhass), „Volk ohne Raum“ (Lebensraum im Osten) und „Volksgemeinschaft“.", "Wer nicht zur „Volksgemeinschaft“ passte, wurde zum Feind erklärt und bestraft."], heft: {"daten": [["1926", "Buch „Volk ohne Raum“"], ["1933", "Machtergreifung, die Ideologie wird Staatspolitik"], ["ab 1933", "„Rassenkunde“ in den Schulen"], ["1935", "Nürnberger Gesetze"]], "begriffe": [["Ideologie", "Weltanschauung, die vorgibt, was richtig und falsch ist, und Probleme scheinbar einfach löst"], ["„Rassenlehre“", "falsche Behauptung, Menschen ließen sich in höher- und minderwertige „Rassen“ einteilen"], ["Antisemitismus", "Hass auf Jüdinnen und Juden"], ["„Volksgemeinschaft“", "Gemeinschaft, der sich jeder völlig unterordnen muss, wer nicht passt, wird ausgestoßen"]], "heute": "Freund-Feind-Denken und die Einteilung von Menschen nach Abstammung erkennen. Art. 1 GG: Die Würde jedes Menschen ist unantastbar. Art. 3 GG: Niemand darf wegen seiner Abstammung benachteiligt werden.", "text": "Die Nazis hatten ein sehr einfaches Weltbild: Wer nicht für sie war, war gegen sie. Im Mittelpunkt stand die falsche „Rassenlehre“, die sich vor allem gegen Juden richtete. Mit „Volk ohne Raum“ begründeten sie den Anspruch, im Osten neues Land zu erobern. Jeder sollte sich der „Volksgemeinschaft“ unterordnen, wer nicht passte, wurde ausgestoßen. Aus diesem Weltbild folgten später Ausgrenzung, Krieg und Völkermord.", "frage": "Was glaubten die Nazis, und warum war dieses Weltbild so gefährlich?", "foto": "s0-einvolk"}, titel: "Das Weltbild der Nazis", teile: [
-      { href: "#einstieg", name: "Einstieg", need: ["s2.e.mc"] },
+      { href: "#einstieg", name: "Einstieg", need: ["s2.e.spot", "s2.e.mc"] },
       { href: "#a", name: "Ideologie", need: ["s2.a.buch"] },
       { href: "#b", name: "Die Bausteine", need: ["s2.b.match.ok"] },
       { href: "#c", name: "Volksgemeinschaft", need: ["s2.c.mc", "s2.c.gefuehl"] },
@@ -28,13 +28,13 @@
       { href: "#einstieg", name: "Einstieg", need: ["s3.e.post"] },
       { href: "#radio", name: "Pauls Radio", need: ["s3.a.buch"] },
       { href: "#tricks", name: "5 Tricks", need: ["s3.a.match.ok"] },
-      { href: "#b", name: "Das Foto", need: ["s3.b.mc1", "s3.b.mc2", "s3.b.mc3"] },
+      { href: "#b", name: "Das Foto", need: ["s3.b.spot", "s3.b.mc3"] },
       { href: "#c", name: "Jungvolk", need: ["s3.c.buch", "s3.c.sort.ok"] },
       { href: "#preis", name: "Der Preis", need: ["s3.c.satz"] },
       { href: "#heute", name: "Heute-Check", need: ["s3.h.1", "s3.h.2"] },
       { href: "#ecken", name: "Vier Ecken", need: ["s3.d.ecke"] } ] },
     { n: 4, code: "STUFE", jahr: "1933–1941", kern: "Wer nicht dazugehören sollte, verlor Schritt für Schritt alle Rechte.", merke: ["1933 entstand in Dachau das erste KZ, zuerst für politische Gegner.", "Juden verloren Schritt für Schritt ihre Rechte: 1933 Boykott, 1935 Nürnberger Gesetze, 1938 Pogromnacht.", "Viele schauten weg, weil jede Stufe nur ein bisschen schlimmer war."], heft: {"daten": [["März 1933", "Erstes KZ in Dachau"], ["1. April 1933", "Boykott jüdischer Geschäfte"], ["1935", "Nürnberger Gesetze"], ["9./10. Nov. 1938", "Novemberpogrom"], ["1941", "Judenstern ab 6 Jahren"]], "begriffe": [["Konzentrationslager (KZ)", "Lager, in dem Menschen ohne Gericht eingesperrt, gequält und ermordet wurden"], ["Nürnberger Gesetze", "Gesetze von 1935, die Juden ihre Bürgerrechte nahmen"], ["Pogrom", "gewaltsamer Angriff auf eine Minderheit"], ["Sündenbock", "eine Gruppe wird für alle Probleme verantwortlich gemacht"]], "heute": "Sündenbock und Entrechtung in kleinen Schritten erkennen. Art. 3 GG: Niemand darf wegen Abstammung oder Glauben benachteiligt werden. Art. 16 GG: Die deutsche Staatsangehörigkeit darf nicht entzogen werden.", "text": "Zuerst verfolgten die Nationalsozialisten ihre politischen Gegner und sperrten sie in Konzentrationslager wie Dachau. Die Juden wurden Schritt für Schritt entrechtet: 1933 Boykott und Berufsverbote, 1935 Nürnberger Gesetze, 1938 Novemberpogrom, 1941 Judenstern. Viele schauten weg, weil jede Stufe nur ein bisschen schlimmer war als die davor.", "frage": "Wie werden aus Nachbarn Feinde gemacht, Schritt für Schritt?", "foto": "s2-boykott"}, titel: "Wer nicht dazugehört", teile: [
-      { href: "#einstieg", name: "Einstieg", need: ["s4.e.wahl"] },
+      { href: "#einstieg", name: "Einstieg", need: ["s4.v.seit", "s4.e.wahl"] },
       { href: "#a", name: "Dachau", need: ["s4.a.buch", "s4.a.satz"] },
       { href: "#b", name: "Stufe für Stufe", need: ["s4.b.buch", "s4.b.order.ok"] },
       { href: "#c", name: "Pogromnacht", need: ["s4.c.mc", "s4.c.gefuehl"] },
@@ -57,25 +57,32 @@
       { href: "#schreib", name: "Schreibgespräch", need: ["s6.d.grund"] } ] },
     { n: 7, code: "NAMEN", jahr: "1941–1945", kern: "Über sechs Millionen Juden wurden ermordet. Wir erinnern an jeden Einzelnen.", merke: ["Über sechs Millionen Juden wurden ermordet. Das nennt man Holocaust oder Shoah.", "Der Weg dorthin: Gettos, Massenerschießungen, Vernichtungslager wie Auschwitz.", "Stolpersteine und Erinnerungszeichen erinnern an jeden Menschen mit Namen."], heft: {"daten": [["ab 1939", "Gettos im besetzten Polen"], ["ab Sommer 1941", "Massenerschießungen im Osten"], ["20. Jan. 1942", "Wannsee-Konferenz"], ["1942–1945", "Vernichtungslager, z. B. Auschwitz"], ["27. Jan. 1945", "Befreiung von Auschwitz, heute Gedenktag"]], "begriffe": [["Holocaust / Shoah", "der Mord an über sechs Millionen europäischen Juden"], ["Getto", "abgesperrtes Stadtviertel, in das Juden gezwungen wurden"], ["Vernichtungslager", "Lager, das nur zum Ermorden von Menschen gebaut wurde"], ["Stolperstein", "Gedenkstein im Gehweg vor dem letzten Wohnort eines Opfers"]], "heute": "Erinnern statt „Schlussstrich“. Holocaustleugnung ist in Deutschland strafbar. Art. 1 GG ist die Antwort auf den Holocaust.", "text": "Der Holocaust (hebräisch: Shoah) war der geplante Mord an über sechs Millionen europäischen Juden. Auch Sinti und Roma, Menschen mit Behinderungen und andere Gruppen wurden ermordet. Aus Ausgrenzung wurden Gettos, Massenerschießungen und schließlich Vernichtungslager wie Auschwitz. Wir erinnern an die Opfer mit ihren Namen, damit so etwas nie wieder geschieht.", "frage": "Wie wurde aus Hass ein Völkermord, und warum erinnern wir uns bis heute daran?", "foto": "s5-stolpersteine"}, titel: "Der Holocaust", teile: [
       { href: "#einstieg", name: "Einstieg", need: ["s7.e.alter"] },
-      { href: "#a", name: "Rudis Eltern", need: ["s7.a.mc"] },
+      { href: "#a", name: "Rudis Eltern", need: ["s7.a.ton.satz", "s7.a.mc"] },
       { href: "#b", name: "Vom Getto zum Lager", need: ["s7.b.order.ok", "s7.b.satz"] },
       { href: "#c", name: "Otto Schwerdt", need: ["s7.c.buch", "s7.c.mc"] },
       { href: "#heute", name: "Heute-Check", need: ["s7.h.1", "s7.h.2", "s7.h.3"] },
       { href: "#runde", name: "Ruhige Runde", need: ["s7.d.anfang"] } ] },
     { n: 8, code: "MUT", jahr: "1933–1945", kern: "Nur wenige hatten den Mut zum Widerstand, oft bezahlten sie mit ihrem Leben.", merke: ["Die meisten Deutschen machten mit oder schwiegen.", "Einige leisteten Widerstand: die Weiße Rose, Georg Elser, Stauffenberg, die Edelweißpiraten.", "Zivilcourage kannst du auch heute zeigen, jeden Tag."], heft: {"daten": [["8. Nov. 1939", "Georg Elser: Bombe im Münchner Bürgerbräukeller"], ["1942/43", "Flugblätter der Weißen Rose"], ["22. Feb. 1943", "Hinrichtung von Hans und Sophie Scholl"], ["20. Juli 1944", "Attentat von Stauffenberg"], ["Nov. 1944", "Edelweißpiraten in Köln erhängt"]], "begriffe": [["Widerstand", "gegen eine Herrschaft handeln, die man ablehnt"], ["Zivilcourage", "sich für andere einsetzen, auch wenn es Nachteile bringt"], ["Weiße Rose", "Münchner Studentengruppe, die Flugblätter gegen Hitler verteilte"], ["Edelweißpiraten", "Jugendliche, die sich der Hitlerjugend verweigerten"]], "heute": "Zivilcourage geht jeden Tag: hinschauen, Hilfe holen (110), Betroffene unterstützen. Art. 20 Abs. 4 GG: Recht auf Widerstand gegen alle, die die Demokratie abschaffen wollen.", "text": "Die meisten Deutschen machten mit oder schwiegen. Trotzdem leisteten Menschen Widerstand: Einzelne wie Georg Elser, Studierende wie die Weiße Rose, Geistliche wie Rupert Mayer, Offiziere um Stauffenberg und Jugendliche wie die Edelweißpiraten. Viele bezahlten mit ihrem Leben. Zivilcourage heißt heute: sich für andere einsetzen, auch wenn es unbequem ist.", "frage": "Wegschauen oder handeln? Was trieb Menschen an, ihr Leben zu riskieren?", "foto": "s6-weisse-rose"}, titel: "Widerstand", teile: [
       { href: "#einstieg", name: "Einstieg", need: ["s8.e.wahl"] },
-      { href: "#a", name: "Ein Brief ohne Absender", need: ["s8.a.match.ok"] },
+      { href: "#a", name: "Ein Brief ohne Absender", need: ["s8.a.spot", "s8.a.match.ok"] },
       { href: "#b", name: "Edelweißpiraten", need: ["s8.b.buch", "s8.b.mc"] },
       { href: "#c", name: "Viele Formen von Mut", need: ["s8.c.sort.ok", "s8.c.mc"] },
       { href: "#heute", name: "Heute-Check", need: ["s8.h.1", "s8.h.2", "s8.h.3"] },
       { href: "#fishbowl", name: "Fishbowl", need: ["s8.d.pos"] } ] },
-    { n: 9, code: "GRUNDGESETZ", jahr: "1943–1949", kern: "Nach dem Krieg bekam Deutschland mit dem Grundgesetz eine Demokratie, die sich selbst schützt.", merke: ["Am 8. Mai 1945 endete der Krieg in Europa. Über 60 Millionen Menschen waren tot.", "Millionen Deutsche flohen oder wurden vertrieben, viele kamen nach Bayern.", "1949 kam das Grundgesetz: Menschenwürde, Demokratie und Rechtsstaat für alle."], heft: {"daten": [["Feb. 1943", "Niederlage in Stalingrad"], ["6. Juni 1944", "Landung der Alliierten in der Normandie"], ["29. April 1945", "Befreiung des KZ Dachau"], ["8. Mai 1945", "Kapitulation, Kriegsende in Europa"], ["2. Sept. 1945", "Kapitulation Japans, Ende des Zweiten Weltkriegs"], ["23. Mai 1949", "Das Grundgesetz tritt in Kraft"]], "begriffe": [["Kapitulation", "ein Staat gibt den Krieg auf"], ["Flucht und Vertreibung", "Millionen Deutsche verloren ab 1945 ihre Heimat im Osten"], ["Grundgesetz", "die Verfassung der Bundesrepublik Deutschland seit 1949"], ["Wehrhafte Demokratie", "die Demokratie kann sich gegen ihre Feinde wehren, z. B. durch Parteiverbote"]], "heute": "Das Grundgesetz ist die Antwort auf die NS-Zeit: Menschenwürde, Demokratie, Rechtsstaat. Art. 1 und 20 dürfen nie geändert werden (Art. 79).", "text": "Nach den Niederlagen in Stalingrad (1943) und der Landung der Alliierten in der Normandie (1944) wurde die Wehrmacht zurückgedrängt. Am 8. Mai 1945 kapitulierte Deutschland, am 2. September 1945 Japan. Über zwölf Millionen Deutsche flohen oder wurden vertrieben. Das Grundgesetz von 1949 ist die Antwort auf die NS-Zeit: Menschenwürde, Demokratie und Rechtsstaat, geschützt als wehrhafte Demokratie.", "frage": "Wie endete der Krieg, und was haben wir daraus gelernt?", "foto": "s7-truemmer"}, titel: "Kriegsende und was bleibt", teile: [
+    { n: 9, code: "WENDE", jahr: "1942–1945", kern: "Ab 1943 wendete sich der Krieg. Er kam nach Deutschland zurück und endete am 8. Mai 1945 mit der Kapitulation.", merke: ["Stalingrad 1943 und die Landung in der Normandie 1944 waren die Wende im Krieg.", "Bomben zerstörten deutsche Städte, Jugendliche mussten als Flakhelfer kämpfen.", "Am 8. Mai 1945 endete der Krieg in Europa, am 2. September 1945 auch in Japan."], heft: {"daten": [["Feb. 1943", "Niederlage in Stalingrad"], ["18. Feb. 1943", "Goebbels ruft den „totalen Krieg“ aus"], ["6. Juni 1944", "Landung der Alliierten in der Normandie"], ["29. April 1945", "US-Soldaten befreien das KZ Dachau"], ["8. Mai 1945", "Kapitulation, Kriegsende in Europa"], ["2. Sept. 1945", "Kapitulation Japans, Ende des Zweiten Weltkriegs"]], "begriffe": [["Kriegswende", "Stalingrad (Osten) und Normandie (Westen): ab jetzt wird die Wehrmacht zurückgedrängt"], ["Totaler Krieg", "alle Menschen und alle Kräfte sollen nur noch dem Krieg dienen"], ["Kapitulation", "ein Staat gibt den Krieg auf"], ["Befreiung", "Ende von Krieg, Diktatur und Morden in den Lagern"]], "heute": "Aus Feinden wurden Partner: Deutschland, Frankreich und Polen arbeiten heute in der EU zusammen. Der 8. Mai gilt als Tag der Befreiung.", "text": "Nach den Niederlagen in Stalingrad (1943) und der Landung der Alliierten in der Normandie (1944) wurde die Wehrmacht zurückgedrängt. Goebbels rief den „totalen Krieg“ aus. Bomben zerstörten deutsche Städte, Jugendliche mussten als Flakhelfer kämpfen. Am 8. Mai 1945 kapitulierte Deutschland, am 2. September 1945 nach den Atombomben auf Hiroshima und Nagasaki auch Japan.", "frage": "Wie kam der Krieg nach Deutschland zurück, und wie endete er?", "foto": "s7-dday"}, titel: "Kriegswende und Kriegsende", teile: [
       { href: "#einstieg", name: "Einstieg", need: ["s9.e.mc"] },
-      { href: "#a", name: "Das Ende", need: ["s9.a.order.ok", "s9.a.buch"] },
-      { href: "#b", name: "Ankunft in Bayern", need: ["s9.b.buch", "s9.b.mc"] },
-      { href: "#c", name: "Das Grundgesetz", need: ["s9.c.match.ok"] },
-      { href: "#heute", name: "Demokratie-Radar", need: ["s9.r.1", "s9.r.2", "s9.r.3", "s9.r.4", "s9.r.5", "s9.r.6", "s9.r.7", "s9.r.8", "s9.r.9"] },
-      { href: "#abschluss", name: "Abschluss", need: ["s9.d.lehre"] } ] }
+      { href: "#a", name: "Stalingrad", need: ["s9.a.buch", "s9.a.ton.satz"] },
+      { href: "#b", name: "Der Krieg kommt zurück", need: ["s9.b.buch", "s9.a.order.ok"] },
+      { href: "#c", name: "Pazifik", need: ["s9.c.mc", "s9.c.meinung"] },
+      { href: "#heute", name: "Heute-Check", need: ["s9.h.1", "s9.h.2"] },
+      { href: "#linie", name: "Positionslinie", need: ["s9.d.befreit"] } ] },
+    { n: 10, code: "GRUNDGESETZ", jahr: "1945–heute", kern: "Das Grundgesetz ist die Antwort auf die NS-Zeit: Würde, Demokratie und Rechtsstaat für alle.", merke: ["Millionen Deutsche flohen oder wurden vertrieben, viele kamen nach Bayern.", "1949 kam das Grundgesetz: Menschenwürde, Demokratie und Rechtsstaat für alle.", "Diese drei Säulen dürfen nie abgeschafft werden. Die Demokratie wehrt sich gegen ihre Feinde."], heft: {"daten": [["1944 bis 1946", "Über zwölf Millionen Deutsche fliehen oder werden vertrieben"], ["1949", "In Bayern ist etwa jeder Fünfte ein Flüchtling oder Vertriebener"], ["23. Mai 1949", "Das Grundgesetz tritt in Kraft"], ["1952", "Das Bundesverfassungsgericht beschreibt die freiheitliche demokratische Grundordnung"]], "begriffe": [["Flucht und Vertreibung", "Millionen Deutsche verloren ab 1945 ihre Heimat im Osten"], ["Grundgesetz", "die Verfassung der Bundesrepublik Deutschland seit 1949"], ["FDGO", "freiheitliche demokratische Grundordnung: Würde, Demokratie, Rechtsstaat"], ["Wehrhafte Demokratie", "die Demokratie kann sich gegen ihre Feinde wehren, z. B. durch Parteiverbote"]], "heute": "Das Grundgesetz ist die Antwort auf die NS-Zeit: Menschenwürde, Demokratie, Rechtsstaat. Art. 1 und 20 dürfen nie geändert werden (Art. 79).", "text": "Über zwölf Millionen Deutsche flohen oder wurden vertrieben, viele kamen nach Bayern. Das Grundgesetz von 1949 ist die Antwort auf die NS-Zeit. Es ruht auf drei Säulen: Würde des Menschen, Demokratie und Rechtsstaat. Diese Grundordnung darf nie abgeschafft werden. Die Demokratie kann sich gegen ihre Feinde wehren.", "frage": "Was haben wir aus der NS-Zeit gelernt?", "foto": "s7-truemmer"}, titel: "Was bleibt?", teile: [
+      { href: "#einstieg", name: "Zeitstrahl", need: ["s10.e.order.ok"] },
+      { href: "#a", name: "Ankunft in Bayern", need: ["s10.a.buch", "s10.a.mc"] },
+      { href: "#b", name: "Drei Säulen", need: ["s10.b.sort.ok"] },
+      { href: "#c", name: "Das Grundgesetz", need: ["s10.c.match.ok"] },
+      { href: "#heute", name: "Demokratie-Radar", need: ["s10.r.1", "s10.r.2", "s10.r.3", "s10.r.4", "s10.r.5", "s10.r.6", "s10.r.7", "s10.r.8", "s10.r.9"] },
+      { href: "#abschluss", name: "Abschluss", need: ["s10.d.lehre"] } ] }
   ];
 
   function load() {
@@ -460,6 +467,77 @@
         z.style.setProperty("--zy", ((e.clientY - r.top) / r.height * 100) + "%");
         z.classList.toggle("is-zoom");
       });
+    });
+  }
+
+  /* ---------- Originalton: Aufnahme lokal, Text läuft mit, gesprochene Zeile leuchtet ----------
+     <div class="ton" data-src="../ton/x.mp3" data-key="s1.ton" [data-pick="s1.ton.satz" data-right="2"]>
+       <ol class="ton__text"><li data-t="0">…</li>…</ol><p class="ton__tipp" hidden>…</p><p class="ton__erkl" hidden>…</p></div>
+     Ohne data-pick: Zeile antippen = dorthin springen. Mit data-pick: Zeile antippen = Antwort (data-right: Index, mehrere mit |). Zeilen mit class="ton__geraeusch" sind nur Hinweise. */
+  function initTon() {
+    document.querySelectorAll(".ton[data-src]").forEach(function (box) {
+      var key = box.dataset.key, pick = box.dataset.pick, right = box.dataset.right;
+      var lines = [].slice.call(box.querySelectorAll(".ton__text li"));
+      var a = new Audio(); a.preload = "metadata"; a.src = box.dataset.src;
+      var head = document.createElement("div"); head.className = "ton__kopf";
+      head.innerHTML = '<button type="button" class="ton__pp" aria-label="Abspielen"><span class="play" aria-hidden="true"></span></button><div class="ton__track" role="slider" aria-label="Stelle in der Aufnahme" tabindex="0"><div class="ton__fill"></div></div><span class="ton__zeit">0:00</span>';
+      box.insertBefore(head, box.firstChild);
+      var pp = head.querySelector(".ton__pp"), fill = head.querySelector(".ton__fill"), zeit = head.querySelector(".ton__zeit"), track = head.querySelector(".ton__track");
+      function gehoert() { if (key && NS.get(key) !== "gehört") { NS.set(key, "gehört"); box.classList.add("is-seen"); progress(); } }
+      pp.addEventListener("click", function () {
+        if (a.paused) a.play().catch(function () { zeit.textContent = "lädt nicht"; }); else a.pause();
+      });
+      a.addEventListener("play", function () { box.classList.add("is-on"); pp.setAttribute("aria-label", "Pause"); });
+      a.addEventListener("pause", function () { box.classList.remove("is-on"); pp.setAttribute("aria-label", "Abspielen"); });
+      a.addEventListener("loadedmetadata", function () { zeit.textContent = "0:00 / " + mmss(a.duration); });
+      a.addEventListener("timeupdate", function () {
+        var t = a.currentTime, d = a.duration || 1, cur = -1;
+        fill.style.width = Math.min(100, t / d * 100) + "%"; zeit.textContent = mmss(t) + " / " + mmss(d);
+        lines.forEach(function (l, i) { if (t + 0.15 >= Number(l.dataset.t)) cur = i; });
+        lines.forEach(function (l, i) { l.classList.toggle("is-cur", i === cur && !a.paused); });
+        if (t / d > 0.9) gehoert();
+      });
+      a.addEventListener("ended", function () { gehoert(); lines.forEach(function (l) { l.classList.remove("is-cur"); }); });
+      track.addEventListener("click", function (e) { if (!a.duration) return; var r = track.getBoundingClientRect(); a.currentTime = (e.clientX - r.left) / r.width * a.duration; });
+      var tipp = box.querySelector(".ton__tipp"), erkl = box.querySelector(".ton__erkl");
+      function richtig(l) { l.classList.add("is-right"); if (erkl) erkl.hidden = false; if (tipp) tipp.hidden = true; }
+      lines.forEach(function (l, i) {
+        l.tabIndex = 0; l.setAttribute("role", "button");
+        l.addEventListener("click", function () {
+          if (!pick) { a.currentTime = Number(l.dataset.t); if (a.paused) a.play().catch(function () {}); return; }
+          if (right.split("|").indexOf(String(i)) > -1) { NS.set(pick, l.textContent.trim()); richtig(l); progress(); }
+          else { l.classList.add("is-wrong"); setTimeout(function () { l.classList.remove("is-wrong"); }, 900); if (tipp) tipp.hidden = false; }
+        });
+        l.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); l.click(); } });
+      });
+      if (pick && NS.get(pick)) lines.forEach(function (l) { if (l.textContent.trim() === NS.get(pick)) richtig(l); });
+      if (key && NS.get(key) === "gehört") box.classList.add("is-seen");
+    });
+  }
+
+  /* ---------- Foto-Detektiv: Punkte im Bild antippen, Erklärung erscheint. Fertig, wenn alle gefunden. ----------
+     <div class="spot" data-spot="key"><div class="spot__bild"><img><button class="spot__p" style="left:30%;top:40%" data-i="0"></button>…</div>
+       <ol class="spot__info"><li data-i="0" hidden><b>…</b> …</li>…</ol></div> */
+  function initSpot() {
+    document.querySelectorAll("[data-spot]").forEach(function (box) {
+      var k = box.dataset.spot, seen = NS.get(k + ".i") || [], pts = box.querySelectorAll(".spot__p"), liste = box.querySelector(".spot__info") || document.querySelector('.spot__info[data-for="' + k + '"]'), infos = liste ? liste.querySelectorAll("li") : [];
+      var stand = document.createElement("p"); stand.className = "spot__stand"; box.appendChild(stand);
+      function zeig(i, neu) {
+        var p = box.querySelector('.spot__p[data-i="' + i + '"]'), li = liste && liste.querySelector('li[data-i="' + i + '"]');
+        if (p) { p.classList.add("is-found"); p.setAttribute("aria-pressed", "true"); }
+        if (li) { li.hidden = false; if (neu) li.scrollIntoView({ block: "nearest", behavior: "smooth" }); }
+        if (seen.indexOf(i) < 0) { seen.push(i); NS.set(k + ".i", seen.slice()); }
+        stand.textContent = seen.length + " von " + pts.length + " Details gefunden" + (seen.length === pts.length ? ". Stark beobachtet!" : "");
+        stand.className = "spot__stand" + (seen.length === pts.length ? " ok" : "");
+        if (seen.length === pts.length && NS.get(k) !== "gefunden") { NS.set(k, "gefunden"); progress(); }
+      }
+      pts.forEach(function (p, n) {
+        p.textContent = n + 1; p.setAttribute("aria-label", "Detail " + (n + 1) + " ansehen");
+        p.addEventListener("click", function () { zeig(p.dataset.i, true); });
+      });
+      infos.forEach(function (li) { li.querySelector("b") && li.insertAdjacentHTML("afterbegin", '<span class="spot__nr">' + (Number(li.dataset.i) + 1) + "</span>"); });
+      stand.textContent = "0 von " + pts.length + " Details gefunden. Tippe die Punkte im Bild an.";
+      seen.slice().forEach(function (i) { zeig(i, false); });
     });
   }
 
@@ -883,7 +961,7 @@
   NS.namensFenster = namensFenster;
 
   /* ---------- Abstimmung am Ende der Station: geht anonym an die Tafel (nur Summen) ---------- */
-  var ABSTIMMUNG = { 1: "s1.x.stufe", 2: "s2.x.grund", 3: "s3.d.ecke", 4: "s4.d.pos", 5: "s5.d.wahl", 6: "s6.d.grund", 8: "s8.d.pos", 9: "s9.d.lehre" };
+  var ABSTIMMUNG = { 1: "s1.x.stufe", 2: "s2.x.grund", 3: "s3.d.ecke", 4: "s4.d.pos", 5: "s5.d.wahl", 6: "s6.d.grund", 8: "s8.d.pos", 9: "s9.d.befreit", 10: "s10.d.lehre" };
   function stimmeSenden() {
     var n = NS.current, key = ABSTIMMUNG[n];
     if (!LIVE || !key) return;
@@ -948,6 +1026,6 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    initReveal(); initAnswers(); initChoices(); initMatch(); initSorter(); initOrder(); initBars(); initVideos(); initClips(); initFind(); initSatz(); initMC(); initZoom(); progress(); initLive();
+    initReveal(); initAnswers(); initChoices(); initMatch(); initSorter(); initOrder(); initBars(); initVideos(); initClips(); initFind(); initSatz(); initMC(); initTon(); initSpot(); initZoom(); progress(); initLive();
   });
 })();

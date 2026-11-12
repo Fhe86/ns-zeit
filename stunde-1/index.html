@@ -112,8 +112,8 @@
         <h2 class="h-l" id="b-t">23. März 1933: Das Parlament gibt seine Macht ab</h2>
       </div>
       <div class="auftrag" data-min="5" data-brauchst="buch:Buch S. 72/73|ipad">
-        <ol class="auftrag__schritte"><li><span>Lies Kapitel 2 und den Kasten mit Otto Wels.</span></li><li><span>Schau dir im Buch <b>S. 73</b> das Foto <b>73.2</b> an: Wer steht vor dem Gebäude?</span></li><li><span>Beantworte die zwei Fragen.</span></li></ol>
-        <p class="auftrag__fertig">Fertig, wenn beide Fragen grün sind.</p>
+        <ol class="auftrag__schritte"><li><span>Lies Kapitel 2 und den Kasten mit Otto Wels.</span></li><li><span>Schau dir im Buch <b>S. 73</b> das Foto <b>73.2</b> an: Wer steht vor dem Gebäude?</span></li><li><span>Beantworte Frage 1. Hör dann Otto Wels im Original (Kopfhörer!) und löse Aufgabe 2.</span></li></ol>
+        <p class="auftrag__fertig">Fertig, wenn Frage 1 grün ist und du den richtigen Satz gefunden hast.</p>
       </div>
       <div class="mauer" data-mauer></div>
       <div class="story">
@@ -132,10 +132,21 @@
           <div class="choices"><button class="choice" data-v="wahl">Er durfte sich selbst wählen lassen.</button><button class="choice" data-v="ohne">Er durfte Gesetze machen, ohne das Parlament zu fragen.</button><button class="choice" data-v="krieg">Er durfte sofort Krieg führen.</button></div>
           <p class="mc__tipp" hidden>Lies im Buch S. 72 den letzten Satz des Abschnitts.</p>
           <p class="mc__erkl" hidden>Richtig. Damit war die Gewaltenteilung aufgehoben. Hitler hatte die uneingeschränkte Macht (Buch S. 72).</p></div>
-        <div class="mc" data-mc="s1.b.mc2" data-right="angst"><p class="mc__frage">2. Warum stimmten so viele Abgeordnete zu?</p>
-          <div class="choices"><button class="choice" data-v="ueberzeugt">Alle waren von Hitler überzeugt.</button><button class="choice" data-v="angst">Die SA stand im Saal, viele hatten Angst. Die KPD durfte gar nicht abstimmen.</button><button class="choice" data-v="geld">Sie bekamen Geld dafür.</button></div>
-          <p class="mc__tipp" hidden>Schau dir das Foto 73.2 im Buch an.</p>
-          <p class="mc__erkl" hidden>Richtig. Das Buch sagt: „unter dem Druck der Nationalsozialisten“. Die SA war als „Saalschutz“ im Gebäude (73.2).</p></div>
+        <div class="stack">
+          <p class="task__q"><b>2</b>Hör Otto Wels im Original. Dann tippe den Satz an, in dem er sagt, dass die Zeitungen nicht mehr frei berichten dürfen.</p>
+          <div class="ton" data-src="../ton/s1-wels.mp3" data-key="s1.b.ton" data-pick="s1.b.ton.satz" data-right="4">
+            <ol class="ton__text">
+              <li data-t="1">„Freiheit und Leben kann man uns nehmen, die Ehre nicht.“</li>
+              <li data-t="15.6">„Nach den Verfolgungen, die die Sozialdemokratische Partei in der letzten Zeit erfahren hat, wird niemand von ihr verlangen können, dass sie für das hier eingebrachte Ermächtigungsgesetz stimmt.“</li>
+              <li data-t="36.5">„Niemals noch, seit es einen deutschen Reichstag gibt, ist die Kontrolle der öffentlichen Angelegenheiten durch die gewählten Vertreter des Volkes in solchem Maße ausgeschaltet worden, wie das jetzt geschieht …“</li>
+              <li data-t="53.7">„… und wie das durch das neue Ermächtigungsgesetz noch mehr geschehen soll.“</li>
+              <li data-t="61.6">„Eine solche Allmacht der Regierung muss sich umso schwerer auswirken, als auch die Presse jeder Bewegungsfreiheit entbehrt.“</li>
+            </ol>
+            <p class="ton__tipp" hidden>Noch nicht. Achte auf das Wort „Presse“, so nannte man damals Zeitungen.</p>
+            <p class="ton__erkl" hidden>Richtig. Wels sagt: Das Parlament kann die Regierung nicht mehr kontrollieren, und die Zeitungen auch nicht. Wenige Monate später gab es keine freie Zeitung mehr (Kapitel 4). Diese Rede steht auch im Buch auf S. 72 (Quelle 72.2).</p>
+            <p class="ton__quelle">Otto Wels (SPD) im Reichstag, 23. März 1933. Tonaufnahme, nur teilweise erhalten, für den Unterricht gekürzt. Gemeinfrei, Wikimedia Commons</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -291,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
   /* Demokratie-Mauer: Jeder Baustein fällt, sobald der passende Schritt richtig gelöst ist. */
   var STEINE = [
     { name: "Grundrechte", wann: "Feb. 1933", key: ["s1.a.buch"] },
-    { name: "Parlament", wann: "März 1933", key: ["s1.b.mc1", "s1.b.mc2"] },
+    { name: "Parlament", wann: "März 1933", key: ["s1.b.mc1", "s1.b.ton.satz"] },
     { name: "Länder", wann: "April 1933", key: ["s1.c.order.ok"] },
     { name: "Gewerkschaften", wann: "Mai 1933", key: ["s1.c.order.ok"] },
     { name: "Parteien", wann: "Juli 1933", key: ["s1.c.order.ok"] },
@@ -313,7 +324,7 @@ document.addEventListener("DOMContentLoaded", function () {
     NS.printPass(1, [
       { label: "Buch-Detektiv S. 72 (Reichskanzler am … · Schuld am Brand angeblich … · SA verschleppte über …)", key: "s1.a.buch.in", fmt: antworten },
       { label: "Was erlaubte das Ermächtigungsgesetz?", key: "s1.b.mc1" },
-      { label: "Warum stimmten so viele zu?", key: "s1.b.mc2" },
+      { label: "Otto Wels im Originalton über die Presse", key: "s1.b.ton.satz" },
       { label: "Die Treppe zur Diktatur", key: "s1.c.order", fmt: function (v) { return v.map(function (x, i) { return (i + 1) + ". " + STUFE[x]; }).join("\n"); } },
       { label: "Buch-Detektiv S. 74 (Gewerkschaften verboten am … · neue Zwangsorganisation)", key: "s1.d.buch.in", fmt: antworten },
       { label: "Gleichschaltung", key: "s1.d.satz" },
