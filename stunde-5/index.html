@@ -156,7 +156,7 @@
         <div class="stack">
           <div class="detektiv" data-find="s5.b.buch">
             <div class="detektiv__kopf"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#5f4497" stroke-width="2.4"><circle cx="10" cy="10" r="6"/><path d="M15 15l6 6"/></svg><p>Buch-Detektiv: S. 93</p></div>
-            <div class="find__q" data-answer="5.45|5:45|545|5.45 uhr|5:45 uhr"><p class="find__ort">Buch S. 93 · Hitler im Reichstag, 1. September 1939</p><p class="find__frage">„Seit … Uhr wird jetzt zurückgeschossen!“ Welche Uhrzeit nennt Hitler?</p><input inputmode="decimal" autocomplete="off" placeholder="Uhrzeit"><p class="find__hinweis" hidden>Tipp: Such auf S. 93 nach dem Wort „zurückgeschossen“.</p></div>
+            <div class="find__q" data-answer="5.45|5:45|545|5.45 uhr|5:45 uhr"><p class="find__ort">Buch S. 93 · Kasten „1.9.1939 Überfall auf Polen“</p><p class="find__frage">„Seit … Uhr wird zurückgeschossen“, verkündete die Propaganda. Welche Uhrzeit?</p><input inputmode="decimal" autocomplete="off" placeholder="Uhrzeit"><p class="find__hinweis" hidden>Tipp: Such auf S. 93 nach dem Wort „zurückgeschossen“.</p></div>
             <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><p class="feedback" aria-live="polite"></p></div>
           </div>
           <div class="mc" data-mc="s5.b.mc" data-right="vorwand"><p class="mc__frage">Hitler sagte „seit 5.45 Uhr“. Der Angriff begann aber um 4.45 Uhr. Warum ließ er Gleiwitz vorher spielen?</p>
@@ -210,7 +210,7 @@
         <div class="stack">
           <div class="detektiv" data-find="s5.c.buch">
             <div class="detektiv__kopf"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#5f4497" stroke-width="2.4"><circle cx="10" cy="10" r="6"/><path d="M15 15l6 6"/></svg><p>Buch-Detektiv: S. 92</p></div>
-            <div class="find__q" data-answer="65|65 mio|65 millionen|65000000|65 000 000"><p class="find__ort">Buch S. 92</p><p class="find__frage">Wie viele Menschen verloren im Zweiten Weltkrieg ihr Leben? (in Millionen)</p><input inputmode="numeric" autocomplete="off" placeholder="Millionen"><p class="find__hinweis" hidden>Tipp: Such auf S. 92 nach „Millionen“.</p></div>
+            <div class="find__q" data-answer="65|65 mio|65 millionen|65000000|65 000 000"><p class="find__ort">Buch S. 92 · blauer Text oben</p><p class="find__frage">Wie viele Menschen verloren im Zweiten Weltkrieg ihr Leben? (in Millionen)</p><input inputmode="numeric" autocomplete="off" placeholder="Millionen"><p class="find__hinweis" hidden>Tipp: Such auf S. 92 nach „Millionen“.</p></div>
             <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button class="btn" type="button" data-check>Prüfen</button><p class="feedback" aria-live="polite"></p></div>
           </div>
           <div class="block block--sand">
@@ -304,7 +304,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { label: "Einstieg: Das Schlagbaum-Foto ist …", key: "s5.e.echt" },
       { label: "Gesagt oder getan?", key: "s5.a.sort", fmt: function (v) { var a = [], b = []; Object.keys(v).forEach(function (id) { (v[id] === "a" ? a : b).push(KARTE[id]); }); return "Gesagt: " + a.join(", ") + "\nGetan: " + b.join(", "); } },
       { label: "Warum Appeasement nicht aufging", key: "s5.a.mc" },
-      { label: "Buch-Detektiv S. 93: „Seit … Uhr wird jetzt zurückgeschossen“", key: "s5.b.buch.in", fmt: antworten },
+      { label: "Buch-Detektiv S. 93: „Seit … Uhr wird zurückgeschossen“", key: "s5.b.buch.in", fmt: antworten },
       { label: "Warum Gleiwitz?", key: "s5.b.mc" },
       { label: "Zeitstrahl 1938 bis 1941", key: "s5.c.order", fmt: function (v) { return v.map(function (x, i) { return (i + 1) + ". " + EV[x]; }).join("\n"); } },
       { label: "Buch-Detektiv S. 92: Tote im Zweiten Weltkrieg (Millionen)", key: "s5.c.buch.in", fmt: antworten },
