@@ -321,6 +321,23 @@ textarea.answer:focus { outline: 3px solid var(--lila); outline-offset: 0; }
 .pass--zeigen { display: block; background: #fff; max-width: 210mm; margin: 0 auto 40px; padding: 12mm 13mm; box-shadow: 0 2px 18px rgba(29,27,44,.18); }
 .pass--zeigen .hp-neu { margin-top: 14mm; padding-top: 10mm; border-top: 2px dashed #cfc6e2; }
 @media print { .pass--zeigen .hp-neu { margin-top: 0; padding-top: 0; border-top: 0; } }
+/* PDF als Datei (Home-Bildschirm-App): unsichtbare Vorlage in A4-Breite ohne Rand (186 mm = 703 px) */
+.pass--pdf { display: block; position: fixed; left: -10000px; top: 0; width: 703px; background: #fff; pointer-events: none; }
+.pass--pdf .hp-seite { padding-bottom: 6px; }
+.pass--pdf .hp-neu { margin: 0; padding: 0 0 6px; border: 0; }
+/* html2canvas setzt Listenziffern schief, deshalb eigene Ziffern */
+.pass--pdf .hp-merke ol { list-style: none; padding-left: 0; counter-reset: hpm; }
+.pass--pdf .hp-merke li { counter-increment: hpm; position: relative; padding-left: 14pt; }
+.pass--pdf .hp-merke li::before { content: counter(hpm) "."; position: absolute; left: 0; top: 0; }
+.pdf-fenster { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 16px; background: rgba(29, 27, 44, .86); }
+.pdf-fenster__box { width: min(460px, 100%); background: var(--white); color: var(--ink); padding: 24px 22px 20px; display: grid; gap: 14px; }
+.pdf-fenster__box .label { color: var(--lila); }
+.pdf-fenster__text { font-size: 17px; line-height: 1.4; }
+.pdf-fenster__knoepfe { display: flex; flex-wrap: wrap; gap: 10px; }
+.pdf-fenster__knoepfe:empty { display: none; }
+.pdf-fenster__knoepfe .btn { font-size: 18px; min-height: 56px; padding: 0 28px; }
+.pdf-fenster__zu { justify-self: start; }
+@media print { .pdf-fenster { display: none; } }
 .pass { color: #1d1b2c; font-family: var(--font-text); font-size: 10.5pt; line-height: 1.4; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .hp-neu { break-before: page; }
 @media all {

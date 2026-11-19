@@ -5,6 +5,8 @@
   "use strict";
 
   var KEY = "nszeit-v1";
+  /* Ordner dieses Skripts (assets/), egal ob von /lernen/stunde-n/ oder von /heft geladen. */
+  var SKRIPT_BASIS = ((document.currentScript && document.currentScript.src) || "").replace(/[^\/]*$/, "");
   /* Teile jeder Station. Eine Station ist geschafft, wenn alle Pflichtteile erledigt sind.
      Dann öffnet sich automatisch die nächste. Der Code ist nur noch Notschlüssel (z. B. nach Krankheit). */
   var STUNDEN = [
@@ -619,10 +621,127 @@
     var img = pass.querySelector("img"), go = function () { setTimeout(function () { window.print(); }, 80); };
     if (img && !img.complete) { img.onload = go; img.onerror = go; } else go();
   }
-  /* App vom Home-Bildschirm: Dort kann iOS nicht drucken (window.print() tut nichts).
-     Dann öffnet sich der Hefteintrag in Safari (/heft liegt außerhalb der App), dort klappt PDF und Drucken.
-     Die Antworten reisen im Adress-Anhang (#…) mit, der geht nie an den Server. */
+  /* App vom Home-Bildschirm: Dort kann iOS nicht drucken (window.print() tut nichts, auch nicht im
+     eingebetteten Browserfenster, das iOS für Seiten außerhalb der App öffnet).
+     Deshalb rechnet die App das PDF selbst als echte Datei: html2canvas macht aus jeder Seite ein Bild,
+     jsPDF legt die Bilder auf A4-Seiten. Danach Teilen-Menü (OneNote, Dateien) oder Öffnen.
+     Beide Bibliotheken liegen lokal in assets/vendor/ und werden erst beim Tippen geladen, also auch offline. */
   function alsApp() { return navigator.standalone === true || !!(window.matchMedia && matchMedia("(display-mode: standalone)").matches); }
+  function ladeSkript(src) {
+    return new Promise(function (ok, fail) {
+      var s = document.createElement("script"); s.src = src;
+      s.onload = ok; s.onerror = function () { s.remove(); fail(new Error("laden: " + src)); };
+      document.head.appendChild(s);
+    });
+  }
+  var pdfLibs = null;
+  function ladePdfLibs() {
+    if (!pdfLibs) pdfLibs = Promise.all([
+      window.html2canvas ? 0 : ladeSkript(SKRIPT_BASIS + "vendor/html2canvas.min.js"),
+      window.jspdf ? 0 : ladeSkript(SKRIPT_BASIS + "vendor/jspdf.umd.min.js")
+    ]).catch(function (e) { pdfLibs = null; throw e; });
+    return pdfLibs;
+  }
+  function bildGeladen(img) {
+    return img.complete ? Promise.resolve() : new Promise(function (ok) { img.onload = ok; img.onerror = ok; });
+  }
+  /* html2canvas kennt weder object-fit noch filter: Foto selbst zuschneiden und grau rechnen. */
+  function fotoVorbereiten(img) {
+    var r = img.getBoundingClientRect(), w = Math.round(r.width * 2), h = Math.round(r.height * 2);
+    if (!w || !h || !img.naturalWidth) return Promise.resolve();
+    var c = document.createElement("canvas"); c.width = w; c.height = h;
+    var x = c.getContext("2d"), s = Math.max(w / img.naturalWidth, h / img.naturalHeight), sw = w / s, sh = h / s;
+    x.drawImage(img, (img.naturalWidth - sw) / 2, (img.naturalHeight - sh) / 2, sw, sh, 0, 0, w, h);
+    try {
+      var p = x.getImageData(0, 0, w, h), a = p.data;
+      for (var i = 0; i < a.length; i += 4) { var g = a[i] * .299 + a[i + 1] * .587 + a[i + 2] * .114; a[i] = a[i + 1] = a[i + 2] = g; }
+      x.putImageData(p, 0, 0);
+    } catch (e) { /* Foto bleibt farbig, PDF klappt trotzdem */ }
+    img.style.cssText = "filter:none;object-fit:fill;max-height:none;width:" + r.width + "px;height:" + r.height + "px";
+    img.src = c.toDataURL("image/jpeg", .9);
+    return bildGeladen(img);
+  }
+  var A4_B = 210, A4_H = 297, RAND = 12;
+  function seiteInsPdf(pdf, c, erste) {
+    var b = A4_B - 2 * RAND, maxH = A4_H - 2 * RAND, h = c.height * b / c.width;
+    if (h <= maxH * 1.3) {
+      /* passt (notfalls etwas verkleinert) auf eine Seite */
+      var w = h > maxH ? b * maxH / h : b; h = Math.min(h, maxH);
+      if (!erste) pdf.addPage();
+      pdf.addImage(c.toDataURL("image/jpeg", .92), "JPEG", (A4_B - w) / 2, RAND, w, h);
+      return;
+    }
+    /* sehr viele Antworten: auf mehrere Seiten verteilen */
+    var proSeite = Math.floor(c.width * maxH / b);
+    for (var y = 0; y < c.height; y += proSeite) {
+      var t = document.createElement("canvas"), th = Math.min(proSeite, c.height - y);
+      t.width = c.width; t.height = th;
+      var tx = t.getContext("2d"); tx.fillStyle = "#fff"; tx.fillRect(0, 0, t.width, th); tx.drawImage(c, 0, y, c.width, th, 0, 0, c.width, th);
+      if (!erste || y) pdf.addPage();
+      pdf.addImage(t.toDataURL("image/jpeg", .92), "JPEG", RAND, RAND, b, th * b / c.width);
+    }
+  }
+  function pdfBauen(n, d, imgBase) {
+    var box = document.createElement("div");
+    box.className = "pass pass--pdf"; box.setAttribute("aria-hidden", "true");
+    box.innerHTML = passHtml(n, d, imgBase);
+    document.body.appendChild(box);
+    var schriften = (document.fonts && document.fonts.ready) || Promise.resolve();
+    return Promise.all([ladePdfLibs(), schriften].concat([].map.call(box.querySelectorAll("img"), bildGeladen)))
+      .then(function () { return Promise.all([].map.call(box.querySelectorAll(".hp-foto"), fotoVorbereiten)); })
+      .then(function () {
+        var pdf = new window.jspdf.jsPDF({ unit: "mm", format: "a4", compress: true });
+        return [].reduce.call(box.querySelectorAll(".hp-seite"), function (kette, seite, i) {
+          return kette
+            .then(function () { return window.html2canvas(seite, { scale: 2, backgroundColor: "#ffffff", logging: false }); })
+            .then(function (c) { seiteInsPdf(pdf, c, i === 0); });
+        }, Promise.resolve()).then(function () { return pdf.output("blob"); });
+      })
+      .then(function (blob) { box.remove(); return blob; }, function (e) { box.remove(); throw e; });
+  }
+  /* Fenster in der App: erst „wird erstellt“, dann Knopf zum Teilen bzw. Öffnen.
+     Das Teilen braucht einen frischen Fingertipp, deshalb ein eigener Knopf nach dem Erstellen. */
+  function pdfFenster(n, d, imgBase) {
+    var alt = document.querySelector(".pdf-fenster"); if (alt) alt.remove();
+    var f = document.createElement("div");
+    f.className = "pdf-fenster"; f.setAttribute("role", "dialog"); f.setAttribute("aria-modal", "true"); f.setAttribute("aria-label", "Hefteintrag als PDF");
+    f.innerHTML = '<div class="pdf-fenster__box"><p class="label">Hefteintrag Station ' + n + '</p>' +
+      '<p class="pdf-fenster__text" aria-live="polite">Dein PDF wird erstellt. Das dauert ein paar Sekunden …</p>' +
+      '<div class="pdf-fenster__knoepfe"></div><button type="button" class="btn-2 pdf-fenster__zu">Schließen</button></div>';
+    document.body.appendChild(f);
+    var text = f.querySelector(".pdf-fenster__text"), knoepfe = f.querySelector(".pdf-fenster__knoepfe");
+    f.querySelector(".pdf-fenster__zu").addEventListener("click", function () { f.remove(); });
+    pdfBauen(n, d, imgBase).then(function (blob) {
+      if (!f.isConnected) return;
+      var name = "Hefteintrag-NS-Zeit-Station-" + n + ".pdf", datei = null;
+      try { datei = new File([blob], name, { type: "application/pdf" }); } catch (e) { datei = null; }
+      var teilbar = false;
+      try { teilbar = !!(datei && navigator.canShare && navigator.canShare({ files: [datei] })); } catch (e) { teilbar = false; }
+      var url = URL.createObjectURL(blob);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 10 * 60 * 1000);
+      text.innerHTML = teilbar
+        ? "Fertig! Tippe auf <b>Teilen</b> und wähle <b>OneNote</b> oder <b>In Dateien sichern</b>."
+        : "Fertig! Tippe auf <b>PDF öffnen</b>. Dann oben auf das Teilen-Symbol und <b>OneNote</b> oder <b>In Dateien sichern</b>.";
+      if (teilbar) {
+        var tb = document.createElement("button");
+        tb.type = "button"; tb.className = "btn btn--lila"; tb.textContent = "Teilen";
+        tb.addEventListener("click", function () {
+          navigator.share({ files: [datei], title: "Hefteintrag Station " + n }).catch(function (e) {
+            if (e && e.name === "AbortError") return;
+            text.textContent = "Teilen hat nicht geklappt. Tippe auf „PDF öffnen“.";
+          });
+        });
+        knoepfe.appendChild(tb);
+      }
+      var a = document.createElement("a");
+      a.className = teilbar ? "btn-2" : "btn btn--lila"; a.href = url; a.download = name; a.target = "_blank"; a.rel = "noopener";
+      a.textContent = "PDF öffnen";
+      knoepfe.appendChild(a);
+    }).catch(function () {
+      if (!f.isConnected) return;
+      text.textContent = "Das PDF konnte nicht erstellt werden. Schließe dieses Fenster und tippe noch einmal auf den PDF-Knopf.";
+    });
+  }
   NS.printPass = function (n, items) {
     var st = NS.stand(n);
     var d = { n: n, name: NS.get("name") || "", fertig: st.fertig, gesamt: st.gesamt, rows: items.map(function (it) {
@@ -633,10 +752,7 @@
       return [it.label, v ? String(v) : ""];
     }) };
     state.pass[n] = true; save();
-    if (alsApp() && LIVE) {
-      window.open(location.origin + "/heft#d=" + b64(JSON.stringify(d)), "_blank");
-      return;
-    }
+    if (alsApp()) { pdfFenster(n, d, "../img/foto/"); return; }
     var pass = document.querySelector(".pass");
     pass.innerHTML = passHtml(n, d, "../img/foto/");
     drucken(pass);
